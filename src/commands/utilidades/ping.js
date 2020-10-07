@@ -7,5 +7,5 @@ module.exports = {
         O ping da API do Discord é de; ${Math.round(client.ws.ping)}ms`);
     },
     aliases: ["ping"],
-    description: "Returns latency and API ping"
+    description: "Latência e ping da API"
 }

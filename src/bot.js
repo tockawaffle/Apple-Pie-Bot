@@ -1,4 +1,4 @@
-//-------------------------------------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------Constancias--------------------------------------------------------------------------------------//
 
 require('dotenv').config();
 const discord = require('discord.js');
@@ -7,7 +7,6 @@ const fs = require('fs').promises;
 const path = require('path');
 const PREFIX = process.env.PREFIX
 const { checkCommandModule, checkProperties } = require('./util/validate');
-const dado = () => Math.floor(Math.random() * 24) + 1;
 const { createStream, table } = require('table')
 const tableConfig = require('./util/tableConfig');
 const c = require('ansi-colors');

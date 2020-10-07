@@ -4,7 +4,7 @@ module.exports = {
         if(message.author.bot) return;
         const args = message.content.split(' ');
         if(args.length > 2) {
-          message.channel.send(`Como usar: -avatar <user_id> | -avatar @mention`);
+          message.channel.send(`Ops, algo deu errado!\nComo usar: -avatar <user_id> | -avatar @mention | -avatar (Sem nenhuma menção ou ID, irá mostrar o seu avatar!)`);
       } else if(args.length === 2) {
           const member = message.mentions.members.size === 1 ? 
             message.mentions.members.first() :

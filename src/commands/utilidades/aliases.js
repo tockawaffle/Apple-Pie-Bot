@@ -27,6 +27,6 @@ module.exports = {
               
     },
     aliases: ['als'],
-    description: 'Comando de ajuda, mostra todos os comandos presentes no servidor!'
+    description: 'Aliases'
   }
   

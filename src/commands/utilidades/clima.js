@@ -23,7 +23,7 @@ module.exports = {
             .setThumbnail(result[0].current.imageUrl);
             message.channel.send(embed)
         } catch(err) {
-            return message.channel.send("Não consegui encontrar informações do local. Tenha certeza de que você inseriu uma localização.\nPara utilizar, digite o nome de um estado.")
+            return message.channel.send("Não consegui encontrar informações do local. Tenha certeza de que você inseriu uma localização.\nPara utilizar, digite o nome de um Estado ou Cidade.")
         }
         });   
     },
