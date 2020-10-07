@@ -12,7 +12,7 @@ module.exports = {
             .addFields(
                 {
                     name: 'Utilidades:', 
-                    value: '-convite(-cvt)\n\n-help (-ajuda, -h)\n\n-avatar (-avt)\n\n-ping (-ping)\n\n-aliases (-als)\n\n-dado (-rolardado, -rolar, -dice, -jogardado)',
+                    value: '-convite(-cvt)\n\n-help (-ajuda, -h)\n\n-avatar (-avt)\n\n-ping (-ping)\n\n-aliases (-als)\n\n-dado (-rolardado, -rolar, -dice, -jogardado)\n\n-botinfo (-bf, -bi)\n\n-userinfo (-uf), -github (-gt, -gthb)',
                     inline: true
                 },
                 

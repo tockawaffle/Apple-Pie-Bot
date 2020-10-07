@@ -16,7 +16,7 @@ module.exports = {
 
             {
               name: 'Utilidades:', 
-              value: '-convite(Para me convidar a um outro servidor!)\n\n-help (Bem... Eu acho que não preciso explicar muito.)\n\n-avatar (Mostra o avatar da pessoa mencionada ou pelo ID, ou o próorio avatar)\n\n-ping (Mostra o meu ping e o ping que eu tenho da API do Discord!)',
+              value: '-convite(Para me convidar a um outro servidor!)\n\n-help (Bem... Eu acho que não preciso explicar muito.)\n\n-avatar (Mostra o avatar da pessoa mencionada ou pelo ID, ou o próorio avatar)\n\n-ping (Mostra o meu ping e o ping que eu tenho da API do Discord!)\n\n -botinfo (Mostra informações minhas!)\n\n-userinfo (Mostra informações de alguém DESTE servidor)\n\n-github (Minha página no github!)',
               inline: true
             },
 

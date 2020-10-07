@@ -13,8 +13,9 @@ module.exports = {
             .setThumbnail(client.user.avatarURL({dynamic: true}))
             .setColor("E7B985")
             .addField("Meu nome é:", client.user.username+', é um prazer te conhecer!')
-            .addField("Fui criada por:", owner.username)
+            .addField("Fui criada por:", owner.tag)
             .addField("Meu criador me deu vida em um:", created)
+            .addField("Meu código fonte (tome cuidado!)", "[Clique Aqui](https://github.com/The-Crow-pleb/Apple-Pie-Bot)")
             .addField('Se eu sou compromissada?', 'Claro! Com a farinha e a maça!')
         message.channel.send(embed);
         console.log(embed)
