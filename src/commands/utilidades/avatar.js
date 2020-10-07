@@ -23,7 +23,7 @@ module.exports = {
 
         } else {
             
-          message.channel.send(`Eu não consegui encontrar o usuario com o ID ou Menção: ${args[1]}, será que ele aprendeu a voar?`);
+          message.channel.send(`Eu não consegui encontrar o usuario com o ID ou Menção: ${args[1]} no forno, será que ele foi levado para a cozinha?`);
 
         }
 

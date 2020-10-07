@@ -33,7 +33,7 @@ module.exports = {
                   message.channel.send(embed)
               }
           } catch (err) {
-                  message.reply('Não foi possivel silenciar tal usuário, tem certeza que você mencionou a pessoa certa?')
+                  message.reply('Desculpe, mas... Você tem certeza que mencionou a pessoa certa?')
                   console.log(err)
           }
       } else {

@@ -29,7 +29,7 @@ module.exports = {
                       message.channel.send(embed)
                   }
           } catch (err) {
-              message.reply('Por favor, tenha certeza de ter mencionado ou utilizado um ID de alguém existente!')
+              message.reply('Hmmmm, algo não parece certo, você usou o comando corretamente?\nTente usar assim: -ban <@menção> ou -ban <@userID>')
           }
           
       } else {

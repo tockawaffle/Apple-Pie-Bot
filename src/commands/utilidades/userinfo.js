@@ -28,7 +28,7 @@ module.exports = {
                     .addField("O que o(a) usuário(a) faz?:", member.user.presence.game ? member.user.presence.game : 'Não está fazendo nada!')
                 message.channel.send(embed);
             } else {
-                message.channel.send(`Eu não consegui encontrar o usuario com o ID ou Menção: ${args[1]}, será que ele aprendeu a voar?`);
+                message.channel.send(`Eu não consegui encontrar o usuario com o ID ou Menção: ${args[1]}, será que ele deixou de ser uma torta!?`);
             }
 
         }
