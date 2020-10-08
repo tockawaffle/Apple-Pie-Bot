@@ -18,7 +18,6 @@ module.exports = {
             .addField("Meu código fonte (tome cuidado!)", "[Clique Aqui](https://github.com/The-Crow-pleb/Apple-Pie-Bot)")
             .addField('Se eu sou compromissada?', 'Claro! Com a farinha e a maça!')
         message.channel.send(embed);
-        console.log(embed)
     },
     aliases: ['bi', 'bf'],
     description: 'Minha descrição'

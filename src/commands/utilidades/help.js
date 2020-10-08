@@ -24,7 +24,13 @@ module.exports = {
               name: 'Moderação:',
                 value: '-ban (Bane um membro do servidor)\n\n-kick (Expulsa um membro do servidor)\n\n-mute (Muta um membro)\n\n-unban (Bem, todo comando de desbanimento só funciana por ID, então...)\n\n-unmute (Desmuta um membro), -muterole (Para criar o cargo de Silenciado)\n\n -muteroleperms (Para criar as permissões do cargo de Silenciado)',
                 inline: true
+            },
+
+            {
+              name: 'Brincadeiras:',
+              value: '-dado (rola um dado de 25 lados!)\n\n-meme (memes direto de vários subreddits!)\n\n-rps (Pedra, papel ou tesoura, ou, Jokenpô)'
             }
+
             )
             .setColor('RANDOM')
             .setFooter("Sim, eu sei, não tenho muitas funcionalidades, mas eu ainda estou em desenvolvimento, com muito esforço, prometo melhorar!\n\nMinha versão atual é: 2.0")
