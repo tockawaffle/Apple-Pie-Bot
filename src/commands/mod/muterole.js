@@ -1,5 +1,8 @@
 module.exports = {
     run: async (client, message, args) => {
+        if(!message.member.hasPermission('MANAGE_ROLES')) {
+            return message.reply('Hey hey, sei que você quer ajudar, mas você não tem o acesso ao comando' + process.env.POUT)
+        }
         if(message.member.hasPermission('MANAGE_ROLES')) {
             const { guild } = message
             try {
@@ -23,3 +26,5 @@ module.exports = {
     aliases: ["mtr"],
     description: "Cria o cargo 'Silenciado'"
 }
+
+require('dotenv').config()

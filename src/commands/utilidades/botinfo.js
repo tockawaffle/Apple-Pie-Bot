@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
     run: async(client, message, args) => {
 
@@ -9,7 +10,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor(`${guild.name}`, owner.avatarURL({ dynamic: true }))
-            .setDescription("Você realmente quer saber sobre mim? Okay!")
+            .setDescription("Você realmente quer saber sobre mim? Ehh..")
             .setThumbnail(client.user.avatarURL({dynamic: true}))
             .setColor("E7B985")
             .addField("Meu nome é:", client.user.username+', é um prazer te conhecer!')
@@ -18,6 +19,7 @@ module.exports = {
             .addField("Meu código fonte (tome cuidado!)", "[Clique Aqui](https://github.com/The-Crow-pleb/Apple-Pie-Bot)")
             .addField('Se eu sou compromissada?', 'Claro! Com a farinha e a maça!')
         message.channel.send(embed);
+        message.channel.send('Isso é vergonhoso' + process.env.BLUSHY)
     },
     aliases: ['bi', 'bf'],
     description: 'Minha descrição'

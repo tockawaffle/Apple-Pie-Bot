@@ -13,12 +13,15 @@ module.exports = {
                 let response = collected.first().content.toLowerCase();
                 if (response === "pedra" && rpsChoice == "tesoura") {
                     message.reply("Tsc... Quem diria que pedra quebra ferro.");
+                    message.channel.send(process.env.ANGWY);
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
                 } else if (response === "papel" && rpsChoice == "pedra") {
                     message.reply("Droga! Só porquê eu achei que você escolheria tesoura");
+                    message.channel.send(process.env.ANGWY);
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
-                } else if (response === "tesouras" && rpsChoice == "papel") {
+                } else if (response === "tesoura" && rpsChoice == "papel") {
                     message.reply("Dessa vez eu perdi, mas juro na próxima ganhar!...");
+                    message.channel.send(process.env.ANGWY);
                     message.channel.send(`Eu escolhi ${rpsChoice} e você ${response}...`);
                 } else if (response  === rpsChoice) {
                     message.reply("Hmm, parece que empatou -Ufa-, quer tentar novamente?");
@@ -38,3 +41,5 @@ module.exports = {
     aliases: ['joken', 'jokenpo'],
     description: "Pedra, papel ou tesoura!"
 }
+
+require('dotenv').config()

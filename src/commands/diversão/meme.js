@@ -3,7 +3,7 @@ module.exports = {
         const { MessageEmbed } = require('discord.js')
         const randomPuppy = require('random-puppy')
 
-        const subReddits = ["shitpostcrusaders", "terriblefacebookmemes", "DiretoDoZapZap", "g1comments", "Animemes"];
+        const subReddits = ["shitpostcrusaders", "memesbrasil", "eu_nvr", "g1comments", "animemes", "bestmemes"];
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
         const img = await randomPuppy(random);
