@@ -18,7 +18,7 @@ module.exports = {
                 
                 {
                     name: 'Moderação:',
-                    value: '-ban (-b)\n\n-kick (-kc)\n\n-mute (-mt)\n\n-unban (-unb)\n\n-unmute (-unmt)\n\n-muterole (-mtr)\n\n -muteroleperms (-mtrp)',
+                    value: '-ban (-b)\n\n-kick (-kc)\n\n-mute (-mt)\n\n-unban (-unb)\n\n-unmute (-unmt)\n\n-muterole (-mtr)\n\n -muteroleperms (-mtrp)\n\n-slowmode (-sm)\n\n-smremove (-smr)\n\n-lock (-l)\n\n-unlock(-ul)',
                     inline: true
                 },
 

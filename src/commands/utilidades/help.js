@@ -16,13 +16,13 @@ module.exports = {
 
             {
               name: 'Utilidades:', 
-              value: '-convite(Para me convidar a um outro servidor!)\n\n-help (Bem... Eu acho que não preciso explicar muito.)\n\n-avatar (Mostra o avatar da pessoa mencionada ou pelo ID, ou o próorio avatar)\n\n-ping (Mostra o meu ping e o ping que eu tenho da API do Discord!)\n\n -botinfo (Mostra informações minhas!)\n\n-userinfo (Mostra informações de alguém DESTE servidor)\n\n-github (Minha página no github!)',
+              value: '-convite(Para me convidar a um outro servidor!)\n\n-help (Bem... Eu acho que não preciso explicar muito.)\n\n-avatar (Mostra o avatar da pessoa mencionada ou pelo ID, ou o próorio avatar)\n\n-ping (Mostra o meu ping e o ping que eu tenho da API do Discord!)\n\n -botinfo (Mostra informações minhas!)\n\n-userinfo (Mostra informações de alguém DESTE servidor)\n\n-github (Minha página no github!)\n\n-clima (Mostra o clima de um Estado/Cidade)',
               inline: true
             },
 
             {
               name: 'Moderação:',
-                value: '-ban (Bane um membro do servidor)\n\n-kick (Expulsa um membro do servidor)\n\n-mute (Muta um membro)\n\n-unban (Bem, todo comando de desbanimento só funciana por ID, então...)\n\n-unmute (Desmuta um membro), -muterole (Para criar o cargo de Silenciado)\n\n -muteroleperms (Para criar as permissões do cargo de Silenciado)',
+                value: '-ban (Bane um membro do servidor)\n\n-kick (Expulsa um membro do servidor)\n\n-mute (Muta um membro)\n\n-unban (Bem, todo comando de desbanimento só funciana por ID, então...)\n\n-unmute (Desmuta um membro)\n\n-muterole (Para criar o cargo de Silenciado)\n\n-muteroleperms (Para criar as permissões do cargo de Silenciado)\n\n-slowmode (Adiciona Slowmode em todos os chats do servidor)\n\n-smremove (Tira o slowmode de todos os chats do servidor)\n\n-lock (Bom contra raids, locka todos os chats do servidor)\n\n-unlock (Retira o lock de todos os chats)',
                 inline: true
             },
 

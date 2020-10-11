@@ -25,6 +25,7 @@ module.exports = {
                     message.channel.send(`Eu escolhi ${rpsChoice} e você ${response}...`);
                 } else if (response  === rpsChoice) {
                     message.reply("Hmm, parece que empatou -Ufa-, quer tentar novamente?");
+                    message.channel.send(process.env.SHRUG)
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
                 } else {
                     message.reply("Haha! Você perdeu, eu saí vitoriosa! Hoje terá torta na janta heh");
