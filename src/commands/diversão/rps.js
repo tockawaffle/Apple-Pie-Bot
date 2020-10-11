@@ -17,17 +17,18 @@ module.exports = {
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
                 } else if (response === "papel" && rpsChoice == "pedra") {
                     message.reply("Droga! Só porquê eu achei que você escolheria tesoura");
-                    message.channel.send(process.env.ANGWY);
+                    message.channel.send(process.env.OHNO);
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
                 } else if (response === "tesoura" && rpsChoice == "papel") {
                     message.reply("Dessa vez eu perdi, mas juro na próxima ganhar!...");
-                    message.channel.send(process.env.ANGWY);
+                    message.channel.send(process.env.POUT);
                     message.channel.send(`Eu escolhi ${rpsChoice} e você ${response}...`);
                 } else if (response  === rpsChoice) {
                     message.reply("Hmm, parece que empatou -Ufa-, quer tentar novamente?");
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
                 } else {
-                    message.reply("Haha! Você perdeu, eu saí vitoriosa! Hoje terá torta na janta heh");    
+                    message.reply("Haha! Você perdeu, eu saí vitoriosa! Hoje terá torta na janta heh");
+                    message.channel.send(process.env.SMUG) 
                     message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`)
                 }
             }).catch(() => {
