@@ -1,4 +1,5 @@
----------------------------------------------------------------------------------PT-BR---------------------------------------------------------------------------------------------
+PT-BR:
+
 Olá, esse é meu bot, ela se chama Apple Pie, ou, caso queira, Torta de Maça!
 Esse é o repositório oficial dela, é totalmente público e seu código-base ficará aberto ao público sempre.
 
@@ -7,7 +8,9 @@ Espero que gostem, e sim, alguns códigos são extremamente grandes e bagunçado
 
 Hello, this is my bot, her name is Apple Pie, you can call her by Apple if you want to!
 This is the official repository for this bot, it's going to be an open-source bot.
----------------------------------------------------------------------------------EN-US---------------------------------------------------------------------------------------------
+
+EN-US:
+
 This is my first bot, so it doenst have many things, it's pretty simple since I'm a novice in javascript.
 Hope you like her, and yes, some codes are very messy, sorry about that~
 
