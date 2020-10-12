@@ -4,6 +4,8 @@ require('dotenv').config();
 module.exports = {
     run: async(client, message) => {
 
+        if(message.author.bot) return;
+
         if(!message.member.hasPermission('MANAGE_CHANNELS', 'ADMINISTRATOR')) {
             return message.reply('Hmmm, você não tem permissão para isso! ' + process.env.SHRUG)
         }

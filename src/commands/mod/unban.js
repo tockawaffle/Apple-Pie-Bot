@@ -1,5 +1,7 @@
 module.exports = {
     run: async(client, message, args) => {
+
+        if(message.author.bot) return;
         const { guild } = message
         const { MessageEmbed } =require('discord.js')
         if(!message.member.hasPermission('BAN_MEMBERS')) {

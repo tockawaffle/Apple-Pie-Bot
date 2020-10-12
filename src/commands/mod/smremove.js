@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js")
 module.exports = {
     run: async(client, message, args) => {
 
+        if(message.author.bot) return;
         if(!message.member.hasPermission('MANAGE_CHANNELS', 'ADMINISTRATOR')) {
             return message.reply('Fufufu, parece que você não tem permissão para isso ' + process.env.SMUG)
         }

@@ -3,7 +3,8 @@ module.exports = {
 
         const {MessageEmbed} = require('discord.js');
         const {guild} = message
-
+        
+        if(message.author.bot) return;
         if(message.member.hasPermission('ADMINISTRATOR')) {
             const embed = new MessageEmbed()
                 .setTitle('Ação: LOCKDOWN')

@@ -3,6 +3,8 @@ require('dotenv').config
 
 module.exports = {
     run: async(client, message, args) => {
+
+        if(message.author.bot) return;
         if(!message.member.hasPermission('ADMINISTRATOR')) {
             return message.reply('Você pode ser moderador, ou algo do tipo, mas só quem tem a permissão de Administrador pode retirar o lockdown!')
         }
