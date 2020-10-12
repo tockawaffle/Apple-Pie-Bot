@@ -44,13 +44,11 @@ async function registerCommands(client, dir) {
 
 async function registerEvents(client, dir) {
     let files = await fs.readdir(path.join(__dirname, dir));
-    // Loop through each file.
     for(let file of files) {
         let stat = await fs.lstat(path.join(__dirname, dir, file));
-        if(stat.isDirectory()) // If file is a directory, recursive call recurDir
+        if(stat.isDirectory())
             registerEvents(client, path.join(dir, file));
         else {
-            // Check if file is a .js file.
             if(file.endsWith(".js")) {
                 let eventName = file.substring(0, file.indexOf(".js"));
                 try {
