@@ -1,6 +1,7 @@
 const PREFIX = process.env.PREFIX
 
 module.exports = (client, message) => {
+    
     if(message.author.bot) return;
 
     if(!message.content.startsWith(PREFIX)) return;

@@ -1,8 +1,11 @@
 const { MessageEmbed } = require("discord.js");
+
 module.exports = (client, member, message, data) => {
+    
     const {MessageEmbed} = require('discord.js')
     const channel = member.guild.channels.cache.find(x => x.name === 'bem-vindo')
     if(!channel) return;
+
     const embed = new MessageEmbed()
         .setThumbnail(member.user.avatarURL())
         .setTitle(`${member.user.tag} seja bem-vindo ao servidor!`)
