@@ -8,6 +8,23 @@ module.exports = async (client) => {
     await loadTable(commandStatus, 50);
     console.log("\n");
     await loadTable(eventStatus, 50);
+
+    let activNum = 0;
+    setInterval(function() {
+        if(activNum === 0) {
+            client.user.setActivity(`Atualmente, ${client.guilds.cache.size} servidores me acolheram como bot!`, {type: 'PLAYING'});
+            activNum = 1;
+        } else if (activNum === 1) {
+            client.user.setActivity("Torta é crocante, torta é vida, se eu fosse uma torta vc me comeria?")
+            activNum = 0;
+        // } else if (activNum === 2) {
+        //     client.user.setActivity("")
+        //     activNum = 3;
+        // } else if (activNum === 3) {
+        //     client.user.setActivity('')
+        //     activNum = 0;
+        }  
+    }, 300 * 1000);
 }
 
 function loadTable(arr, interval) {
