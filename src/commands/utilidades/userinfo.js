@@ -14,7 +14,7 @@ module.exports = {
                 message.mentions.members.first() :
                 message.guild.members.cache.get(args[1]);
             if(member) {
-                const created = moment(member.createdAt).locale('pt-br').format('LLLL')
+                const created = moment(member.user.createdAt).locale('pt-br').format('LLLL')
 
                 const embed = new MessageEmbed()
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
