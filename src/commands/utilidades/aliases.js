@@ -25,6 +25,11 @@ module.exports = {
                 {
                   name: 'Brincadeiras:',
                   value: '-dado (-dice)\n\n-meme (-rdm, -reddit)\n\n-rps (-joken, -jokenpo)'
+                },
+
+                {
+                  name: 'Outros',
+                  value: '-nowelcome (-nw)'
                 }
               )
               .setColor('RANDOM')

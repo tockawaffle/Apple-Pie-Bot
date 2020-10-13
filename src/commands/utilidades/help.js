@@ -29,6 +29,11 @@ module.exports = {
             {
               name: 'Brincadeiras:',
               value: '-dado (rola um dado de 25 lados!)\n\n-meme (memes direto de vários subreddits!)\n\n-rps (Pedra, papel ou tesoura, ou, Jokenpô)'
+            },
+
+            {
+              name: 'Outros',
+              value: '-nowelcome (Tira a mensagem de boas vindas do bot)'
             }
 
             )
