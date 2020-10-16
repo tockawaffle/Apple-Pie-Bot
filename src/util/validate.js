@@ -11,10 +11,10 @@ module.exports.checkCommandModule = (cmdName, cmdModule) => {
 
 module.exports.checkProperties = (cmdName, cmdModule) => {
     if(typeof cmdModule.run !== 'function')
-        throw new Error(`${cmdName}: 'run' não é uma função`)
+        throw new Error(`A função 'run' no comando ${cmdName} não existe!`)
     if(typeof cmdModule.description !== 'string')
-        throw new Error(`${cmdName} 'description' não é uma linha`)
+        throw new Error(`A descrição do comando ${cmdName} não foi definida!`)
     if(!Array.isArray(cmdModule.aliases))
-        throw new Error(`${cmdName} 'aliases' não existe`)
+        throw new Error(`Hey hey, as aliases do comando ${cmdName} não existem!`)
     return true;
 }
