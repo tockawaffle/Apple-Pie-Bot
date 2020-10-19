@@ -1,6 +1,6 @@
 {
   "name": "apple_pie",
-  "version": "3.0.0",
+  "version": "4.5.0",
   "description": "yummi apple pie yummi yummi",
   "main": "./src/bot.js",
   "scripts": {

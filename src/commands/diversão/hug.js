@@ -1,3 +1,5 @@
+//Novamente digo, não é a melhor forma de se fazer, mas funciona. Sim, pretendo melhorar o código quando possível
+//I'm going to say it again, it's not the best way to do this, but it works. Yes, I am going to do this better anyday
 module.exports = {
     run: async(client, message, args) => {
         const {MessageEmbed} = require('discord.js')

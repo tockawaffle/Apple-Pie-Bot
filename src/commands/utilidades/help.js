@@ -28,7 +28,8 @@ module.exports = {
 
             {
               name: 'Brincadeiras:',
-              value: '-dado (rola um dado de 25 lados!)\n\n-meme (memes direto de vários subreddits!)\n\n-rps (Pedra, papel ou tesoura, ou, Jokenpô)\n\n-kiss (Beija o usuário mencionado hehe)\n\n-hug (Dá um abraço no usuario mencionado)',
+              value: '-dado (rola um dado de 26 lados!)\n\n-meme (memes direto de vários subreddits!)\n\n-rps (Pedra, papel ou tesoura, ou, Jokenpô)\n\n-kiss (Beija o usuário mencionado hehe)\n\n-hug (Dá um abraço no usuario mencionado)',
+              inline: true
             },
 
             {
@@ -39,7 +40,7 @@ module.exports = {
 
             )
             .setColor('RANDOM')
-            .setFooter("Sim, eu sei, não tenho muitas funcionalidades, mas eu ainda estou em desenvolvimento, com muito esforço, prometo melhorar!\n\nMinha versão atual é: 2.0")
+            .setFooter("Sim, eu sei, não tenho muitas funcionalidades, mas eu ainda estou em desenvolvimento, com muito esforço, prometo melhorar!\n\nMinha versão atual é: 4.5.0")
               message.channel.send(embed); 
             
   },

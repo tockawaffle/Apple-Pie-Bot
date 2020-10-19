@@ -1,3 +1,5 @@
+//Um modo bem idiota e longo de se fazer, mas por falta de experiencia, assim será.
+//Idiot and inexperienced way to do this, but it is going to work anyways
 module.exports = {
     run: async(client, message, args) => {
         const {MessageEmbed} = require('discord.js');
@@ -5,6 +7,7 @@ module.exports = {
         const owner = client.users.cache.get('723185654044950539');
         const user = message.mentions.users.first();
         const me = message.mentions.has(client.user);
+        const owner1 = message.author.id === owner.id
 
         const g1 = 'https://i.pinimg.com/originals/4f/db/e9/4fdbe9469f67804ae273f2d7a71120c6.gif'
         const g2 = 'https://i.pinimg.com/originals/3a/df/00/3adf007025f558319e96b7557027fe41.gif'
@@ -14,29 +17,48 @@ module.exports = {
         const g6 = 'https://i.pinimg.com/originals/cb/b1/7d/cbb17d3f633e0a740f4ab864bee2694d.gif'
         const gImages = [g1, g2 ,g3 ,g4, g5, g6]
         const random = gImages[Math.floor(Math.random() * gImages.length)]
-        console.log(random)
 
-        if(me) {
-            const embed = new MessageEmbed()
-                .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
-                .setTitle('Hey! Você não pode fazer isso!')
-                .setDescription('O único autorizado a me beijar é meu criador!!')
-                .setImage('https://i.pinimg.com/originals/fe/1e/3a/fe1e3a486fb347929c0cebd1df3ef170.gif')
-                .setColor('RANDOM')
-                .addField('Você está encrencado!', `${owner.username} vai ficar sabendo disso! ${process.env.BLUSHY4}`)
-            message.channel.send(embed)
+        try{
+            if(me & owner1) {
+                const embed = new MessageEmbed()
+                    .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
+                    .setTitle('Finalmente você me beijou!')
+                    .setDescription('Eu esperei isso desde o primeiro momento que você me criou!')
+                    .setColor('E7B985')
+                    .setImage('https://i.pinimg.com/originals/69/fb/4b/69fb4b69e9b66342adcab3a0065ac579.gif')
+                    .addField(`Será que isso conta como incesto? ${process.env.THNK}`, 'Naaah, provavelmente não.... né?')
+                message.channel.send(embed)
+            }
+        }catch(err) {
+            console.log(err)
+        }
+
+        try{
+            if(me & owner1) return
+            if(me) {
+                const embed = new MessageEmbed()
+                    .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
+                    .setTitle('Hey! Você não pode fazer isso!')
+                    .setDescription('O único autorizado a me beijar é meu criador!!')
+                    .setImage('https://i.pinimg.com/originals/fe/1e/3a/fe1e3a486fb347929c0cebd1df3ef170.gif')
+                    .setColor('RANDOM')
+                    .addField('Você está encrencado!', `${owner.username} vai ficar sabendo disso! ${process.env.BLUSHY4}`)
+                message.channel.send(embed)
+            } 
+        }catch(err) {
+            console.log(err)
         }
 
         try{
             if(me) return;
             if(user) {
                 const embed = new MessageEmbed()
+                    .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
                     .setTitle('Beijos são tão doces quanto qualquer outro doce!')
-                    .setDescription(`${message.author.username} beijou ${user.username}`)
+                    .setDescription(`${message.author.username} beijou ${user.username} ${process.env.TOHRUYES}`)
                     .setImage(random)
                     .setColor('RANDOM');
                 message.channel.send(embed)
-                console.log(embed)
             }
         }catch(err) {
             console.log(err)
