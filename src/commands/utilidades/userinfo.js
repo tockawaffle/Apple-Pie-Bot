@@ -25,7 +25,7 @@ module.exports = {
                     .addField("ID:", member.user.id)
                     .addField("Conta criada em:", created)
                     .addField("Status:", member.user.presence.status)
-                    .addField("O que o(a) usuário(a) faz?:", member.user.presence.game ? member.user.presence.game : 'Não está fazendo nada!')
+                    .addField("O que o(a) usuário(a) faz?:", `${member.user.presence.activities}.`)
                 message.channel.send(embed);
             } else {
                 message.channel.send(`Eu não consegui encontrar o usuario com o ID ou Menção: ${args[1]}, será que ele deixou de ser uma torta!?`);

@@ -4,8 +4,9 @@ module.exports = {
         const {MessageEmbed} = require('discord.js');
         const {guild} = message
         
+        if(!message.guild.me.hasPermission('ADMINISTRATOR')) return message.author.send('Hey! Não sei o que está acontecendo para você utilizar o comando de lockdown, mas antes, me dê a permissão de Administrador!(Caso não dê, o comando não funciona!)\nE por favor, após, retire a mesma para meu funcionamento!') + message.author.send('https://i.pinimg.com/originals/46/30/84/463084cec82eb48db4d4d64becefdfe4.gif')
         if(message.author.bot) return;
-        if(message.member.hasPermission('ADMINISTRATOR')) {
+        if(message.member.hasPermission('MANAGE_CHANNELS')) {
             const embed = new MessageEmbed()
                 .setTitle('Ação: LOCKDOWN')
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
@@ -23,7 +24,7 @@ module.exports = {
                 });
             });
         };
-        if(!message.member.hasPermission('ADMINISTRATOR')) {
+        if(!message.member.hasPermission('MANAGE_CHANNELS')) {
             return message.reply('Hey! você não tem permissão para usar o lockdown!')
         }
     },

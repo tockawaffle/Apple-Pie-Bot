@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports = {
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         const { guild } = message
         const { discord } = require("discord.js");

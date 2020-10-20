@@ -17,6 +17,6 @@ module.exports = (client, member, message) => {
             .setImage('https://i.pinimg.com/originals/b0/de/02/b0de026a12e20137a654b5e2e65e2aed.gif')
         channel.send(embed)
     }catch(err) {
-        console.log(err) //Para não logar o erro de API
+        console.log(err)
     }
 }

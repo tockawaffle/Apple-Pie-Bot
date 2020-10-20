@@ -8,7 +8,7 @@ module.exports = async (client) => {
     await loadTable(commandStatus, 50);
     console.log("\n");
     await loadTable(eventStatus, 50);
-
+    
     client.user.setActivity(`Atualmente, ${client.guilds.cache.size} servidores me acolheram como bot!`, {type: 'PLAYING'});
     let activNum = 0;
     setInterval(function() {
