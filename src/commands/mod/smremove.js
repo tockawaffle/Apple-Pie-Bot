@@ -4,7 +4,12 @@ module.exports = {
     run: async(client, message, args) => {
 
         if(message.author.bot) return;
-        if(!message.member.hasPermission('MANAGE_CHANNELS', 'ADMINISTRATOR')) {
+
+        if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) {
+            return message.channel.send("Eu não tenho permissão para isso. Habilite a permissão 'Gerenciar Canais' em meu cargo para que eu possa concluir o comando!");
+        }
+
+        if(!message.member.hasPermission('MANAGE_CHANNELS')) {
             return message.reply('Fufufu, parece que você não tem permissão para isso ' + process.env.SMUG)
         }
 

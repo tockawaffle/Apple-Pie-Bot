@@ -3,12 +3,20 @@ module.exports = {
         const {MessageEmbed} = require('discord.js');
         const {guild} = message;
         const moment = require('moment')
+        const owner = client.users.cache.get('723185654044950539')
+        const PREFIX = process.env.PREFIX
 
         try{
             const botinfo = guild.members.cache.filter(member => member.user.bot).size
             const memberinfo = guild.members.cache.filter(member => !member.user.bot).size
             const created = moment(guild.createdAt).locale('pt-br').format('LLLL')
             const created2 = moment(guild.owner.user.createdAt).locale('pt-br').format('LLLL')
+            const created3 = moment(owner.createdAt).locale('pt-br').format('LLLL')
+            const created4 = moment(client.user.createdAt).locale('pt-br').format('LLLL')
+            
+            if(message.author.id !== owner.id) {
+                return
+            }
 
             const testEmbed = new MessageEmbed()
                 .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
@@ -51,7 +59,7 @@ module.exports = {
                     }
                 )
                 //Client Info
-                .addField(
+                .addFields(
                     {
                         name: 'Meu nome é:',
                         value: `${client.user.username}`,
@@ -59,7 +67,34 @@ module.exports = {
                     },
                     {
                         name: 'Meu criador se chama:',
-                        // value: `${client.user.owner.username}`
+                        value: `${owner.username}`,
+                        inline: true
+                    },
+                    {
+                        name: 'Meu prefixo padrão é:',
+                        value: `${PREFIX}`,
+                        inline: true
+                    }
+                )
+                //Client Owner Info
+                .addFields(
+                    {
+                        name: 'A conta do meu criador foi criada em:',
+                        value: `${created3}`,
+                        inline: true
+                    },
+                    {
+                        name: 'Ele me criou em:',
+                        value: `${created4}`,
+                        inline: true
+                    },
+                    {
+                        name: 'Ele me criou pelo motivo:',
+                        value: '"Estar entediado xD" —Tocka Waifu',
+                        inline: true
+                    },
+                    {
+                        name: '[Object]'
                     }
                 )
                 .addField('Você pode ignorar agora', 'Caso tenha sido invocado por engano, entre no [servidor de suporte](https://discord.gg/sGgzNQ6) e relate!')

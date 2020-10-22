@@ -1,9 +1,0 @@
-module.exports = {
-    run: async(client, message, args) => {
-        
-    }, aliases: ['<Aliases>'], description: '<Descrição>'
-}
-
-module.exports = {
-    run:
-}

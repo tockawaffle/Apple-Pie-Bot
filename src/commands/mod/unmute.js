@@ -14,7 +14,7 @@ module.exports = {
         }
     
         if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send("Eu não tenho permissão para mutar alguém.");
+            return message.channel.send("Eu não tenho permissão para desmutar alguém.");
         }
     
         if(!user) {

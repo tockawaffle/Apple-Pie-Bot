@@ -18,7 +18,7 @@ module.exports = {
 
                 const embed = new MessageEmbed()
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setDescription("Informações quentinhas chegando!")
+                    .setDescription(`Informações quentinhas chegando! ${process.env.SRVC}`)
                     .setThumbnail(member.user.avatarURL({dynamic: true}))
                     .setColor("RANDOM")
                     .addField("Nome do Usuário:", member.user.tag)

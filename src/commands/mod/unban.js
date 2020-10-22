@@ -7,6 +7,9 @@ module.exports = {
         if(!message.member.hasPermission('BAN_MEMBERS')) {
             message.channel.send("Você não tem acessso ao comando!!")
         }
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
+            return message.channel.send(`**${message.author.username}**, Eu não tenho permissão para desbanir!`)
+        }
         else {
             let memberId = message.content.substring(message.content.indexOf(' ') + 1)
             let member = message.guild.members.cache.get(memberId);

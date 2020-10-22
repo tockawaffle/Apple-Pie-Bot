@@ -5,6 +5,9 @@ module.exports = {
         if(!message.member.hasPermission('MANAGE_ROLES')) {
             return message.reply('Hey hey, sei que você quer ajudar, mas você não tem o acesso ao comando' + process.env.POUT)
         }
+        if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
+            return message.channel.send("Eu não posso criar o cargo de Silenciado. Habilite a permissão 'Gerenciar Cargos' em meu cargo para que eu possa concluir o comando!");
+        }
         if(message.member.hasPermission('MANAGE_ROLES')) {
             const { guild } = message
             try {

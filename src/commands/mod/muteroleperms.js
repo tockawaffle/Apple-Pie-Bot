@@ -2,11 +2,15 @@ module.exports = {
     run: async (client, message, args) => {
 
         if(message.author.bot) return;
-        if(!message.member.hasPermission('MANAGE_ROLES')) {
+        if(!message.member.hasPermission('MANAGE_ROLES' & "MANAGE_CHANNELS")) {
             return message.reply('Hey hey, sei que você quer ajudar, mas você não tem o acesso ao comando' + process.env.POUT)
         }
 
-        if(message.member.hasPermission('MANAGE_ROLES')) {
+        if (!message.guild.me.hasPermission("MANAGE_ROLES" & "MANAGE_CHANNELS")) {
+            return message.channel.send("Eu não tenho permissão para mudar todas as permissões. Habilite a permissão 'Gerenciar Cargos' em meu cargo para que eu possa concluir o comando!");
+        }
+
+        if(message.member.hasPermission('MANAGE_ROLES' & "MANAGE_CHANNELS   ")) {
             const { guild } = message
             try {
                 let muteRole = message.guild.roles.cache.find(x => x.name === "Silenciado")
