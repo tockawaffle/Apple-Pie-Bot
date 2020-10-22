@@ -1,5 +1,2 @@
 .env
 node_modules
-src\commands\testfolder
-src\commands\easterfolder\kaguya.js
-src\commands\easterfolder/*
