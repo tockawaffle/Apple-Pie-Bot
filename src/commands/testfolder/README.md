@@ -12,6 +12,7 @@ Mesmo que você esteja fazendo isso apenas para aprender e não tenha nínguem t
 Portanto, aqui está o que eu recomendo que você faça:
 
 - [X] Volte aqui todo dia e escute o som que você marcou em mim, isso vai te lembrar do que você precisa pra continuar, marque todas as datas que você entrou aqui abaixo, ok?
+
 Dia: 22/10/2020
 
 - [ ] Aprender mais sobre javascript, o máximo que conseguir, veja tudo que puder encontrar, pelo menos 3 vídeos ou leituras por dia, tá bem?
