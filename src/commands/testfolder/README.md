@@ -14,6 +14,8 @@ Portanto, aqui está o que eu recomendo que você faça:
 - [X] Volte aqui todo dia e escute o som que você marcou em mim, isso vai te lembrar do que você precisa pra continuar, marque todas as datas que você entrou aqui abaixo, ok?
 
 Dia: 22/10/2020
+Dia: 23/10/2020
+Dia: 24/10/2020
 
 - [ ] Aprender mais sobre javascript, o máximo que conseguir, veja tudo que puder encontrar, pelo menos 3 vídeos ou leituras por dia, tá bem?
 - [ ] Assim que você aprender sobre, aprenda a ler repositórios e a conseguir fazer as coisas sozinho, sem procurar na internet ou no stackOverFlow (Tudo bem usar quando não saber por onde começar ou como terminar, mas tente fazer por si mesmo!),
