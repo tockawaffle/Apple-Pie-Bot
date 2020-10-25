@@ -14,8 +14,10 @@ Portanto, aqui está o que eu recomendo que você faça:
 - [X] Volte aqui todo dia e escute o som que você marcou em mim, isso vai te lembrar do que você precisa pra continuar, marque todas as datas que você entrou aqui abaixo, ok?
 
 Dia: 22/10/2020
+
 Dia: 23/10/2020
-Dia: 24/10/2020
+
+Dia: 24/10/2020 (Eu consegui! Você agora suporta Base de Dados, eu estou orgulhoso de você, minha querida)
 
 Dia: 23/10/2020
 
