@@ -20,10 +20,14 @@ _Hello you!_
 This is Apple Pie, an "open-source" Discord bot that uses the Javascript language!
 It's a pretty new bot  that I made because ~I was bored and had nothing else to do~ I love programming!
 
-It doesn't has many things like a DB (too advanced for me, a newbie) but it surely is enough to be called a "Multifunctional bot"!
-You can peek the source-code if you want to, there is no problem at all. ~Be careful, you're looking at a young lady source-code!~
+~It doesn't has many things like a DB (too advanced for me, a newbie) but it surely is enough to be called a "Multifunctional bot"!
+You can peek the source-code if you want to, there is no problem at all.~
 
-Unfortunately it does not has a multilanguage functionality in the main code, however I'm going to translate it into another bot so english speakers can use the bot. You might want to check the #english-users topic in the Support Server to see if it has been translated
+~Unfortunately it does not has a multilanguage functionality in the main code, however I'm going to translate it into another bot so english speakers can use the bot. You might want to check the #english-users topic in the Support Server to see if it has been translated~
+
+It seems like I could do it! now this bot has a DB and Multilanguage functionality 
+
+~Be careful, you're looking at a young lady source-code!~
 
 PS: If you're going to download it and use it as a base for your bot (or something) be  sure that in every single command that uses the dotenv process you delete it or change the code for it to work properly.
 
@@ -34,7 +38,7 @@ PS: If you're going to download it and use it as a base for your bot (or somethi
 
 [Servidor de suporte / Support Server](https://discord.gg/sGgzNQ6)
 
-Versão do bot / Bot Version: 4.7.0
+Versão do bot / Bot Version: 6.0
 
 [Repositório de Imagens / Image Repo](https://pin.it/6gAWnUp)
 
