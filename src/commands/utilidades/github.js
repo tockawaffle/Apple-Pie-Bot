@@ -1,4 +1,4 @@
-const { description } = require('./userinfo');
+const languages = require('../../languages/languages')
 
 module.exports = {
     run: async(client, message, args) => {
@@ -9,10 +9,10 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor(`${guild.name}`, owner.avatarURL({ dynamic: true }))
-            .setDescription("Deseja saber como eu sou feita? Eh...")
+            .setDescription(`${languages(guild, 'G_C')}`)
             .setThumbnail(client.user.avatarURL({dynamic: true}))
             .setColor("E7B985")
-            .addField('H-hey! Tome cuidado com o que for ver, está bem?...', 'Você pode me ver por completo [aqui](https://github.com/The-Crow-pleb/Apple-Pie-Bot)')  
+            .addField(`${languages(guild, 'G2_C')}`, `${languages(guild, 'G3_C')} [${languages(guild, 'G3_C_2')}](https://github.com/The-Crow-pleb/Apple-Pie-Bot)`)  
         message.channel.send(embed)  
     },
     aliases: ['gt', 'gthb'],

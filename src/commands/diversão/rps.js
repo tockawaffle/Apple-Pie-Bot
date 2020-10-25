@@ -1,39 +1,41 @@
 module.exports = {
     run :async(client, message) => {
-
-        var rps = ["pedra", "papel", "tesoura"];
+        const languages = require('../../languages/languages')
+        const { guild } = message
+        var rps = [`${languages(guild, 'RPS_P')}`, `${languages(guild, 'RPS_P2')}`, `${languages(guild, 'RPS_T')}`];
         var rpsChoice = rps[Math.floor(Math.random() * rps.length)];
-        
-        message.reply("Então você quer me desafiar para o famoso Jokenpô? Ha! Mal sabe você que eu sou profissional nesse jogo!\nMas já que é o caso, faça sua escolha: Pedra, Papel ou Tesoura?").then(() => {
-            message.channel.awaitMessages(response => response.content === "pedra" || response.content === "papel" || response.content === "tesoura",  {
+        //This looks disgusting AAAAAAAAAAAAAAA... But it works :3
+
+        message.reply(`${languages(guild, 'RPS_C')}`).then(() => {
+            message.channel.awaitMessages(response => response.content === `${languages(guild, 'RPS_P')}` || response.content === `${languages(guild, 'RPS_P2')}` || response.content === `${languages(guild, 'RPS_T')}`,  {
                 max: 1,
                 time: 10000,
                 errors: ['time'],
             }).then((collected) => {
                 let response = collected.first().content.toLowerCase();
-                if (response === "pedra" && rpsChoice == "tesoura") {
-                    message.reply("Tsc... Quem diria que pedra quebra ferro.");
+                if (response === `${languages(guild, 'RPS_P')}` && rpsChoice == `${languages(guild, 'RPS_T')}`) {
+                    message.reply(`${languages(guild, 'RPS_A')}`);
                     message.channel.send(process.env.ANGWY);
-                    message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
-                } else if (response === "papel" && rpsChoice == "pedra") {
-                    message.reply("Droga! Só porquê eu achei que você escolheria tesoura");
+                    message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`);
+                } else if (response === `${languages(guild, 'RPS_P2')}` && rpsChoice == `${languages(guild, 'RPS_P2')}`) {
+                    message.reply(`${languages(guild, 'RPS_A1')}`);
                     message.channel.send(process.env.OHNO);
-                    message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
-                } else if (response === "tesoura" && rpsChoice == "papel") {
-                    message.reply("Dessa vez eu perdi, mas juro na próxima ganhar!...");
+                    message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`);
+                } else if (response === `${languages(guild, 'RPS_T')}` && rpsChoice == `${languages(guild, 'RPS_P2')}`) {
+                    message.reply(`${languages(guild, 'RPS_A2')}`);
                     message.channel.send(process.env.POUT);
-                    message.channel.send(`Eu escolhi ${rpsChoice} e você ${response}...`);
+                    message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`);
                 } else if (response  === rpsChoice) {
-                    message.reply("Hmm, parece que empatou -Ufa-, quer tentar novamente?");
+                    message.reply(`${languages(guild, 'RPS_A3')}`);
                     message.channel.send(process.env.SHRUG)
-                    message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`);
+                    message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`);
                 } else {
-                    message.reply("Haha! Você perdeu, eu saí vitoriosa! Hoje terá torta na janta heh");
+                    message.reply(`${languages(guild, 'RPS_A4')}`);
                     message.channel.send(process.env.SMUG) 
-                    message.channel.send(`Eu escolhi ${rpsChoice} e você escolheu ${response}`)
+                    message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`)
                 }
             }).catch(() => {
-                message.reply("Você não deu um resposta válida, injusto!\n||Meu criador não quer que você saiba, mas, se você escrever a primeira letra maiúscula, eu não consigo ler o que você escreveu..||");
+                message.reply(`${languages(guild, 'RPS_ERR')}`);
             
             });
         });

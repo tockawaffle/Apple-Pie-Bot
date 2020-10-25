@@ -1,17 +1,19 @@
 const { MessageEmbed} = require("discord.js");
-require('dotenv').config();
+const languages = require('../../languages/languages')
 
 module.exports = {
     run: async(client, message) => {
 
+        const { guild } = message
+
         if(message.author.bot) return;
 
         if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) {
-            return message.channel.send("Eu não tenho permissão para isso. Habilite a permissão 'Gerenciar Canais' em meu cargo para que eu possa concluir o comando!");
+            return message.channel.send(`${languages(guild, 'L_C')}`);
         }
 
         if(!message.member.hasPermission('MANAGE_CHANNELS')) {
-            return message.reply('Hmmm, você não tem permissão para isso! ' + process.env.SHRUG)
+            return message.reply(`${languages(guild, 'SM_C')} ` + process.env.SHRUG)
         }
         const {MessageEmbed} = require('discord.js')
         var args = message.content.substr(1).split(/ +/);
@@ -20,18 +22,17 @@ module.exports = {
 
             const {guild} = message
             const embed = new MessageEmbed()
-                .setTitle('Ação: Slowmode.')
+                .setTitle(`${languages(guild, 'SM1_C')}`)
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
                 .setThumbnail(guild.iconURL({ dynamic: true }))
-                .setDescription('Slowmode foi adicionado em todos os chats!')
+                .setDescription(`${languages(guild, 'SM2_C')}`)
                 .addFields(
                     {
-                        name: `O slowmode foi adicionado com a espera de`,
+                        name: `${languages(guild, 'SM3_C')}`,
                         value: `${args[1]}s!`
                     }
                 )
                 .setColor('RANDOM')
-                .setFooter('Se quiser retirar o slowmode, use o comando -smr, ou o mesmo comando mas com um 0 na frente!')
             message.channel.send(embed)
             message.guild.channels.cache.forEach(channels => {
                 if(channels.type === 'text') {
@@ -39,7 +40,7 @@ module.exports = {
                 }
             })
         } else {
-            message.reply('Hey, especifique um número! (Entre segundos)')
+            message.reply(`${languages(guild, 'SM4_C')}`)
         }
     },
     aliases: ['sm', 'slow', 'smd'],

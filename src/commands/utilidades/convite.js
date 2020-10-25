@@ -1,16 +1,17 @@
 const { MessageEmbed } = require('discord.js')
+const languages = require('../../languages/languages')
 
 module.exports = {
     run: (client, message, args) => {
         if(message.author.bot) return;
         const { guild } = message
         const embed = new MessageEmbed()
-            .setDescription('Olá, [este](https://discord.com/oauth2/authorize?client_id=762077336812126228&scope=bot&permissions=2112351350) é o convite que me fará entrar em seu servidor!')
+            .setDescription(`[${languages(guild, 'I_C')}](https://discord.com/oauth2/authorize?client_id=762077336812126228&scope=bot&permissions=2112351350) ${languages(guild, 'I2_C')}`)
             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
             .setColor('RANDOM')
-            .setFooter('Não me dê a permissão de Administrador!')
-            message.channel.send(embed)
+            .setFooter(`${languages(guild, 'I3_C')}`)
+        message.channel.send(embed)
     },
-    aliases: ['cvt'],
+    aliases: ['cvt', 'invite'],
     description: ''
 }

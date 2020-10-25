@@ -1,11 +1,13 @@
 module.exports = {
     run: async(client, message) => {
+      const languages = require('../../languages/languages')
       const { MessageEmbed } = require('discord.js')
       if(message.author.bot) return;
       const args = message.content.split(' ');
+      const { guild } = message
 
       if(args.length > 2) {
-        message.channel.send(`Ops, algo deu errado!\nComo usar: -avatar <user_id> | -avatar @mention | -avatar (Sem nenhuma menção ou ID, irá mostrar o seu avatar!)`);
+        message.channel.send(`${languages(guild, 'AV_E1')}`);
       } else if(args.length === 2) {
 
         const member = message.mentions.members.size === 1 ? 
@@ -16,14 +18,14 @@ module.exports = {
           const { guild } = message;
           const embed = new MessageEmbed()
             .setTitle(`🔍${message.author.username}`)
-            .setDescription(`[Esta](${member.user.avatarURL({format: 'png', dynamic: true, size:2048})}) é a imagem que o usuário utiliza no momento`)
+            .setDescription(`[${languages(guild, 'AVATAR_C')}](${member.user.avatarURL({format: 'png', dynamic: true, size:2048})}) ${languages(guild, 'AV_C2')}`)
             .setImage(member.user.avatarURL({format: 'png', dynamic: true, size: 2048 }))
             .setColor('RANDOM')
           message.channel.send(embed);
 
         } else {
             
-          message.channel.send(`Eu não consegui encontrar o usuario com o ID ou Menção: ${args[1]} no forno, será que ele foi levado para a cozinha?`);
+          message.channel.send(`${languages(guild, 'AV_E2')} " ${args[1]} " ${languages(guild, 'AV_E2_1')}`);
 
         }
 
@@ -35,7 +37,7 @@ module.exports = {
 
           .setTitle(`🔍${message.author.username}`)
 
-          .setDescription(`[Esta](${message.author.displayAvatarURL({format: 'png', dynamic: true, size:2048})}) é a imagem que você utiliza no momento`)
+          .setDescription(`[${languages(guild, 'AVATAR_C')}](${message.author.displayAvatarURL({format: 'png', dynamic: true, size:2048})}) ${languages(guild, 'AV_C')}`)
 
           .setImage(message.author.displayAvatarURL({format: 'png', dynamic: true, size: 2048 }))
 

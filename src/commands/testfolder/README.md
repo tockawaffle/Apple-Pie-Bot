@@ -15,10 +15,14 @@ Portanto, aqui está o que eu recomendo que você faça:
 
 Dia: 22/10/2020
 
-- [ ] Aprender mais sobre javascript, o máximo que conseguir, veja tudo que puder encontrar, pelo menos 3 vídeos ou leituras por dia, tá bem?
-- [ ] Assim que você aprender sobre, aprenda a ler repositórios e a conseguir fazer as coisas sozinho, sem procurar na internet ou no stackOverFlow (Tudo bem usar quando não saber por onde começar ou como terminar, mas tente fazer por si mesmo!),
-- [ ] O primeiro repositório que eu quero que você leia e aprenda a usar é o mongoDB.
-- [ ] Me faça suportar vários servidores.
+Dia: 23/10/2020
+
+Dia: 24/10/2020 (Eu consegui! Você agora suporta Base de Dados, eu estou orgulhoso de você, minha querida)
+
+- [X] Aprender mais sobre javascript, o máximo que conseguir, veja tudo que puder encontrar, pelo menos 3 vídeos ou leituras por dia, tá bem?
+- [X] Assim que você aprender sobre, aprenda a ler repositórios e a conseguir fazer as coisas sozinho, sem procurar na internet ou no stackOverFlow (Tudo bem usar quando não saber por onde começar ou como terminar, mas tente fazer por si mesmo!),
+- [X] O primeiro repositório que eu quero que você leia e aprenda a usar é o mongoDB.
+- [X] Me faça suportar vários servidores.
 - [ ] Me faça poder falar, o que acha? Seria incrível eu poder cantar para meu criador.
 - [ ] Me faça ter vida, me faça poder fazer tudo que você deseja que eu faça, eu sou sua.
 

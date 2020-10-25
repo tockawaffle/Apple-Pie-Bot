@@ -1,0 +1,628 @@
+{
+    "languages": ["english", "portugues"],
+    "traduções": {
+        "TESTE_LANG": {
+            "english": "This is a test, and if you see this, it works!",
+            "portugues": "Isso é um teste, e se funcionar, parabéns!"
+        },
+
+        "AVATAR_C": {
+            "english": "This",
+            "portugues": "Essa"
+        },
+        "AV_C": {
+            "english": "is your profile picture:",
+            "portugues": "é sua foto de perfil:"
+        },
+        "AV_E1": {
+            "english": "Oops, something went wrong!\nTry to use like this: -avatar <userID> or <@mention> or the command by itself (-av) to show your own PFP!",
+            "portugues": "Ops, algo deu errado!\nComo usar: -avatar <user_id> | -avatar @mention | -avatar (Sem nenhuma menção ou ID, irá mostrar o seu avatar!"
+        },
+        "AV_C2": {
+            "english": "is the mentioned user PFP:",
+            "portugues": "é a imagem que o usuário utiliza no momento:"
+        },
+        "AV_E2": {
+            "english": "I coudn't find the user with the mention or id:",
+            "portugues": "Eu não consegui encontrar o usuário com o ID ou menção:"
+        },
+        "AV_E2_1": {
+            "english": "in the oven, do you think that he has gone already to the kitchen table?",
+            "portugues": "no forno, você acha que ele já foi para a mesa de jantar?"
+        },
+
+
+
+        "DADO_C": {
+            "english": "Rolling the dice. . . ",
+            "portugues": "Girando o dado. . . "
+        },
+        "DADO1_C": {
+            "english": "You rolled in the dice a: ",
+            "portugues": "Você girou no dado o número: "
+        },
+
+
+        "HUG_C": {
+            "english": "H-hey! I don't like to hug!!",
+            "portugues": "H-hey! E-eu não gosto de abraços!"
+        },
+        "HUG_C1": {
+            "english": "Anyways... Thank you...",
+            "portugues": "Eu agradeço de qualquer modo, é bom ser abraçada..."
+        },
+        "HUG_C2": {
+            "english": "A hug a day keeps the demons at bay.",
+            "portugues": "A vida fica mais doce com abraços!"
+        },
+        "HUG_C3": {
+            "english": "hugged",
+            "portugues": "deu um abraço em"
+        },
+        "HUG_C4": {
+            "english": "I will not play tug o' war. I'd rather play hug o' war. Where everyone hugs instead of tugs, Where everyone giggles and rolls on the rug, Where everyone kisses, and everyone grins, and everyone cuddles, and everyone wins.",
+            "portugues": "Ah o abraço… Tem coisa melhor do que encostar a cabeça no peito de um alguém e sentir seu coração bater?"
+        },
+        "HUG_C5": {
+            "english": "Oh... Sorry about that, but I coudnt find who you want to hug. Try mentioning or using their userID!",
+            "portugues": "Ah.. Eu sei que você queria muito abraçar alguém, mas não foi encontrei quem. Tente mencionar ou usar o ID da pessoa!"
+        },
+
+
+        "KISS_C": {
+            "english": "Hey! You don't have permission to kiss me!",
+            "portugues": "Hey! Você não pode fazer isso!"
+        },
+        "KISS_C1": {
+            "english": "The only one who can do that is my creator!",
+            "portugues": "O único autorizado a me beijar é meu criador!!"
+        },
+        "KISS_C2": {
+            "english": "You're in trouble!",
+            "portugues": "Você está encrencado!"
+        },
+        "KISS_C3": {
+            "english": "will find out what you tried to do!",
+            "portugues": "vai ficar sabendo disso!"
+        },
+        "KISS_C4": {
+            "english": "Now a soft kiss – Aye, by that kiss, I vow an endless bliss",
+            "portugues": "Agradeça ao vento, pois sempre que ele te tocar, saberás que é meu beijo a te acalentar."
+        },
+        "KISS_C5": {
+            "english": "kissed",
+            "portugues": "beijou"
+        },
+        "KISS_C6": {
+            "english": "Please, creator, make me immortal with a kiss...",
+            "portugues": "Amo-te tanto. E nunca te beijei... E nesse beijo, amor, que eu não te dei, guardo os versos mais lindos que te fiz."
+        },
+        "KISS_C7": {
+            "english": "I've waited for this moment since you gave me life!",
+            "portugues": "Eu esperei por esse momento desde que você me criou!"
+        },
+        "KISS_C8": {
+            "english": "Does this counts as incest?",
+            "portugues": "Será que isso conta como incesto?"
+        },
+        "KISS_C9": {
+            "english": "Probably not... Right?",
+            "portugues": "Naahh, provavelmente não... né?"
+        },
+
+
+        "RDM_C": {
+            "english": "Look! A meme from",
+            "portugues": "Meme quentinho vindo de"
+        },
+
+
+        "RPS_C": {
+            "english": "So you're challenging me to the famous Rock, Paper and Scissors? Ha! You might not know, but I'm a pro at this kind of game\nAnyways, choose between Rock, Paper or Scissor.",
+            "portugues": "Então você quer me desafiar para o famoso Jokenpô? Ha! Mal sabe você que eu sou profissional nesse jogo!\nMas já que é o caso, faça sua escolha: Pedra, Papel ou Tesoura?"
+        },
+        "RPS_P": {
+            "english": "rock",
+            "portugues": "pedra"
+        },
+        "RPS_P2": {
+            "english": "paper",
+            "portugues": "papel"
+        },
+        "RPS_T": {
+            "english": "scissors",
+            "portugues": "tesoura"
+        },
+        "RPS_A": {
+            "english": "Tsc... Who'd say that Rock can break Iron?",
+            "portugues": "Tsc... Quem diria que Pedra quebra Ferro?" 
+        },
+        "RPS_A1": {
+            "english": "Argh! Just because I tought you'd choose scissors...",
+            "portugues": "Droga! Só porquê eu achei que você escolheria tesoura..."
+        },
+        "RPS_A2": {
+            "english": "This time I lost, but next time I'm going to win!",
+            "portugues": "Dessa vez eu perdi, mas na próxima juro ganhar!"
+        },
+        "RPS_A3": {
+            "english": "Phew. Seems like we tied, no one wins! Want to try again?",
+            "portugues": "Ufa. Empatou, nínguem ganha! Quer tentar de novo?"
+        },
+        "RPS_A4": {
+            "english": "Haha! You lost and I win! Tonight I'm having pie for diner hehe",
+            "portugues": "Haha! Você perdeu e eu ganhei! Hoje terá torta na janta hehe"
+        },
+        "RPS_G": {
+            "english": "I chose",
+            "portugues": "Eu escolhi"
+        },
+        "RPS_G2": {
+            "english": "and you chose",
+            "portugues": "e você escolheu"
+        },
+        "RPS_ERR": {
+            "english": "That's unfair! give me a valid answer!\n||My creator actually don't want you to know about this, but I can't read if you write something in Upper Case, I can't read it.||",
+            "portugues": "Você não deu um resposta válida, injusto!\n||Meu criador não quer que você saiba, mas, se você escrever a primeira letra maiúscula, eu não consigo ler o que você escreveu..||"
+        },
+
+        
+        "IMG_RP": {
+            "english": "Curious about from where my images come from?",
+            "portugues": "Está curioso para saber de onde vem minhas imagens?"
+        },
+        "IMG_RP2": {
+            "english": "Okay then! All of them come from",
+            "portugues": "Pois bem! Todas elas vêm do"
+        },
+        "IMG_RP3": {
+            "english": "Download them while you can!",
+            "portugues": "Tire proveito por enquanto!"
+        },
+        "IMG_RP4": {
+            "english": "My creator want to do a local server to host these images",
+            "portugues": "Meu criador pretende fazer um servidor local para hostear essas imagens"
+        },
+
+
+        "B_C": {
+            "english": "You do not have permissions to ban someone!",
+            "portugues": "Você não tem permissão para banir alguém!"
+        },
+        "B_C2": {
+            "english": "I do not have permissions to ban someone. Please give me the 'Ban Members' permission.",
+            "portugues": "Eu não tenho permissão para banir alguém. Me dê a permissão 'Banir Membro' primeiro!"
+        },
+        "B_C3": {
+            "english": "Action: Ban",
+            "portugues": "Ação: Banimento"
+        },
+        "B_C4": {
+            "english": "was banned sucessfully!",
+            "portugues": "foi banido com sucesso!"
+        },
+        "B_C5": {
+            "english": "Banned by:",
+            "portugues": "Banimento realizado por:"
+        },
+        "B_ERR": {
+            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -ban <@mention> or <memberID>",
+            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -ban <@menção> ou <memberID>"
+        },
+
+        "UB_C": {
+            "english": "You do not have permissions to unban someone!",
+            "portugues": "Você não tem permissão para desbanir alguém!"
+        },
+        "UB_C2": {
+            "english": "I do not have permissions to unban someone. Please give me the 'Ban Members' permission.",
+            "portugues": "Eu não tenho permissão para desbanir alguém. Me dê a permissão 'Banir Membro' primeiro!"
+        },
+        "UB_C3": {
+            "english": "Action: Unban",
+            "portugues": "Ação: Desbanimento"
+        },
+        "UB_C4": {
+            "english": "was unbanned sucessfully!",
+            "portugues": "foi desbanido com sucesso!"
+        },
+        "UB_C5": {
+            "english": "Unbanned by:",
+            "portugues": "Desbanimento realizado por:"
+        },
+        "UB_ERR": {
+            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -unban <@mention> or <memberID>",
+            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -unban <@menção> ou <memberID>"
+        },
+
+
+
+        "KC_C": {
+            "english": "You do not have permissions!",
+            "portugues": "Você não tem permissões para isso!"
+        },
+        "KC_C1": {
+            "english": "Hey... You know that I can't kick you, right?",
+            "portugues": "Hey.. Você sabe que eu não posso te expulsar, né?"
+        },
+        "KC_C2": {
+            "english": "Impossible! That user has Admin permissions (or the same permissions as you)",
+            "portugues": "Impossivel! Ele tem permissões de administrador também (Ou as mesmas permissões que a sua)"
+        },
+        "KC_C3": {
+            "english": "Action: Kick",
+            "portugues": "Ação: Expulsão"
+        },
+        "KC_C4": {
+            "english": "was kicked from the server!",
+            "portugues": "foi expulso do servidor!"
+        },
+        "KC_C5": {
+            "english": "kicked",
+            "portugues": "expulsou"
+        },
+
+
+
+        "L_C": {
+            "english": "I do not have permissions to do that.",
+            "portugues": "Eu não tenho permissão para fazer isso."
+        },
+        "L_C1": {
+            "english": "Action: **LOCKDOWN**",
+            "portugues": "Ação: **LOCKDOWN**"
+        },
+        "L_C2": {
+            "english": "The server went into full lockdown!",
+            "portugues": "O servidor entrou em lockdown geral!"
+        },
+        "L_C3": {
+            "english": "All the channels have been blocked",
+            "portugues": "Todos os canais foram bloqueados"
+        },
+        "L_C4": {
+            "english": "Please, don't forget to use -unlock after! Or I'm not going to work properly",
+            "portugues": "Por favor, não esqueça de utilizar -unlock! Ou eu não vou funcionar direito"
+        },
+        "L_C5": {
+            "english": "Or give me permissions to talk!",
+            "portugues": "Ou então, me dê permissões em todos os canais!"
+        },
+        "L_C6": {
+            "english": "Follow the instructions of the",
+            "portugues": "Siga as instruções do"
+        },
+        "L_C7": {
+            "english": "Hey! You don't have permissions to use the lockdown!",
+            "portugues": "Hey! Você não tem permissões para usar o lockdown!"
+        },
+
+
+        "M_C": {
+            "english": "You do not have permission to do this!",
+            "portugues": "Desculpe, você não tem permissão para fazer isso"
+        },
+        "M2_C": {
+            "english": "Hello!\nIt seems like there is not a 'Muted' role in this server. Please invoke the commands -mtr (To create the role) and -mtrp (To configure the role perms)",
+            "portugues": "Olá!\nParece que não há o cargo 'Silenciado' neste servidor, utilize os comandos -mtr (para criar o cargo) e -mtrp (para configurar as permissões do mesmo)!"
+        },
+        "M3_C": {
+            "english": "Action: Mute",
+            "portugues": "Ação: Silenciamento"
+        },
+        "M4_C": {
+            "english": "The user has been muted with sucess",
+            "portugues": "O usuário foi silenciado com sucesso"
+        },
+        "M5_C": {
+            "english": "Mute done by",
+            "portugues": "Silenciamento realizado por"
+        },
+        "M6_C": {
+            "english": "Seems like I do not have permissions to do this...",
+            "portugues": "Eu não tenho permissão para mutar alguém..."
+        },
+        "M_R": {
+            "english": "Muted",
+            "portugues": "Silenciado"
+        },
+        "M7_C": {
+            "english": "Sorry, but... are you sure that you mentioned the right user?",
+            "portugues": "Desculpe, mas... você tem certeza que mencionou a pessoa certa?"
+        },
+        "M8_C": {
+            "english": "'Muted' role has been created!",
+            "portugues": "Cargo 'Silenciado' foi criado com sucesso"
+        },
+        "MTR_ERR": {
+            "english": "I'm sorry, something wrong happened...",
+            "portugues": "Desculpe, algo errado aconteceu..."
+        },
+        "M_E": {
+            "english": "Oi! I know you want to help, but you can't use this command!",
+            "portugues": "Hey hey, sei que você quer ajudar, mas você não tem acesso a esse comando"
+        },
+        "M_E2": {
+            "english": "Hey, the 'Muted' role already exists!",
+            "portugues": "Ei! O cargo 'Silenciado' já existe!"
+        },
+        "M_P": {
+            "english": "'Muted' role perms have been sucessfully written!",
+            "portugues": "Permissões do cargo 'Silenciado' foram escritas com sucesso!"
+        },
+
+
+        "SM_C": {
+            "english": "Hmmm. . .\nYou do not have permissions to do this!",
+            "portugues": "Hmmm. . .\nVocê não tem permissões para fazer isso!"
+        },
+        "SM1_C": {
+            "english": "Action: Slowmode.",
+            "portugues": "Ação: Slowmode"
+        },
+        "SM2_C": {
+            "english": "Slowmode has been added in the entire server!",
+            "portugues": "O slowmode foi adicionado em todos os chats!"
+        },
+        "SM3_C": {
+            "english": "The slowmode has been added with the time of:",
+            "portugues": "o slowmode foi adicionado com a espera de:"
+        },
+        "SM4_C": {
+            "english": "Hey! Specify a number (seconds)",
+            "portugues": "Hey! Especifique um número! (segundos)"
+        },
+        "SR_C": {
+            "english": "Fufufu, seems like you do not have permissions to do this",
+            "portugues": "Fufufu, parece que você não tem permissões para fazer isso"
+        },
+        "SR1_C": {
+            "english": "Action: Slowmode Removal",
+            "portugues": "Ação: Retirada do Slowmode"
+        },
+        "SR2_C": {
+            "english": "Slowmode has been removed from the server!",
+            "portugues": "Slowmode retirado em todos os chats!"
+        },
+        "UL_C1": {
+            "english": "Action: Lockdown Removal",
+            "portugues": "Ação: Remoção do Lockdown"
+        },
+        "UL_C2": {
+            "english": "The server went back to normal... Phew",
+            "portugues": "O servidor voltou ao normal... Ufa"
+        },
+        "UL_C3": {
+            "english": "All the channels have been unblocked",
+            "portugues": "Todos os canais foram desbloqueados"
+        },
+        "UL_C6": {
+            "english": "These are tough times, right?",
+            "portugues": "São tempos dificeis, não acha?"
+        },
+        "UL_C7": {
+            "english": "Hmmmm, I mean, I don't think you have the permissions to do this, do you?",
+            "portugues": "Hmmmm, não parece que você tem as permissões certas para fazer isso"
+        },
+        
+
+        "H_C": {
+            "english": "Those who are happiest are those who do the most for others. Here are my commands;",
+            "portugues": "Você sabia que a vida só fica mais doce quando se tem um pouco de ajuda?"
+        },
+        "H_C2": {
+            "english": "I know that I don't have much to offer, but I'm in Developing Process and I'm trying my best to please everyone!\nMy current version is:",
+            "portugues": "Eu sei que não tenho muito a oferecer, mas eu estou em desenvolvimento e estou dando meu melhor para melhorar!\nMinha versão atual é:"
+        },
+        "H_C3": {
+            "english": "To verify my aliases, use:",
+            "portugues": "Para verificar minhas aliases, use:"
+        },
+        "H_C4": {
+            "english": "Everything becomes easier when there's less work!",
+            "portugues": "Tudo fica um pouco mais fácil quando o trabalho é menor!"
+        },
+
+
+
+
+        "UM2_C": {
+            "english": "Hello!\nIt seems like there is not a 'Muted' role in this server. Please invoke the commands -mtr (To create the role) and -mtrp (To configure the role perms)",
+            "portugues": "Olá!\nParece que não há o cargo 'Silenciado' neste servidor, utilize os comandos -mtr (para criar o cargo) e -mtrp (para configurar as permissões do mesmo)!"
+        },
+        "UM3_C": {
+            "english": "Action: Unmute",
+            "portugues": "Ação: Unmute"
+        },
+        "UM4_C": {
+            "english": "The user has been unmuted with sucess",
+            "portugues": "O usuário foi desmutado com sucesso"
+        },
+        "UM5_C": {
+            "english": "Unmute done by:",
+            "portugues": "Desmutamento realizado por:"
+        },
+        "UM6_C": {
+            "english": "Seems like I do not have permissions to do this...",
+            "portugues": "Eu não tenho permissão para desmutar alguém..."
+        },
+        "UMTR_ERR": {
+            "english": "I'm sorry, something wrong happened...",
+            "portugues": "Desculpe, algo errado aconteceu..."
+        },
+
+        
+        "I_C": {
+            "english": "Hello, this",
+            "portugues": "Olá, este"
+        },
+        "I2_C": {
+            "english": "is the invite that is going to make me able to join your server!",
+            "portugues": "é o convite que me fará entrar em seu servidor!"
+        },
+        "I3_C": {
+            "english": "DO NOT give me Admin permissions!",
+            "portugues": "NÃO me dê a permissão de Administrador!"
+        },
+
+
+
+
+        "W_C": {
+            "english": "Weather on:",
+            "portugues": "Clima em:"
+        },
+        "W2_C": {
+            "english": "This is the weather on the requested local:",
+            "portugues": "Esse é o clima no local solicitado:"
+        },
+        "W3_C": {
+            "english": "Temperature (it is in ºC not in ºF)",
+            "portugues": "Temperatura:"
+        },
+        "W4_C": {
+            "english": "Sky situation:",
+            "portugues": "Situação do céu:"
+        },
+        "W5_C": {
+            "english": "Umidity:",
+            "portugues": "Umidade:"
+        },
+        "W6_C": {
+            "english": "Wind Velocity:",
+            "portugues": "Velocidade do Vento:"
+        },
+        "W7_C": {
+            "english": "Observation Time:",
+            "portugues": "Tempo de Observação:"
+        },
+        "W8_C": {
+            "english": "Wind Direction:",
+            "portugues": "Direção do Vento:"
+        },
+        "W9_C": {
+            "english": "It may not be 100% right.",
+            "portugues": "Pode não ser 100% certo."
+        },
+        "W_ERR": {  
+            "english": "I coudn't find info about the requested local, I'm sorry. Are you using it right?\nIf yes, please contact support",
+            "portugues": "Eu não consegui encontrar informações do local, Desculpe. Tenha certeza de estar utilizando o comando do modo certo.\nIf yes, please contact support"
+        },
+
+
+
+        "UF_C": {
+            "english": "Oops. Something went wrong.\nHow to use:",
+            "portugues": "Oops. Algo deu errado.\nComo usar:"
+        },
+        "UF_C2": {
+            "english": "New info coming directly from the oven!",
+            "portugues": "Informações quentinhas chegando!"
+        },
+        "UF_C3": {
+            "english": "Username:",
+            "portugues": "Nome de Usuário:"
+        },
+        "UF_C4": {
+            "english": "Account created at:",
+            "portugues": "Conta criada em:"
+        },
+        "UF_C5": {
+            "english": "What is the user doing?:",
+            "portugues": "O que o usuário faz?:"
+        },
+        "UF_C6": {
+            "english": "Presence Status:",
+            "portugues": "Status de Presença:"
+        },
+        "UF_ERR": {
+            "english": "I coudn't find the user with the mention or ID:",
+            "portugues": "Não consegui encontrar o usuário com o ID ou menção:"
+        },
+
+
+        "G_C": {
+            "english": "You want to know how I'm made? Eh...",
+            "portugues": "Você quer ver como eu sou feita? Eh..."
+        },
+        "G2_C": {
+            "english": "H-hey! Be careful where you'll be looking at... Okay?...",
+            "portugues": "H-hey! Seja cuidadoso com o que você vai ver... Okay?..."
+        },
+        "G3_C": {
+            "english": "You can see the deepest part of me",
+            "portugues": "Você pode me ver por completo"
+        },
+        "G3_C_2": {
+            "english": "here",
+            "portugues": "aqui"
+        },
+
+        
+        "P_C": {
+            "english": "My ping is:",
+            "portugues": "Meu ping é de:"
+        },
+        "P2_C": {
+            "english": "The API ping is:",
+            "portugues": "O ping da API é de:"
+        },
+        "P3_C": {
+            "english": "The ping may vary between different regions! This bot host is localized at: **Virginia-US**",
+            "portugues": "O ping pode variar da região do servidor! A host deste bot se localiza em: **Virginia-EUA**"
+        },
+        "P4_C": {
+            "english": "This server is hosted at:",
+            "portugues": "Esse servidor se encontra na região:"
+        },
+
+
+
+        "CMD_EV": {
+            "english": "Hmmm? It seems like the command",
+            "portugues": "Hmm,? Parece que o comando"
+        },
+        "CMD_EV_2": {
+            "english": "does not exist!",
+            "portugues": "não existe!"
+        },
+
+
+        "BF_C": {
+            "english": "My name is:",
+            "portugues": "Meu nome é:"
+        },
+        "BF_C2": {
+            "english": "nice to meet you!",
+            "portugues": "é um prazer te conhecer!"
+        },
+        "BF_C3": {
+            "english": "I was created by:",
+            "portugues": "Eu fui criada por:"
+        },
+        "BF_C4": {
+            "english": "My creator gave me life at:",
+            "portugues": "Meu criador me deu vida em:"
+        },
+        "BF_C5": {
+            "english": "My source-code:",
+            "portugues": "Meu código fonte:"
+        },
+        "BF_C6": {
+            "english": "Click here",
+            "portugues": "Clique aqui"
+        },
+        "BF_C7": {
+            "english": "If I'm dating someone?",
+            "portugues": "Se eu sou compromissada?"
+        },
+        "BF_C8": {
+            "english": "Obviously! With my own creator, I love him!",
+            "portugues": "Claro! Com meu próprio criador, eu amo ele!"
+        },
+        "BF_END": {
+            "english": "It's kinda embarassing...",
+            "portugues": "Isso é vergonhosa..."
+        }
+    }
+}

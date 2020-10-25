@@ -1,5 +1,7 @@
 module.exports = {
     run: async(client, message, args) => {
+        const languages = require('../../languages/languages')
+        const { guild } = message
         const { MessageEmbed } = require('discord.js')
         const randomPuppy = require('random-puppy')
 
@@ -10,7 +12,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
             .setImage(img)
-            .setTitle(`Meme quentinho vindo de /r/${random}`)
+            .setTitle(`${languages(guild, 'RDM_C')} /r/${random}`)
             .setURL(`https://reddit.com/r/${random}`);
 
         message.channel.send(embed);

@@ -2,6 +2,7 @@
 //Idiot and inexperienced way to do this, but it is going to work anyways
 module.exports = {
     run: async(client, message, args) => {
+        const languages = require('../../languages/languages')
         const {MessageEmbed} = require('discord.js');
         const guild = message.guild;
         const owner = client.users.cache.get('723185654044950539');
@@ -22,11 +23,11 @@ module.exports = {
             if(me & owner1) {
                 const embed = new MessageEmbed()
                     .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
-                    .setTitle('Finalmente você me beijou!')
-                    .setDescription('Eu esperei isso desde o primeiro momento que você me criou!')
+                    .setTitle(`${languages(guild, 'KISS_C6')}`)
+                    .setDescription(`${languages(guild, 'KISS_C7')}`)
                     .setColor('E7B985')
                     .setImage('https://i.pinimg.com/originals/69/fb/4b/69fb4b69e9b66342adcab3a0065ac579.gif')
-                    .addField(`Será que isso conta como incesto? ${process.env.THNK}`, 'Naaah, provavelmente não.... né?')
+                    .addField(`${languages(guild, 'KISS_C8')} ${process.env.THNK}`, `${languages(guild, 'KISS_C9')}`)
                 message.channel.send(embed)
             }
         }catch(err) {
@@ -38,11 +39,11 @@ module.exports = {
             if(me) {
                 const embed = new MessageEmbed()
                     .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
-                    .setTitle('Hey! Você não pode fazer isso!')
-                    .setDescription('O único autorizado a me beijar é meu criador!!')
+                    .setTitle(`${languages(guild, 'KISS_C')}`)
+                    .setDescription(`${languages(guild, 'KISS_C1')}`)
                     .setImage('https://i.pinimg.com/originals/fe/1e/3a/fe1e3a486fb347929c0cebd1df3ef170.gif')
                     .setColor('RANDOM')
-                    .addField('Você está encrencado!', `${owner.username} vai ficar sabendo disso! ${process.env.BLUSHY4}`)
+                    .addField(`${languages(guild, 'KISS_C2')}`, `${owner.username} ${languages(guild, 'KISS_C3')} ${process.env.BLUSHY4}`)
                 message.channel.send(embed)
             } 
         }catch(err) {
@@ -54,8 +55,8 @@ module.exports = {
             if(user) {
                 const embed = new MessageEmbed()
                     .setAuthor(`${guild.name}`, guild.iconURL({dynamic: true}))
-                    .setTitle('Beijos são tão doces quanto qualquer outro doce!')
-                    .setDescription(`${message.author.username} beijou ${user.username} ${process.env.TOHRUYES}`)
+                    .setTitle(`${languages(guild, 'KISS_C4')}`)
+                    .setDescription(`${message.author.username} ${languages(guild, 'KISS_C5')} ${user.username} ${process.env.TOHRUYES}`)
                     .setImage(random)
                     .setColor('RANDOM');
                 message.channel.send(embed)

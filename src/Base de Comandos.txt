@@ -1,0 +1,10 @@
+const languages = require('../../languages/languages')
+const { MessageEmbed } = require('discord.js')
+
+module.exports = {
+    run: async(client, message, args) => {
+        const { guild } = message;
+
+        
+    }, aliases: ['<Aliases>'], description: '<Descrição>'
+}

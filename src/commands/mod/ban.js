@@ -1,8 +1,7 @@
-const discord = require("discord.js");
-
 module.exports = {
     run: async (client, message) => {
 
+        const languages = require('../../languages/languages')
         const { guild } = message
         const { discord } = require("discord.js");
         const { MessageEmbed } = require('discord.js')
@@ -10,10 +9,10 @@ module.exports = {
         
         if(message.author.bot) return;
         if(!message.member.hasPermission("BAN_MEMBERS")) {
-            return message.channel.send(`**${message.author.username}**, Você não tem permissão para banir alguém!`)
+            return message.channel.send(`**${message.author.username}**, ${languages(guild, 'B_C')}`)
         }
         if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
-            return message.channel.send(`**${message.author.username}**, Eu não tenho permissão para banir!`)
+            return message.channel.send(`**${message.author.username}**, ${languages(guild, 'B_C2')}`)
         }
         if (!user) {
             try {
@@ -23,25 +22,25 @@ module.exports = {
                 let bannedMember = await message.guild.members.ban(memberId)
                     if(bannedMember) {
                         const embed = new MessageEmbed()
-                        .setTitle('Ação: Banimento.')
-                        .setDescription(`${bannedMember.tag} foi banido(a) com sucesso!`)
+                        .setTitle(`${languages(guild, 'B_C3')}`)
+                        .setDescription(`${bannedMember.tag} ${languages(guild, 'B_C4')}`)
                         .setColor('RANDOM')
                         .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                        .setFooter(`Banimento realizado por: ${message.author.tag}`);
+                        .setFooter(`${languages(guild, 'B_C5')} ${message.author.tag}`);
                         message.channel.send(embed)
                     }
             } catch (err) {
-                message.reply('Hmmmm, algo não parece certo, você usou o comando corretamente?\nTente usar assim: -ban <@menção> ou -ban <@userID>')
+                message.reply(`${languages(guild, 'B_ERR')}`)
             }
             
         } else {
             await message.guild.members.ban(user)
             const embed = new MessageEmbed()
-                .setTitle('Ação: Banimento.')
-                .setDescription(`${user.tag} foi banido(a) com sucesso!`)
+                .setTitle(`${languages(guild, 'B_C3')}`)
+                .setDescription(`${user.tag} ${languages(guild, 'B_C4')}`)
                 .setColor('RANDOM')
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                .setFooter(`Banimento realizado por: ${message.author.tag}`);
+                .setFooter(`${languages(guild, 'B_C5')} ${message.author.tag}`);
                 message.channel.send(embed)
                 await message.guild.members.ban(user)
         }

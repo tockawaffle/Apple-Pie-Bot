@@ -1,13 +1,14 @@
 module.exports = {
     run: async(args, message, client) => {
 
+        const languages = require('../../languages/languages')
         const {MessageEmbed} = require('discord.js');
         const {guild} = message
         
         if(message.author.bot) return;
 
         if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) {
-            return message.channel.send("Eu não tenho permissão para isso. Habilite a permissão 'Gerenciar Canais' em meu cargo para que eu possa concluir o comando!");
+            return message.channel.send(`${languages(guild, 'L_C')}`);
         }
 
         if(message.member.hasPermission('MANAGE_CHANNELS')) {
@@ -18,23 +19,21 @@ module.exports = {
             ca.createOverwrite(message.guild.me, {SEND_MESSAGES: true})
 
             const embed = new MessageEmbed()
-                .setTitle('Ação: LOCKDOWN')
+                .setTitle(`${languages(guild, 'L_C1')}`)
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
                 .setThumbnail(guild.iconURL({ dynamic: true }))
-                .setDescription(`O server ${guild.name} entrou em lockdown!`)
-                .addField('Todos os canais foram bloqueados', `Por favor, não esqueça de utilizar -unlock!`)
-                .addField('Utilize o unlock **assim que puder**', 'Caso contrário, não funcionarei direito e as permissões de canais vão ficar todas bagunçadas!')
+                .setDescription(`${languages(guild, 'L_C2')}`)
+                .addField(`${languages(guild, 'L_C3')}`, `${languages(guild, 'L_C4')}`)
                 .setColor('RANDOM')
             message.channel.send(embed)
 
             const embed1 = new MessageEmbed()
-                .setTitle('Ação: LOCKDOWN')
+                .setTitle(`${languages(guild, 'L_C1')}`)
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
                 .setThumbnail(guild.iconURL({ dynamic: true }))
-                .setDescription(`O server ${guild.name} entrou em lockdown!`)
-                .addField('Todos os canais foram bloqueados', `Por favor, não esqueça de utilizar -unlock!`)
-                .addField('Utilize o unlock **assim que puder**', 'Caso contrário, não funcionarei direito e as permissões de canais vão ficar todas bagunçadas!')
-                .addField('Ou então, me dê permissões em todos os canais!', 'Siga as instruções do [GIF](https://i.pinimg.com/originals/3c/87/e4/3c87e4afe7fe0d834454e43cfd10c190.gif)(Ou aqui) abaixo:')
+                .setDescription(`${languages(guild, 'L_C2')}`)
+                .addField(`${languages(guild, 'L_C3')}`, `${languages(guild, 'L_C4')}`)
+                .addField(`${languages(guild, 'L_C5')}`, `${languages(guild, 'L_C6')} [GIF](https://i.pinimg.com/originals/3c/87/e4/3c87e4afe7fe0d834454e43cfd10c190.gif)(Ou aqui) abaixo:`)
                 .setImage('https://i.pinimg.com/originals/3c/87/e4/3c87e4afe7fe0d834454e43cfd10c190.gif')
                 .setColor('RANDOM')
             message.author.send(embed1) //I know. There is better ways to this, but anyways, this is the easiest way I found, I don't know how I'd change the code to make it better.
@@ -48,9 +47,9 @@ module.exports = {
             });
         };
         if(!message.member.hasPermission('MANAGE_CHANNELS')) {
-            return message.reply('Hey! você não tem permissão para usar o lockdown!')
+            return message.reply(`${languages(guild, 'L_C7')}`)
         }
     },
     aliases: ['l'],
-    description: 'Tranca '
+    description: 'Tranca todos os canais de um servidor.'
 }

@@ -1,8 +1,14 @@
 const { createStream } = require('table');
 const tableConfig = require('../../util/tableConfig');
 const { commandStatus, eventStatus } = require('../../util/registry');
+    const { loadLangs } = require('../../languages/languages')
+    const database = require('../../../db/db')
+    database.then(() => console.log("Conectado ao MongoDB")).catch(err => console.log(err))
+
 
 module.exports = async (client) => {
+
+
 
     console.log(`${client.user.tag} Saiu do forno!`);
     await loadTable(commandStatus, 50);
@@ -26,6 +32,8 @@ module.exports = async (client) => {
             activNum = 0;
         }  
     }, 300 * 1000);
+
+    loadLangs(client)
 }
 
 function loadTable(arr, interval) {

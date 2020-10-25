@@ -1,5 +1,6 @@
 module.exports = {
     run: async (client, message, args) => {
+        const languages = require('../../languages/languages')
         const { guild } = message
         const { discord } = require("discord.js");
         const { MessageEmbed } = require('discord.js')
@@ -8,48 +9,48 @@ module.exports = {
         if(message.author.bot) return;
         if (!message.member.hasPermission("MANAGE_ROLES")) {
             return message.channel.send(
-                "Desculpe, mas você não tem permissão para fazer isso."
+                `${languages(guild, 'M_C')}`
             );
         }
         if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send("Eu não tenho permissão para mutar alguém. Habilite a permissão 'Gerenciar Cargos' em meu cargo para que eu possa concluir o comando!");
+            return message.channel.send(`${languages(guild, 'M6_C')}`);
         }
         if(!user) {
             try {
                 const { MessageEmbed } = require('discord.js')
-                let mutedRole = message.guild.roles.cache.find(x => x.name === "Silenciado")
+                let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
                 let memberId = message.content.substring(message.content.indexOf(' ') + 1)
                 let member = message.guild.members.cache.get(memberId);
                 if(!mutedRole) {
-                    message.reply('Olá!\nParece que não há o cargo "Silenciado" neste servidor, utilize os comandos -mtr (para criar o cargo) e -mtrp (para configurar as permissões do mesmo)!')
+                    message.reply(`${languages(guild, 'M2_C')}`)
                 }
                 if(mutedRole) {
                     member.roles.add(mutedRole)
                     const embed = new MessageEmbed()
-                    .setTitle('Ação: Silenciamento')
-                    .setDescription(`O usuário indicado foi silenciado(a) com sucesso!`)
+                    .setTitle(`${languages(guild, 'M3_C')}`)
+                    .setDescription(`${languages(guild, 'M4_C')}`)
                     .setColor('RANDOM')
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setFooter(`Silenciamento realizado por: ${message.author.tag}`);
+                    .setFooter(`${languages(guild, 'M5_C')} ${message.author.tag}`);
                     message.channel.send(embed)
                 }
             } catch (err) {
-                    message.reply('Desculpe, mas... Você tem certeza que mencionou a pessoa certa?')
+                    message.reply(`${languages(guild, 'M7_C')}`)
                     console.log(err)
             }
         } else {
-            let mutedRole = message.guild.roles.cache.find(x => x.name === "Silenciado")
+            let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
             if(!mutedRole) {
-                message.reply('Olá!\nParece que não há o cargo "Silenciado" neste servidor, utilize os comandos -mtr (para criar o cargo) e -mtrp (para configurar as permissões do mesmo)!')
+                message.reply(`${languages(guild, 'M2_C')}`)
             } 
             if(mutedRole) {
                 user.roles.add(mutedRole)
                 const embed = new MessageEmbed()
-                .setTitle('Ação: Silenciamento')
-                .setDescription(`O usuário mencionado foi silenciado(a) com sucesso!`)
+                .setTitle(`${languages(guild, 'M3_C')}`)
+                .setDescription(`${languages(guild, 'M4_C')}`)
                 .setColor('RANDOM')
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                .setFooter(`Silenciamento realizado por: ${message.author.tag}`);
+                .setFooter(`${languages(guild, 'M5_C')} ${message.author.tag}`);
                 message.channel.send(embed)
                 
             }

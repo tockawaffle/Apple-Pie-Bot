@@ -1,5 +1,5 @@
-//Novamente digo, não é a melhor forma de se fazer, mas funciona. Sim, pretendo melhorar o código quando possível
-//I'm going to say it again, it's not the best way to do this, but it works. Yes, I am going to do this better anyday
+const languages = require('../../languages/languages')
+
 module.exports = {
     run: async(client, message, args) => {
         const {MessageEmbed} = require('discord.js')
@@ -20,12 +20,12 @@ module.exports = {
         if(me){
             const embed = new MessageEmbed()
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                .setDescription('H-hey! E-eu não gosto de abraços!')
+                .setDescription(`${languages(guild, 'HUG_C')}`)
                 .setImage('https://i.pinimg.com/originals/8e/a6/a7/8ea6a720f2ebf4aee663f92d9395b864.gif')
                 .setColor("E7B985")
             message.channel.send(embed)
             message.channel.send(process.env.BLUSHY3)
-            message.channel.send('||Eu agradeço de qualquer modo, é bom ser abraçada...||')
+            message.channel.send(`||${languages(guild, 'HUG_C1')}||`)
         }
 
 
@@ -34,13 +34,14 @@ module.exports = {
             if(user) {
                 const embed = new MessageEmbed()
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setTitle('A vida fica mais doce com abraços!')
-                    .setDescription(`**${message.author.username}** deu um abraço em **${user.username}**`)
+                    .setTitle(`${languages(guild, 'HUG_C2')}`)
+                    .setDescription(`**${message.author.username}** ${languages(guild, 'HUG_C3')} **${user.username}**`)
                     .setImage(random)
                     .setColor('RANDOM')
+                    .setFooter(`${languages(guild, 'HUG_C4')}`)
                 message.channel.send(embed)
             }else{
-                message.channel.send(`Você quer fazer alguém feliz com um abraço? Que fofo! ${process.env.BLUSHY2}\nTente mencionar alguém para abraçar a pessoa!`)
+                message.channel.send(`${languages(guild, 'HUG_C5')}`)
             }
         }catch(error) {
             console.log(error)

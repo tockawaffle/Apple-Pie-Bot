@@ -1,7 +1,7 @@
 module.exports = {
     run: async (client, message, args) => {
-
-
+        
+        const languages = require('../../languages/languages')
         const { guild } = message
         const { discord } = require("discord.js");
         const { MessageEmbed } = require('discord.js')
@@ -9,52 +9,52 @@ module.exports = {
         if(message.author.bot) return;
         if (!message.member.hasPermission("MANAGE_ROLES")) {
             return message.channel.send(
-                "Desculpe, mas você não tem permissão para fazer isso."
+               `${languages(guild, 'M_C')}`
             );
         }
     
         if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send("Eu não tenho permissão para desmutar alguém.");
+            return message.channel.send(`${languages(guild, 'UM6_C')}`);
         }
     
         if(!user) {
             try {
                 const { MessageEmbed } = require('discord.js')
-                let mutedRole = message.guild.roles.cache.find(x => x.name === "Silenciado")
+                let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
                 let memberId = message.content.substring(message.content.indexOf(' ') + 1)
                 let member = message.guild.members.cache.get(memberId);
                 if(!mutedRole) {
-                    message.reply('Olá!\nParece que não há o cargo "Silenciado" neste servidor, tenha certeza de criar o mesmo e configurar os canais para de modo correto para o unmute funcionar!')
+                    message.reply(`${languages(guild, 'UM2_C')}`)
     
                 }    
                 if(mutedRole) {
                         member.roles.remove(mutedRole)
                         const embed = new MessageEmbed()
-                        .setTitle('Ação: Unmute')
-                        .setDescription(`O usuário indicado foi desmutado(a) com sucesso!`)
+                        .setTitle(`${languages(guild, 'UM3_C')}`)
+                        .setDescription(`${languages(guild, 'UM4_C')}`)
                         .setColor('RANDOM')
                         .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                        .setFooter(`Unmute realizado por: ${message.author.tag}`);
+                        .setFooter(`${languages(guild, 'UM5_C')} ${message.author.tag}`);
                         message.channel.send(embed)
                     }
             } catch (err) {
-                    message.reply('Algo de errado aconteceu, desculpe-me pela inconveniencia...')
+                    message.reply(`${languages(guild, 'MTR_C7')}`)
                     console.log(err)
             }
         } else {
-            let mutedRole = message.guild.roles.cache.find(x => x.name === "Silenciado")
+            let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
             if(!mutedRole) {
-                message.reply('Olá!\nParece que não há o cargo "Silenciado" neste servidor, tenha certeza de criar o mesmo e configurar os canais para de modo correto para o unmute funcionar!')
+                message.reply(`${languages(guild, 'UM2_C')}`)
     
                 }   
             if(mutedRole) {
                 user.roles.remove(mutedRole)
                 const embed = new MessageEmbed()
-                    .setTitle('Ação: Unmute')
-                    .setDescription(`O usuário mencionado foi desmutado(a) com sucesso!`)
+                    .setTitle(`${languages(guild, 'UM3_C')}`)
+                    .setDescription(`${languages(guild, 'UM4_C')}`)
                     .setColor('RANDOM')
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setFooter(`Unmute realizado por: ${message.author.tag}`);
+                    .setFooter(`${languages(guild, 'UM5_C')} ${message.author.tag}`);
                 message.channel.send(embed)
             }
         }

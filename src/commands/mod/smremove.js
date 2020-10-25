@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js")
+const languages = require('../../languages/languages')
 
 module.exports = {
     run: async(client, message, args) => {
@@ -6,21 +7,21 @@ module.exports = {
         if(message.author.bot) return;
 
         if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) {
-            return message.channel.send("Eu não tenho permissão para isso. Habilite a permissão 'Gerenciar Canais' em meu cargo para que eu possa concluir o comando!");
+            return message.channel.send(`${languages(guild, 'L_C')}`);
         }
 
         if(!message.member.hasPermission('MANAGE_CHANNELS')) {
-            return message.reply('Fufufu, parece que você não tem permissão para isso ' + process.env.SMUG)
+            return message.reply(`${languages(guild, 'SR_C')} ` + process.env.SMUG)
         }
 
         const {MessageEmbed} = require('discord.js');
 
         const {guild} = message
         const embed = new MessageEmbed()
-            .setTitle('Ação: Retirada de Slowmode')
+            .setTitle(`${languages(guild, 'SR1_C')}`)
             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
             .setThumbnail(guild.iconURL({ dynamic: true }))
-            .setDescription('Slowmode foi retirado em todos os chats!')
+            .setDescription(`${languages(guild, 'SR2_C')}`)
             .setColor('RANDOM')
         message.channel.send(embed)
         

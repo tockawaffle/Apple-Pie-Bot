@@ -56,9 +56,9 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 
 - [X] Command Handler + Event Handler
 
-- [ ] Base de dados / Database Code
+- [X] Base de dados / Database Code
 
-- [ ] Função Multilingual / Multilanguage functionality 
+- [X] Função Multilingual / Multilanguage functionality 
 
 - [ ] Mudança de Prefixo / Change Prefix Command
 

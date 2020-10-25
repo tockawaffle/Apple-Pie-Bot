@@ -1,19 +1,19 @@
 module.exports = {
     run: async (client, message, args) => {
-
+        const languages = require('../../languages/languages')
         if(message.author.bot) return;
         if(!message.member.hasPermission('MANAGE_ROLES' & "MANAGE_CHANNELS")) {
-            return message.reply('Hey hey, sei que você quer ajudar, mas você não tem o acesso ao comando' + process.env.POUT)
+            return message.reply(`${languages(guild, 'M_E')}` + process.env.POUT)
         }
 
         if (!message.guild.me.hasPermission("MANAGE_ROLES" & "MANAGE_CHANNELS")) {
-            return message.channel.send("Eu não tenho permissão para mudar todas as permissões. Habilite a permissão 'Gerenciar Cargos' em meu cargo para que eu possa concluir o comando!");
+            return message.channel.send(`${languages(guild, 'L_C')}`);
         }
 
-        if(message.member.hasPermission('MANAGE_ROLES' & "MANAGE_CHANNELS   ")) {
+        if(message.member.hasPermission('MANAGE_ROLES' & "MANAGE_CHANNELS")) {
             const { guild } = message
             try {
-                let muteRole = message.guild.roles.cache.find(x => x.name === "Silenciado")
+                let muteRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
                 message.guild.channels.cache.forEach(async (channel, id) => {
                     await channel.createOverwrite(muteRole, {
                        SEND_MESSAGES: false,
@@ -22,10 +22,10 @@ module.exports = {
                        ADD_REACTIONS: false
                     });
                  });
-                message.channel.send("Permissões do cargo 'Silenciado' foram criadas com sucesso!")
+                message.channel.send(`${languages(guild, 'M_P')}`)
             } catch (error) {
                 console.log(error);
-                message.channel.send('Desculpe, algo errado aconteceu...')
+                message.channel.send(`${languages(guild, 'MTR_ERR')}`)
                 
             }
         }

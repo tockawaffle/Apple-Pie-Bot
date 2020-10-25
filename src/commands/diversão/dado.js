@@ -1,11 +1,13 @@
-const { dado } = require('../../util/dicefn')
+const dado = () => Math.floor(Math.random() * 25) + 1;
+const languages = require('../../languages/languages')
 
 module.exports = {
     run: async(client, message) => {
-        let msg = await message.channel.send(`Girando o dado. . . 🎲`)
+        const { guild } = message;
+        let msg = await message.channel.send(`${languages(guild, 'DADO_C')}`)
             .then((msg)=> {
                 setTimeout(function(){
-                  msg.edit('Você girou no dado o número ' + dado());
+                  msg.edit(`${languages(guild, 'DADO1_C')}` + dado());
                 }, 2000)
               })
     },
