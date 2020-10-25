@@ -7,8 +7,10 @@ _Hey você!_
 Essa é a Apple Pie, um bot de Discord "open-source", ela foi programada com Javascript!
 Ela é um bot bem novo que eu decidi fazer pelo simples motivo de ~Estar tão entediado que acabei fazendo isso~ amar programar!
 
-Ela não tem muitas funcionalidades ou uma DB (Database/Base de dados), mas tem funcionalidades o suficiente para ser chamada de "Bot multifunções"!
-Você pode ver e fazer o que desejar com o código base dela, não existe nenhum problema nisso. ~Mas tenha em mente que você vai estar vendo o código base de uma bela jovem!~
+Ela agora consegue ter uma DB e função multilinguagem. Yay!
+Agora você pode aproveitar o máximo dela uwu
+
+~Seja cuidadoso, você está vendo o código fonte de uma linda jovem!~
 
 PS: Se você for baixar e utilizar o código como base para seu bot (Ou algo do tipo), tenha certeza de retirar todas as dependências do dotenv na pasta de comandos, pois se não fizer, pode acabar não funcionando direito.
 
@@ -20,12 +22,8 @@ _Hello you!_
 This is Apple Pie, an "open-source" Discord bot that uses the Javascript language!
 It's a pretty new bot  that I made because ~I was bored and had nothing else to do~ I love programming!
 
-~It doesn't has many things like a DB (too advanced for me, a newbie) but it surely is enough to be called a "Multifunctional bot"!
-You can peek the source-code if you want to, there is no problem at all.~
-
-~Unfortunately it does not has a multilanguage functionality in the main code, however I'm going to translate it into another bot so english speakers can use the bot. You might want to check the #english-users topic in the Support Server to see if it has been translated~
-
-It seems like I could do it! now this bot has a DB and Multilanguage functionality 
+It seems like I could do it! now this bot has a DB and Multilanguage functionality. Yay!
+You can now enjoy the best of her uwu
 
 ~Be careful, you're looking at a young lady source-code!~
 
