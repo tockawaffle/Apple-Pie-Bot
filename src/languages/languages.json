@@ -1,10 +1,6 @@
 {
     "languages": ["english", "portugues"],
     "traduções": {
-        "TESTE_LANG": {
-            "english": "This is a test, and if you see this, it works!",
-            "portugues": "Isso é um teste, e se funcionar, parabéns!"
-        },
 
         "AVATAR_C": {
             "english": "This",
@@ -422,14 +418,6 @@
             "english": "Everything becomes easier when there's less work!",
             "portugues": "Tudo fica um pouco mais fácil quando o trabalho é menor!"
         },
-        "H_C5": {
-            "english": "You can find what each command do",
-            "portugues": "Você pode encontrar o quê cada comando faz"
-        },
-        "H_C6": {
-            "english": "here",
-            "portugues": "aqui"
-        },
 
 
 
@@ -547,6 +535,10 @@
             "english": "I coudn't find the user with the mention or ID:",
             "portugues": "Não consegui encontrar o usuário com o ID ou menção:"
         },
+        "UF_ERR_2": {
+            "english": "maybe he turned into a pie!",
+            "portugues": "talvez ele tenha se tornado uma torta!"
+        },
 
 
         "G_C": {
@@ -596,41 +588,27 @@
         },
 
 
-        "BF_C": {
-            "english": "My name is:",
-            "portugues": "Meu nome é:"
+        
+
+        "GW_C": {
+            "english": "You do not have permissions to run this command!",
+            "portugues": "Você não tem permissão para usar este comando!"
         },
-        "BF_C2": {
-            "english": "nice to meet you!",
-            "portugues": "é um prazer te conhecer!"
+        "GW_C2": {
+            "english": "The Generic Welcome Message has been added to **this** channel.",
+            "portugues": "A mensagem de boas-vindas genérica foi configurada **neste** canal."
         },
-        "BF_C3": {
-            "english": "I was created by:",
-            "portugues": "Eu fui criada por:"
+        "GW_C3": {
+            "english": "welcome to the server!",
+            "portugues": "bem vindo ao servidor!"
         },
-        "BF_C4": {
-            "english": "My creator gave me life at:",
-            "portugues": "Meu criador me deu vida em:"
+        "GW_C4": {
+            "english": "We hope you like your stay in here!",
+            "portugues": "Esperamos que você goste de sua estadia aqui!"
         },
-        "BF_C5": {
-            "english": "My source-code:",
-            "portugues": "Meu código fonte:"
-        },
-        "BF_C6": {
-            "english": "Click here",
-            "portugues": "Clique aqui"
-        },
-        "BF_C7": {
-            "english": "If I'm dating someone?",
-            "portugues": "Se eu sou compromissada?"
-        },
-        "BF_C8": {
-            "english": "Obviously! With my own creator, I love him!",
-            "portugues": "Claro! Com meu próprio criador, eu amo ele!"
-        },
-        "BF_END": {
-            "english": "It's kinda embarassing...",
-            "portugues": "Isso é vergonhosa..."
+        "GW_C5": {
+            "english": "Be sure to read the rules in the rules-channel! if you don't, I guarantee you that in the future you'll be inside my oven!",
+            "portugues": "Trate de ler as regras, caso não leia, no futuro você estará em meu forninho hehe"
         }
     }
 }

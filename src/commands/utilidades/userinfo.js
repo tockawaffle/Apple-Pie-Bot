@@ -29,7 +29,7 @@ module.exports = {
                     .addField(`${languages(guild, 'UF_C5')} `, `${member.user.presence.activities}.`)
                 message.channel.send(embed);
             } else {
-                message.channel.send(`${languages(guild, 'UF_ERR')}  ${args[1]}, será que ele deixou de ser uma torta!?`);
+                message.channel.send(`${languages(guild, 'UF_ERR')}  ${args[1]}, ${languages(guild, 'UF_ERR_2')}`);
             }
 
         }
