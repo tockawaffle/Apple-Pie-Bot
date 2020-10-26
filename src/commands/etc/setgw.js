@@ -38,7 +38,7 @@ module.exports = {
         
             if (!data) {
         
-                const result = await welcomeSchema.findOne({ _id: guild.id })
+                const result = await welcomeGSchema.findOne({ _id: guild.id })
             
                 cache[guild.id] = data = [result.channelId]
             }

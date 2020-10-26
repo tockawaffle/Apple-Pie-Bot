@@ -34,6 +34,9 @@ PS: If you're going to download it and use it as a base for your bot (or somethi
 
 # **Informações Úteis / Useful Info:**
 
+Como usar os comandos de boas-vindas: [Clique aqui](https://github.com/The-Crow-pleb/Junk/blob/master/Atalhos/Apple%20Pie/WelcomeTypes/README.md)
+How to user the welcome commands: [Click here](https://github.com/The-Crow-pleb/Junk/blob/master/Atalhos/Apple%20Pie/WelcomeTypes/README.md)
+
 [Servidor de suporte / Support Server](https://discord.gg/sGgzNQ6)
 
 Versão do bot / Bot Version: 6.0
