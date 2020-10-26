@@ -1,10 +1,10 @@
 const { createStream } = require('table');
 const tableConfig = require('../../util/tableConfig');
 const { commandStatus, eventStatus } = require('../../util/registry');
-    const { loadLangs } = require('../../languages/languages')
+    
     const database = require('../../../db/db')
-    database.then(() => console.log("Conectado ao MongoDB")).catch(err => console.log(err))
-
+    database.then(() => console.log(`Apple Pie se conectou ao MongoDB!`)).catch(err => console.log(err))
+    const { loadLangs } = require('../../languages/languages')
 
 module.exports = async (client) => {
 

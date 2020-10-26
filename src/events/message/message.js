@@ -1,11 +1,30 @@
 const PREFIX = process.env.PREFIX
-const languages = require('../../languages/languages')
 
-module.exports = (client, message) => {
-    
+    // const mongo = require('../../../db/db')
+    const languages = require('../../languages/languages')
+    // const userIdSchema = require('../../../db/schemas/userid-schema')
+
+module.exports = async(client, message) => {
+
     if(message.author.bot) return;
 
     const { guild } = message
+
+    // No need to use it rn.
+
+    // await mongo.then(async (mongoose) => {
+    //     await userIdSchema.findOneAndUpdate({
+    //         _id: message.author.id
+    //     },  
+    //     {
+    //         $inc: {
+    //             messageCount: 1,
+    //         },
+    //     },
+    //     {
+    //         upsert: true
+    //     })
+    // })
 
     if(!message.content.startsWith(PREFIX)) return;
     let cmdName = message.content.substring(message.content.indexOf(PREFIX)+1).split(new RegExp(/\s+/)).shift()
