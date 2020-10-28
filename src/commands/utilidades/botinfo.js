@@ -1,3 +1,4 @@
+
 require('dotenv').config()
 module.exports = {
     run: async(client, message, args) => {
@@ -12,16 +13,15 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor(`${guild.name}`, owner.avatarURL({ dynamic: true }))
-            .setDescription("Você realmente quer saber sobre mim? Ehh..")
+            .setDescription(`${languages(guild, 'BF_S')}`)
             .setThumbnail(client.user.avatarURL({dynamic: true}))
             .setColor("E7B985")
-            .addField(`${languages(guild, 'BF_C')}`, client.user.username +`, ${languages(guild, 'BF_C2')}`)
-            .addField(`${languages(guild, 'BF_C3')}`, owner.tag)
-            .addField(`${languages(guild, 'BF_C4')}`, created)
-            .addField(`${languages(guild, 'BF_C5')}`, `[${languages(guild, 'BF_C6')}](https://github.com/The-Crow-pleb/Apple-Pie-Bot)`)
-            .addField(`${languages(guild, 'BF_C7')}`, `${languages(guild, 'BF_C8')}`)
+            .addField(`${languages(guild, 'BF_C')}`, client.user.username +``)
+            .addField(`${languages(guild, 'BF_C2')}`, owner.tag)
+            .addField(`${languages(guild, 'BF_C3')}`, created)
+            .addField(`${languages(guild, 'BF_C4')}`, `[${languages(guild, 'BF_C5')}](https://github.com/The-Crow-pleb/Apple-Pie-Bot)`)
+            .addField(`${languages(guild, 'BF_C6')}`, `[${languages(guild, 'BF_C7')}](https://twitter.com/matchavi)`)
         message.channel.send(embed);
-        message.channel.send(`${languages(guild, 'BF_END')}` + process.env.BLUSHY)
     },
     aliases: ['bi', 'bf'],
     description: 'Minha descrição'

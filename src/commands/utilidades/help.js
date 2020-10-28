@@ -40,7 +40,7 @@ module.exports = {
             }
 
             )
-            .addField(`${languages(guild, 'H_C5')}`, `[${languages(guild, 'H_C6')}](https://github.com/The-Crow-pleb/Junk/tree/master/Atalhos/help%20-%20apple)`)
+            .addField(`${languages(guild, 'H_C5')}`, `[${languages(guild, 'H_C6')}]`)
             .setColor('RANDOM')
             .setFooter(`${languages(guild, 'H_C2')} 6.0`)
         message.channel.send(embed); 

@@ -540,6 +540,40 @@
             "portugues": "talvez ele tenha se tornado uma torta!"
         },
 
+        
+        "BF_S": {
+            "english": "Ehhh? You want to know more about me?...",
+            "portugues": "Ehh? Você quer saber mais sobre mim?..."
+        },
+        "BF_C": {
+            "english": "My name is:",
+            "portugues": "Meu nome é:"
+        },
+        "BF_C2": {
+            "english": "The name of my creator is:",
+            "portugues": "O nome do meu criador é:"
+        },
+        "BF_C3": {
+            "english": "I was created at:",
+            "portugues": "Eu fui criada em:"
+        },
+        "BF_C4": {
+            "english": "My source-code (Be careful!):",
+            "portugues": "Meu código fonte (Tome cuidado!):"
+        },
+        "BF_C5": {
+            "english": "Click here",
+            "portugues": "Clique aqui"
+        },
+        "BF_C6": {
+            "english": "Want to know about my pfp creator? here it goes!:",
+            "portugues": "Deseja saber sobre o criador de minha foto de perfil? Veja aqui!:"
+        },
+        "BF_C7": {
+            "english": "Click here",
+            "portugues": "Clique aqui"
+        },
+
 
         "G_C": {
             "english": "You want to know how I'm made? Eh...",
@@ -609,6 +643,74 @@
         "GW_C5": {
             "english": "Be sure to read the rules in the rules-channel! if you don't, I guarantee you that in the future you'll be inside my oven!",
             "portugues": "Trate de ler as regras, caso não leia, no futuro você estará em meu forninho hehe"
+        },
+        "WM_C": {
+            "english": "You do not have permissions to run this command!",
+            "portugues": "Você não tem permissões para usar esse comando!"
+        },
+        "WM_C2": {
+            "english": "Please, provide a welcome message,",
+            "portugues": "Por favor, providencie uma mensagem de boas vindas,"
+        },
+        "WM_C2_2": {
+            "english": "Click here",
+            "portugues": "Clique aqui"
+        },
+        "WM_C2_3": {
+            "english": "to see how to use it!",
+            "portugues": "para ver como usar!"
+        },
+        "WM_C3": {
+            "english": "Oops! Something went wrong",
+            "portugues": "Oops! Algo deu errado"
+        },
+        "WM_C4": {
+            "english": "You need to write something in the command!",
+            "portugues": "Você precisa escrever algo no comando!"
+        },
+        "WM_C5": {
+            "english": "Check out the guide below:",
+            "portugues": "Leia o guia abaixo:"
+        },
+        "WM_C6": {
+            "english": "Click here",
+            "portugues": "Clique aqui"
+        },
+        "WM_C7": {
+            "english": "You configured with sucess a welcome message in this server!",
+            "portugues": "Você configurou com sucesso a mensagem de boas-vindas neste servidor!"
+        },
+        "WM_ERR": {
+            "english": "Hey! You already have a custom welcome-message in this server! You can't do it again without removing it first!",
+            "portugues": "Ei! Você já tem uma mensagem de boas-vindas customizavel nesse servidor! Você não pode colocar outra antes de remover ela!"
+        },
+
+
+        
+
+        "RM_C": {
+            "english": "You do not have permissions to do this!",
+            "portugues": "Você não tem permissões para fazer isso!"
+        },
+        "RM_C2": {
+            "english": "Okayu, the welcome-message has been removed from this server!",
+            "portugues": "Kay! Eu retirei a mensagem de boas-vindas deste servidor como foi pedido!"
+        },
+        "RM_C3": {
+            "english": "Oi! This is not okayu! I coudnt find this server in my database, are you sure that you configured the welcome message in here?",
+            "portugues": "Ei! Nada okayu! Esse servidor não existe na minha base de dados, você tem certeza que configurou as mensagens para cá?"
+        },
+        "GR_C": {
+            "english": "Oi! You do not have permissions to do this!!",
+            "portugues": "Hey! Você não tem permissões para fazer isso!"
+        },
+        "GR_C2": {
+            "english": "Okayu, the generic welcome message has been removed from this server",
+            "portugues": "Okayu, eu removi as boas-vindas genérico deste servidor"
+        },
+        "GR_C3": {
+            "english": "Hmmmm, something is out of place here, I coudn't find this server on my database, I can't remove something that doesn't exists!",
+            "portugues": "Hmmmm, parece que algo não está no lugar certo por aqui. Eu não consegui achar esse servidor na minha base de dados, não posso remover algo que não existe!"
         }
     }
 }
