@@ -23,7 +23,7 @@ module.exports = {
 
             {
               name: 'Moderação / Moderation:',
-              value: '-ban\n-kick\n-mute\n-unban\n-unmute\n-muterole\n-muteroleperms\n-slowmode\n-smremove\n-locks\n-unlock',
+              value: '-ban\n-kick\n-mute\n-unban\n-unmute\n-slowmode\n-smremove\n-locks\n-unlock',
               inline: true
             },
 
