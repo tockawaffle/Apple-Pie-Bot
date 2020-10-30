@@ -12,24 +12,31 @@ module.exports = {
           .addFields(
               {
                   name: 'Utilidades / Utilities:', 
-                  value: '-convite(-cvt)\n\n-help (-ajuda, -h)\n\n-avatar (-avt)\n\n-ping (-ping)\n\n-aliases (-als)\n\n-dado (-rolardado, -rolar, -dice, -jogardado)\n\n-botinfo (-bf, -bi)\n\n-userinfo (-uf), -github (-gt, -gthb)',
+                  value: '-convite(-cvt)\n-help (-ajuda, -h)\n-avatar (-avt)\n-ping (-ping)\n-aliases (-als)\n-botinfo (-bf, -bi)\n-userinfo (-uf)\n-github (-gt, -gthb)',
                   inline: true
               },
               
               {
                   name: 'Moderação / Moderation:',
-                  value: '-ban (-b)\n\n-kick (-kc)\n\n-mute (-mt)\n\n-unban (-unb)\n\n-unmute (-unmt)\n\n-muterole (-mtr)\n\n -muteroleperms (-mtrp)\n\n-slowmode (-sm)\n\n-smremove (-smr)\n\n-lock (-l)\n\n-unlock(-ul)',
+                  value: '-ban (-b)\n-kick (-kc)\n-mute (-mt)\n-unban (-unb)\n-unmute (-unmt)\n-muterole (-mtr)\n-muteroleperms (-mtrp)\n-slowmode (-sm)\n-smremove (-smr)\n-lock (-l)\n-unlock(-ul)',
                   inline: true
               },
 
               {
                 name: 'Brincadeiras / Fun:',
-                value: '-dado (-dice)\n\n-meme (-rdm, -reddit)\n\n-rps (-joken, -jokenpo)'
+                value: '-dado (-dice)\n-meme (-rdm, -reddit)\n-rps (-joken, -jokenpo)',
+                inline: true
               },
 
               {
                 name: 'Outros / Others:',
-                value: '-nowelcome (-nw)'
+                value: '-setlanguage (-setl)',
+                inline: true
+              },
+              {
+                name: 'Mensagens de boas-vindas / Welcome Messages:',
+                value: '-setgw\n-gwmsg\n-rwmsg\n-rgw',
+                inline: true
               }
             )
           .setColor('RANDOM')

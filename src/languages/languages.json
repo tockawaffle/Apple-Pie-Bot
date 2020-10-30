@@ -331,20 +331,12 @@
             "portugues": "Cargo 'Silenciado' foi criado com sucesso"
         },
         "MTR_ERR": {
-            "english": "I'm sorry, something wrong happened...",
-            "portugues": "Desculpe, algo errado aconteceu..."
+            "english": "Sorry but, I coudn't find the userID or the mentioned user!",
+            "portugues": "Desculpe, mas, não consegui encontrar o usuário mencionado ou seu ID!"
         },
         "M_E": {
             "english": "Oi! I know you want to help, but you can't use this command!",
             "portugues": "Hey hey, sei que você quer ajudar, mas você não tem acesso a esse comando"
-        },
-        "M_E2": {
-            "english": "Hey, the 'Muted' role already exists!",
-            "portugues": "Ei! O cargo 'Silenciado' já existe!"
-        },
-        "M_P": {
-            "english": "'Muted' role perms have been sucessfully written!",
-            "portugues": "Permissões do cargo 'Silenciado' foram escritas com sucesso!"
         },
 
 
@@ -418,6 +410,14 @@
             "english": "Everything becomes easier when there's less work!",
             "portugues": "Tudo fica um pouco mais fácil quando o trabalho é menor!"
         },
+        "H_C5": {
+            "english": "Want to know more about how my commands work?",
+            "portugues": "Quer saber mais sobre como meus comandos funcionam?"
+        },
+        "H_C6": {
+            "english": "Click Here Then!",
+            "portugues": "Então clique aqui!"
+        },
 
 
 
@@ -443,9 +443,10 @@
             "portugues": "Eu não tenho permissão para desmutar alguém..."
         },
         "UMTR_ERR": {
-            "english": "I'm sorry, something wrong happened...",
-            "portugues": "Desculpe, algo errado aconteceu..."
+            "english": "Sorry, but I coudn't find either the user mentioned, the userID or the muted role. Be sure also to run the mute command to mute someone first.",
+            "portugues": "Desculpe, eu não consegui achar ou o usuário mencionado, ou o ID dele, ou o cargo de mutado. Tente primeiro utilizar o comando de mute para depois desmutar alguém!"
         },
+        
 
         
         "I_C": {

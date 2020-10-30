@@ -2,12 +2,12 @@ module.exports = {
     run: async(client, message, args) => {
         const { MessageEmbed } = require('discord.js')
         const { guild } = message;
-        const kaguya = client.users.cache.get('465578457951109160')
+        const kaguya = client.users.cache.get(`${process.env.ID}`)
 
         if(message.author.bot) return;
         try{
             if(message.author.id !== kaguya.id) {
-                return message.author.send(`Haha! Por essa você não esperava, não é?\nSó a ${kaguya.username} pode invocar esse comando!`)
+                return message.channel.send(`This is not avaible!`)
             }
             const embed = new MessageEmbed()
                 .setAuthor(`${kaguya.username}`, kaguya.avatarURL({dynamic: true}))

@@ -23,6 +23,7 @@ module.exports = {
                 if(target.id === message.author.id) {
                     return message.reply(`${languages(guild, 'KC_C1')}`)
                 }
+                //If a mod is tring to kick someone with these perms, the bot will return a message.
                 if(target.hasPermission("KICK_MEMBERS", "ADMINISTRATOR", "BAN_MEMBERS")) {
                    return message.reply(`${languages(guild, 'KC_C2')}`)
                 }

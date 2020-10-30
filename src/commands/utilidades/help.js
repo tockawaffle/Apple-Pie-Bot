@@ -35,12 +35,18 @@ module.exports = {
 
             {
               name: 'Outros / Others',
-              value: '-nowelcome',
+              value: '-setlanguage',
+              inline: true
+            },
+
+            {
+              name: 'Mensagens de boas-vindas / Welcome Messages:',
+              value: '-setgw\n-gwmsg\n-rwmsg\n-rgw',
               inline: true
             }
 
             )
-            .addField(`${languages(guild, 'H_C5')}`, `[${languages(guild, 'H_C6')}]`)
+            .addField(`${languages(guild, 'H_C5')}`, `[${languages(guild, 'H_C6')}](https://github.com/The-Crow-pleb/Junk/blob/master/Atalhos/Apple%20Pie/help%20-%20apple/README.md)`)
             .setColor('RANDOM')
             .setFooter(`${languages(guild, 'H_C2')} 6.0`)
         message.channel.send(embed); 
