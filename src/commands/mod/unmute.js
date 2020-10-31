@@ -49,7 +49,7 @@ module.exports = {
                 return message.reply(`${languages(guild, 'UMTR_ERR')}`) + message.channel.send(`${process.env.SRRB}`)
             }
         }catch(err) {
-            message.channel.send(`Um erro ocorreu: ${err}`)
+            console.log(err)
         }
     }, aliases: ['unmt'], description: 'Desmuta um usuario!'
 }

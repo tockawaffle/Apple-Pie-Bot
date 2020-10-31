@@ -17,9 +17,6 @@ module.exports = {
         if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
             return message.channel.send(`${languages(guild, 'M6_C')} ${process.env.POUT}`);
         }
-        if(!user || !member) {
-            return message.reply(`${languages(guild, 'UMTR_ERR')}`) + message.channel.send(`${process.env.SRRB}`)
-        }
         //if there is not a mutedrole but it mentions the userID or the raw mention, it's going to create the role and it's permissions for each channel in the server
         //I think this way is easier than doing 3 separate commands like I used to do with the bot
         //Still coudnt get a way to check if the user has the mutedRole, searched everywhere, nothing worksssssssss

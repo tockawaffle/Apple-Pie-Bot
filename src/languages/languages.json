@@ -242,8 +242,8 @@
             "portugues": "Hey.. Você sabe que eu não posso te expulsar, né?"
         },
         "KC_C2": {
-            "english": "Impossible! That user has Admin permissions (or the same permissions as you)",
-            "portugues": "Impossivel! Ele tem permissões de administrador também (Ou as mesmas permissões que a sua)"
+            "english": "Impossible! That user has 'Kick Members' permissions",
+            "portugues": "Impossivel! Ele tem permissões para 'Expulsar Membros' também"
         },
         "KC_C3": {
             "english": "Action: Kick",
@@ -256,6 +256,22 @@
         "KC_C5": {
             "english": "kicked",
             "portugues": "expulsou"
+        },
+        "KC_ERR": {
+            "english": "I can't do that, missing permissions!",
+            "portugues": "Eu não posso fazer isso, faltando permissões!"
+        },
+        "KC_ERR2" : {
+            "english": "Hey! I can't kick and admin!",
+            "portugues": "Ei! Eu não posso expulsar um administrador!"
+        },
+        "KC_C6": {
+            "english": "He has the 'Ban Members' permissions, I cannot kick him!",
+            "portugues": "Ele tem as permissões de 'Banir Membros', não posso expulsar ele!"
+        },
+        "KC_ERR3": {
+            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -kick <@mention>",
+            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -kick <memberID>"
         },
 
 
@@ -450,16 +466,16 @@
 
         
         "I_C": {
-            "english": "Hello, this",
-            "portugues": "Olá, este"
+            "english": "This",
+            "portugues": "Este"
         },
         "I2_C": {
             "english": "is the invite that is going to make me able to join your server!",
             "portugues": "é o convite que me fará entrar em seu servidor!"
         },
         "I3_C": {
-            "english": "DO NOT give me Admin permissions!",
-            "portugues": "NÃO me dê a permissão de Administrador!"
+            "english": "Hope you enjoy!",
+            "portugues": "Espero que goste!"
         },
 
 
@@ -603,7 +619,7 @@
             "portugues": "O ping da API é de:"
         },
         "P3_C": {
-            "english": "The ping may vary between different regions! This bot host is localized at: **Virginia-US**",
+            "english": "The ping may vary between different regions! This bot host is located at: **Virginia-US**",
             "portugues": "O ping pode variar da região do servidor! A host deste bot se localiza em: **Virginia-EUA**"
         },
         "P4_C": {
