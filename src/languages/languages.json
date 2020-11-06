@@ -28,6 +28,16 @@
         },
 
 
+        "PT_C": {
+            "english": "These are the bot sponsors!",
+            "portugues": "Esses são os parceiros do bot!"
+        },
+        "PT_C2": {
+            "english": "I hope you like them!",
+            "portugues": "Espero que goste deles!"
+        },
+
+
 
         "DADO_C": {
             "english": "Rolling the dice. . . ",
@@ -202,8 +212,20 @@
             "portugues": "Banimento realizado por:"
         },
         "B_ERR": {
-            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -ban <@mention> or <memberID>",
-            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -ban <@menção> ou <memberID>"
+            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -ban <@mention> or <memberID>\nAlso, check the roles hierarchy!",
+            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -ban <@menção> ou <memberID>\nCheque também a hierarquia dos cargos!"
+        },
+        "B_ERR2": {
+            "english": "Hey! I'm not able to ban someone with the 'Ban Members' permissions!",
+            "portugues": "Hey! Eu não consigo banir alguém com a permissão de 'Banir Membros"
+        },
+        "B_ERR3": {
+            "english": "Hey! I'm not able to ban an Administrator!",
+            "portugues": "Hey! Eu não consigo banir um Administrador!"
+        },
+        "B_ERR4": {
+            "english": "I could not ban the user, please, check the role hierarchy.",
+            "portugues": "Eu não consegui banir o usuario, por favor, cheque a hierarquia dos cargos."
         },
 
         "UB_C": {
