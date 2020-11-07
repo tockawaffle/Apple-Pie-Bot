@@ -1,3 +1,5 @@
+[![Discord Bots](https://top.gg/api/widget/762077336812126228.svg)](https://top.gg/bot/762077336812126228)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # **Introdução / Intro**
 
@@ -53,8 +55,6 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # **Lista de Tarefas / To do List:**
-
-- [ ] Mudar o repositório de Imagens para Servidor Local / Change the Image Repo to a local server (Não me julgue, tenho preguiça/ Don't judge me, I'm lazy)
 
 - [X] Adicionar mais comandos para diversão / More 'fun' Commands
 
