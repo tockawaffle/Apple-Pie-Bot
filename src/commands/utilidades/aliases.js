@@ -35,11 +35,12 @@ module.exports = {
               },
               {
                 name: 'Mensagens de boas-vindas / Welcome Messages:',
-                value: '-setgw\n-gwmsg\n-rwmsg\n-rgw',
+                value: '-sgw\n-rgw',
                 inline: true
               }
             )
           .setColor('RANDOM')
+          .setFooter(`${languages(guild, 'H_C7')}`)
         message.channel.send(embed); 
               
     },

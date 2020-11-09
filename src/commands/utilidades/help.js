@@ -29,19 +29,19 @@ module.exports = {
 
             {
               name: 'Brincadeiras / Fun:',
-              value: '-dado\n-meme\n-rps\n-kiss\n-hug',
+              value: '-dado\n-meme\n-rps\n-kiss\n-hug\n-pat\n-slap',
               inline: true
             },
 
             {
               name: 'Outros / Others',
-              value: '-setlanguage',
+              value: '-setlanguage\n-vote\n-sponsors',
               inline: true
             },
 
             {
               name: 'Mensagens de boas-vindas / Welcome Messages:',
-              value: '-setgw\n-gwmsg\n-rwmsg\n-rgw',
+              value: '-sgw\n-rgw',
               inline: true
             }
 

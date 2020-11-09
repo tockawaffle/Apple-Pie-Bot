@@ -456,7 +456,10 @@
             "english": "Click Here Then!",
             "portugues": "Então clique aqui!"
         },
-
+        "H_C7": {
+            "english": "The commands that aren't listed in here don't have/need an alias!",
+            "portugues": "Os comandos não listados aqui não tem/precisam de um alias!"
+        },
 
 
 
@@ -668,8 +671,8 @@
             "portugues": "Você não tem permissão para usar este comando!"
         },
         "GW_C2": {
-            "english": "The Generic Welcome Message has been added to **this** channel.",
-            "portugues": "A mensagem de boas-vindas genérica foi configurada **neste** canal."
+            "english": "The Welcome Message has been added to **this** channel.",
+            "portugues": "A mensagem de boas-vindas foi configurada **neste** canal."
         },
         "GW_C3": {
             "english": "welcome to the server!",
@@ -683,46 +686,7 @@
             "english": "Be sure to read the rules in the rules-channel! if you don't, I guarantee you that in the future you'll be inside my oven!",
             "portugues": "Trate de ler as regras, caso não leia, no futuro você estará em meu forninho hehe"
         },
-        "WM_C": {
-            "english": "You do not have permissions to run this command!",
-            "portugues": "Você não tem permissões para usar esse comando!"
-        },
-        "WM_C2": {
-            "english": "Please, provide a welcome message,",
-            "portugues": "Por favor, providencie uma mensagem de boas vindas,"
-        },
-        "WM_C2_2": {
-            "english": "Click here",
-            "portugues": "Clique aqui"
-        },
-        "WM_C2_3": {
-            "english": "to see how to use it!",
-            "portugues": "para ver como usar!"
-        },
-        "WM_C3": {
-            "english": "Oops! Something went wrong",
-            "portugues": "Oops! Algo deu errado"
-        },
-        "WM_C4": {
-            "english": "You need to write something in the command!",
-            "portugues": "Você precisa escrever algo no comando!"
-        },
-        "WM_C5": {
-            "english": "Check out the guide below:",
-            "portugues": "Leia o guia abaixo:"
-        },
-        "WM_C6": {
-            "english": "Click here",
-            "portugues": "Clique aqui"
-        },
-        "WM_C7": {
-            "english": "You configured with sucess a welcome message in this server!",
-            "portugues": "Você configurou com sucesso a mensagem de boas-vindas neste servidor!"
-        },
-        "WM_ERR": {
-            "english": "Hey! You already have a custom welcome-message in this server! You can't do it again without removing it first!",
-            "portugues": "Ei! Você já tem uma mensagem de boas-vindas customizavel nesse servidor! Você não pode colocar outra antes de remover ela!"
-        },
+
 
 
         
@@ -750,6 +714,74 @@
         "GR_C3": {
             "english": "Hmmmm, something is out of place here, I coudn't find this server on my database, I can't remove something that doesn't exists!",
             "portugues": "Hmmmm, parece que algo não está no lugar certo por aqui. Eu não consegui achar esse servidor na minha base de dados, não posso remover algo que não existe!"
+        },
+
+
+
+        "PAT_C": {
+            "english": "Thank for headpatting me, kind stranger",
+            "portugues": "Obrigado por me fazer carinho, caro estranho"
+        },
+        "PAT_C2": {
+            "english": "headpatted me!",
+            "portugues": "me fez carinho!"
+        },
+        "PAT_C3": {
+            "english": "Want to headpat someone? Use the -pat command!",
+            "portugues": "Quer fazer carinho em alguém? Use o comando -pat !"
+        },
+        "PAT_C4": {
+            "english": "Here are some cuddles to make your day better!",
+            "portugues": "Aqui um pouco de carinho para melhorar seu dia!"
+        },
+        "PAT_C5": {
+            "english": "headpatted",
+            "portugues": "fez carinho em"
+        },
+        "PAT_C6": {
+            "english": "But please, don't do so much of it!",
+            "portugues": "Mas por favor, não faça tanto!"
+        },
+        "PAT_C7": {
+            "english": "I get embarassed when you do so much of it...",
+            "portugues": "Eu fico com vergonha desse modo..."
+        },
+
+
+
+        "VT_C": {
+            "english": "This",
+            "portugues": "Esse"
+        },
+        "VT_C2": {
+            "english": "is the link where you can vote on me! Hope you liked me!",
+            "portugues": "é o link onde você pode votar em mim! Espero que tenha gostado de mim!"
+        },
+        "VT_C3": {
+            "english": "Hope you continue using me! Also, thanks!",
+            "portugues": "Espero que continue me usando! Aliás, obrigada!"
+        },
+
+
+        "S_C": {
+            "english": "H-hey! Why would you slap me?...",
+            "portugues": "H-hey! Por que você me bateria?..."
+        },
+        "S_C2": {
+            "english": "slapped me...",
+            "portugues": "me bateu..."
+        },
+        "S_C3": {
+            "english": "If you want to slap someone like he did, run the command -slap",
+            "portugues": "Se quiser bater em alguém como ele fez, use o comando -slap"
+        },
+        "S_C4": {
+            "english": "Uuuh, that must've hurt!",
+            "portugues": "Uuuh, isso deve ter doido!"
+        },
+        "S_C5": {
+            "english": "slapped",
+            "portugues": "bateu em"
         }
     }
 }

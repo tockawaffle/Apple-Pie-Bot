@@ -1,4 +1,3 @@
-const mongo = require('../../../db/db')
 const welcomeGSchema = require('../../../db/schemas/wgmsg-schema')
 const languages = require('../../languages/languages')
 
