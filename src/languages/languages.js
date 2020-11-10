@@ -12,7 +12,8 @@ const loadLangs = async(client) => {
                 const result = await langSchema.findOne({
                     _id: guildId,
                 })
-                guildLanguages[guildId] = result ? result.language: 'portugues'
+                guildLanguages[guildId] = result ? result.language : 'portugues'
+                console.log(result)
             }
         } catch(err) {
             console.log(err)

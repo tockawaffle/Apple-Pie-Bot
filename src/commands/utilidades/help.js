@@ -17,7 +17,7 @@ module.exports = {
 
             {
               name: 'Utilidades / Utilities:', 
-              value: '-convite\n-help\n-avatar\n-ping\n-botinfo\n-userinfo\n-github\n-clima',
+              value: '-convite\n-help\n-avatar\n-ping\n-botinfo\n-userinfo\n-github\n-clima\n-serverinfo\n-uptime',
               inline: true
             },
 
@@ -29,7 +29,7 @@ module.exports = {
 
             {
               name: 'Brincadeiras / Fun:',
-              value: '-dado\n-meme\n-rps\n-kiss\n-hug\n-pat\n-slap',
+              value: '-dado\n-meme\n-rps\n-kiss\n-hug\n-pat\n-slap\n-coin\n-snakegame',
               inline: true
             },
 

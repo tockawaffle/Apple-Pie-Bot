@@ -12,7 +12,7 @@ module.exports = {
           .addFields(
               {
                   name: 'Utilidades / Utilities:', 
-                  value: '-convite(-cvt)\n-help (-ajuda, -h)\n-avatar (-avt)\n-ping (-ping)\n-aliases (-als)\n-botinfo (-bf, -bi)\n-userinfo (-uf)\n-github (-gt, -gthb)',
+                  value: '-convite(-cvt)\n-help (-ajuda, -h)\n-avatar (-avt)\n-ping (-ping)\n-aliases (-als)\n-botinfo (-bf, -bi)\n-userinfo (-uf)\n-github (-gt, -gthb)\n-serverinfo (-si)\n-uptime (-upt)',
                   inline: true
               },
               
@@ -24,7 +24,7 @@ module.exports = {
 
               {
                 name: 'Brincadeiras / Fun:',
-                value: '-dado (-dice)\n-meme (-rdm, -reddit)\n-rps (-joken, -jokenpo)',
+                value: '-dado (-dice)\n-meme (-rdm, -reddit)\n-rps (-joken, -jokenpo)\n-snakegame (-snake)',
                 inline: true
               },
 

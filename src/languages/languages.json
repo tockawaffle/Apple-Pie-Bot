@@ -782,6 +782,135 @@
         "S_C5": {
             "english": "slapped",
             "portugues": "bateu em"
+        },
+        "COIN": {
+            "english": "So you're going to test your luck, huh?\nPlease, choose between Heads or Tails!",
+            "portugues": "Então você quer testar sua sorte, huh?\nPor favor, escolha entre Cara ou Coroa!"
+        },
+        "COIN_C": {
+            "english": "heads",
+            "portugues": "cara"
+        },
+        "COIN_C2": {
+            "english" :"tails",
+            "portugues": "coroa"
+        },
+        "COIN2": {
+            "english": "Uuuh, seems like you lost!",
+            "portugues": "Hmmm, parece que você perdeu!"
+        },
+        "COIN3": {
+            "english": "It endeded up being",
+            "portugues": "A moeda caiu em"
+        },
+        "COIN4": {
+            "english": "Lucky! You tossed the coin with the right side and winned!",
+            "portugues": "Sortudo! Você escolheu o lado certo da moeda e ganhou!"
+        },
+        "COIN_ERR": {
+            "english": "Hey! I can't wait a whole day for you to choose something =_=",
+            "portugues": "Hey! Eu não posso esperar o dia inteiro para você escolher algo =_="
+        },
+
+
+        "UPT_C": {
+            "english": "The bot has been online for:",
+            "portugues": "O bot está online faz:"
+        },
+
+        "UPT_T": {
+            "english": "hours",
+            "portugues": "horas"
+        },
+        "UPT_T2": {
+            "english": "minutes",
+            "portugues": "minutos"
+        },
+        "UPT_T3": {
+            "english": "Days",
+            "portugues": "Dias"
+        },
+        "UPT_T4": {
+            "english": "seconds",
+            "portugues": "seconds"
+        },
+
+        "UPT_C2": {
+            "english": "Memory Usage:",
+            "portugues": "Uso de memória:"
+        },
+
+
+        "SI_C": {
+            "english": "Guild Owner:",
+            "portugues": "Dono do Servidor"
+        },
+        "SI_C2": {
+            "english": "Member Count:",
+            "portugues": "Contagem de membros:"
+        },
+        "SI_MB": {
+            "english": "members",
+            "portugues": "membros" 
+        },
+        "SI_C3": {
+            "english": "User status:",
+            "portugues": "Status dos Usuários:"
+        },
+        "SI_ST": {
+            "english": "Members online",
+            "portugues": "Membros online"
+        },
+        "SI_ST2": {
+            "english": "Members in Idle",
+            "portugues": "Membros AFK"
+        },
+        "SI_ST3": {
+            "english": "Members in Do not Disturb",
+            "portugues": "Membros em 'Não Perturbe'"
+        },
+        "SI_ST4": {
+            "english": "Members Offline",
+            "portugues": "Membros Offline"
+        },
+        "SI_C4": {
+            "english": "Role Count:",
+            "portugues": "Contagem de Cargos:"
+        },
+        "SI_RC": {
+            "english": "roles",
+            "portugues": "cargos"
+        },
+        "SI_C5": {
+            "english": "Channel Count:",
+            "portugues": "Contagem de Canal:"
+        },
+        "SI_CC": {
+            "english": "text channels",
+            "portugues": "canais de texto"
+        },
+        "SI_CC2": {
+            "english": "voice channels",
+            "portugues": "canais de texto"
+        },
+        "SI_C6": {
+            "english": "Guild Created at:",
+            "portugues": "Servidor criado em:"
+        },
+        "SI_C7": {
+            "english": "Emojis info",
+            "portugues": "Emojis info"
+        },
+        "SI_EM": {
+            "english": "emojis in the guild",
+            "portugues": "emojis no servidor"
+        },
+        "SI_C8": {
+            "english": "Bot count",
+            "portugues": "Contagem de bot"
         }
+        
+
+
     }
 }

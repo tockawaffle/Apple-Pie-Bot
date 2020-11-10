@@ -1,6 +1,5 @@
 const PREFIX = process.env.PREFIX
 
-    // const mongo = require('../../../db/db')
     const languages = require('../../languages/languages')
     // const userIdSchema = require('../../../db/schemas/userid-schema')
 
@@ -11,19 +10,16 @@ module.exports = async(client, message) => {
     const { guild } = message
 
     // No need to use it rn.
-
-    // await mongo.then(async (mongoose) => {
-    //     await userIdSchema.findOneAndUpdate({
-    //         _id: message.author.id
-    //     },  
-    //     {
-    //         $inc: {
-    //             messageCount: 1,
-    //         },
+    // await userIdSchema.findOneAndUpdate({
+    //     _id: message.author.id
+    // },  
+    // {
+    //     $inc: {
+    //         messageCount: 1,
     //     },
-    //     {
-    //         upsert: true
-    //     })
+    // },
+    // {
+    //     upsert: true
     // })
 
     if(!message.content.startsWith(PREFIX)) return;
