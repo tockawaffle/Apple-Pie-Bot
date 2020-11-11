@@ -1,4 +1,4 @@
-const languages = require('../../languages/languages')
+const languages = require('../../util/languages/languages')
 const {MessageEmbed} = require('discord.js');
 const moment = require('moment')
 
