@@ -26,10 +26,9 @@ module.exports = async(client, member) => {
 
         const embed = new MessageEmbed()
             .setThumbnail(member.user.avatarURL())
-            .setTitle(`${member.user.tag} ${languages(guild, 'GW_C3')}!`)
-            .setDescription(`${languages(guild, 'GW_C4')}`)
+            .setTitle(`${member.user.tag} ${languages(guild, 'LF_EV')}!`)
             .setColor('RANDOM')
-            .setFooter(`${languages(guild, 'GW_C5')}`)
+            .setDescription(`${languages(guild, 'LF_EV2')}`)
             .setImage(random)
         channel.send(embed)
     }catch(err) {

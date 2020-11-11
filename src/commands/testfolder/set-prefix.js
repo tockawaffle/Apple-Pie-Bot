@@ -1,5 +1,5 @@
 const { mongo } = require('mongoose')
-const prefixSchema = require('../../../db/schemas/prefix-schema')
+const prefixSchema = require('../../../db/schemas/not-in-use/prefix-schema')
 module.exports = {
     run: async(client, message, args) => {
 

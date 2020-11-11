@@ -926,6 +926,16 @@
         "RL_C2": {
             "english": "Okayu, the 'left message' has been removed from this server\nOBS: the left message channel will only be removed after the weekly reset",
             "portugues": "Okayu, eu removi as 'mensagens de saída' deste servidor\nOBS: a mensagem só irá parar depois do restart semanal do bot"
+        },
+
+
+        "LF_EV": {
+            "english": "has left the server",
+            "portugues": "saiu do servidor"
+        },
+        "LF_EV2": {
+            "english": "We'll miss him! Can't wait for him to come back.",
+            "portugues": "Espero que ele volte logo!"
         }
         
 
