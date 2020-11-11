@@ -2,7 +2,7 @@
 //Idiot and inexperienced way to do this, but it is going to work anyways
 module.exports = {
     run: async(client, message, args) => {
-        const languages = require('../../languages/languages')
+        const languages = require('../../util/languages/languages')
         const {MessageEmbed} = require('discord.js');
         const guild = message.guild;
         const owner = client.users.cache.get('723185654044950539');

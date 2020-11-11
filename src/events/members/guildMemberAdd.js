@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const {getChannelId} = require('../../commands/welcomes/setgw')
-const languages = require('../../languages/languages')
+const languages = require('../../util/languages/languages')
 // const path = require('path')
 // const Canvas = require('canvas')
  

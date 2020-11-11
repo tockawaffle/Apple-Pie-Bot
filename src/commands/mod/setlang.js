@@ -1,7 +1,7 @@
 const mongo = require('../../../db/db')
 const langSchema = require('../../../db/schemas/language-schema')
-const { languages } = require('../../languages/languages.json')
-const { setLanguage } = require('../../languages/languages')
+const { languages } = require('../../util/languages/languages.json')
+const { setLanguage } = require('../../util/languages/languages')
 
 module.exports = {
 

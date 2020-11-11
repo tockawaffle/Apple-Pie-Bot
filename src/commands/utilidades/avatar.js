@@ -1,6 +1,6 @@
 module.exports = {
     run: async(client, message) => {
-      const languages = require('../../languages/languages')
+      const languages = require('../../util/languages/languages')
       const { MessageEmbed } = require('discord.js')
       if(message.author.bot) return;
       const args = message.content.split(' ');

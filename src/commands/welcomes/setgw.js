@@ -1,5 +1,5 @@
 const welcomeGSchema = require('../../../db/schemas/wgmsg-schema')
-const languages = require('../../languages/languages')
+const languages = require('../../util/languages/languages')
 
 const cache = new Map()
 const loadData = async() => {
@@ -36,7 +36,10 @@ module.exports = {
 
         cache.set(guild.id, channel.id)
         
-        message.reply(`${languages(guild, 'GW_C2')}`)
+        message.delete()
+        message.reply(`${languages(guild, 'GW_C2')}`).then((message) => {
+            message.delete({ timeout: 5000})
+        })
 
     }, aliases:['sgw'], description: 'Welcome message!'
 }

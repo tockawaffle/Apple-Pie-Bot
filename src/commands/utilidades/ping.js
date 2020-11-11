@@ -1,7 +1,7 @@
 module.exports = {
     run: async(client, message, args) => {
 
-        const languages = require('../../languages/languages')
+        const languages = require('../../util/languages/languages')
         const {guild} = message;
 
         if(message.author.bot) return;

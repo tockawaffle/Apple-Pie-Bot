@@ -4,7 +4,7 @@ const { commandStatus, eventStatus } = require('../../util/registry');
     
     const database = require('../../../db/db')
     database.then(() => console.log(`Apple Pie se conectou ao MongoDB!`)).catch(err => console.log(err))
-    const { loadLangs } = require('../../languages/languages')
+    const { loadLangs } = require('../../util/languages/languages')
 
 module.exports = async (client) => {
 

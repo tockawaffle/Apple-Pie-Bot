@@ -1,5 +1,5 @@
 const welcomeGSchema = require('../../../db/schemas/wgmsg-schema')
-const languages = require('../../languages/languages')
+const languages = require('../../util/languages/languages')
 
 module.exports = {
     run: async(client, message) => {

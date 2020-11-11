@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js")
 const moment = require('moment')
-const languages = require('../../languages/languages')
+const languages = require('../../util/languages/languages')
 
 module.exports = {
     run: async(client, message, args) => {

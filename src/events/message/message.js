@@ -1,6 +1,6 @@
 const PREFIX = process.env.PREFIX
 
-    const languages = require('../../languages/languages')
+    const languages = require('../../util/languages/languages')
     // const userIdSchema = require('../../../db/schemas/userid-schema')
 
 module.exports = async(client, message) => {
