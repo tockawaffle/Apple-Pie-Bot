@@ -750,12 +750,12 @@
 
 
         "VT_C": {
-            "english": "This",
-            "portugues": "Esse"
+            "english": "You can vote using these links!:",
+            "portugues": "Você pode votar usando esses links!:"
         },
         "VT_C2": {
-            "english": "is the link where you can vote on me! Hope you liked me!",
-            "portugues": "é o link onde você pode votar em mim! Espero que tenha gostado de mim!"
+            "english": "Click here!",
+            "portugues": "Clique aqui!"
         },
         "VT_C3": {
             "english": "Hope you continue using me! Also, thanks!",
