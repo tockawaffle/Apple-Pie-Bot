@@ -12,6 +12,7 @@
   "dependencies": {
     "ansi-colors": "^4.1.1",
     "common-tags": "^1.8.0",
+    "dblapi.js": "^2.4.1",
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
     "moment": "^2.29.1",

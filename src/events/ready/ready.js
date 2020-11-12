@@ -1,3 +1,4 @@
+const dbl = require('dblapi.js')
 const { createStream } = require('table');
 const tableConfig = require('../../util/tableConfig');
 const { commandStatus, eventStatus } = require('../../util/registry');
@@ -8,7 +9,9 @@ const { commandStatus, eventStatus } = require('../../util/registry');
 
 module.exports = async (client) => {
 
-
+    setInterval(() => {
+        dbl.postStats(client.guilds.size, client.shards.Id, client.shards.total);
+    }, 1800000);
 
     console.log(`${client.user.tag} Saiu do forno!`);
     await loadTable(commandStatus, 50);
