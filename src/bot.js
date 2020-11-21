@@ -4,7 +4,7 @@ require('dotenv').config();
 const discord = require('discord.js');
 const DBL = require('dblapi.js')
 const client = new discord.Client();
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MjA3NzMzNjgxMjEyNjIyOCIsImJvdCI6dHJ1ZSwiaWF0IjoxNjA1MjAxNjAyfQ.H_6XSbmBFIW2ArDpgBKfa4FjWF31L0GoOFUwMWCAUdo', client)
+const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client)
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
 
