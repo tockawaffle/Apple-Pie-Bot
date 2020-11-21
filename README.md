@@ -70,7 +70,7 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 
 - [ ] Comandos de Música / Music Commands
 
-- [ ] Refazer todos os códigos de uma maneira mais complexa / Remake all of the codes in a complex way
+- [X] Refazer todos os códigos de uma maneira mais complexa / Remake all of the codes in a complex way
 
 - [ ] Ser famosa! / Be famous! (Sonhar alto não tem problema, tem?)
 
