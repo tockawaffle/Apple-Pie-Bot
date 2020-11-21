@@ -3,7 +3,7 @@
 require('dotenv').config();
 const discord = require('discord.js');
 const DBL = require('dblapi.js')
-const client = new discord.Client();
+const client = new discord.Client({disableMentions: "everyone"});
 const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client)
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
