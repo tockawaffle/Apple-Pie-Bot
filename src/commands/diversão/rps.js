@@ -17,7 +17,7 @@ module.exports = {
                     message.reply(`${languages(guild, 'RPS_A')}`);
                     message.channel.send(process.env.ANGWY);
                     message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`);
-                } else if (response === `${languages(guild, 'RPS_P2')}` && rpsChoice == `${languages(guild, 'RPS_P2')}`) {
+                } else if (response === `${languages(guild, 'RPS_P2')}` && rpsChoice == `${languages(guild, 'RPS_P')}`) {
                     message.reply(`${languages(guild, 'RPS_A1')}`);
                     message.channel.send(process.env.OHNO);
                     message.channel.send(`${languages(guild, 'RPS_G')} ${rpsChoice} ${languages(guild, 'RPS_G2')} ${response}`);

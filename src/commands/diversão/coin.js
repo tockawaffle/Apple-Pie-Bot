@@ -29,5 +29,5 @@ module.exports = {
         })
 
         console.log(random)
-    }, aliases: [''], description: ''
+    }, aliases: [], description: ''
 }

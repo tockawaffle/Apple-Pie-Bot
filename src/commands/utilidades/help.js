@@ -29,7 +29,7 @@ module.exports = {
 
             {
               name: 'Brincadeiras / Fun:',
-              value: '-dado\n-meme\n-rps\n-kiss\n-hug\n-pat\n-slap\n-coin\n-snakegame',
+              value: '-dado\n-meme\n-rps\n-kiss\n-hug\n-pat\n-slap\n-coin\n-snakegame\n-changemymind\n-phub\n-trigger\n-ytb',
               inline: true
             },
 
@@ -43,6 +43,10 @@ module.exports = {
               name: 'Mensagens de boas-vindas / Welcome Messages:',
               value: '-sgw\n-rgw',
               inline: true
+            },
+            {
+              name: 'Backups',
+              value: '-create\n-load\n-info\nbacku-help'
             }
 
             )

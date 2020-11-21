@@ -9,5 +9,5 @@ module.exports = {
             console.log('Se você não usou isso, houve uma falha na segurança do bot!\nrun: <command name>')
         } else return console.log('Segurança funcionou:\nFailed to <command name>')
         
-    }, aliases: [''], description: 'Sim Left Command'
+    }, aliases: [], description: 'Sim Left Command'
 }

@@ -16,6 +16,10 @@ module.exports = {
                 {
                     name: 'Discord Bot List:',
                     value: `[${languages(guild, 'VT_C2')}](https://discord.ly/apple-pie)`
+                },
+                {
+                    name: "Botrix:",
+                    value: `[${languages(guild, 'VT_C2')}](https://botrix.cc/bots/762077336812126228)`
                 }
             )
             .setColor('RANDOM')

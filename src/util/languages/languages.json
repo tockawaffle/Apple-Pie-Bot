@@ -936,9 +936,162 @@
         "LF_EV2": {
             "english": "We'll miss him! Can't wait for him to come back.",
             "portugues": "Espero que ele volte logo!"
-        }
+        },
+
+        "CV_C": {
+            "english": "You should write something!",
+            "portugues": "Você deveria escrever algo!"
+        },
+        "CV_C2": {
+            "english": "You should write something!\nYou can use this command mentioning someone too!\nExample: -ytb @<mention> <text>",
+            "portugues": "Você deveria escrever algo!\nVocê pode usar esse comando mencionando alguém também!\nExemplo: -ytb @<mention> <text> "
+        },
+
         
 
+        "L_CC": {
+            "english": "yes",
+            "portugues": "sim"
+        },
+        "L_CC2": {
+            "english" : "no",
+            "portugues": "não"
+        },
+        "L_CMD_P": {
+            "english": "❌Failed!: Missing User Permissions.",
+            "portugues": "❌Falha!: Usuário sem permissões"
+        },
+        "L_CMD_P2": {
+            "english": "You cannot create or load a backup for the server:",
+            "portugues": "Você não pode criar um backup ou carregar para o servidor:"
+        },
+        "L_CMD_P3": {
+            "english": "Reasons:",
+            "portugues": "Motivos:"
+        },
+        "L_CMD_P4": {
+            "english": "Missing: **Administrator Permission**",
+            "portugues": "Faltando: **Permissão de Administrador**"
+        },
+        "L_CMD": {
+            "english": "Are you sure that you want to create a backup for",
+            "portugues": "Você tem certeza que quer criar um backup para o servidor"
+        },
+        "L_CMD2": {
+            "english": "Answer with:\n**Yes**\n**No**",
+            "portugues": "Responda com:\n**Sim**\n**Não**"
+        },
+        "L_CMD3": {
+            "english": "Want to know more about the backups?",
+            "portugues": "Quer saber mais sobre backups?"
+        },
+        "L_CMD4": {
+            "english": "Run the **-backuph** command!",
+            "portugues": "Faça o comando **-backuph**!"
+        },
+        
+        "L_CMD_B": {
+            "english": "Backup created for the guild",
+            "portugues": "Backup criado para a guilda"
+        },
+        "L_CMD_B1": {
+            "english": "Your backup code is:",
+            "potugues": "Seu código de backup é:"
+        },
+        "L_CMD_B2": {
+            "english": "You can use this code with:",
+            "portugues": "Você pode usar esse código com o comando:"
+        },
+        "L_CMD_B3": {
+            "english": "**ATTENTION**",
+            "portugues": "**ATENÇÃO**"
+        },
+        "L_CMD_B4": {
+            "english": "This backup code will be invalidated after you use it.",
+            "portugues": "Esse código de backup será invalidado depois que você o utilizar."
+        },
+        "L_CMD_B5":{ 
+            "english": "Backup created at:",
+            "portugues": "Backup criado em:"
+        },
+        "L_CMD_C": {
+            "english": "Backup was canceled for the guild:",
+            "portugues": "Backup foi cancelado para a guilda:"
+        },
+        "L_CMD_C2": {
+            "english": "It's okay if you want to backup!",
+            "portugues": "Tudo bem caso não queira fazer um backup!"
+        },
 
+
+        "L1": {
+            "english": "❌Failed!: Could not find a backup for the provided backupID.",
+            "portugues": "❌Falha!: Não foi possivel encontrar um backup com o ID providenciado."
+        },
+        "L2": {
+            "english": "✅ Backup found!",
+            "portugues": "✅ Backup encontrado!"
+        },
+        "L3": {
+            "english": "Your backup ID is:",
+            "portugues": "Seu código de backup é:"
+        },
+        "L4": {
+            "english": "The backup's guild name:",
+            "portugues": "O nome da guild no backup:"
+        },
+        "L5": {
+            "english": "The backup's guild ID:",
+            "portugues": "O ID da guilda no backup:"
+        },
+        "L6": {
+            "english": "Backup size:",
+            "portugues": "Tamanho do backup:"
+        },
+        "L7": {
+            "english": "Created at:",
+            "portugues": "Criado em:"
+        },
+        "L8": {
+            "english": "Backup loaded in the guild:",
+            "portugues": "Backup carregado na guilda:"
+        },
+        "LL": {
+            "english": "Backup loaded in the guild:",
+            "portugues": "Backup carregado na guilda:"
+        },
+        "LL2": {
+            "english": "Your backup code was:",
+            "portugues": "Seu código de backup era:"
+        },
+        "LL3": {
+            "english": "The guild this command was invoked:",
+            "portugues": "O nome da guilda em que o comando foi invocado:"
+        },
+        "LL4": {
+            "english": "**ATTENTION**",
+            "portugues": "**ATENÇÃO**"
+        },
+        "LL5": {
+            "english": "Your code",
+            "portugues": "Seu código"
+        },
+        "LL5_2": {
+            "english": "is invalid now! You'll need to create a new backup to get a new code.",
+            "portugues": "agora é inválido! Você irá precisar criar um novo backup para conseguir um novo código"
+        },
+        "LL6": {
+            "english": "Backup loaded at:",
+            "portugues": "Backup carregado em:"
+        },
+
+        "LLC": {
+            "english": "❌Backup not loaded for the guild:",
+            "portugues": "❌Backup não carregado para a guilda"
+        },
+        "LLC2": {
+            "english": "Action was canceled by: ",
+            "portugues": "Ação foi cancelada por:"
+        }
     }
 }

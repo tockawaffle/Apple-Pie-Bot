@@ -7,8 +7,8 @@ module.exports = async(client, message) => {
 
     if(message.author.bot) return;
 
-    const { guild } = message
-
+    const { guild, channel } = message
+    if(!channel.permissionsFor(client.user).has('SEND_MESSAGES')) return
     // No need to use it rn.
     // await userIdSchema.findOneAndUpdate({
     //     _id: message.author.id
