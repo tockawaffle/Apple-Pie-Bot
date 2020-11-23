@@ -1,6 +1,6 @@
 const { createStream } = require('table');
 const tableConfig = require('../../util/tableConfig');
-const { commandStatus, eventStatus } = require('../../util/registry');
+const { commandStatus, eventStatus, playerEventStatus } = require('../../util/registry');
     
     const database = require('../../../db/db')
     database.then(() => console.log(`Apple Pie se conectou ao MongoDB!`)).catch(err => console.log(err))
@@ -13,6 +13,8 @@ module.exports = async (client) => {
     await loadTable(commandStatus, 50);
     console.log("\n");
     await loadTable(eventStatus, 50);
+    console.log("\n");
+    await loadTable(playerEventStatus, 50)
     
     // client.user.setActivity('A stream de: https://www.twitch.tv/izgohi', {type: 'LISTENING'});
     client.user.setActivity(`Atualmente, ${client.guilds.cache.size} servidores me acolheram como bot!`, {type: 'PLAYING'});
@@ -39,16 +41,16 @@ module.exports = async (client) => {
         }
     }, 300 * 1000);
 
-    client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
-    let av = 0
-    setInterval(function() {
-      if(av === 0) {
-        client.user.setAvatar('src/events/ready/imgs/avatar1.png')
-        av = 1
-      } else if (av === 1) {
-        client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
-      }
-    }, 7200000)
+    // client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
+    // let av = 0
+    // setInterval(function() {
+    //   if(av === 0) {
+    //     client.user.setAvatar('src/events/ready/imgs/avatar1.png')
+    //     av = 1
+    //   } else if (av === 1) {
+    //     client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
+    //   }
+    // }, 7200000)
 
     loadLangs(client)
 }

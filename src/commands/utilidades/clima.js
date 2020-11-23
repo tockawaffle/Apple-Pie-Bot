@@ -4,10 +4,11 @@ const languages = require('../../util/languages/languages')
 
 
 module.exports = {
-    run: (client, message, args) => {
-        
+    run: async(client, message) => {
+        const args = message.content.split(' ')
+        args.shift(' ')
         const { guild } = message;
-        weather.find({search: args.split(0) , degreeType: 'C'}, function(err, result) {
+        weather.find({search: args , degreeType: 'C'}, function(err, result) {
             try {
                 const embed = new MessageEmbed()
                     .setTitle(`${languages(guild, 'W_C')}  ${result[0].location.name}`)
