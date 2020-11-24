@@ -1,19 +1,23 @@
+const { MessageEmbed } = require("discord.js");
+const languages = require('../../util/languages/languages')
+
 module.exports = {
     aliases:[],
     description:'Loops the queue',
     run: async(client, message, args) => {
-        if (!message.member.voice.channel) return message.channel.send(`You're not in a voice channel`);
+        const {guild} = message
+        if (!message.member.voice.channel) return message.reply(`${languages(guild, 'LPVP')}`)
 
-        if (!client.player.getQueue(message)) return message.channel.send(`No music playing on this server`);
+        if (!client.player.getQueue(message)) return message.reply(`${languages(guild, 'LPNQ')}`)
     
         const repeatMode = client.player.getQueue(message).repeatMode;
     
         if (repeatMode) {
             client.player.setRepeatMode(message, false);
-            return message.channel.send(`Repeat mode **disabled**`);
+            return message.channel.send(`${languages(guild, 'LPDS')}`);
         } else {
             client.player.setRepeatMode(message, true);
-            return message.channel.send(`Repeat mode **enabled**`);
+            return message.channel.send(`${languages(guild, 'LPAT')}`);
         };
     }
 }

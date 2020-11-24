@@ -5,7 +5,7 @@ module.exports = {
     aliases: [],
     description: '',
     run: async(client, message) => {
-
+        const {guild} = message
         const args = message.content.split(' ')
         args.shift(' ')
 
@@ -14,7 +14,7 @@ module.exports = {
         if (!message.member.voice.channel) {
             const noChannel = new MessageEmbed()
                 .setAuthor(`${message.guild.name}`, message.guild.iconURL({dynamic: true}))
-                .setDescription(`You're not in a channel, join one first!`)
+                .setDescription(`${languages(guild, 'PL')}`)
                 .setColor('RED')
             message.reply(noChannel)
             return
@@ -22,7 +22,7 @@ module.exports = {
 
         if (!args[0]) {
             const noArgs = new MessageEmbed()
-                .setDescription(`You need to provide a link first!`)
+                .setDescription(`${languages(guild, 'PL_2')}!`)
                 .setColor('RED')
             message.reply(noArgs)
             return

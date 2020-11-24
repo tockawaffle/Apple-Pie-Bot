@@ -4,9 +4,11 @@ const languages = require('../../util/languages/languages')
 module.exports = {
     run: async (client, message) => {
 
-        if (!message.member.voice.channel) return message.channel.send(`You're not in a voice channel`);
+        const {guild} = message
+
+        if (!message.member.voice.channel) return message.channel.send(`${languages(guild, 'LPVP')}`)
     
-        if (!client.player.getQueue(message)) return message.channel.send(`No music playing on this servers`);
+        if (!client.player.getQueue(message)) return message.channel.send(`${languages(guild, 'LPNQ')}`)
     
         const track = await client.player.nowPlaying(message);
         
@@ -15,12 +17,11 @@ module.exports = {
             embed: {
                 color: 'RED',
                 author: { name: track.title },
-                footer: { text: 'This is how we vibe today!' },
+                footer: { text: `${languages(guild, 'NP')}` },
                 fields: [
-                    { name: 'Channel', value: message.member.voice.channel.name, inline: true },
-                    { name: 'Requested by', value: track.requestedBy.username, inline: true },
-                    { name: 'From playlist', value: track.fromPlaylist ? 'Yes' : 'No', inline: true },
-                    { name: 'Progress bar', value: client.player.createProgressBar(message, { timecodes: true }), inline: true }
+                    { name: `${languages(guild, 'NP_1')}`, value: message.member.voice.channel.name, inline: true },
+                    { name: `${languages(guild, 'NP_2')}`, value: track.requestedBy.username, inline: true },
+                    { name: `${languages(guild, 'NP_3')}`, value: client.player.createProgressBar(message, { timecodes: true })}
                 ],
                 thumbnail: { url: track.thumbnail },
                 timestamp: new Date(),

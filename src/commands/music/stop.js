@@ -1,14 +1,16 @@
+const languages = require('../../util/languages/languages')
 module.exports = {
     aliases: [],
     description: 'Stops the music',
     run: async(client, message, args) => {
-        if (!message.member.voice.channel) return message.channel.send(`You're not in a voice channel`);
+        const {guild} = message
+        if (!message.member.voice.channel) return message.channel.send(`${languagues(guild, 'LPVP')}`);
 
-        if (!client.player.getQueue(message)) return message.channel.send(`No music playing on this server`);
+        if (!client.player.getQueue(message)) return message.channel.send(`${languagues(guild, 'LPNQ')}`);
     
         client.player.setRepeatMode(message, false);
         client.player.stop(message);
     
-        message.channel.send(`Music stopped in this server`);
+        message.channel.send(`${languages(guild, 'STP')} ${message.author.username}`);
     }
 }

@@ -20,7 +20,7 @@ const { registerCommands, registerEvents, registerPlayerEvents } = require('./ut
     client.cachedMessageReactions = new Map();
     await registerEvents(client, '../events');
     await registerCommands(client, '../commands');
-    await registerPlayerEvents(client, '../playerEvent')
+    await registerPlayerEvents(player, '../player-event')
     
 })();
 

@@ -1092,6 +1092,196 @@
         "LLC2": {
             "english": "Action was canceled by: ",
             "portugues": "Ação foi cancelada por:"
+        },
+
+
+
+
+        "MEVT": {
+            "english": "started a song!",
+            "portugues": "começou a festa!"
+        },
+        "MEVT_2":{
+            "english": "added a song to the queue!",
+            "portugues": "colocou uma música na playlist!"
+        },
+        "SEVT": {
+            "english": "Here are your search results for: ",
+            "portugues": "Aqui estão seus resultados para: "
+        },
+        "SIVT": {
+            "english": "You must choose a valid number between **1** and ",
+            "portugues": "Você tem de escolher uma resposta válida entre **1** e "
+        },
+        "SCVT": {
+            "english": "You didn't choose a valid response. Please, request the command again.",
+            "portugues": "Você não escolheu uma resposta válida. Por favor, requisite o comando novamente."
+        },
+        "QEVT": {
+            "english": "There are no more musics in the queue, add more!",
+            "portugues": "Não têm mais músicas na queue, adicione mais!"
+        },
+        "PEVT": {
+            "english": "has been added to the queue",
+            "portugues": "foi adicionado à queue"
+        },
+        "NRVT": {
+            "english": "No results found on YouTube for",
+            "portugues": "Nenhum resultado encontrado no youtube para"
+        },
+        "EEVT": {
+            "english": "There is no music being played on this server!",
+            "portugues": "Não há nenhuma música sendo tocada neste servidor!"
+        },
+        "EEVT_2": {
+            "english": "You are not connected in any VOIP!",
+            "portugues": "Você não está conectado em nenhum VOIP!"
+        },
+        "EEVT_3": {
+            "english": "I am not able to join your voice channel, please check my permissions.",
+            "portugues": "Eu não consegui entrar em seu canal de música, por favor, cheque minhas permissões"
+        },
+        "EEVT_4": {
+            "english": "Something went wrong... Error:",
+            "portugues": "Algo de errado aconteceu... Erro:"
+        },
+        "CEVT": {
+            "english": "Music stopped as there is no one listening to it!",
+            "portugues": "Música parou de tocar pois não há ninguem escutando!"
+        },
+        "BTEVT": {
+            "english": "Music stopped because I was disconnected!",
+            "portugues": "Música parou pois fui desconectada!"
+        },
+
+
+
+
+
+        "LPVP": {
+            "english": "You're not in a voice channel to do this!",
+            "portugues": "Você não está em um canal de voz para fazer isso!"
+        },
+        "LPNQ": {
+            "english": "There is no music playing in this server right now!",
+            "portugues": "Não há nenhuma música tocando neste servidor!"
+        },
+        "LPDS": {
+            "english": "Repeat mode is now disabled!",
+            "portugues": "Modo de repetição agora foi desativado!"
+        },
+        "LPAT": {
+            "english": "Repeat mode is now enabled!",
+            "portugues": "Modo de repetição agora foi ativado!"
+        },
+
+        "NP": {
+            "english": "This is how we're vibing today!",
+            "portugues": "É assim que nós festejamos hoje!"
+        },
+        "NP_1": {
+            "english": "Channel",
+            "portugues": "Canal"
+        },
+        "NP_2": {
+            "english": "Requested by:",
+            "portugues": "Requisitado por:"
+        },
+        "NP_3":{ 
+            "english": "Progress bar:",
+            "portugues": "Barra de progresso:"
+        },
+
+
+        "PL": {
+            "english": "You're not in a channel, join one first!",
+            "portugues": "Você não está em um canal, entre em um primeiro!"
+        },
+        "PL_2": {
+            "english": "You need to provide a **link** first!",
+            "portugues": "Você precisa providenciar um **link** primeiro!"
+        },
+
+
+
+        "NOQ": {
+            "english": "No songs are playing right now!",
+            "portugues": "Não há músicas tocando neste momento!"
+        },
+        "Q": {
+            "english": "Queue of the server",
+            "portugues": "Queue do servidor"
+        },
+        "Q_2": {
+            "english": "Current song:",
+            "portugues": "Música tocando agora:"
+        },
+        "Q_3": {
+            "english:": "Requested by:",
+            "portugues": "Requisitado por:"
+        },
+        "Q_4":{
+            "english": "And",
+            "portugues": "E"
+        },
+        "Q_5": {
+            "english": "other songs.",
+            "portugues": "outras músicas."
+        },
+        "Q_6": {
+            "english": "In the playlist are",
+            "portugues": "Na playlist tem"
+        },
+        "Q_7": {
+            "english": "other song(s)",
+            "portugues": "outra(s) música(s)"
+        },
+
+
+        "SKP": {
+            "english": "The previous music has been skipped by:",
+            "portugues": "A música anterior foi pulada por:"
+        },
+
+
+        "STP": {
+            "english": "Music has been stopped by:",
+            "portugues": "Música foi parada por:"
+        },
+
+
+
+        "MH": {
+            "english": "This is where you get help about the music commands!",
+            "portugues": "Aqui é onde você acha ajuda sobre comandos de música!"
+        },
+        "MH_2": {
+            "english": "This music function was made with:",
+            "portugues": "Essa função de música foi feita com:"
+        },
+        "MH_3": {
+            "english": "Looping the song:",
+            "portugues": "Para repetir o som:"
+        },
+        "MH_4": {
+            "english": "To show the music that is playing now:",
+            "portugues": "Para mostrar a música que está tocando:"
+        },
+        "MH_5": {
+            "english": "To play a music with it's **link**:",
+            "portugues": "Para tocar uma música com seu **link**:"
+        },
+        "MH_6": {
+            "english": "To show the queue in the server:",
+            "portugues": "Para mostrar a queue do servidor:"
+        },
+        "MH_7": {
+            "english": "To skip a music:",
+            "portugues": "Para pular uma música:"
+        },
+        "MH_8": {
+            "english": "To stop a music:",
+            "portugues": "Para parar uma música:"
         }
     }
 }
