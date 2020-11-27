@@ -68,7 +68,7 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 
 - [ ] Mudança de Prefixo / Change Prefix Command
 
-- [ ] Comandos de Música / Music Commands
+- [X] Comandos de Música / Music Commands
 
 - [X] Refazer todos os códigos de uma maneira mais complexa / Remake all of the codes in a complex way
 
