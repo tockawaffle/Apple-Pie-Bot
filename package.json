@@ -10,12 +10,14 @@
   "author": "Tocka!",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.3",
     "ansi-colors": "^4.1.1",
     "canvacord": "^5.0.8",
     "common-tags": "^1.8.0",
     "dblapi.js": "^2.4.1",
     "discord-backup": "^2.2.5",
-    "discord.js": "^12.4.1",
+    "discord-player": "git+https://github.com/Androz2091/discord-player.git",
+    "discord.js": "^12.5.0",
     "dotenv": "^8.2.0",
     "moment": "^2.29.1",
     "mongoose": "^5.10.15",
@@ -23,7 +25,6 @@
     "random-puppy": "^1.1.0",
     "snakecord": "0.0.6",
     "table": "^5.4.6",
-    "weather-js": "^2.0.0",
-    "ytdl-core": "^4.0.5"
+    "weather-js": "^2.0.0"
   }
 }
