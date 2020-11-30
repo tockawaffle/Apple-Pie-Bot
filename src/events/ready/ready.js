@@ -55,7 +55,7 @@ module.exports = async (client) => {
         client.user.setAvatar('src/events/ready/imgs/avatar4.jpg')
         av = 0
       }
-    }, 7200000)
+    }, 7200000);
 
     loadLangs(client)
 }
