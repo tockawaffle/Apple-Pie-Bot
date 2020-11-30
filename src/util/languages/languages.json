@@ -1282,6 +1282,78 @@
         "MH_8": {
             "english": "To stop a music:",
             "portugues": "Para parar uma música:"
+        },
+
+        "FH":{
+            "english": "These are the filters I can support!:",
+            "portugues": "Esses são os filtros que eu suporto!:"
+        },
+        "FH_2": {
+            "english": "Filters:",
+            "portugues": "Filtros:"
+        },
+        "FH_3": {
+            "english": "How to use: -filter <Filter-Name>",
+            "portugues": "Como usar: -filter <Nome-do-Filtro"
+
+        },
+
+        "FE": {
+            "english": "You need to provide a filter to enable/disable!",
+            "portugues": "Você precisa me dizer qual filtro ativar/desativar!"
+        },
+        "FE_2": {
+            "english": "That filter does not exists! Please, provide a valid filter",
+            "portugues": "Esse filtro não existe, por favor, me dê um filtro válido!"
+        },
+        "FE_3": {
+            "english": "I am now **adding** the provided filter to the music, please, give me a second.",
+            "portugues": "Eu estou **adicionando** o filtro requisitado à música, por favor, me dê um momento."
+        },
+        "FE_4":{ 
+            "english": "The longer the song is, the longer I am going to take to apply the filter to the music.",
+            "portugues": "O quão maior a música for, mais tempo eu levarei para aplicar o filtro."
+        },
+        "FE_5": {
+            "english": "I am now **removing** the provided filter to the music, please, give me a second.",
+            "portugues": "Eu estou **removendo** o filtro requisitado à música, por favor, me dê um momento."
+        },
+        "FE_6":{ 
+            "english": "The longer the song is, the longer I am going to take to remove the filter to the music.",
+            "portugues": "O quão maior a música for, mais tempo eu levarei para remover o filtro."
+        },
+        "FE_7":{
+            "english": "Note:",
+            "portugues": "Nota:"
+        },
+
+
+
+        "PS": {
+            "english": "Song paused!:",
+            "portugues": "Música pausada!"
+        },
+        "PS_2": {
+            "english": "Paused by:",
+            "portugues": "Pausado por:"
+        },
+        "RS": {
+            "english": "Song resumed!:",
+            "portugues": "Música despausada!:"
+        },
+        "RS_2": {
+            "english": "Resumed by:",
+            "portugues": "Despausada por:"
+        },
+
+
+        "SF": {
+            "english": "Queue shuffled!:",
+            "portugues": "Queue colocada em modo aleatório!:"
+        },
+        "SF_2": {
+            "english": "song(s)",
+            "portugues": "música(s)"
         }
     }
 }

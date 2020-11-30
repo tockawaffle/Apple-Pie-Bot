@@ -5,7 +5,14 @@ const PREFIX = process.env.PREFIX
 
 module.exports = async(client, message) => {
 
+
     if(message.author.bot) return;
+
+    //---------------------Flagged Servers-----------------------------//
+
+    //HA! None.
+
+    //----------------------------------------------------------------//
 
     const { guild, channel } = message
     if(!channel.permissionsFor(client.user).has('SEND_MESSAGES')) return

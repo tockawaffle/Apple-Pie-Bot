@@ -18,6 +18,7 @@ const { registerCommands, registerEvents, registerPlayerEvents } = require('./ut
     client.login(process.env.BOT_TOKEN);
     client.commands = new Map();
     client.cachedMessageReactions = new Map();
+    client.filters = require('./util/filters.json')
     await registerEvents(client, '../events');
     await registerCommands(client, '../commands');
     await registerPlayerEvents(player, '../player-event')

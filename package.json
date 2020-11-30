@@ -22,7 +22,6 @@
     "moment": "^2.29.1",
     "mongoose": "^5.10.15",
     "nodemon": "^2.0.6",
-    "random-puppy": "^1.1.0",
     "snakecord": "0.0.6",
     "table": "^5.4.6",
     "weather-js": "^2.0.0"
