@@ -29,6 +29,7 @@ module.exports = {
         }
 
         client.player.play(message, args.join(" "), message.member)
+        client.player.play(message, args.join(' '), message.member)
         
     }
 }   

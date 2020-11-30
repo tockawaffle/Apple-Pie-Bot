@@ -4,9 +4,6 @@ module.exports = {
     description: 'Skips a music',
     run: async(client, message, args) =>{ 
         const {guild} = message
-        if (!message.member.voice.channel) return message.channel.send(`${languagues(guild, 'LPVP')}`);
-
-        if (!client.player.getQueue(message)) return message.channel.send(`${languagues(guild, 'LPNQ')}`);
     
         client.player.skip(message);
     

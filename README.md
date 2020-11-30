@@ -68,11 +68,39 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 
 - [ ] Mudança de Prefixo / Change Prefix Command
 
-- [ ] Comandos de Música / Music Commands
+- [X] Comandos de Música / Music Commands
 
 - [X] Refazer todos os códigos de uma maneira mais complexa / Remake all of the codes in a complex way
 
 - [ ] Ser famosa! / Be famous! (Sonhar alto não tem problema, tem?)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h1 style="color:Red;text-align:center">Privacy Policy</h1>
+
+<h4 style="color:MediumPurple">This bot is going to store in a private DB:</h4>
+
+- Your guild ID when a language get set.
+- A channel ID when a welcome/left channel gets set.
+
+<h4 style="color:DarkSeaGreen">This bot is going to store in the backup commands (If used):</h4>
+
+- Your guild whole data. i.e The guild roles, channels, roles permissions, channel permissions, guild icon, banned members and etc. The only thing it won't store are your emojis and messages. -If you load a backup, IT IS going to replace all the present data in the server, replacing it by the backup's data.
+
+<h4 style="color:LightYellow">The bot won't store anything without the user first running a command that uses it's database, that said, the following commands require a database:</h4>
+
+- setlanguage =>
+
+<p style="font-size: 70%">It is tho, strongly recommended to set a language, since it might send "undefined" messages when you don't set it.</p>
+
+- sgw
+
+<p style="font-size: 70%">It sets a welcome message in the channel the command was invoked) -setlft (It sets a left message in the channel the command was invoked) Both -rgw and -rlft will remove your guild's data from the database but the bot will still send messages in the selected channels till it restarts (It restarts weekly, if not updated or if a backup is not created
+(Creating a backup will restart the bot, if this get abused by a server, the server WILL be placed into a blacklist of the bot and the backup/stored data will be removed permanently from the bot, the same won't work again in the server that abused these commands)</p>
+
+- The bot won't (if not asked to[Still, the bot does not have a command or utilitiy that stores the following]) store any user IDs/names/icons
+
+Any errors/complaints contact the dev in the support server!
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
