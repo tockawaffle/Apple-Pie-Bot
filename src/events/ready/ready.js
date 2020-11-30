@@ -42,14 +42,17 @@ module.exports = async (client) => {
     }, 300 * 1000);
 
 
-    client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
+    client.user.setAvatar('src/events/ready/imgs/avatar1.jpg')
     let av = 0
     setInterval(function() {
       if(av === 0) {
-        client.user.setAvatar('src/events/ready/imgs/avatar1.png')
+        client.user.setAvatar('src/events/ready/imgs/avatar2.png')
         av = 1
       } else if (av === 1) {
-        client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
+        client.user.setAvatar('src/events/ready/imgs/avatar3.jpg')
+        av = 2
+      } else if (av === 2 ) {
+        client.user.setAvatar('src/events/ready/imgs/avatar4.jpg')
         av = 0
       }
     }, 7200000)

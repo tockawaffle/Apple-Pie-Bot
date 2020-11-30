@@ -52,7 +52,7 @@ module.exports = {
                 .setAuthor(`${message.guild.name}`, message.guild.iconURL({dynamic: true}))
                 .setColor('RANDOM')
                 .setDescription(`${languages(guild, "FE_3")}`)
-                .addField(`${languages(guild, "FE_7")}:`, `${languages(guild, "FE_4")}`)
+                .addField(`${languages(guild, "FE_7")}`, `${languages(guild, "FE_4")}`)
             message.reply(filterUpdated)
         }
         else {
