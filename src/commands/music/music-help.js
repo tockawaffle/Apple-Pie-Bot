@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js")
-
 const languages = require('../../util/languages/languages')
+
 module.exports = {
     aliases: ['mh'],
     description: "Music Help Command",
@@ -41,6 +41,11 @@ module.exports = {
                 {
                     name: `${languages(guild, 'MH_8')}`,
                     value: `-stop`,
+                    inline: true
+                },
+                {
+                    name: `Filters:`,
+                    value: `-filters-help`,
                     inline: true
                 },
                 {

@@ -28,9 +28,5 @@ module.exports = {
                 }
             }
         )
-
-        // message.channel.send(`**${languages(guild, 'Q')} - ${message.guild.name}**\n${languages(guild, 'Q_2')} ${queue.playing.title} | ${queue.playing.author}\n\n` + (queue.tracks.map((track, i) => {
-        //     return `**#${i + 1}** - ${track.title} | ${track.author} (r${languages(guild, 'Q_3')} ${track.requestedBy.username})`
-        // }).slice(0, 5).join('\n') + `\n\n${queue.tracks.length > 5 ? `${languages(guild, 'Q_4')} **${queue.tracks.length - 5}**${languages(guild, 'Q_5')}` : `${languages(guild, 'Q_6')} **${queue.tracks.length}** ${languages(guild, 'Q_7')}`}`));
     }
 }
