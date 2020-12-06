@@ -192,41 +192,77 @@
 
 
         "B_C": {
-            "english": "You do not have permissions to ban someone!",
-            "portugues": "Você não tem permissão para banir alguém!"
+            "english": "Hello,",
+            "portugues": "Olá,"
         },
         "B_C2": {
-            "english": "I do not have permissions to ban someone. Please give me the 'Ban Members' permission.",
-            "portugues": "Eu não tenho permissão para banir alguém. Me dê a permissão 'Banir Membro' primeiro!"
+            "english": ", you cannot ban someone",
+            "portugues": ", você não pode banir"
         },
         "B_C3": {
-            "english": "Action: Ban",
-            "portugues": "Ação: Banimento"
+            "english": "Reason: Missing 'Ban Members' Permission",
+            "portugues": "Motivo: Faltando a permissão 'Banir Membros'"
         },
         "B_C4": {
-            "english": "was banned sucessfully!",
-            "portugues": "foi banido com sucesso!"
+            "english": "❌ Failed: Missing User Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Usuário"
         },
         "B_C5": {
-            "english": "Banned by:",
-            "portugues": "Banimento realizado por:"
+            "english": "❌ Failed: Missing Bot Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Bot"
         },
-        "B_ERR": {
-            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -ban <@mention> or <memberID>\nAlso, check the roles hierarchy!",
-            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -ban <@menção> ou <memberID>\nCheque também a hierarquia dos cargos!"
+        "B_C6": {
+            "english": ", I can't ban someone.",
+            "portugues": ", eu não posso banir alguém"
         },
-        "B_ERR2": {
-            "english": "Hey! I'm not able to ban someone with the 'Ban Members' permissions!",
-            "portugues": "Hey! Eu não consigo banir alguém com a permissão de 'Banir Membros"
+        "B_C7": {
+            "english": "Reason: Missing 'Ban Members' Permission for the Bot",
+            "portugues": "Motivo: Faltando a permissão do bot: 'Ban Members'"
         },
-        "B_ERR3": {
-            "english": "Hey! I'm not able to ban an Administrator!",
-            "portugues": "Hey! Eu não consigo banir um Administrador!"
+        "B_C8": {
+            "english": "❌ Failed: Ban",
+            "portugues": "❌ Falha: Ban"
         },
-        "B_ERR4": {
-            "english": "I could not ban the user, please, check the role hierarchy.",
-            "portugues": "Eu não consegui banir o usuario, por favor, cheque a hierarquia dos cargos."
+        "B_C9": {
+            "english": "Please, mention someone or enter a valid userID:",
+            "portugues": "Por favor, mencione alguém ou use um userID válido"
         },
+        "B_C10": {
+            "english": "❌ Failed: Member is not bannable",
+            "portugues": "❌ Falha: Não é possível banir este membro"
+        },
+        "B_C11": {
+            "english": ", I could not ban that user",
+            "portugues": ", eu não consegui banir o membro"
+        },
+        "B_C12": {
+            "english": "Reason: Either because he has a higher role than I do or because he is the guild owner.",
+            "portugues": "Motivo: O membro tem um cargo maior que o meu ou é dono do servidor."
+        },
+        "B_C13": {
+            "english": "✅Sucess: Ban",
+            "portugues": "✅Sucesso: Ban"
+        },
+        "B_C14": {
+            "english": "User Banned:",
+            "portugues": "Usuário Banido:"
+        },
+        "B_C15": {
+            "english": "Reason:",
+            "portugues": "Motivo"
+        },
+        "B_C16": {
+            "english": "Not Provided",
+            "portugues": "Não Providenciado"
+        },
+        "B_C17": {
+            "english": "User Banned By:",
+            "portugues": "Usuário Banido por:"
+        },
+
+
+
+
 
         "UB_C": {
             "english": "You do not have permissions to unban someone!",
@@ -433,33 +469,90 @@
         
 
         "H_C": {
-            "english": "Those who are happiest are those who do the most for others. Here are my commands;",
-            "portugues": "Você sabia que a vida só fica mais doce quando se tem um pouco de ajuda?"
+            "english": "Utilities",
+            "portugues": "Utilidades"
         },
         "H_C2": {
-            "english": "I know that I don't have much to offer, but I'm in Developing Process and I'm trying my best to please everyone!\nMy current version is:",
-            "portugues": "Eu sei que não tenho muito a oferecer, mas eu estou em desenvolvimento e estou dando meu melhor para melhorar!\nMinha versão atual é:"
+            "english": "Invite",
+            "portugues": "Convite"
         },
         "H_C3": {
-            "english": "To verify my aliases, use:",
-            "portugues": "Para verificar minhas aliases, use:"
+            "english": "Página do Github",
+            "portugues": "Gituhub's Page"
         },
         "H_C4": {
-            "english": "Everything becomes easier when there's less work!",
-            "portugues": "Tudo fica um pouco mais fácil quando o trabalho é menor!"
+            "english": "Games / Roleplay 🎮",
+            "portugues": "Jogos / Roleplay 🎮"
         },
         "H_C5": {
-            "english": "Want to know more about how my commands work?",
-            "portugues": "Quer saber mais sobre como meus comandos funcionam?"
+            "english": "Toss a Coin!",
+            "portugues": "Cara ou Coroa!"
         },
         "H_C6": {
-            "english": "Click Here Then!",
-            "portugues": "Então clique aqui!"
+            "english": "Roll a dice!",
+            "portugues": "Gire um dado!"
         },
         "H_C7": {
-            "english": "The commands that aren't listed in here don't have/need an alias!",
-            "portugues": "Os comandos não listados aqui não tem/precisam de um alias!"
+            "english": "Want to hug someone?",
+            "portugues": "Abrace alguém!"
         },
+        "H_C8": {
+            "english": "Want to kiss someone?",
+            "portugues": "Beije alguém!"
+        },
+        "H_C9": {
+            "english": "Want to headpat someone?",
+            "portugues": "Faça carinho em alguém"
+        },
+        "H_C10": {
+            "english": "A random anime-girl uwu",
+            "portugues": "Uma foto aleatória de anime uwu"
+        },
+        "H_C11": {
+            "english": "Rock, Paper or Scissors!",
+            "portugues": "Pedra, Papel ou Tesoura!"
+        },
+        "H_C12": {
+            "english": "Slap someone!",
+            "portugues": "Dê um tapa em alguém!"
+        },
+        "H_C13": {
+            "english": "The old SnakeGame now in your DS!",
+            "portugues": "O antigo jogo da cobra agora no Discord!"
+        },
+        "H_C14": {
+            "english": "Essentials",
+            "portugues": "Essenciais"
+        },
+        "H_C15": {
+            "english": "Set a language to your server!",
+            "portugues": "Escolha uma linguagem para o servidor!"
+        },
+        "H_C16": {
+            "english": "Want to backup your server?",
+            "portugues": "Crie um backup para seu servidor!"
+        },
+        "H_C17": {
+            "english": "Want to ser or remove a Welcome Message?",
+            "portugues": "Configure uma mensagem de boas vindas!"
+        },
+        "H_C18": {
+            "english": "Want to set a 'Member Left' Message?",
+            "portugues": "Configure uma mensagem de saída!"
+        },
+        "H_C19": {
+            "english": "Want to visit my website?",
+            "portugues": "Deseja visitar meu website?"
+        },
+        "H_C20": {
+            "english": "Give it a try, there are plenty more information about me on my site!:",
+            "portugues": "Por quê não? Tem muito mais informações sobre mim no meu site!:"
+        },
+        "H_C21": {
+            "english": "Click Here",
+            "portugues": "Clique Aqui"
+        },
+
 
 
 
@@ -580,6 +673,14 @@
         "UF_ERR_2": {
             "english": "maybe he turned into a pie!",
             "portugues": "talvez ele tenha se tornado uma torta!"
+        },
+        "UF_C7": {
+            "english": "Do not Disturb",
+            "portugues": "Não Interromper"
+        },
+        "UF_C8": {
+            "english": "Idle",
+            "portugues": "Ausente"
         },
 
         
@@ -1354,6 +1455,104 @@
         "SF_2": {
             "english": "song(s)",
             "portugues": "música(s)"
+        },
+
+
+
+
+        "LCK": {
+            "english": "✅ Sucess: Channel Lock",
+            "portugues": "✅ Sucesso: Lock de Canal"
+        },
+        "LCK_C": {
+            "english": "Your channel was locked:",
+            "portugues": "O seguinte canal foi bloqueado:"
+        },
+        "LCK_C1": {
+            "english": "The role it has been locked for:",
+            "portugues": "O cargo que foi bloqueado no canal:"
+        },
+        "LCK_C2": {
+            "english": "Channel locked by:",
+            "portugues": "Canal bloqueado por:"
+        },
+
+
+        "BCK": {
+            "english": "Here you can find what every backup command does!",
+            "portugues": "Aqui você pode encontrar o que cada comando de backup faz!"
+        },
+        "BCK_C": {
+            "english": "**Before using this command, please, read the Terms of Service below:**",
+            "portugues": "**Antes de usar esses comandos, por favor, leia os Termos de Serviço abaixo:**"
+        },
+        "BCK_C2": {
+            "english": "Click Here",
+            "portugues": "Clique Aqui"
+        },
+        "BCK_C3": {
+            "english": "To create a backup:",
+            "portugues": "Para criar um backup:"
+        },
+        "BCK_C4": {
+            "english": "To load a backup:",
+            "portugues": "Para carregar um backup:"
+        },
+        "BCK_C5": {
+            "english": "Gives you info about the backup:",
+            "portugues": "Te dá informações sobre o backup:"
+        },
+
+
+
+
+        "SVIC": {
+            "english": "This",
+            "portugues": "Esse"
+        },
+        "SVIC_C": {
+            "english": "is the server icon",
+            "portugues": "é o ícone do servidor"
+        },
+
+
+
+        "UNLC": {
+            "english": "✅ Sucess: Channel Lock",
+            "portugues": "✅ Sucesso: Canal Bloqueado"
+        },
+        "UNLC_C": {
+            "english": "Your channel was locked:",
+            "portugues": "Seu canal foi bloqueado:"
+        },
+        "UNLC_C2": {
+            "english": "The role it has been locked for:",
+            "portugues": "O cargo que foi bloqueado no canal:"
+        },
+        "UNLC_C3": {
+            "english": "Channel locked by:",
+            "portugues": "Canal bloqueado por:"
+        },
+
+        "MT": {
+            "english": "❌ Failed: Mute",
+            "portugues": "❌ Falha: Mute"
+        },
+        "MT_C": {
+            "english": "That user is already muted! Please, unmute him before muting again",
+            "portugues": "Esse usuário já está mutado! Por favor, desmute-o antes de o mutar novamente"
+        },
+        "MT_C2": {
+            "english": "Failed at:",
+            "portugues": "Falhou em:"
+        },
+        "LCKP": {
+            "english": "❌ Failed: Missing User Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Usuário"
+        },
+        "LCKP2": {
+            "english": "Reason: Missing user 'Manage Channels' Permission",
+            "portugues": "Motiv: Faltando a permissão 'Manage Channels'"
         }
     }
 }

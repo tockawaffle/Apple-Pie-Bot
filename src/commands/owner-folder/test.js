@@ -7,9 +7,8 @@ module.exports = {
         if(message.author.id === owner.id) {
 
 
-            const Embed = new MessageEmbed()    
-            .addField('no')
-            message.channel.send(Embed)
+            const role = message.guild.roles.cache.get(`${args[1]}`)
+            console.log(role)
 
             console.log('Se você não usou isso, houve uma falha na segurança do bot!\nrun: <command name>')
         } else return console.log('Segurança funcionou:\nFailed to <command name>')

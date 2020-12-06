@@ -53,6 +53,9 @@ module.exports = async (client) => {
         av = 2
       } else if (av === 2 ) {
         client.user.setAvatar('src/events/ready/imgs/avatar4.jpg')
+        av = 3
+      } else if (av === 3) {
+        client.user.setAvatar('src/events/ready/imgs/avatar5.jpg')
         av = 0
       }
     }, 7200000);
