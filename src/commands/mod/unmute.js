@@ -20,6 +20,15 @@ module.exports = {
         if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
             return message.channel.send(`${languages(guild, 'UM6_C')}`);
         }
+        if(user.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)) {
+            const embed = new MessageEmbed()
+                .setDescription(`${languages(guild, 'MT_C')}`)
+                .setAuthor(`${languages(guild, 'MT')}`)
+                .setFooter(`${languages(guild, 'MT_C2')}`)
+                .setTimestamp()
+            message.reply(embed)
+            return
+        } 
 
         //Still coudnt find a way to check for the mutedRole, AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
         try{

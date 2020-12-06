@@ -1,6 +1,5 @@
 const languages = require('../../util/languages/languages');
 const { MessageEmbed } = require('discord.js');
-const mute = require('./mute');
 
 module.exports = {
     run: async(client, message, args) => {
@@ -17,9 +16,15 @@ module.exports = {
         if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
             return message.channel.send(`${languages(guild, 'M6_C')} ${process.env.POUT}`);
         }
-        //if there is not a mutedrole but it mentions the userID or the raw mention, it's going to create the role and it's permissions for each channel in the server
-        //I think this way is easier than doing 3 separate commands like I used to do with the bot
-        //Still coudnt get a way to check if the user has the mutedRole, searched everywhere, nothing worksssssssss
+        if(user.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)) {
+            const embed = new MessageEmbed()
+                .setDescription(`${languages(guild, 'MT_C')}`)
+                .setAuthor(`${languages(guild, 'MT')}`)
+                .setFooter(`${languages(guild, 'MT_C2')}`)
+                .setTimestamp()
+            message.reply(embed)
+            return
+        }
         try{
             if(!mutedRole && member) {
 
