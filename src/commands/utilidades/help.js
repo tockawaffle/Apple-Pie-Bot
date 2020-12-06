@@ -1,61 +1,187 @@
+const { MessageEmbed } = require('discord.js')
+const languages = require('../../util/languages/languages')
+
 module.exports = {
-  run: async(client, message, args) => {  
-    const languages = require('../../util/languages/languages')
-      const { MessageEmbed } = require('discord.js')
-      const { guild } = message;
-
-      if(message.author.bot) return;
-        const embed = new MessageEmbed()
-
-          .setTitle(`${languages(guild, 'H_C')}`)
-          .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-          .setThumbnail(guild.iconURL({ dynamic: true }))
-          .addFields(
-            {
-              name: `${languages(guild, 'H_C3')}`, value: '-aliases (ou, -als)'
-            },
-
-            {
-              name: 'Utilidades / Utilities:', 
-              value: '-convite\n-help\n-avatar\n-ping\n-botinfo\n-userinfo\n-github\n-clima\n-serverinfo\n-uptime',
-              inline: true
-            },
-
-            {
-              name: 'Moderação / Moderation:',
-              value: '-ban\n-kick\n-mute\n-unban\n-unmute\n-slowmode\n-smremove\n-locks\n-unlock',
-              inline: true
-            },
-
-            {
-              name: 'Brincadeiras / Fun:',
-              value: '-dado\n-meme\n-rps\n-kiss\n-hug\n-pat\n-slap\n-coin\n-snakegame\n-changemymind\n-phub\n-trigger\n-ytb',
-              inline: true
-            },
-
-            {
-              name: 'Outros / Others',
-              value: '-setlanguage\n-vote\n-sponsors',
-              inline: true
-            },
-
-            {
-              name: 'Mensagens de boas-vindas / Welcome Messages:',
-              value: '-sgw\n-rgw',
-              inline: true
-            },
-            {
-              name: 'Backups',
-              value: '-create\n-load\n-info\nbacku-help'
-            }
+    aliases: ['h'],
+    description: 'Comando de help',
+    run: async(client, message) => {
+        const { guild } = message;
+        const pageEmbed = require('discord.js-pagination')
+        
+        const helpUtil = new MessageEmbed()
+            .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
+            .setTitle(`${languages(guild, 'H_C')}`)
+            .addFields(
+                {
+                    name:  `${languages(guild, 'H_C2')}`,
+                    value: '```-invite```',
+                },
+                {
+                    name: 'Avatar:',
+                    value: '```-avatar <@mention>, <userID>```'
+                },
+                {
+                    name: 'Server Icon:',
+                    value: '```-server-icon```'
+                },
+                {
+                    name: 'Ping:',
+                    value: '```-ping```'
+                },
+                {
+                    name: 'Bot Info:',
+                    value: '```-botinfo```'
+                },
+                {
+                    name: 'User Info',
+                    value: '```-userinfo <@mention>, <userID>```'
+                },
+                {
+                    name: `${languages(guild, 'H_C3')}`,
+                    value: '```-github```'
+                },
+                {
+                    name: 'Weather:',
+                    value: '```-weather```'
+                },
+                {
+                    name: 'Server Info:',
+                    value: '```-serverinfo```'
+                }
+            )
+            .setColor('RANDOM')
+        const helpMod = new MessageEmbed()
+            .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
+            .setTitle(`Mod Commands`)
+            .addFields(
+                {
+                    name: 'Ban Command:',
+                    value: '```-ban <@mention>, <userID>```'
+                },
+                {
+                    name: 'Kick Command:',
+                    value: '```-kick <@mention>, <userID>```'
+                },
+                {
+                    name: 'Mute Command:',
+                    value: '```-mute <@mention>, <userID>```'
+                },
+                {
+                    name: 'Unmute Command:',
+                    value: '```-unmute <@mention>, <userID>```'
+                },
+                {
+                    name: 'Unban Command:',
+                    value: '```-unban <userID>```'
+                },
+                {
+                    name: 'Slowmode:',
+                    value: '```-slowmode <messageChannel> || <#channel>```'
+                },
+                {
+                    name: 'Remove Slowmode:',
+                    value: '```-smr```'
+                },
+                {
+                    name: 'Lockdown:',
+                    value: '```-lock or -lock-channel <#channelMention>```'
+                },
+                {
+                    name: 'Unlockdown:',
+                    value: '```-unlock or -unlock-channel <#channelMention>```'
+                },
+                
+            )
+            .setColor('RANDOM')
+        const helpFun = new MessageEmbed()
+            .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
+            .setTitle(`${languages(guild, 'H_C4')}`)
+            .setColor('RANDOM')
+            .addFields(
+                {
+                    name: `${languages(guild, 'H_C5')}`,
+                    value: '```-coin```'
+                },
+                {
+                    name: `${languages(guild, 'H_C6')}`,
+                    value: '```-dice```'
+                },
+                {
+                    name: `${languages(guild, 'H_C7')}`,
+                    value: '```-hug <@mention>```'
+                },
+                {
+                    name: `${languages(guild, 'H_C8')}`,
+                    value: '```-kiss <@mention>```'
+                },
+                {
+                    name: `${languages(guild, 'H_C9')}`,
+                    value: '```-hug <@mention>```'
+                },
+                {
+                    name: `${languages(guild, 'H_C10')}`,
+                    value: '```-randomanime```'
+                },
+                {
+                    name: `${languages(guild, 'H_C11')}`,
+                    value: '```-rps```'
+                },
+                {
+                    name: `${languages(guild, 'H_C12')}`,
+                    value: '```-slap <@mention>```'
+                },
+                {
+                    name: `${languages(guild, 'H_C13')}`,
+                    value: '```-snakegame```',
+                },
 
             )
-            .addField(`${languages(guild, 'H_C5')}`, `[${languages(guild, 'H_C6')}](https://github.com/The-Crow-pleb/Junk/blob/master/Atalhos/Apple%20Pie/help%20-%20apple/README.md)`)
+        const helpEssentials = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setTitle(`${languages(guild, 'H_C14')}`)
+            .addFields(
+                {
+                    name: `${languages(guild, 'H_C15')}`,
+                    value: '```-setlanguage <english or portuguese>```'
+                },
+                {
+                    name: `${languages(guild, 'H_C16')}`,
+                    value: '```-backup-help```'
+                },
+                {
+                    name: `${languages(guild, 'H_C17')}`,
+                    value: '```-setgw (To add) -rgw (To remove)```'
+                },
+                {
+                    name: `${languages(guild, 'H_C18')}`,
+                    value: '```-setleft (To add) -rmvleft (To remove)```'
+                },
+            )
             .setColor('RANDOM')
-            .setFooter(`${languages(guild, 'H_C2')} 6.0`)
-        message.channel.send(embed); 
-            
-  },
-  aliases: ['ajuda', 'h'],
-  description: 'Comando de ajuda, mostra todos os comandos presentes no servidor!'
+        const helpPage = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setTitle(`${languages(guild, 'H_C19')}`)
+            .addFields({
+                name: `${languages(guild, 'H_C20')}`,
+                value: `[${languages(guild, 'H_C21')}](https://www.applepiebot.xyz/)`
+            })
+            .setColor('RANDOM')
+        const helpNSFW = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setTitle('NSFW Commands')
+            .addFields(
+                {
+                    name: 'NSFW Anime:',
+                    value: '-nsfw-anime'
+                }
+            )
+        pages = [
+            helpPage,
+            helpEssentials,
+            helpUtil,
+            helpMod,
+            helpFun,
+        ]
+        pageEmbed(message, pages)
+    }
 }
