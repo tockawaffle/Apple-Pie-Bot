@@ -8,7 +8,20 @@ module.exports = {
         const args = message.content.split(' ')
         args.shift(' ')
         const { guild } = message;
-        weather.find({search: args , degreeType: 'C'}, function(err, result) {
+        if(!args[0]) {
+            const embed = new MessageEmbed()
+                .setAuthor(message.guild.name, guild.iconURL({dynamic: true}))
+                .setDescription(`${languages(guild, "W_A")}`)
+                .addFields(
+                    {
+                        name: `${languages(guild, "W_A2")}`,
+                        value: '```_weather <city/state>```'
+                    }
+                )
+            message.reply(embed)
+            return
+        }
+        weather.find({search: args.join(' ') , degreeType: 'C'}, function(err, result) {
             try {
                 const embed = new MessageEmbed()
                     .setTitle(`${languages(guild, 'W_C')}  ${result[0].location.name}`)
