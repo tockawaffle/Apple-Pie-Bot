@@ -14,39 +14,43 @@ module.exports = {
             .addFields(
                 {
                     name:  `${languages(guild, 'H_C2')}`,
-                    value: '```-invite```',
+                    value: '```_invite```',
                 },
                 {
                     name: 'Avatar:',
-                    value: '```-avatar <@mention>, <userID>```'
+                    value: '```_avatar <@mention>, <userID>```'
                 },
                 {
                     name: 'Server Icon:',
-                    value: '```-server-icon```'
+                    value: '```_server_icon```'
                 },
                 {
                     name: 'Ping:',
-                    value: '```-ping```'
+                    value: '```_ping```'
                 },
                 {
                     name: 'Bot Info:',
-                    value: '```-botinfo```'
+                    value: '```_botinfo```'
                 },
                 {
                     name: 'User Info',
-                    value: '```-userinfo <@mention>, <userID>```'
+                    value: '```_userinfo <@mention>, <userID>```'
                 },
                 {
                     name: `${languages(guild, 'H_C3')}`,
-                    value: '```-github```'
+                    value: '```_github```'
                 },
                 {
                     name: 'Weather:',
-                    value: '```-weather```'
+                    value: '```_weather```'
                 },
                 {
                     name: 'Server Info:',
-                    value: '```-serverinfo```'
+                    value: '```_serverinfo```'
+                },
+                {
+                    name: 'Music Commands',
+                    value: '```_music-help```'
                 }
             )
             .setColor('RANDOM')
@@ -56,39 +60,35 @@ module.exports = {
             .addFields(
                 {
                     name: 'Ban Command:',
-                    value: '```-ban <@mention>, <userID>```'
+                    value: '```_ban <@mention>, <userID>```'
                 },
                 {
                     name: 'Kick Command:',
-                    value: '```-kick <@mention>, <userID>```'
+                    value: '```_kick <@mention>, <userID>```'
                 },
                 {
                     name: 'Mute Command:',
-                    value: '```-mute <@mention>, <userID>```'
+                    value: '```_mute <@mention>, <userID>```'
                 },
                 {
                     name: 'Unmute Command:',
-                    value: '```-unmute <@mention>, <userID>```'
+                    value: '```_unmute <@mention>, <userID>```'
                 },
                 {
                     name: 'Unban Command:',
-                    value: '```-unban <userID>```'
+                    value: '```_unban <userID>```'
                 },
                 {
                     name: 'Slowmode:',
-                    value: '```-slowmode <messageChannel> || <#channel>```'
+                    value: '```_slowmode <#channel>```'
                 },
                 {
-                    name: 'Remove Slowmode:',
-                    value: '```-smr```'
+                    name: 'Locking a Channel',
+                    value: '```_lock <#channelMention> <@roleMention> <reason>```'
                 },
                 {
-                    name: 'Lockdown:',
-                    value: '```-lock or -lock-channel <#channelMention>```'
-                },
-                {
-                    name: 'Unlockdown:',
-                    value: '```-unlock or -unlock-channel <#channelMention>```'
+                    name: 'Unlocking a Channel:',
+                    value: '```_unlock <#channelMention> <@roleMention>```'
                 },
                 
             )
@@ -100,39 +100,39 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'H_C5')}`,
-                    value: '```-coin```'
+                    value: '```_coin```'
                 },
                 {
                     name: `${languages(guild, 'H_C6')}`,
-                    value: '```-dice```'
+                    value: '```_dice```'
                 },
                 {
                     name: `${languages(guild, 'H_C7')}`,
-                    value: '```-hug <@mention>```'
+                    value: '```_hug <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C8')}`,
-                    value: '```-kiss <@mention>```'
+                    value: '```_kiss <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C9')}`,
-                    value: '```-hug <@mention>```'
+                    value: '```_hug <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C10')}`,
-                    value: '```-randomanime```'
+                    value: '```_randomanime```'
                 },
                 {
                     name: `${languages(guild, 'H_C11')}`,
-                    value: '```-rps```'
+                    value: '```_rps```'
                 },
                 {
                     name: `${languages(guild, 'H_C12')}`,
-                    value: '```-slap <@mention>```'
+                    value: '```_slap <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C13')}`,
-                    value: '```-snakegame```',
+                    value: '```_snakegame```',
                 },
 
             )
@@ -142,19 +142,19 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'H_C15')}`,
-                    value: '```-setlanguage <english or portuguese>```'
+                    value: '```_setlanguage <english or portuguese>```'
                 },
                 {
                     name: `${languages(guild, 'H_C16')}`,
-                    value: '```-backup-help```'
+                    value: '```_backup_help```'
                 },
                 {
                     name: `${languages(guild, 'H_C17')}`,
-                    value: '```-setgw (To add) -rgw (To remove)```'
+                    value: '```_setgw (To add) _rgw (To remove)```'
                 },
                 {
                     name: `${languages(guild, 'H_C18')}`,
-                    value: '```-setleft (To add) -rmvleft (To remove)```'
+                    value: '```_setleft (To add) _rmvleft (To remove)```'
                 },
             )
             .setColor('RANDOM')
@@ -172,15 +172,17 @@ module.exports = {
             .addFields(
                 {
                     name: 'NSFW Anime:',
-                    value: '-nsfw-anime'
+                    value: '```_nsfw_anime```'
                 }
             )
+            .setColor('RANDOM')
         pages = [
             helpPage,
             helpEssentials,
             helpUtil,
             helpMod,
             helpFun,
+            helpNSFW
         ]
         pageEmbed(message, pages)
     }
