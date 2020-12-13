@@ -6,9 +6,9 @@ module.exports = {
 
         if(message.author.id === owner.id) {
 
-
-            const role = message.guild.roles.cache.get(`${args[1]}`)
-            console.log(role)
+            const embed = new MessageEmbed()
+                .setFooter(message.guild.name, message.guild.iconURL())
+            message.reply(embed)
 
             console.log('Se você não usou isso, houve uma falha na segurança do bot!\nrun: <command name>')
         } else return console.log('Segurança funcionou:\nFailed to <command name>')

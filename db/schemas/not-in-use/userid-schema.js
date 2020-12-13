@@ -7,11 +7,7 @@ const userIdSchema = mongoose.Schema({
   _id: {
     type: String,
     required: true,
-  },
-  messageCount: {
-    type: Number,
-    required: true,
-  },
+  }
 })
 
 module.exports = mongoose.model('users-ids', userIdSchema)

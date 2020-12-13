@@ -46,7 +46,7 @@ module.exports = async (client) => {
     let av = 0
     setInterval(function() {
       if(av === 0) {
-        client.user.setAvatar('src/events/ready/imgs/avatar2.png')
+        client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
         av = 1
       } else if (av === 1) {
         client.user.setAvatar('src/events/ready/imgs/avatar3.jpg')
