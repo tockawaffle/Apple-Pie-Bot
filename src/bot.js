@@ -8,7 +8,7 @@ const { Player } = require('discord-player')
 const player = new Player(client)
 
 
-const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client)
+// const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client)
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -18,6 +18,7 @@ const { registerCommands, registerEvents, registerPlayerEvents } = require('./ut
     client.login(process.env.BOT_TOKEN);
     client.commands = new Map();
     client.cachedMessageReactions = new Map();
+    client.filters = require('./util/filters.json')
     await registerEvents(client, '../events');
     await registerCommands(client, '../commands');
     await registerPlayerEvents(player, '../player-event')

@@ -1,10 +1,12 @@
 const languages = require('../../util/languages/languages')
 
 module.exports = {
-    run: async(client, message, args) => {
+    run: async(client, message) => {
 
         if(message.author.bot) return;
-
+        
+        const args = message.content.split(' ')
+        args.shift(' ')
         const { guild } = message
         const { MessageEmbed } =require('discord.js')
 
@@ -17,11 +19,9 @@ module.exports = {
             message.channel.send(`${message.author.username} ${languages(guild, 'UB_C')}`)
         }
         else {
-            let memberId = message.content.substring(message.content.indexOf(' ') + 1)
-            let member = message.guild.members.cache.get(memberId);
             
             try{
-                let bannedMember = await message.guild.members.unban(memberId)
+                let bannedMember = await message.guild.members.unban(args[0])
                 if(bannedMember) {
                     const embed = new MessageEmbed()
                     .setTitle(`${languages(guild, 'UB_C3')}`)

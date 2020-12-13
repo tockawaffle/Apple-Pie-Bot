@@ -27,7 +27,6 @@ module.exports = {
             message.reply(noArgs)
             return
         }
-
         client.player.play(message, args.join(' '), message.member)
         
     }

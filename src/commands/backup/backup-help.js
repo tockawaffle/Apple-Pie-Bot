@@ -1,6 +1,5 @@
 const backup = require('discord-backup');
 const { MessageEmbed } = require('discord.js');
-const moment = require('moment')
 backup.setStorageFolder(__dirname+"/backups/");
 const languages = require('../../util/languages/languages')
 
@@ -8,21 +7,26 @@ module.exports = {
     aliases: ['bckh'],
     description: 'Backup help',
     run: async(client, message, args) => {
+        const {guild} = message
         const bckH = new MessageEmbed()
             .setAuthor(`${message.guild.name}`, message.guild.iconURL({dynamic: true}))
-            .setDescription(`Here you can find what every backup command does!`)
+            .setDescription(`${languages(guild, 'BCK')}`)
             .addFields(
                 {
-                    name: `-create`,
-                    value: `This creates a backup and provide you a code to load it latter!`
+                    name: `${languages(guild, 'BCK_C')}`,
+                    value: `[${languages(guild, 'BCK_C2')}](https://www.applepiebot.xyz/privacy-service-terms)`
                 },
                 {
-                    name: `-load`,
-                    value: `This loads a backup with the code provided in the creation of the backup`
+                    name: `${languages(guild, 'BCK_C3')}`,
+                    value: `\`\`\`-create\`\`\``
                 },
                 {
-                    name: `-info`,
-                    value: `This gives some info about that backup!`
+                    name: `${languages(guild, 'BCK_C4')}`,
+                    value: `\`\`\`-load\`\`\``
+                },
+                {
+                    name: `${languages(guild, 'BCK_C5')}`,
+                    value: `\`\`\`-info\`\`\``
                 }
             )
             .setColor('RANDOM')

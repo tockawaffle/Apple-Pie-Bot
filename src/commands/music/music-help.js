@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js")
-
 const languages = require('../../util/languages/languages')
+
 module.exports = {
     aliases: ['mh'],
     description: "Music Help Command",
@@ -15,37 +15,38 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'MH_3')}`,
-                    value: `-loop`,
+                    value: `\`\`\`-loop\`\`\``,
                     inline: true
                 },
                 { 
                     name: `${languages(guild, 'MH_4')}`,
-                    value: `-np`,
+                    value: `\`\`\`-np\`\`\``,
                     inline: true
                 },
                 {
                     name: `${languages(guild, 'MH_5')}`,
-                    value: `-play <link only>`,
+                    value: `\`\`\`-play <link only>\`\`\``,
                     inline: true
                 },
                 {
                     name: `${languages(guild, 'MH_6')}`,
-                    value: `-queue`,
+                    value: `\`\`\`-queue\`\`\``,
                     inline: true
                 },
                 {
                     name: `${languages(guild, 'MH_7')}`,
-                    value: `-skip`,
+                    value: `\`\`\`-skip\`\`\``,
                     inline: true
                 },
                 {
                     name: `${languages(guild, 'MH_8')}`,
-                    value: `-stop`,
+                    value: `\`\`\`-stop\`\`\``,
                     inline: true
                 },
                 {
-                    name: `${languages(guild, 'MH_2')}`,
-                    value: '[Discord-Player](https://www.npmjs.com/package/discord-player)'
+                    name: `Filters:`,
+                    value: `\`\`\`-filters-help\`\`\``,
+                    inline: true
                 }
             )
         message.reply(helpEmbed)

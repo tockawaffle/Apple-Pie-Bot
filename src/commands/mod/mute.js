@@ -1,28 +1,55 @@
 const languages = require('../../util/languages/languages');
 const { MessageEmbed } = require('discord.js');
-const mute = require('./mute');
+const pageEmbed = require('discord.js-pagination')
 
 module.exports = {
-    run: async(client, message, args) => {
+    run: async(client, message) => {
 
+        const args = message.content.split(' ')
+        args.shift(' ')
         const { guild } = message
-        const user = message.mentions.members.first()
-        let memberId = message.content.substring(message.content.indexOf(' ') + 1)
-        let member = message.guild.members.cache.get(memberId);
+        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
 
+        if(!args[0]) {
+            if(member === undefined) {
+                member = `${languages(guild, "UN5")}`
+            }
+            const invalidMember = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setDescription(`${languages(guild, "M_C3")}`)
+            .addFields(
+                {
+                    name: `${languages(guild, "M_IV")}`,
+                    value: `\`\`\`${args[0] || member}\`\`\``
+                },
+                {
+                    name: `${languages(guild, "M_C4")}`,
+                    value: '```_mute <userID> or <@mention>```'
+                }
+            )
+            message.reply(invalidMember)
+            return
+        }
+
         if (!message.member.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send(`${languages(guild, 'M_E')} ${process.env.SHRUG}`);
+            return message.channel.send(
+               `${languages(guild, 'M_C')}`
+            );
         }
-        if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send(`${languages(guild, 'M6_C')} ${process.env.POUT}`);
-        }
-        //if there is not a mutedrole but it mentions the userID or the raw mention, it's going to create the role and it's permissions for each channel in the server
-        //I think this way is easier than doing 3 separate commands like I used to do with the bot
-        //Still coudnt get a way to check if the user has the mutedRole, searched everywhere, nothing worksssssssss
+
         try{
+
+            if(member.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)) {
+                const embed = new MessageEmbed()
+                    .setDescription(`${languages(guild, 'M_C2')}`)
+                    .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                message.reply(embed)
+                return
+            }
+
             if(!mutedRole && member) {
-
+    
                 guild.roles.create({
                     data:{
                         name: `${languages(guild, 'M_R')}`,
@@ -40,75 +67,121 @@ module.exports = {
                                ADD_REACTIONS: false
                             });
                         })
-                        await member.roles.add(mutedRole)
                         const embed = new MessageEmbed()
-                            .setTitle(`${languages(guild, 'M3_C')}`)
-                            .setDescription(`${languages(guild, 'M4_C')}`)
+                            .setDescription(`${languages(guild, 'M2_C')}`)
                             .setColor('RANDOM')
+                            .addFields(
+                                {
+                                    name: `${languages(guild, "M3_C")}`,
+                                    value: `${member.user.username}`
+                                }
+                            )
                             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                            .setFooter(`${languages(guild, 'M5_C')} ${message.author.tag}`);
-                        message.channel.send(embed)
-                    }
-                )
-            } else if(!mutedRole && user) {
-                guild.roles.create({
-                    data:{
-                        name: `${languages(guild, 'M_R')}`,
-                        color:"grey",
-                        permissions:[]
-                    },
-                reason:"Cargo de mutado!",
-                }).then(
-                    async(mutedRole) => {
-                        message.guild.channels.cache.forEach(async (channel, id) => {
-                            await channel.createOverwrite(mutedRole, {
-                               SEND_MESSAGES: false,
-                               SPEAK: false,
-                               READ_MESSAGES: false,
-                               ADD_REACTIONS: false
-                            });
+                            .setFooter(`${languages(guild, 'M4_C')} ${message.author.tag}`, message.author.displayAvatarURL({dynamic: true}));
+                        message.channel.send(embed).then((msg) => {
+                            member.roles.add(mutedRole).catch(err => {
+                                msg.delete()
+                                const embedError = new MessageEmbed()
+                                    .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                                    .setDescription(`${languages(guild, "M_E")}`)
+                                    .addFields(
+                                        {
+                                            name: `${languages(guild, "M_E2")}`,
+                                            value: `\`\`\`${err}\`\`\``
+                                        },
+                                        {
+                                            name: `${languages(guild, "M_E3")}`,
+                                            value: `${languages(guild, "M_E4")}`
+                                        }
+                                    )
+                                const solution = new MessageEmbed()
+                                    .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                                    .setDescription(`${languages(guild, "M_E5")}`)
+                                    .addFields(
+                                        {
+                                            name: `${languages(guild, "M_E6")}`,
+                                            value: `[Click Here](https://www.applepiebot.xyz/permission-flags)`
+                                        },
+                                        {
+                                            name: `${languages(guild, "M_E7")}`,
+                                            value: `${languages(guild, "M_E8")}`
+                                        }
+                                    )
+                                pages = [
+                                    embedError,
+                                    solution
+                                ]
+                                pageEmbed(message,pages)
+                            })
                         })
-                        await user.roles.add(mutedRole)
-                        const embed = new MessageEmbed()
-                            .setTitle(`${languages(guild, 'M3_C')}`)
-                            .setDescription(`${languages(guild, 'M4_C')}`)
-                            .setColor('RANDOM')
-                            .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                            .setFooter(`${languages(guild, 'M5_C')} ${message.author.tag}`);
-                        message.channel.send(embed)
                     }
                 )
-            }
-        }catch(err) {
-            console.log(err)
-            message.channel.send(`Um erro ocorreu: ${err}`)
-        }
-
-        try{
-            if(mutedRole && member) {
-                member.roles.add(mutedRole)
+            } else if (mutedRole && member) {
                 const embed = new MessageEmbed()
-                    .setTitle(`${languages(guild, 'M3_C')}`)
-                    .setDescription(`${languages(guild, 'M4_C')}`)
+                    .setDescription(`${languages(guild, 'M2_C')}`)
+                    .addFields(
+                        {
+                            name: `${languages(guild, "M3_C")}`,
+                            value: `${member.user.username}`
+                        }
+                    )
                     .setColor('RANDOM')
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setFooter(`${languages(guild, 'M5_C')} ${message.author.tag}`);
-                message.channel.send(embed)
-            } else if(mutedRole && user) {
-                user.roles.add(mutedRole)
-                const embed = new MessageEmbed()
-                    .setTitle(`${languages(guild, 'M3_C')}`)
-                    .setDescription(`${languages(guild, 'M4_C')}`)
-                    .setColor('RANDOM')
-                    .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setFooter(`${languages(guild, 'M5_C')} ${message.author.tag}`);
-                message.channel.send(embed)
+                    .setFooter(`${languages(guild, 'M4_C')} ${message.author.tag}`, message.author.displayAvatarURL({dynamic: true}));
+                message.channel.send(embed).then((msg) => {
+                    member.roles.add(mutedRole).catch(err => {
+                        msg.delete()
+                        const embedError = new MessageEmbed()
+                            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                            .setDescription(`${languages(guild, "M_E")}`)
+                            .addFields(
+                                {
+                                    name: `${languages(guild, "M_E2")}`,
+                                    value: `\`\`\`${err}\`\`\``
+                                },
+                                {
+                                    name: `${languages(guild, "M_E3")}`,
+                                    value: `${languages(guild, "M_E4")}`
+                                }
+                            )
+                        const solution = new MessageEmbed()
+                            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                            .setDescription(`${languages(guild, "M_E5")}`)
+                            .addFields(
+                                {
+                                    name: `${languages(guild, "M_E6")}`,
+                                    value: `[Click Here](https://www.applepiebot.xyz/permission-flags)`
+                                },
+                                {
+                                    name: `${languages(guild, "M_E7")}`,
+                                    value: `${languages(guild, "M_E8")}`
+                                }
+                            )
+                        pages = [
+                            embedError,
+                            solution
+                        ]
+                        pageEmbed(message,pages)
+                    })
+                })
             }
         }catch(err) {
-            console.log(err)
-            message.channel.send(`Um erro ocorreu: ${err}`)
-        }
+            const invalidMember = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setDescription(`${languages(guild, "M_C3")}`)
+                .addFields(
+                    {
+                        name: `${languages(guild, "M_IV")}`,
+                        value: `\`\`\`${args[0] || member}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "M_IV2")}`,
+                        value: `\`\`\`${languages(guild, "M_IV3")}\`\`\``
+                    }
+                )
+            message.reply(invalidMember)
 
+        }
 
     }, aliases: ['mt'], description: 'Para mutar um membro!'
 }
