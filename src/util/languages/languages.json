@@ -334,140 +334,6 @@
 
 
 
-        "L_C": {
-            "english": "I do not have permissions to do that.",
-            "portugues": "Eu não tenho permissão para fazer isso."
-        },
-        "L_C1": {
-            "english": "Action: **LOCKDOWN**",
-            "portugues": "Ação: **LOCKDOWN**"
-        },
-        "L_C2": {
-            "english": "The server went into full lockdown!",
-            "portugues": "O servidor entrou em lockdown geral!"
-        },
-        "L_C3": {
-            "english": "All the channels have been blocked",
-            "portugues": "Todos os canais foram bloqueados"
-        },
-        "L_C4": {
-            "english": "Please, don't forget to use -unlock after! Or I'm not going to work properly",
-            "portugues": "Por favor, não esqueça de utilizar -unlock! Ou eu não vou funcionar direito"
-        },
-        "L_C5": {
-            "english": "Or give me permissions to talk!",
-            "portugues": "Ou então, me dê permissões em todos os canais!"
-        },
-        "L_C6": {
-            "english": "Follow the instructions of the",
-            "portugues": "Siga as instruções do"
-        },
-        "L_C7": {
-            "english": "Hey! You don't have permissions to use the lockdown!",
-            "portugues": "Hey! Você não tem permissões para usar o lockdown!"
-        },
-
-
-        "M_C": {
-            "english": "You do not have permission to do this!",
-            "portugues": "Desculpe, você não tem permissão para fazer isso"
-        },
-        "M2_C": {
-            "english": "Hello!\nIt seems like there is not a 'Muted' role in this server. Please invoke the commands -mtr (To create the role) and -mtrp (To configure the role perms)",
-            "portugues": "Olá!\nParece que não há o cargo 'Silenciado' neste servidor, utilize os comandos -mtr (para criar o cargo) e -mtrp (para configurar as permissões do mesmo)!"
-        },
-        "M3_C": {
-            "english": "Action: Mute",
-            "portugues": "Ação: Silenciamento"
-        },
-        "M4_C": {
-            "english": "The user has been muted with sucess",
-            "portugues": "O usuário foi silenciado com sucesso"
-        },
-        "M5_C": {
-            "english": "Mute done by",
-            "portugues": "Silenciamento realizado por"
-        },
-        "M6_C": {
-            "english": "Seems like I do not have permissions to do this...",
-            "portugues": "Eu não tenho permissão para mutar alguém..."
-        },
-        "M_R": {
-            "english": "Muted",
-            "portugues": "Silenciado"
-        },
-        "M7_C": {
-            "english": "Sorry, but... are you sure that you mentioned the right user?",
-            "portugues": "Desculpe, mas... você tem certeza que mencionou a pessoa certa?"
-        },
-        "M8_C": {
-            "english": "'Muted' role has been created!",
-            "portugues": "Cargo 'Silenciado' foi criado com sucesso"
-        },
-        "MTR_ERR": {
-            "english": "Sorry but, I coudn't find the userID or the mentioned user!",
-            "portugues": "Desculpe, mas, não consegui encontrar o usuário mencionado ou seu ID!"
-        },
-        "M_E": {
-            "english": "Oi! I know you want to help, but you can't use this command!",
-            "portugues": "Hey hey, sei que você quer ajudar, mas você não tem acesso a esse comando"
-        },
-
-
-        "SM_C": {
-            "english": "Hmmm. . .\nYou do not have permissions to do this!",
-            "portugues": "Hmmm. . .\nVocê não tem permissões para fazer isso!"
-        },
-        "SM1_C": {
-            "english": "Action: Slowmode.",
-            "portugues": "Ação: Slowmode"
-        },
-        "SM2_C": {
-            "english": "Slowmode has been added in the entire server!",
-            "portugues": "O slowmode foi adicionado em todos os chats!"
-        },
-        "SM3_C": {
-            "english": "The slowmode has been added with the time of:",
-            "portugues": "o slowmode foi adicionado com a espera de:"
-        },
-        "SM4_C": {
-            "english": "Hey! Specify a number (seconds)",
-            "portugues": "Hey! Especifique um número! (segundos)"
-        },
-        "SR_C": {
-            "english": "Fufufu, seems like you do not have permissions to do this",
-            "portugues": "Fufufu, parece que você não tem permissões para fazer isso"
-        },
-        "SR1_C": {
-            "english": "Action: Slowmode Removal",
-            "portugues": "Ação: Retirada do Slowmode"
-        },
-        "SR2_C": {
-            "english": "Slowmode has been removed from the server!",
-            "portugues": "Slowmode retirado em todos os chats!"
-        },
-        "UL_C1": {
-            "english": "Action: Lockdown Removal",
-            "portugues": "Ação: Remoção do Lockdown"
-        },
-        "UL_C2": {
-            "english": "The server went back to normal... Phew",
-            "portugues": "O servidor voltou ao normal... Ufa"
-        },
-        "UL_C3": {
-            "english": "All the channels have been unblocked",
-            "portugues": "Todos os canais foram desbloqueados"
-        },
-        "UL_C6": {
-            "english": "These are tough times, right?",
-            "portugues": "São tempos dificeis, não acha?"
-        },
-        "UL_C7": {
-            "english": "Hmmmm, I mean, I don't think you have the permissions to do this, do you?",
-            "portugues": "Hmmmm, não parece que você tem as permissões certas para fazer isso"
-        },
-        
-
         "H_C": {
             "english": "Utilities",
             "portugues": "Utilidades"
@@ -555,33 +421,6 @@
 
 
 
-
-        "UM2_C": {
-            "english": "Hello!\nIt seems like there is not a 'Muted' role in this server. Please invoke the commands -mtr (To create the role) and -mtrp (To configure the role perms)",
-            "portugues": "Olá!\nParece que não há o cargo 'Silenciado' neste servidor, utilize os comandos -mtr (para criar o cargo) e -mtrp (para configurar as permissões do mesmo)!"
-        },
-        "UM3_C": {
-            "english": "Action: Unmute",
-            "portugues": "Ação: Unmute"
-        },
-        "UM4_C": {
-            "english": "The user has been unmuted with sucess",
-            "portugues": "O usuário foi desmutado com sucesso"
-        },
-        "UM5_C": {
-            "english": "Unmute done by:",
-            "portugues": "Desmutamento realizado por:"
-        },
-        "UM6_C": {
-            "english": "Seems like I do not have permissions to do this...",
-            "portugues": "Eu não tenho permissão para desmutar alguém..."
-        },
-        "UMTR_ERR": {
-            "english": "Sorry, but I coudn't find either the user mentioned, the userID or the muted role. Be sure also to run the mute command to mute someone first.",
-            "portugues": "Desculpe, eu não consegui achar ou o usuário mencionado, ou o ID dele, ou o cargo de mutado. Tente primeiro utilizar o comando de mute para depois desmutar alguém!"
-        },
-        
-
         
         "I_C": {
             "english": "This",
@@ -638,6 +477,14 @@
         "W_ERR": {  
             "english": "I coudn't find info about the requested local, I'm sorry. Are you using it right?\nIf yes, please contact support",
             "portugues": "Eu não consegui encontrar informações do local, Desculpe. Tenha certeza de estar utilizando o comando do modo certo.\nIf yes, please contact support"
+        },
+        "W_A": {
+            "english": "❌ Failed: Incorrect Usage",
+            "portugues": "❌ Falha: Uso Incorreto"
+        },
+        "W_A2": {
+            "english": "Correct Usage:",
+            "portugues": "Uso Correto:"
         },
 
 
@@ -911,34 +758,6 @@
         "COIN_ERR": {
             "english": "Hey! I can't wait a whole day for you to choose something =_=",
             "portugues": "Hey! Eu não posso esperar o dia inteiro para você escolher algo =_="
-        },
-
-
-        "UPT_C": {
-            "english": "The bot has been online for:",
-            "portugues": "O bot está online faz:"
-        },
-
-        "UPT_T": {
-            "english": "hours",
-            "portugues": "horas"
-        },
-        "UPT_T2": {
-            "english": "minutes",
-            "portugues": "minutos"
-        },
-        "UPT_T3": {
-            "english": "Days",
-            "portugues": "Dias"
-        },
-        "UPT_T4": {
-            "english": "seconds",
-            "portugues": "seconds"
-        },
-
-        "UPT_C2": {
-            "english": "Memory Usage:",
-            "portugues": "Uso de memória:"
         },
 
 
@@ -1534,25 +1353,240 @@
             "portugues": "Canal bloqueado por:"
         },
 
-        "MT": {
-            "english": "❌ Failed: Mute",
-            "portugues": "❌ Falha: Mute"
-        },
-        "MT_C": {
-            "english": "That user is already muted! Please, unmute him before muting again",
-            "portugues": "Esse usuário já está mutado! Por favor, desmute-o antes de o mutar novamente"
-        },
-        "MT_C2": {
-            "english": "Failed at:",
-            "portugues": "Falhou em:"
-        },
-        "LCKP": {
+        "L_C": {
             "english": "❌ Failed: Missing User Permissions",
             "portugues": "❌ Falha: Faltando Permissões de Usuário"
         },
-        "LCKP2": {
-            "english": "Reason: Missing user 'Manage Channels' Permission",
-            "portugues": "Motiv: Faltando a permissão 'Manage Channels'"
+        "L_C2": {
+            "english": "Reason:",
+            "portugues": "Motivo:"
+        },
+        "L_C3": {
+            "english": "❌ Failed: Missing Bot Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Bot"
+        },
+        "L_C4": {
+            "english": "Check the link below to see wich permissions the bot need in order to work:",
+            "portugues": "Cheque no site abaixo para ver quais permissões o bot precisa para funcionar:"
+        },
+        "L_C5": {
+            "english": "It's safe to click. The link will bring you into the bot's website.",
+            "portugues": "É seguro clicar. O link te enviará para o website do bot."
+        },
+        "L_C6": {
+            "english": "Specific Permission:",
+            "portugues": "Permissão Específica:"
+        },
+        "L_C7": {
+            "english": "Manage Channels",
+            "portugues": "Gerenciar Canais"
+        },
+        "L_C8": {
+            "english": "Missing 'Manage Channels' permissions for the user",
+            "portugues": "Faltando permissão 'Gerenciar Canais' para o usuário"
+        },
+        "L_C9": {
+            "english": "✅ Sucess!: Channel Lock",
+            "portugues": "✅ Sucesso!: Bloqueio de Canal"
+        },
+        "L_C10": {
+            "english": "Channel Locked:",
+            "portugues": "Canal Bloqueado:"
+        },
+        "L_C11": {
+            "english": "Locked for the role:",
+            "portugues": "Bloqueado para o cargo:"
+        },
+        "L_C12": {
+            "english": "Not Provided",
+            "portugues": "Não Providenciado"
+        },
+        "L_C13": {
+            "english": "How to use:",
+            "portugues": "Como usar:"
+        },
+        "L_C14": {
+            "english": "If you want to lock the channel for everyone:",
+            "portugues": "Caso queira bloquear para todos, use apenas:"
+        },
+        "L_C15": {
+            "english": "Reason:",
+            "portugues": "Motivo:"
+        },
+
+
+
+        "M_C": {
+            "english": "You do not have permission to do this!",
+            "portugues": "Desculpe, você não tem permissão para fazer isso."
+        },
+        "M2_C": {
+            "english": "✅ Sucess: Mute",
+            "portugues": "✅ Sucesso: Silenciamento"
+        },
+        "M3_C": {
+            "english": "User Muted:",
+            "portugues": "Membro mutado:"
+        },
+        "M4_C": {
+            "english": "Mute done by",
+            "portugues": "Silenciamento realizado por"
+        },
+        "M_R": {
+            "english": "Muted",
+            "portugues": "Silenciado"
+        },
+        "M_C2": {
+            "english": "❌ Failed: Member already muted.",
+            "portugues": "❌ Falha: Membro já mutado."
+        },
+        "M_C3": {
+            "english": "❌ Failed: Member not found",
+            "portugues": "❌ Falha: Membro não encontrado"
+        },
+        "M_C4": {
+            "english": "Correct Usage:",
+            "portugues": "Uso Correto:"
+        },
+        "M_E": {
+            "english": "Error found!",
+            "portugues": "Erro encontrado!"
+        },
+        "M_E2": {
+            "english": "Error:",
+            "portugues": "Erro:"
+        },
+        "M_E3": {
+            "english": "Solution:",
+            "portugues": "Solução:"
+        },
+        "M_E4": {
+            "english": "Go to the next page.",
+            "portugues": "Vá para a próxima página."
+        },
+        "M_E5": {
+            "english": "Quickfix:",
+            "portugues": "Solução Rápida"
+        },
+        "M_E6": {
+            "english": "Check the bot's permissions, you can check which perms the bot need in the link below:",
+            "portugues": "Cheque as permissões do bot, você pode ver quais permissões ela precisa para funcionar no link abaixo:"
+        },
+        "M_E7": {
+            "english": "Check the bot role hierarchy.",
+            "portugues": "Cheque a hierarquia de cargos."
+        },
+        "M_E8": {
+            "english": "It's simple, if the user has a role higher than the bot's role, then the bot is unable to do something with that person.\nPlease, check that (Since it's the most common issue.)",
+            "portugues": "É simples, se o usuário tiver um cargo superior à do bot, o bot não poderá fazer algo com aquela pessoa.\nPor favor, verifique isso (já que é o problema mais comum.)"
+        },
+        "M_IV": {
+            "english": "Tried to find member:",
+            "portugues": "Tentei encontrar o membro:"
+        },
+        "M_IV2": {
+            "english": "Result:",
+            "portugues": "Resultado:"
+        },
+        "M_IV3": {
+            "english": "Invalid Member",
+            "portugues": "Membro inválido"
+        },
+
+
+        "SM_C": {
+            "english": "❌ Failed: Missing Time Argument",
+            "portugues": "❌ Falha: Faltando Argumentos de Tempo"
+        },
+        "SM_C2": {
+            "english": "Reason:",
+            "portugues": "Motivo:"
+        },
+        "SM_C3": {
+            "english": "No time argument was provided.",
+            "portugues": "Argumento de tempo não providenciado."
+        },
+        "SM_C4": {
+            "english": "Correct Usage:",
+            "portugues": "Uso Correto:"
+        },
+        "SM_C5": {
+            "english": "❌ Failed: Number too high",
+            "portugues": "❌ Falha: Número muito alto"
+        },
+        "SM_C6": {
+            "english": "Choose between 1s to 21600s",
+            "portugues": "Escolha entre 1s à 21600s"
+        },
+        "SM_C7": {
+            "english": "If you want to see what numbers are supported, go to the next page",
+            "portugues": "Caso queira saber quais números são suportados, vá para a próxima página"
+        },
+        "SM_C8": {
+            "english": "These are the supported numbers in seconds:",
+            "portugues": "Esses são os números suportados em segundos:"
+        },
+        "SM_C9": {
+            "english": "These are the numbers in minutes:",
+            "portugues": "Esses são os números em minutos:"
+        },
+        "SM_C10": {
+            "english": "These are the numbers in hours",
+            "portugues": "Esses são os números em horas:"
+        },
+        "SM_C11": {
+            "english":"❌ Failed: Provided argument is not a number",
+            "portugues": "❌ Falha: Argumento providenciado não é um número"
+        },
+        "SM_C12": {
+            "english": "NOTE: Do not use the time as '10s', the bot is going to recognize it as not an Integer",
+            "portugues": "NOTA: Não use o tempo como '10s', o bot vai reconhecê-lo como um número não inteiro"
+        },
+        "SM_C13": {
+            "english": "✅ Sucess!: Slowmode",
+            "portugues": "✅ Sucesso!: Slowmode"
+        },
+        "SM_C14": {
+            "english":"Slowmode set to:",
+            "portugues": "Slowmode colocado em:"
+        },
+        "SM_C15": {
+            "english": "Channel the slowmode was set:",
+            "portugues": "Canal em que o slowmode foi colocado:"
+        },
+        "SM_C16": {
+            "english": "To remove the slowmode, run:",
+            "portugues": "Para remover o slowmode, use:"
+        },
+        "SM_C17": {
+            "english": "The number might not be an Integer:",
+            "portugues": "O número pode não ser um número inteiro:"
+        },
+        "SM_C18": {
+            "english": "Using broken numbers, such as '1.5' are not supported by Discord.",
+            "portugues": "O uso de números quebrados, como '1.5' não é compatível com o Discord."
+        },
+
+        "UN": {
+            "english": "❌ Failed: That user is not muted, please, check that before trying to unmute him.",
+            "portugues": "❌ Falha: Este usuário não está mutado, por favor, cheque isso antes de o desmutar."
+        },
+        "UN2": {
+            "english": "✅ Sucess: Unmute",
+            "portugues": "✅ Sucesso: Desmutar"
+        },
+        "UN3": {
+            "english": "User Unmuted:",
+            "portugues": "Membro Desmutado:"
+        },
+        "UN4": {
+            "english": "Unmuted by:",
+            "portugues": "Desmutado por:"
+        },
+        "UN5": {
+            "english": "Not Mentioned.",
+            "portugues": "Não Mencionado."
         }
+
     }
 }
