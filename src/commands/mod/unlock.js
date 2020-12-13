@@ -1,30 +1,84 @@
-const {MessageEmbed} = require('discord.js');
-require('dotenv').config
+const {MessageEmbed, Permissions} = require('discord.js');
 const languages = require('../../util/languages/languages')
 
 module.exports = {
-    run: async(client, message, args) => {
+    run: async(client, message) => {
 
-        if(message.author.bot) return;
-        if(!message.member.hasPermission('MANAGE_CHANNELS')) {
-            return message.reply(`${languages(guild, 'UL_C7')} `)
+        const args = message.content.split(' ')
+        args.shift(' ')
+        const role = message.mentions.roles.first() || message.guild.roles.everyone
+        const chn = message.mentions.channels.first() || message.channel
+        const flags = [
+            "SEND_MESSAGES",
+            "ADD_REACTIONS"
+        ]
+
+        if(chn.permissionsFor(role).has(flags)) {
+            const alreadySet = new MessageEmbed()
+                .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
+                .setDescription(`❌ Failed: Permissiosn already set`)
+                .addFields(
+                    {
+                        name: `Permissions already set for the role:`,
+                        value: `\`\`\`${role.name}\`\`\``
+                    }
+                )
+                .setFooter(`If the permissions does not exists, check the everyone role.`)
+            message.reply(alreadySet)
+            return
         }
-        
-        const {guild} = message
-        const embed = new MessageEmbed()
-            .setTitle(`${languages(guild, 'UL_C1')} `)
-            .setDescription(`${languages(guild, 'UL_C2')} `)
-            .addField(`${languages(guild, 'UL_C3')} `, (`${languages(guild, 'UL_C6')} `))
-            .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-            .setThumbnail(guild.iconURL({ dynamic: true }))
-        message.channel.send(embed);
 
-        message.guild.channels.cache.forEach(async (channel, id) => {
-            await channel.createOverwrite(channel.guild.roles.everyone, {
-            SEND_MESSAGES: true,
-            ADD_REACTIONS: true
-            });
-        });
+        
+        if(!message.member.hasPermission("MANAGE_CHANNELS")) {
+            const noUserPerm = new MessageEmbed()
+                .setDescription(`❌ Failed: Missing User Permissions`)
+                .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
+                .addFields(
+                    {
+                        name: `Reason:`,
+                        value: `Missing 'Manage Channels' permissions for the user`
+                    }
+                )
+                .setColor('RED')
+            message.reply(noUserPerm)
+            return
+        }
+        if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) {
+            const noClientPerm = new MessageEmbed()
+                .setDescription(`❌ Failed: Missing Bot Permissions`)
+                .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
+                .addFields(
+                    {
+                        name: `Check the link below to see wich permissions the bot need and enable them after:`,
+                        value: `[Click here](https://www.applepiebot.xyz/permission-flags)`
+                    }
+                )
+                .setFooter(`It's safe to click. The link will bring you into the bot's website.`)
+                .setColor('RED')
+            message.reply(noClientPerm)
+            return
+        }
+
+        const sucess = new MessageEmbed()
+            .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
+            .setDescription(`✅ Sucess!: Channel unlock`)
+            .addFields(
+                {
+                    name: `Channel unlocked:\n \`\`\`${chn.name}\`\`\``,
+                    value: `Unlocked for the role: \`\`\`${role.name}\`\`\``
+                }
+            )
+            .setColor('RANDOM')
+            .setFooter(`How to use: _unlock <#Channel> <#Role>\nOr, if you want it to just unlock the channel for everyone: _unlock`)
+        message.channel.send(sucess).then((msg) => {
+            setTimeout(function() {
+                chn.createOverwrite(role, {
+                    SEND_MESSAGES: true,
+                    ADD_REACTIONS: true
+                })
+            }, 1000)
+        })
+
     },
     aliases:['ul'],
     description: ''
