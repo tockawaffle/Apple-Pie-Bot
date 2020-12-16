@@ -21,16 +21,16 @@ module.exports = async (client) => {
     let activNum = 0;
     setInterval(function() {
         if(activNum === 0) {
-            client.user.setActivity(`Use -help to get help!`)
+            client.user.setActivity(`Use _help to get help!`)
             activNum = 1;
         } else if (activNum === 1) {
-            client.user.setActivity("Use -help para ter ajuda!")
+            client.user.setActivity("Use _help para ter ajuda!")
             activNum = 2;
         } else if (activNum === 2) {
-            client.user.setActivity("at my '-sponsors'! They're gorgeous!")
+            client.user.setActivity("at my '_sponsors'! They're gorgeous!")
             activNum = 3;
         } else if (activNum === 3) {
-            client.user.setActivity(`aos meus ' -parceiros '" Eles são tão belos... `)
+            client.user.setActivity(`aos meus '_parceiros '" Eles são tão belos... `)
             activNum = 4;
         } else if (activNum === 4) {
             client.user.setActivity('A vida é curta! Não deixe para amanhã a torta que você pode comer hoje.', {type: 'PLAYING'})
