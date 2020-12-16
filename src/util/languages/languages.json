@@ -1129,32 +1129,28 @@
             "portugues": "Não há músicas tocando neste momento!"
         },
         "Q": {
-            "english": "Queue of the server",
-            "portugues": "Queue do servidor"
+            "english": "Server Queue",
+            "portugues": "Queue do Servidor"
         },
-        "Q_2": {
-            "english": "Current song:",
-            "portugues": "Música tocando agora:"
+        "Q_2":{
+            "english": "**Current Music:**",
+            "portugues": "**Música Atual**"
         },
         "Q_3": {
-            "english:": "Requested by:",
-            "portugues": "Requisitado por:"
-        },
-        "Q_4":{
             "english": "And",
             "portugues": "E"
         },
-        "Q_5": {
-            "english": "other songs.",
-            "portugues": "outras músicas."
+        "Q_4":{ 
+            "english": "(Or more) others songs. . .",
+            "portugues": "(Ou mais) outras músicas. . ."
         },
-        "Q_6": {
+        "Q_5": {
             "english": "In the playlist are",
             "portugues": "Na playlist tem"
         },
-        "Q_7": {
-            "english": "other song(s)",
-            "portugues": "outra(s) música(s)"
+        "Q_6": {
+            "english": "song(s). . .",
+            "portugues": "músicas. . ."
         },
 
 
