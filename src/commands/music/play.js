@@ -28,6 +28,7 @@ module.exports = {
             return
         }
         client.player.play(message, args.join(' '), message.member)
+        console.log(client.player.isPlaylist)
         
     }
 }   
