@@ -20,6 +20,10 @@ module.exports = {
                 {
                     name: "Botrix:",
                     value: `[${languages(guild, 'VT_C2')}](https://botrix.cc/bots/762077336812126228)`
+                },
+                {
+                    name: `${languages(guild, "VT_C4")}`,
+                    value: `[${languages(guild, "VT_C2")}](https://www.applepiebot.xyz/)`
                 }
             )
             .setColor('RANDOM')
