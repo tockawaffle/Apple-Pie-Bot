@@ -15,38 +15,35 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'MH_3')}`,
-                    value: `\`\`\`-loop\`\`\``,
-                    inline: true
+                    value: `\`\`\`_loop\`\`\``,
                 },
                 { 
                     name: `${languages(guild, 'MH_4')}`,
-                    value: `\`\`\`-np\`\`\``,
-                    inline: true
+                    value: `\`\`\`_np\`\`\``,
                 },
                 {
                     name: `${languages(guild, 'MH_5')}`,
-                    value: `\`\`\`-play <link only>\`\`\``,
-                    inline: true
+                    value: `\`\`\`_play <link only>\`\`\``,
                 },
                 {
                     name: `${languages(guild, 'MH_6')}`,
-                    value: `\`\`\`-queue\`\`\``,
-                    inline: true
+                    value: `\`\`\`_queue\`\`\``,
                 },
                 {
                     name: `${languages(guild, 'MH_7')}`,
-                    value: `\`\`\`-skip\`\`\``,
-                    inline: true
+                    value: `\`\`\`_skip\`\`\``,
                 },
                 {
                     name: `${languages(guild, 'MH_8')}`,
-                    value: `\`\`\`-stop\`\`\``,
-                    inline: true
+                    value: `\`\`\`_stop\`\`\``,
                 },
                 {
                     name: `Filters:`,
-                    value: `\`\`\`-filters-help\`\`\``,
-                    inline: true
+                    value: `\`\`\`_filters-help\`\`\``,
+                },
+                {
+                    name: `${MH_9}`,
+                    value: '```_shuffle```'
                 }
             )
         message.reply(helpEmbed)

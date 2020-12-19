@@ -1199,6 +1199,12 @@
             "english": "To stop a music:",
             "portugues": "Para parar uma música:"
         },
+        "MH_9": {
+            "english": "Shuffle",
+            "portugues": "Randomizar"
+        },
+
+
 
         "FH":{
             "english": "These are the filters I can support!:",
@@ -1213,6 +1219,19 @@
             "portugues": "Como usar: -filter <Nome-do-Filtro"
 
         },
+        "FH_4": {
+            "english": "Go to the next Page to see which filters I support!",
+            "portugues": "Vá para a próxima página para ver quais filtros eu suporto!"
+        },
+        "FH_5":{
+            "english": "Check what each filter do",
+            "portugues": "Cheque o quê cada filtro faz"
+        },
+        "FH_6": {
+            "english": "here",
+            "portugues": "aqui"
+        },
+
 
         "FE": {
             "english": "You need to provide a filter to enable/disable!",
@@ -1582,6 +1601,53 @@
         "UN5": {
             "english": "Not Mentioned.",
             "portugues": "Não Mencionado."
+        },
+
+        "FF": {
+            "english": "❌ Failed: This music was not requested by you.",
+            "portugues": "❌ Falha: Essa música não foi requisitada por você"
+        },
+        "FF_2": {
+            "english": "Please, ask the user named below to do this action.",
+            "portugues": "Por favor, peça ao usuário nomeado abaixo para fazer esta ação"
+        },
+        "FF_3": {
+            "english": "Or ask for a DJ role! A mod can create the role using _dj",
+            "portugues": "Ou peça pelo cargo de DJ! Um mod pode criar ele usando _dj" 
+        },
+
+
+        "DJ": {
+            "english": "❌ Failed: Missing User Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Usuário"
+        },
+        "DJ_2": {
+            "english": "Sorry, you need the permission `Manage Roles` in order to create the DJ role",
+            "portugues": "Desculpe, você precisa da permissão `Gerenciar Cargos` em order de criar o cargo de DJ"
+        },
+        "DJ_3": {
+            "english": "Ask someone with that permission to create it for you!",
+            "portugues": "Peça à alguém com essa permissão para criar para você!"
+        },
+        "DJ_4": {
+            "english": "Sorry, I do not have the permission to create roles, check my site below to see wich permissions I need in order to work properly:",
+            "portugues": "Desculpe, eu não tenho permissão para criar cargos, veja meu site abaixo para ver quais permissões eu preciso em order para funcionar bem:"
+        },
+        "DJ_5": {
+            "english": "❌ Failed: Missing Bot Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Bot"
+        },
+        "DJ_6": {
+            "english": "❌ Failed: DJ role already exists\nPlease, check the roles tab.",
+            "portugues": "❌ Falha: Cargo de DJ já existe\nPor favor, cheque a aba de cargos."
+        },
+        "DJ_C": {
+            "english": "The DJ Role is being created, give me a second. . .",
+            "portugues": "O cargo de DJ está sendo criado, me dê um segundo. . ."
+        },
+        "DJ_C2": {
+            "english": "Dj Role was created sucessfully, now give it to someone!",
+            "portugues": "O cargo de DJ foi criado com sucesso!, agora dê ela para alguém!"
         }
 
     }
