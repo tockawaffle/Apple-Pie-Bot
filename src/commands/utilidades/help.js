@@ -22,7 +22,7 @@ module.exports = {
                 },
                 {
                     name: 'Server Icon:',
-                    value: '```_server_icon```'
+                    value: '```_server-icon```'
                 },
                 {
                     name: 'Ping:',
@@ -143,10 +143,6 @@ module.exports = {
                 {
                     name: `${languages(guild, 'H_C15')}`,
                     value: '```_setlanguage <english or portuguese>```'
-                },
-                {
-                    name: `${languages(guild, 'H_C16')}`,
-                    value: '```_backup_help```'
                 },
                 {
                     name: `${languages(guild, 'H_C17')}`,

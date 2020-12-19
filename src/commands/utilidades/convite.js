@@ -1,16 +1,24 @@
 const { MessageEmbed } = require('discord.js')
 const languages = require('../../util/languages/languages')
+const pageEmbed = require('discord.js-pagination') 
 
 module.exports = {
     run: (client, message, args) => {
         if(message.author.bot) return;
         const { guild } = message
-        const embed = new MessageEmbed()
-            .setDescription(`[${languages(guild, 'I_C')}](https://discord.com/oauth2/authorize?client_id=762077336812126228&scope=bot&permissions=277212190) ${languages(guild, 'I2_C')}`)
-            .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
+
+        const apple = client.user
+        const initial = new MessageEmbed()
+            .setDescription(`Hello! Thank you for considering voting on me!`)
+            .setAuthor(apple.username, apple.avatarURL())
+            .addFields(
+                {
+                    name: `Here you can find where to vote on me!`,
+                    value: `[Click Here](https://www.applepiebot.xyz/votes)`
+                }
+            )
             .setColor('RANDOM')
-            .setFooter(`${languages(guild, 'I3_C')}`)
-        message.channel.send(embed)
+        message.reply(initial)
     },
     aliases: ['cvt', 'invite'],
     description: ''

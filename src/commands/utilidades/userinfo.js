@@ -38,6 +38,8 @@ module.exports = {
                     presence = `\`\`\`${languages(guild, 'UF_C8')}\`\`\``
                 } else if (presence === 'online') {
                     presence = '```Online```'
+                } else if (presence === 'offline') {
+                    presence = '```Offline```'
                 }
 
 
