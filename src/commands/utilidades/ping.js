@@ -1,23 +1,49 @@
+const { MessageEmbed } = require('discord.js');
+const pageEmbed = require('discord.js-pagination')
+const languages = require('../../util/languages/languages')
 module.exports = {
     run: async(client, message, args) => {
 
-        const languages = require('../../util/languages/languages')
         const {guild} = message;
+        const pinging = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setDescription(`🏓 Pinging. . .`)
+            .setColor('RANDOM')
+        message.reply(pinging).then((msg) => {
+            msg.delete()
+            const pingEmbed = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setDescription(`This is my ping:`)
+                .addFields(
+                    {
+                        name: `Bot Ping`,
+                        value: `\`\`\`${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms\`\`\``
+                    },
+                    {
+                        name: `API Ping`,
+                        value: `\`\`\`${Math.round(client.ws.ping)}ms\`\`\``
+                    }
+                )
+                .setColor("RANDOM")
+            const hostEmbed = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic:true}))
+                .setDescription(`The bot's host is named FantasyHost!`)
+                .addFields(
+                    {
+                        name: `Give it a check (the site is in pt-br, but you can buy using US$)`,
+                        value: `[Click Here](https://fantasyhosting.com.br/)`
+                    }
+                )
+                .setColor("RANDOM")
+            pages = [
+                pingEmbed,
+                hostEmbed
+            ]
 
-        if(message.author.bot) return;
-        let msg = await message.channel.send(`🏓 Pinging....`)
-        .then((msg) => {
-            setTimeout(function() {
-                msg.edit(`🏓 Pong!
-    
-                ${languages(guild, 'P_C')} **${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms**
-                ${languages(guild, 'P2_C')} **${Math.round(client.ws.ping)}ms**
-                
-                ${languages(guild, 'P3_C')}
-                ${languages(guild, 'P4_C')} **${guild.region}**`);
-            }, 2000)
+            pageEmbed(message, pages)
         })
-
+        
+        
     },
     aliases: ["ping"],
     description: "Latência e ping da API"

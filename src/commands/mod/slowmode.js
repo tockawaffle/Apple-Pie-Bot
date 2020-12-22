@@ -3,10 +3,8 @@ const languages = require('../../util/languages/languages')
 const pageEmbed = require('discord.js-pagination')
 
 module.exports = {
-    run: async(client, message) => {
+    run: async(client, message, args) => {
 
-        const args = message.content.split(' ')
-        args.shift(' ')
         const chn = message.mentions.channels.first() || message.channel
         const {guild} = message
 

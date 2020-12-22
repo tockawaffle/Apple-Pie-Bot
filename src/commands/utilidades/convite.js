@@ -4,7 +4,6 @@ const pageEmbed = require('discord.js-pagination')
 
 module.exports = {
     run: (client, message, args) => {
-        if(message.author.bot) return;
         const { guild } = message
 
         const apple = client.user

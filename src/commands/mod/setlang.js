@@ -8,9 +8,9 @@ module.exports = {
   run: async(client, message, args) => {
     const { guild } = message
 
-    const targetLanguage = args.toLowerCase()
+    const targetLanguage = args[0]
     if (!languages.includes(targetLanguage)) {
-      message.reply(`The language " ${targetLanguage} " is not supported!\nA linguagem " ${targetLanguage} " não é suportada!`)
+      message.reply(`\nThe language " ${targetLanguage} " is not supported!\nA linguagem " ${targetLanguage} " não é suportada!`)
       return
     }
     

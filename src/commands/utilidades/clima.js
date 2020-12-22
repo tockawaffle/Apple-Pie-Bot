@@ -4,9 +4,8 @@ const languages = require('../../util/languages/languages')
 
 
 module.exports = {
-    run: async(client, message) => {
-        const args = message.content.split(' ')
-        args.shift(' ')
+    run: async(client, message, args) => {
+
         const { guild } = message;
         if(!args[0]) {
             const embed = new MessageEmbed()

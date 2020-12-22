@@ -3,10 +3,8 @@ const { MessageEmbed } = require('discord.js');
 const pageEmbed = require('discord.js-pagination')
 
 module.exports = {
-    run: async(client, message) => {
+    run: async(client, message, args) => {
 
-        const args = message.content.split(' ')
-        args.shift(' ')
         const { guild } = message
         let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
@@ -54,7 +52,7 @@ module.exports = {
                     .addFields(
                         {
                             name: `${languages(guild, "UN3")}`,
-                            value: `${member.user.username}`
+                            value: `\`\`\`${member.user.username}\`\`\``
                         }
                     )
                     .setColor('RANDOM')

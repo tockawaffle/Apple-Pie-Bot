@@ -1,18 +1,17 @@
 module.exports = {
-    run: async(client, message) => {
+    run: async(client, message,args) => {
 
         const languages = require('../../util/languages/languages')
         const { MessageEmbed } = require('discord.js');
         const { guild } = message;
-        const args = message.content.split(' ');
         const moment = require('moment')
 
-        if(args.length > 2) {
+        if(args.length > 1) {
           message.channel.send(`${languages(guild, 'UF_C')}  -userinfo <user_id> | -userinfo @mention`);
-        } else if(args.length === 2) {
+        } else if(args.length === 1) {
             const member = message.mentions.members.size === 1 ? 
                 message.mentions.members.first() :
-                message.guild.members.cache.get(args[1]);
+                message.guild.members.cache.get(args[0]);
             if(message.mentions.has(client.user)) {
                 const owner = client.users.cache.get('723185654044950539')
                 const created2 = moment(client.user.createdAt).locale('pt-br').format('l')
@@ -55,7 +54,7 @@ module.exports = {
                     .addField(`${languages(guild, 'UF_C5')} `, `\`\`\`${member.user.presence.activities}.\`\`\``)
                 message.channel.send(embed);
             } else {
-                message.channel.send(`${languages(guild, 'UF_ERR')}  ${args[1]}, ${languages(guild, 'UF_ERR_2')}`);
+                message.channel.send(`${languages(guild, 'UF_ERR')}  ${args[0]}, ${languages(guild, 'UF_ERR_2')}`);
             }
 
         }

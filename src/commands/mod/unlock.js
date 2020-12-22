@@ -2,10 +2,8 @@ const {MessageEmbed, Permissions} = require('discord.js');
 const languages = require('../../util/languages/languages')
 
 module.exports = {
-    run: async(client, message) => {
+    run: async(client, message, args) => {
 
-        const args = message.content.split(' ')
-        args.shift(' ')
         const role = message.mentions.roles.first() || message.guild.roles.everyone
         const chn = message.mentions.channels.first() || message.channel
         const flags = [
@@ -16,7 +14,7 @@ module.exports = {
         if(chn.permissionsFor(role).has(flags)) {
             const alreadySet = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription(`❌ Failed: Permissiosn already set`)
+                .setDescription(`❌ Failed: Permissios already set`)
                 .addFields(
                     {
                         name: `Permissions already set for the role:`,
