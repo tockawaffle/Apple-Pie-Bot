@@ -39,12 +39,12 @@ module.exports = {
             )
         const donatePage = new MessageEmbed()
             .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-            .setDescription(`Thank you for visiting me`, process.env.CUTIE)
+            .setDescription(`Want to create your own bot or donate to Apple?`, process.env.CUTIE)
             .setColor("RANDOM")
             .addFields(
                 {
-                    name: `Thank you for considering!`,
-                    value: `[Click Here](https://www.applepiebot.xyz/donate)`
+                    name: `Here you can find where to do it!`,
+                    value: `[Click Here](https://www.applepiebot.xyz/donate) or [Here!](https://www.fiverr.com/share/2AGlEN) (if you want to buy a bot)`
                 }
             )
         pages = [

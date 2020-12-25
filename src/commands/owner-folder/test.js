@@ -6,10 +6,8 @@ module.exports = {
 
         if(message.author.id === owner.id) {
 
-            const user = client.users.cache.get('723185654044950539')
-            const user2 = client.users.cache.get('320606239920881668')
-            user.send('ok')
-            user2.send('ok')
+            let test = message.guild.channels.cache.get('782331604467056642')
+            console.log(test)
             console.log('Se você não usou isso, houve uma falha na segurança do bot!\nrun: <command name>')
         } else return console.log('Segurança funcionou:\nFailed to <command name>')
         

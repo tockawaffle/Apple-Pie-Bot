@@ -1,4 +1,5 @@
 const languages = require('../../util/languages/languages')
+const {MessageEmbed} = require('discord.js')
 module.exports = {
     aliases: [],
     description: 'Stops the music',
