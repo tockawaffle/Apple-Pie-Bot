@@ -1,18 +1,16 @@
 module.exports = {
-    run: async(client, message) => {
+    run: async(client, message, args) => {
       const languages = require('../../util/languages/languages')
       const { MessageEmbed } = require('discord.js')
-      if(message.author.bot) return;
-      const args = message.content.split(' ');
       const { guild } = message
 
-      if(args.length > 2) {
+      if(args.length > 1) {
         message.channel.send(`${languages(guild, 'AV_E1')}`);
-      } else if(args.length === 2) {
+      } else if(args.length === 1) {
 
         const member = message.mentions.members.size === 1 ? 
         message.mentions.members.first() :
-        message.guild.members.cache.get(args[1]);
+        message.guild.members.cache.get(args[0]);
 
         if(member) {
           const { guild } = message;
@@ -28,9 +26,8 @@ module.exports = {
           message.channel.send(`${languages(guild, 'AV_E2')} " ${args[1]} " ${languages(guild, 'AV_E2_1')}`);
 
         }
-
       }
-      if(args.length === 1) {
+      if(args.length === 0) {
         const { guild } = message;
 
         const embed = new MessageEmbed()

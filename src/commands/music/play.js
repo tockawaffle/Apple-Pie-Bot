@@ -4,12 +4,8 @@ const languages = require('../../util/languages/languages')
 module.exports = {
     aliases: [],
     description: '',
-    run: async(client, message) => {
+    run: async(client, message, args) => {
         const {guild} = message
-        const args = message.content.split(' ')
-        args.shift(' ')
-
-
 
         if (!message.member.voice.channel) {
             const noChannel = new MessageEmbed()

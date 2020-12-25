@@ -29,7 +29,7 @@ module.exports = {
                 .addFields(
                     {
                         name: `${languages(guild, "L_C4")}`,
-                        value: `[${languages(H_C21)}](https://www.applepiebot.xyz/permission-flags)`
+                        value: `[${languages(guild, "H_C21")}](https://www.applepiebot.xyz/permission-flags)`
                     },
                     {
                         name: `${languages(guild, "L_C6")}`,
@@ -68,7 +68,7 @@ module.exports = {
                 },
                 {
                     name: `${languages(guild, "L_C15")}`,
-                    value: `\`\`\`${reason ? reason: `${languages(guild, "L_C16")}`}\`\`\``
+                    value: `\`\`\`${reason ? reason: `${languages(guild, "B_C16")}`}\`\`\``
                 }
             )
             .setColor('RANDOM')

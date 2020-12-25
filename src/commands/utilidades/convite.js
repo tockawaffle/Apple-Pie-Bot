@@ -3,6 +3,9 @@ const languages = require('../../util/languages/languages')
 
 module.exports = {
     run: (client, message, args) => {
+        const { guild } = message
+
+        const apple = client.user
         if(message.author.bot) return;
         const initial = new MessageEmbed()
         .setDescription(`${languages(guild, "I_C")}`)

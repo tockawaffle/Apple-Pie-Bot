@@ -3,10 +3,8 @@ const languages = require('../../util/languages/languages')
 module.exports = {
     aliases:[],
     description: 'Filtros para músicas',
-    run: async(client, message) => {
+    run: async(client, message, args) => {
 
-        const args = message.content.split(' ')
-        args.shift(' ')
         const {guild} = message
         if (!message.member.voice.channel) {
             const noChannel = new MessageEmbed()

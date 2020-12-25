@@ -3,14 +3,16 @@ const { MessageEmbed } = require('discord.js');
 const pageEmbed = require('discord.js-pagination')
 
 module.exports = {
-    run: async(client, message) => {
+    run: async(client, message, args) => {
 
-        const args = message.content.split(' ')
-        args.shift(' ')
         const { guild } = message
         let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         let mutedRole = message.guild.roles.cache.find(x => x.name === `${languages(guild, 'M_R')}`)
-
+        if (!message.member.hasPermission("MANAGE_ROLES")) {
+            return message.channel.send(
+               `${languages(guild, 'M_C')}`
+            );
+        }
         if(!args[0]) {
             if(member === undefined) {
                 member = `${languages(guild, "UN5")}`
@@ -32,11 +34,6 @@ module.exports = {
             return
         }
 
-        if (!message.member.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send(
-               `${languages(guild, 'M_C')}`
-            );
-        }
 
         try{
 
@@ -73,7 +70,7 @@ module.exports = {
                             .addFields(
                                 {
                                     name: `${languages(guild, "M3_C")}`,
-                                    value: `${member.user.username}`
+                                    value: `\`\`\`${member.user.username}\`\`\``
                                 }
                             )
                             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
@@ -122,7 +119,7 @@ module.exports = {
                     .addFields(
                         {
                             name: `${languages(guild, "M3_C")}`,
-                            value: `${member.user.username}`
+                            value: `\`\`\`${member.user.username}\`\`\``
                         }
                     )
                     .setColor('RANDOM')

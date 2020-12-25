@@ -14,15 +14,13 @@ const player = new Player(client)
 
 const { registerCommands, registerEvents, registerPlayerEvents } = require('./util/registry');
 (async () => {
-    client.player = player
     client.login(process.env.BOT_TOKEN);
+    client.player = player
     client.commands = new Map();
-    client.cachedMessageReactions = new Map();
-    client.filters = require('./util/filters.json')
+    client.filters = require('./util/music-utils/filters.json')
     await registerEvents(client, '../events');
     await registerCommands(client, '../commands');
     await registerPlayerEvents(player, '../player-event')
-    
 })();
 
 //------------------------------------------------------------------------------------------------------------------------------------------------//
