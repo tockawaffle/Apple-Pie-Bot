@@ -419,17 +419,18 @@
 
         
         "I_C": {
-            "english": "This",
-            "portugues": "Este"
+            "english": "Hello! Thank you for using me!",
+            "portugues": "Olá! Obrigado por me utilizar!"
         },
         "I2_C": {
-            "english": "is the invite that is going to make me able to join your server!",
-            "portugues": "é o convite que me fará entrar em seu servidor!"
+            "english": "Here you can find where to invite me for your server!",
+            "portugues": "Aqui você pode encontrar onde me convidar para seu servidor!"
         },
         "I3_C": {
             "english": "Hope you enjoy!",
             "portugues": "Espero que goste!"
         },
+        
 
 
 
@@ -704,6 +705,10 @@
         "VT_C3": {
             "english": "Hope you continue using me! Also, thanks!",
             "portugues": "Espero que continue me usando! Aliás, obrigada!"
+        },
+        "VT_C4": {
+            "english": "Check my site!:",
+            "portugues": "Veja o meu site!:"
         },
 
 
