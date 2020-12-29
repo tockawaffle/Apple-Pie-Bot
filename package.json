@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
+    "akaneko": "^5.0.1",
     "ansi-colors": "^4.1.1",
     "canvacord": "^5.0.8",
     "common-tags": "^1.8.0",
@@ -23,7 +24,6 @@
     "mongoose": "^5.10.15",
     "ms": "^2.1.2",
     "nodemon": "^2.0.6",
-    "random-anime": "^1.0.6",
     "snakecord": "0.0.6",
     "table": "^5.4.6",
     "weather-js": "^2.0.0",
