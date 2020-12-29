@@ -1,6 +1,6 @@
 const weather = require('weather-js');
 const {MessageEmbed} = require('discord.js')
-const languages = require('../../util/languages/languages')
+const languages = require('../../../util/languages/languages')
 
 
 module.exports = {
