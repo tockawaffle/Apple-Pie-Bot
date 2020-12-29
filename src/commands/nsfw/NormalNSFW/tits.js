@@ -1,4 +1,4 @@
-const languages = require('../../util/languages/languages')
+const languages = require('../../../util/languages/languages')
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
