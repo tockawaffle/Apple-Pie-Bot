@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const {getChannelId} = require('../../commands/memberleft/setleft')
+const {getChannelId} = require('../../commands/memberdb/Memberleft/setleft')
 const languages = require('../../util/languages/languages')
 const path = require('path')
 
