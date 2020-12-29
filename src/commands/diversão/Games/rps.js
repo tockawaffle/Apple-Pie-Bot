@@ -1,6 +1,6 @@
 module.exports = {
     run :async(client, message) => {
-        const languages = require('../../util/languages/languages')
+        const languages = require('../../../util/languages/languages')
         const { guild } = message
         var rps = [`${languages(guild, 'RPS_P')}`, `${languages(guild, 'RPS_P2')}`, `${languages(guild, 'RPS_T')}`];
         var rpsChoice = rps[Math.floor(Math.random() * rps.length)];

@@ -1,5 +1,5 @@
 const dado = () => Math.floor(Math.random() * 25) + 1;
-const languages = require('../../util/languages/languages')
+const languages = require('../../../util/languages/languages')
 
 module.exports = {
     run: async(client, message) => {
