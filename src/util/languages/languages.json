@@ -1500,6 +1500,31 @@
         "UNLKC_2": {
             "english": "Unlocked for the role:",
             "portugues": "Desbloqueado para o cargo:"
+        },
+
+        "ST": {
+            "english": "Thank you for visiting me ",
+            "portugues": "Obrigado por me visitar "
+        },
+        "ST2": {
+            "english": "This is my site:",
+            "portugues": "Esse é o meu site:"
+        },
+        "ST3": {
+            "english": "These are my commands, take a look on them!:",
+            "portugues": "Esses são os meus comandos, dê uma olhada!:"
+        },
+        "ST4": {
+            "english": "Here you can find where to invite me:",
+            "portugues": "Aqui você pode encontrar onde me convidar:"
+        },
+        "ST5": {
+            "english": "Want to create your own bot or donate to Apple?",
+            "portugues": "Quer criar seu próprio bot ou doar para a Apple?"
+        },
+        "ST6": {
+            "english": "Here you can find where to do it!:",
+            "portugues": "Aqui você pode encontrar onde fazer isso!:"
         }
 
     }
