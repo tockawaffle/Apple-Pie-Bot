@@ -162,7 +162,7 @@ module.exports = {
                 .setFooter('DAMN BOI, SHES THICK!')
                 .setColor("RANDOM")
             message.reply(thighsEmbed)
-        } else if(args[0] === 'foxes') {
+        } else if(args[0] === 'foxgirls') {
             const foxEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .setDescription('Wannabe foxgirls, yeah')

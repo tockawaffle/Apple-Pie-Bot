@@ -42,7 +42,7 @@ module.exports = {
                     value: `\`\`\`_filters-help\`\`\``,
                 },
                 {
-                    name: `${MH_9}`,
+                    name: `${languages(guild, 'MH_9')}`,
                     value: '```_shuffle```'
                 }
             )

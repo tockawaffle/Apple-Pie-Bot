@@ -134,6 +134,10 @@ module.exports = {
                     name: `${languages(guild, 'H_C13')}`,
                     value: '```_snakegame```',
                 },
+                {
+                    name: 'Anime',
+                    value: '```_rda```\n```_animebg```'                    
+                }
 
             )
         const helpEssentials = new MessageEmbed()
@@ -168,7 +172,7 @@ module.exports = {
             .addFields(
                 {
                     name: 'NSFW Anime:',
-                    value: '```_nsfw_anime```'
+                    value: '```_anisfw```\n```_bgnsfw```'
                 }
             )
             .setColor('RANDOM')
