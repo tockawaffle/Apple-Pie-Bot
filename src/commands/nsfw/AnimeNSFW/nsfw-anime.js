@@ -1,92 +1,94 @@
 const { MessageEmbed } = require('discord.js')
-
+const languages = require('../../../util/languages/languages')
 module.exports = {
     aliases: ['animensfw', 'anisfw'],
-    description: 'Um gerador de garotas de anime com borgars',
+    description: 'Perv~',
     run: async(client, message, args) => {
-        if(!message.channel.nsfw) return message.reply('Not nsfw channel uwu').then((msg) => {msg.delete({timeout: 5000})})
+
+        const {guild} = message
         const akaneko = require('akaneko')
         const pageEmbed = require('discord.js-pagination')
 
+        if(!message.channel.nsfw) return message.reply(`${languages(guild, "NOTNSFW")}`).then((msg) => {msg.delete({timeout: 5000})})
         if(!args[0]) {
             const error = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription(`❌ Failed: Missing Args`)
+                .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
                     {
-                        name: `You need to provide what you want to see!`,
-                        value: `Go to the next page to see what you can ask to see`
+                        name: `${languages(guild, "NARGS_2")}`,
+                        value: `${languages(guild, "NARGS_3")}`
                     }
                 )
             const error2 = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .addFields(
                     {
-                        name: `I know you like anime ass~ uwu`,
+                        name: `${languages(guild, "ASFW")}`,
                         value: '```_anisfw ass```'
                     },
                     {
-                        name: `If you don't know what it is, search it up (Not recommended)`,
+                        name: `${languages(guild, "ASFW2")}`,
                         value: '```_anisfw bdsm```'
                     },
                     {
-                        name: `Basically an image of a girl sucking on a sharp blade!`,
+                        name: `${languages(guild, "ASFW3")}`,
                         value: '```_anisfw blowjob```'
                     },
                     {
-                        name: `Sends a random doujin page!`,
+                        name: `${languages(guild, "ASFW4")}`,
                         value: '```_anisfw doujin```'
                     },
                     {
-                        name: `So you like smelly feet huh?`,
+                        name: `${languages(guild, "ASFW5")}`,
                         value: '```_anisfw feet```'
                     },
                     {
-                        name: `Female Domination?! I'm in!`,
+                        name: `${languages(guild, "ASFW6")}`,
                         value: '```_anisfw femdom```'
                     },
                     {
-                        name: `Girl's that are wannabe foxes, yes`,
+                        name: `${languages(guild, "ASFW7")}`,
                         value: '```_anisfw foxgirls```'
                     },
                     {
-                        name: `Basically an animated image, so yes :3`,
+                        name: `${languages(guild, "ASFW8")}`,
                         value: '```_anisfw gif```'
                     },
                     {
-                        name: `Girls that wear glasses, uwu~`,
+                        name: `${languages(guild, "ASFW9")}`,
                         value: '```_anisfw glasses```'
                     },
                     {
-                        name: `Wow, I won't even question your fetishes.`,
+                        name: `${languages(guild, "ASFW10")}`,
                         value: '```_anisfw netorare```'
                     },
                     {
-                        name: `Maids, Maid Uniforms, etc, you know what maids are uwu`,
+                        name: `${languages(guild, "ASFW11")}`,
                         value: '```_anisfw maid```'
                     },
                     {
-                        name: `I mean... just why? You like underwear? (That's cool af)`,
+                        name: `${languages(guild, "ASFW12")}`,
                         value: '```_anisfw panties```'
                     },
                     {
-                        name: `School Uniforms!~ Yatta~!`,
+                        name: `${languages(guild, "ASFW13")}`,
                         value: '```_anisfw school```'
                     },
                     {
-                        name: `The top part of your legs, very hot, isn't it?`,
+                        name: `${languages(guild, "ASFW14")}`,
                         value: '```_anisfw thighs```'
                     },
                     {
-                        name: `Military, Konbini, Work, Nurse Uniforms, etc!~ Sexy~`,
+                        name: `${languages(guild, "ASFW15")}`,
                         value: '```_anisfw uniform```'
                     },
                     {
-                        name: `Girls on Girls, and Girl's only!<3`,
+                        name: `${languages(guild, "ASFW16")}`,
                         value: '```_anisfw yuri```'
                     },
                     {
-                        name: `That one part of the flesh being squeeze in thigh-highs~<3`,
+                        name: `${languages(guild, "ASFW17")}`,
                         value: '```_anisfw zettaiRyouiki```'
                     },
                     
@@ -101,33 +103,29 @@ module.exports = {
         if(args[0] === 'ass') {
             const assEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription('Everyone loves a good ass, right?')
+                .setDescription('Slappy~')
                 .setImage(await akaneko.nsfw.ass())
-                .setFooter('Slappy~')
                 .setColor('RANDOM')
             message.reply(assEmbed)
         } else if(args[0] === 'bdsm') {
             const bdsmEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription('Sadistic!')
+                .setDescription(`${languages(guild, "CASFW")}`)
                 .setImage(await akaneko.nsfw.bdsm())
-                .setFooter('So, you are one of these, huh?')
                 .setColor('RANDOM')
             message.reply(bdsmEmbed)
         } else if(args[0] === 'blowjob') {
             const blowjobEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription('A lovely girl sucking\non a sharp blade!')
+                .setDescription('Blowie~')
                 .setImage(await akaneko.nsfw.blowjob())
-                .setFooter('Blowie~')
                 .setColor('RANDOM')
             message.reply(blowjobEmbed)
         } else if(args[0] === 'doujin') {
             const doujinEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription('So, you prefer to test your luck?')
+                .setDescription(`${languages(guild, "CASFW3")}`)
                 .setImage(await akaneko.nsfw.doujin())
-                .setFooter('Hope you are lucky!')
                 .setColor('RANDOM')
             message.reply(doujinEmbed)
         } else if(args[0] === 'feet') {
@@ -135,97 +133,90 @@ module.exports = {
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setDescription('Kinky~')
                 .setImage(await akaneko.nsfw.feet())
-                .setFooter('Lovely feet, dont you think?')
                 .setColor('RANDOM')
             message.reply(feetEmbed)
         } else if(args[0] === 'femdom') {
             const femdomEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription('Heh')
+                .setDescription(`${languages(guild, "CASFW4")}`)
                 .setImage(await akaneko.nsfw.femdom())
-                .setFooter('I can be your dom, if you want~')
                 .setColor('RANDOM')
             message.reply(femdomEmbed)
         } else if(args[0] === 'glasses') {
             const glassesEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription('Shiny!')
+                .setDescription(`${languages(guild, "CASFW5")}`)
                 .setImage(await akaneko.nsfw.glasses())
-                .setFooter('These are the best!')
                 .setColor('RANDOM')
             message.reply(glassesEmbed)
         } else if(args[0] === 'thighs') {
             const thighsEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('Those thiiiiighs')
+                .setDescription(`${languages(guild, "CASFW6")}`)
                 .setImage(await akaneko.nsfw.thighs())
-                .setFooter('DAMN BOI, SHES THICK!')
                 .setColor("RANDOM")
             message.reply(thighsEmbed)
         } else if(args[0] === 'foxgirls') {
             const foxEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('Wannabe foxgirls, yeah')
+                .setDescription(`${languages(guild, "CASFW7")}`)
                 .setImage(await akaneko.nsfw.foxgirl())
-                .setFooter('Still cute tho')
                 .setColor("RANDOM")
             message.reply(foxEmbed)
         } else if(args[0] === 'gif') {
             const gifEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('Animated ones, yay!')
+                .setDescription(`${languages(guild, "CASFW8")}`)
                 .setImage(await akaneko.nsfw.gifs())
-                .setFooter('Kinky~')
                 .setColor("RANDOM")
             message.reply(gifEmbed)
         } else if(args[0] == 'netorare') {
             const ntrEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('I mean... Yeah?')
+                .setDescription(`${languages(guild, "CASFW9")}`)
                 .setImage(await akaneko.nsfw.netorare())
                 .setColor("RANDOM")
             message.reply(ntrEmbed)
         } else if(args[0] == 'maid') {
             const maidEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('This is what I call goodtaste!')
+                .setDescription(`${languages(guild, "CASFW10")}`)
                 .setImage(await akaneko.nsfw.maid())
                 .setColor("RANDOM")
             message.reply(maidEmbed)
         } else if(args[0] == 'panties') {
-            const Embed = new MessageEmbed()
+            const pantyEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('Panty~')
+                .setDescription(`${languages(guild, "CASFW11")}`)
                 .setImage(await akaneko.nsfw.panties())
                 .setFooter('Kinky~')
                 .setColor("RANDOM")
-            message.reply()
+            message.reply(pantyEmbed)
         } else if(args[0] == 'school') {
             const schEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('School Uniforms, yay!')
+                .setDescription(`${languages(guild, "CASFW11 ")}`)
                 .setImage(await akaneko.nsfw.school())
-                .setFooter('Is this even allowed?')
                 .setColor("RANDOM")
             message.reply(schEmbed)
         } else if(args[0] == 'uniform') {
             const uniEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('Military, Nurse and etc, they are sexy!')
+                .setDescription(`${languages(guild, "CASFW12")}`)
                 .setImage(await akaneko.nsfw.uniform())
                 .setColor("RANDOM")
             message.reply(uniEmbed)
         } else if(args[0] == 'yuri') {
             const yuriEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('Two girls, perfection!')
+                .setDescription(`${languages(guild, "CASFW13")}`)
                 .setImage(await akaneko.nsfw.yuri())
                 .setColor("RANDOM")
             message.reply(yuriEmbed)
         } else if(args[0] == 'zettaiRyouiki') {
             const zettaiRyouikiEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
-                .setDescription('That one part of the flesh being squeeze in thigh-highs ~<3')
+                .setDescription(`${languages(guild, "CASFW14")}`)
                 .setImage(await akaneko.nsfw.zettaiRyouiki())
                 .setColor("RANDOM")
             message.reply(zettaiRyouikiEmbed)

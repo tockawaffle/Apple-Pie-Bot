@@ -1,25 +1,23 @@
 const { MessageEmbed } = require('discord.js')
-
+const akaneko = require('akaneko')
+const languages = require('../../../util/languages/languages')
 module.exports = {
     aliases: ['rda'],
     description: 'Um gerador de garotas de anime com borgars',
     run: async(client, message, args) => {
-        const akaneko = require('akaneko')
+
 
         if(!args[0]) {
             const errorEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription(`❌ Failed: Missing Argument`)
+                .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
                     {
-                        name: `You need to choose between:`,
-                        value: '```foxgirl or neko```'
-                    },
-                    {
-                        name: `Example:`,
-                        value: '```_rda foxgirl\n_rda neko```'
+                        name: `${languages(guild, "NARGS2")}`,
+                        value: `${languages(guild, "NARGS3")}.`
                     }
                 )
+                .setColor("RED")
             message.reply(errorEmbed)
             return
         }
@@ -29,7 +27,7 @@ module.exports = {
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setImage(await akaneko.foxgirl())
                 .setColor('RANDOM')
-                .setFooter(`Yes! That is a fox\nFubuki would be ashemed if you think that's a catgirl!`)
+                .setFooter(`${languages(guild, "RDA")}`)
             message.reply(foxgirlEmbed)
         } else if (args[0] === 'neko') {
             const nekoEmbed = new MessageEmbed()
