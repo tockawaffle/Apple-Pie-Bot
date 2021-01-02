@@ -8,7 +8,7 @@ const { Player } = require('discord-player')
 const player = new Player(client)
 
 
-const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client)
+// const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client)
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
 

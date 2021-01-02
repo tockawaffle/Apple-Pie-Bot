@@ -4,7 +4,7 @@ module.exports = {
         const kaguya = client.users.cache.get(`${process.env.ID}`)
 
         if(message.author.id !== kaguya.id) {
-            return message.channel.send(`This is not avaible!`)
+            return
         }
         const embed = new MessageEmbed()
             .setAuthor(`${kaguya.username}`, kaguya.avatarURL({dynamic: true}))

@@ -1,30 +1,34 @@
 const { MessageEmbed } = require("discord.js")
+const languages = require("../../../util/languages/languages")
+const pageEmbed = require('discord.js-pagination')
+const akaneko = require('akaneko')
 
 module.exports = {
     aliases: ['bgnsfw'],
     description: 'NSFW Wallpapers',
     run: async(client, message, args) => {
-        const pageEmbed = require('discord.js-pagination')
-        const akaneko = require('akaneko')
-        if(!message.channel.nsfw) return message.reply('Not a nsfw channel uwu').then((msg) => {msg.delete({timeout: 5000})})
+
+        const {guild} = message
+
+        if(!message.channel.nsfw) return message.reply(`${languages(guild, "NOTNSFW")}`).then((msg) => {msg.delete({timeout: 5000})})
 
         if(!args[0]) {
             const errorEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription(`❌ Failed: Missing Args`)
+                .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
                     {
-                        name: `You didn't request something to be sent`,
-                        value: `Please, check the next page.`
+                        name: `${languages(guild, "NARGS2")}`,
+                        value: `${languages(guild, "NARGS3")}.`
                     }
                 )
                 .setColor("RED")
             const secondEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription(`These are the current wallpapers you can request:`)
+                .setDescription(`${languages(guild, "BGNSFW")}`)
                 .addFields(
                     {
-                        name: `For PC:`,
+                        name: `PC:`,
                         value: "```_bgnsfw pc```"
                     },
                     {
@@ -41,14 +45,14 @@ module.exports = {
             const pcEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setImage(await akaneko.nsfw.wallpapers())
-                .setDescription(`Here's your wallpaper!`)
+                .setDescription(`${languages(guild, "BGNSFW2")}`)
                 .setColor("RANDOM")
             message.reply(pcEmbed)
         } else if(args[0] === 'mobile') {
             const mobileEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setImage(await akaneko.nsfw.mobileWallpapers())
-                .setDescription(`Here's your mobile wallpaper!`)
+                .setDescription(`${languages(guild, "BGNSFW2")}`)
                 .setColor('RANDOM')
             message.reply(mobileEmbed)
         }

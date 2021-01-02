@@ -1525,6 +1525,163 @@
         "ST6": {
             "english": "Here you can find where to do it!:",
             "portugues": "Aqui você pode encontrar onde fazer isso!:"
+        },
+
+        "NOTNSFW": {
+            "english": "This is not a NSFW channel, pervert!",
+            "portugues": "Esse canal não é NSFW, pervertido!"
+        },
+        "NARGS": {
+            "english": "❌ Failed: Missing Args",
+            "portugues": "❌ Falha: Faltando Argumentos"
+        },
+        "NARGS_2": {
+            "english": "You need to provide what you want to see!",
+            "portugues": "Você precisa me dizer o que você quer ver!"
+        },
+        "NARGS_3": {
+            "english": "Go to the next page to see what you can ask to see",
+            "portugues": "Vá para a próxima página para escolher algo"
+        },
+
+
+        "ASFW": {
+            "english": "I know you like anime ass~ uwu",
+            "portugues": "Eu sei que você gosta de umas rabas uwu"
+        },
+        "ASFW2": {
+            "english" : "If you don't know what it is, search it up (Not recommended)",
+            "portugues": "Se você não sabe o que isso é, Google. (Não recomendado)"
+        },
+        "ASFW3": {
+            "english": "Basically an image of a girl sucking on a sharp blade!",
+            "portugues": "Basicamente uma imagem de uma garota \"rezando\""
+        },
+        "ASFW4": {
+            "english": "Sends a random doujin page!",
+            "portugues": "Uma imagem aleatória de doujin!"
+        },
+        "ASFW5": {
+            "english": "So you like smelly feet huh?",
+            "portugues": "Então você é um desses, huh?"
+        },
+        "ASFW6": {
+            "english": "Female Domination?! I'm in!",
+            "portugues": "Dominação Feminina? Tô dentro!"
+        },
+        "ASFW7": {
+            "english": "Girl's that are wannabe foxes, yes",
+            "portugues": "Cosplays de garotas-raposas, sim."
+        },
+        "ASFW8": {
+            "english": "Basically an animated image, so yes :3",
+            "portugues": "Basicamente uma imagem animada, então, é :3"
+        },
+        "ASFW9": {
+            "english": "Girls that wear glasses, uwu~",
+            "portugues": "Garotas com óculos, uwu~"
+        },
+        "ASFW10": {
+            "english": "Wow, I won't even question your fetishes.",
+            "portugues": "Wow, depois dessa eu nem vou perguntar mais"
+        },
+        "ASFW11": {
+            "english": "Maids, Maid Uniforms, etc, you know what maids are uwu",
+            "portugues": "Empregadas, uniforme de empregadas, etc, você sabe o que são Maids uwu"
+        },
+        "ASFW12": {
+            "english": "I mean... If you like underwears...",
+            "portugues": "Bem... Se você gosta de calcinhas..."
+        },
+        "ASFW13": {
+            "english": "School Uniforms!~ Yatta~!",
+            "portugues": "Uniformes Escolares!~"
+        },
+        "ASFW14": {
+            "english": "The top part of your legs, very hot, isn't it?",
+            "portugues": "A parte de cima da sua perna, bem gostoso, não acha?"
+        },
+        "ASFW15": {
+            "english": "Military, Konbini, Work, Nurse Uniforms, etc!~ Sexy~",
+            "portugues": "Militar, Konbini, Trabalho, Enfermeiras e etc! Todos sexys~"
+        },
+        "ASFW16": {
+            "english": "Girls on Girls, and Girl's only!<3",
+            "portugues":"Garotas com garotas, e garotas apenas! <3"
+        },
+        "ASFW17": {
+            "english": "That one part of the flesh being squeeze in thigh-highs~<3",
+            "portugues": "aquela parte da carne sendo espremida na altura das coxas~<3"
+        },
+
+
+        "CASFW": {
+            "english":  "So, you are one of these, huh?",
+            "portugues": "Então você realmente é um desses, huh?"
+        },
+        "CASFW2": {
+            "english": "So you prefer to test your luck?",
+            "portugues": "Então você prefere testar sua sorte?"
+        },
+        "CASFW4": {
+            "english": "I can be your dom, if you want heh~<3",
+            "portugues": "Se quiser, eu sei dominar também, heh~<3"
+        },
+        "CASFW5":{
+            "english": "Shiny!",
+            "portugues": "Brilhante~"
+        },
+        "CASFW6": {
+            "english": "Those thiiiiighs babe~",
+            "portugues": "Uma palavra: T H I C C"
+        },
+        "CASFW7": {
+            "english": "Tails are awesome!",
+            "portugues": "Rabos realmente são incríveis!"
+        },
+        "CASFW8": {
+            "english": "Animation really evolved, huh?",
+            "portugues": "Animações realmente evoluíram, huh?"
+        },
+        "CASFW9": {
+            "english": "I mean... Yeah?",
+            "portugues": "Uh... Okay..."
+        },
+        "CASFW10": {
+            "english": "Panty~",
+            "portugues": "Calcinhas~"
+        },
+        "CASFW11": {
+            "english": "Is this even allowed?",
+            "portugues": "Isso é permitido?"
+        },
+        "CASFW12": {
+            "english": "Sexy!",
+            "portugues": "Sexy!"
+        },
+        "CASFW13": {
+            "english": "Two girls, only girls, perfection!",
+            "portugues": "Duas garotas, apenas isso, perfeição!"
+        },
+        "CASFW14": {
+            "english": "I'll admit, I have thicc thighs.",
+            "portugues": "Ok, eu admito, eu tenho coxas grossas."
+        },
+
+
+        "BGNSFW": {
+            "english": "These are the current wallpapers you can request:",
+            "portugues": "Esses são os wallpapers que você pode requisitar:"
+        },
+        "BGNSFW2": {
+            "english": "Here's your wallpaper!",
+            "portugues": "Aqui está seu wallpaper!"
+        },
+
+
+        "RDA": {
+            "english": "Yes! This is a fox\nFubuki would be ashemed.",
+            "portugues": "SiM! Isso é uma raposa\nFubuki ficaria com vergonha de você."
         }
 
     }

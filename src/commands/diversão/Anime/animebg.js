@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js")
+const languages = require("../../../util/languages/languages")
 
 module.exports = {
     aliases: [],
@@ -10,20 +11,20 @@ module.exports = {
         if(!args[0]) {
             const errorEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription(`❌ Failed: Missing Args`)
+                .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
                     {
-                        name: `You didn't request something to be sent`,
-                        value: `Please, check the next page.`
+                        name: `${languages(guild, "NARGS2")}`,
+                        value: `${languages(guild, "NARGS3")}.`
                     }
                 )
                 .setColor("RED")
             const secondEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setDescription(`These are the current wallpapers you can request:`)
+                .setDescription(`${languages(guild, "BGNSFW")}`)
                 .addFields(
                     {
-                        name: `For PC:`,
+                        name: `PC:`,
                         value: "```_animebg pc```"
                     },
                     {
@@ -40,14 +41,14 @@ module.exports = {
             const pcEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setImage(await akaneko.wallpapers())
-                .setDescription(`Here's your wallpaper!`)
+                .setDescription(`${languages(guild, "BGNSFW2")}`)
                 .setColor("RANDOM")
             message.reply(pcEmbed)
         } else if(args[0] === 'mobile') {
             const mobileEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setImage(await akaneko.mobileWallpapers())
-                .setDescription(`Here's your mobile wallpaper!`)
+                .setDescription(`${languages(guild, "BGNSFW2")}`)
                 .setColor('RANDOM')
             message.reply(mobileEmbed)
         }
