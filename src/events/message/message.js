@@ -2,7 +2,7 @@ const PREFIX = process.env.PREFIX
 const {RateLimiter} = require('discord.js-rate-limiter')
 const languages = require('../../util/languages/languages')
 const ids = process.env.ID || process.env.ID2
-let rateLimiter = new RateLimiter(1, 3000)
+let rateLimiter = new RateLimiter(2, 2000)
 
 module.exports = async(client, message) => {
 
@@ -25,8 +25,9 @@ module.exports = async(client, message) => {
             if(client.commands.get(cmdName)) {
                 client.commands.get(cmdName)(client, message, cmdArgs)
             }else {
-                message.reply(`${languages(guild, 'CMD_EV')}  **'-${cmdName}'** ${languages(guild, 'CMD_EV_2')}`);
-                message.channel.send(process.env.NKCF);
+                // message.reply(`${languages(guild, 'CMD_EV')}  **'-${cmdName}'** ${languages(guild, 'CMD_EV_2')}`);
+                // message.channel.send(process.env.NKCF);
+                return
             }
         }
 
