@@ -14,8 +14,8 @@ module.exports = {
                 .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
                     {
-                        name: `${languages(guild, "NARGS2")}`,
-                        value: `${languages(guild, "NARGS3")}.`
+                        name: `${languages(guild, "NARGS_2")}`,
+                        value: `${languages(guild, "NARGS_3")}.`
                     }
                 )
                 .setColor("RED")
