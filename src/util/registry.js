@@ -73,8 +73,30 @@ async function registerPlayerEvents(client, dir) {
     }
 }
 
+async function registerDblEvents(client, dir) {
+    let files = await fs.readdir(path.join(__dirname, dir));
+    for(let file of files) {
+        let stat = await fs.lstat(path.join(__dirname, dir, file));
+        if(stat.isDirectory())
+            registerEvents(client, path.join(dir, file));
+        else {
+            if(file.endsWith(".js")) {
+                let dblEventName = file.substring(0, file.indexOf(".js"));
+                try {
+                    let dblEventModule = require(path.join(__dirname, dir, file));
+                    client.on(dblEventName, dblEventModule.bind(null, client));
+                }
+                catch(err) {
+                    console.log(err);
+                }
+            }
+        }
+    }
+}
+
 module.exports = { 
     registerEvents, 
     registerCommands,
-    registerPlayerEvents
+    registerPlayerEvents,
+    registerDblEvents
 };

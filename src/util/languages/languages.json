@@ -1682,6 +1682,20 @@
         "RDA": {
             "english": "Yes! This is a fox\nFubuki would be ashemed.",
             "portugues": "SiM! Isso é uma raposa\nFubuki ficaria com vergonha de você."
+        },
+
+
+        "AN" :{
+            "english": "This is what you can request:",
+            "portugues": "Isso é o que você pode pedir:"
+        },
+        "AN1": {
+            "english": "Fox girls, like Fubuki!",
+            "portugues": "Garotas que parecem raposas, como a Fubuki!"
+        },
+        "AN2": {
+            "english": "Neko Girls~",
+            "portugues": "Garotas Gato~"
         }
 
     }
