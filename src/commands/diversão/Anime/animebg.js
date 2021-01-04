@@ -37,20 +37,42 @@ module.exports = {
             pageEmbed(message, pages)
             return
         }
-        if(args[0] === 'pc') {
-            const pcEmbed = new MessageEmbed()
+        try{
+            if(args[0] === 'pc') {
+                const pcEmbed = new MessageEmbed()
+                    .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
+                    .setImage(await akaneko.wallpapers())
+                    .setDescription(`${languages(guild, "BGNSFW2")}`)
+                    .setColor("RANDOM")
+                message.reply(pcEmbed)
+            } else if(args[0] === 'mobile') {
+                const mobileEmbed = new MessageEmbed()
+                    .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
+                    .setImage(await akaneko.mobileWallpapers())
+                    .setDescription(`${languages(guild, "BGNSFW2")}`)
+                    .setColor('RANDOM')
+                message.reply(mobileEmbed)
+            }
+        }catch(err) {
+            const errEmbed = new MessageEmbed()
+            .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
+            .setColor('RANDOM')
+            .setDescription(`${languages(guild, "mst5")}`)
+            const errDet = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setImage(await akaneko.wallpapers())
-                .setDescription(`${languages(guild, "BGNSFW2")}`)
-                .setColor("RANDOM")
-            message.reply(pcEmbed)
-        } else if(args[0] === 'mobile') {
-            const mobileEmbed = new MessageEmbed()
-                .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setImage(await akaneko.mobileWallpapers())
-                .setDescription(`${languages(guild, "BGNSFW2")}`)
                 .setColor('RANDOM')
-            message.reply(mobileEmbed)
+                .setDescription(`${languages(guild, "mst6")}`)
+                .addFields(
+                    {
+                        name: `${languages(guild, mst6)}`,
+                        value: `\`\`\`${err}\`\`\``
+                    }
+                )
+            pages = [
+                errEmbed,
+                errDet
+            ]
+            pageEmbed(message, pages)
         }
     }
 }
