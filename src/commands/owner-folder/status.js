@@ -15,8 +15,7 @@ module.exports = {
                     }
                 })
             }
-
-        } else return console.log('Segurança funcionou:\nFailed to run status.js')
+        }
         
     }, aliases: ['sts'], description: 'mudar o status do bot'
 }

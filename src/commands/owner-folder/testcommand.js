@@ -76,8 +76,7 @@ module.exports = {
                 console.log(err)
                 message.author.send(err)
             }
-            console.log('Se você não usou isso, houve uma falha na segurança do bot!\nrun: <command name>')
-        } else return console.log('Segurança funcionou:\nFailed to <command name>')
+        }
         
     }, aliases: ['cmdtst'], description: 'cmdtest>'
 }
