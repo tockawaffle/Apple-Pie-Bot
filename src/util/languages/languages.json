@@ -10,21 +10,9 @@
             "english": "is your profile picture:",
             "portugues": "é sua foto de perfil:"
         },
-        "AV_E1": {
-            "english": "Oops, something went wrong!\nTry to use like this: -avatar <userID> or <@mention> or the command by itself (-av) to show your own PFP!",
-            "portugues": "Ops, algo deu errado!\nComo usar: -avatar <user_id> | -avatar @mention | -avatar (Sem nenhuma menção ou ID, irá mostrar o seu avatar!"
-        },
         "AV_C2": {
             "english": "is the mentioned user PFP:",
             "portugues": "é a imagem que o usuário utiliza no momento:"
-        },
-        "AV_E2": {
-            "english": "I coudn't find the user with the mention or id:",
-            "portugues": "Eu não consegui encontrar o usuário com o ID ou menção:"
-        },
-        "AV_E2_1": {
-            "english": "in the oven, do you think that he has gone already to the kitchen table?",
-            "portugues": "no forno, você acha que ele já foi para a mesa de jantar?"
         },
 
 
@@ -414,6 +402,39 @@
             "english": "Click Here",
             "portugues": "Clique Aqui"
         },
+        "H_C22":{
+            "english": "Image Manipulation",
+            "portugues": "Manipulação de Imagem"
+        },
+        "H_C23": {
+            "english": "The monster under your bed",
+            "portugues": "O monstro de baixo de sua cama"
+        },
+        "H_C24": {
+            "english": "Oh no, it's retarded",
+            "portugues": "Oh não, ele é retardado"
+        },
+        "H_C25": {
+            "english": "Ew, you stepped on shit",
+            "portugues": " Eca, você pisou na merda"
+        },
+        "H_C26":{
+            "english": "I respect your opinion, trust me.",
+            "portugues": "Eu respeito sua opinião, confia."
+        },
+        "H_C27": {
+            "english": "Didn't know you were famous on phub",
+            "portugues": "Não sabia que você era famoso no phub"
+        },
+        "H_C28": {
+            "english": "Are you triggered, ye?",
+            "portugues": "Você tá bravinho, é?"
+        },
+        "H_C29": {
+            "english": "Youtube Comment",
+            "portugues": "Comentário do Youtube"
+        },
+
 
 
 
@@ -581,20 +602,16 @@
 
         
         "P_C": {
-            "english": "My ping is:",
-            "portugues": "Meu ping é de:"
+            "english": "The bot's host is named FantasyHost!:",
+            "portugues": "A host do bot é a FantasyHost!"
         },
         "P2_C": {
-            "english": "The API ping is:",
-            "portugues": "O ping da API é de:"
+            "english": "Give it a check if you want to",
+            "portugues": "Cheque o site deles, caso desejar"
         },
         "P3_C": {
-            "english": "The ping may vary between different regions! This bot host is located at: **Virginia-US**",
-            "portugues": "O ping pode variar da região do servidor! A host deste bot se localiza em: **Virginia-EUA**"
-        },
-        "P4_C": {
-            "english": "This server is hosted at:",
-            "portugues": "Esse servidor se encontra na região:"
+            "english": "```OBS: The  bot is not in any means associated or sponsored by them.```",
+            "portugues": "```OBS: O bot não é de nenhum modo associado ou patrocinado por eles.```"
         },
 
 
@@ -1696,6 +1713,36 @@
         "AN2": {
             "english": "Neko Girls~",
             "portugues": "Garotas Gato~"
+        },
+
+
+        "mst": {
+            "english": "❌Failed: Missing Target",
+            "portugues": "❌Falha: Faltando Menção"
+        },
+        "mst2": {
+            "english": "You need to mention someone to use this command!",
+            "portugues": "Você precisa mencionar alguém para usar esse comando!"
+        },
+        "mst3": {
+            "english": "```_bed <@mention>```",
+            "portugues": "```_bed <@menção```"
+        },
+        "mst4": {
+            "english": "```_facepalm <@mention>```",
+            "portugues": "```_facepalm <@menção```"
+        },
+        "mst5": {
+            "english": "Oops, something went wrong!\nGo to the next page for more info.",
+            "portugues": "Opa, parece que algo não funcionou\nVá para a próxima página caso queira mais informações."
+        },
+        "mst6": {
+            "english": "Error Details",
+            "portugues": "Detalhes do Erro"
+        },
+        "mst7":{ 
+            "english": "The following error appeared!",
+            "portugues": "O seguinte erro aconteceu!"
         }
 
     }
