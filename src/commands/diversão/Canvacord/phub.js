@@ -22,7 +22,6 @@ module.exports = {
                 let attachment = new MessageAttachment(phub, "phub_comment.jpg")
                 message.channel.send(attachment)
             }
-
         }
     }
 }
