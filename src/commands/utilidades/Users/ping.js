@@ -10,7 +10,7 @@ module.exports = {
             .setDescription(`🏓 Pinging. . .`)
             .setColor('RANDOM')
         message.reply(pinging).then((msg) => {
-            msg.delete()
+            msg.delete({timeout: 2000})
             const pingEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                 .setDescription(`This is my ping:`)
@@ -27,11 +27,11 @@ module.exports = {
                 .setColor("RANDOM")
             const hostEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic:true}))
-                .setDescription(`The bot's host is named FantasyHost!`)
+                .setDescription(`${languages(guild, "P_C")}`)
                 .addFields(
                     {
-                        name: `Give it a check (the site is in pt-br, but you can buy using US$)`,
-                        value: `[Click Here](https://fantasyhosting.com.br/)`
+                        name: `${languages(guild, "P2_C")}`,
+                        value: `[${languages(guild, "VT_C2")}](https://fantasyhosting.com.br/)\n${languages(guild, "P3_C")}`
                     }
                 )
                 .setColor("RANDOM")
@@ -39,8 +39,9 @@ module.exports = {
                 pingEmbed,
                 hostEmbed
             ]
-
-            pageEmbed(message, pages)
+            setTimeout(function() {
+                pageEmbed(message, pages)
+            }, 2500)
         })
         
         

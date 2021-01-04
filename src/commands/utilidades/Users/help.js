@@ -176,12 +176,55 @@ module.exports = {
                 }
             )
             .setColor('RANDOM')
+        const helpCanvas = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setTitle(`${languages(guild, "H_C22")}`)
+            .addFields(
+                {
+                    name: `Change my mind Meme`,
+                    value: "```_changemymind <text>```"
+                },
+                {
+                    name: `Facepalm`,
+                    value: "```_facepalm <@mention>```"
+                },
+                {
+                    name: `${languages(guild, "H_C23")}`,
+                    value: "```_monster <@mention>```"
+                },
+                {
+                    name: `${languages(guild, "H_C24")}`,
+                    value: "```_ohno <text>```"
+                },
+                {
+                    name: `${languages(guild, "H_C25")}`,
+                    value: "```_ohshit <@mention>```"
+                },
+                {
+                    name: `${languages(guild, "H_C26")}`,
+                    value: "```_opinion <@mention> <text>```"
+                },
+                {
+                    name: `${languages(guild, "H_C27")}`,
+                    value: "```_phub <@mention> <text>```"
+                },
+                {
+                    name: `${languages(guild, "H_C28")}`,
+                    value: "```_trigger <@mention>```"
+                },
+                {
+                    name: `${languages(guild, "H_C29")}`,
+                    value: "```_ytb <@mention> <text>```"
+                }
+            )
+            .setColor("RANDOM")
         pages = [
             helpPage,
             helpEssentials,
             helpUtil,
             helpMod,
             helpFun,
+            helpCanvas,
             helpNSFW
         ]
         pageEmbed(message, pages)
