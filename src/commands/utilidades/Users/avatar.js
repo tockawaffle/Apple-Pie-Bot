@@ -1,48 +1,42 @@
+const { MessageEmbed } = require("discord.js")
+const languages = require("../../../util/languages/languages")
+const page = require('discord.js-pagination')
 module.exports = {
+    aliases: ['av'],
+    description: "Mostra o avatar de um usuário",
     run: async(client, message, args) => {
-      const languages = require('../../../util/languages/languages')
-      const { MessageEmbed } = require('discord.js')
-      const { guild } = message
-
-      if(args.length > 1) {
-        message.channel.send(`${languages(guild, 'AV_E1')}`);
-      } else if(args.length === 1) {
-
-        const member = message.mentions.members.size === 1 ? 
-        message.mentions.members.first() :
-        message.guild.members.cache.get(args[0]);
-
-        if(member) {
-          const { guild } = message;
-          const embed = new MessageEmbed()
-            .setTitle(`🔍${message.author.username}`)
-            .setDescription(`[${languages(guild, 'AVATAR_C')}](${member.user.avatarURL({format: 'png', dynamic: true, size:2048})}) ${languages(guild, 'AV_C2')}`)
-            .setImage(member.user.avatarURL({format: 'png', dynamic: true, size: 2048 }))
-            .setColor('RANDOM')
-          message.channel.send(embed);
-
-        } else {
-            
-          message.channel.send(`${languages(guild, 'AV_E2')} " ${args[1]} " ${languages(guild, 'AV_E2_1')}`);
-
+        const {guild} = message
+        const member = message.mentions.members.first() || guild.members.cache.get(args[0])
+        if(!member) {
+            const avatar = message.author.avatarURL({dynamic: true, size: 2048, format: 'png'})
+            const authorAv = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RANDOM")
+                .setTitle(`🔍${message.author.username}`)
+                .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C")}`)
+                .setImage(await avatar)
+            message.reply(authorAv)
+            return
+        } else if(member){
+            const avatar2 = message.author.avatarURL({dynamic: true, size: 2048, format: 'png'})
+            const avatar = member.user.avatarURL({dynamic: true, size: 2048, format: 'png'})
+            const memberAv = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RANDOM")
+                .setTitle(`🔎 ${member.user.username}`)
+                .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C2")}`)
+                .setImage(await avatar)
+            const authorAv = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setTitle(`🔍${message.author.username}`)
+                .setColor("RANDOM")
+                .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar2}) ${languages(guild, "AV_C")}`)
+                .setImage(await avatar2)
+            pages = [
+                memberAv,
+                authorAv
+            ]
+            page(message, pages)
         }
-      }
-      if(args.length === 0) {
-        const { guild } = message;
-
-        const embed = new MessageEmbed()
-
-          .setTitle(`🔍${message.author.username}`)
-
-          .setDescription(`[${languages(guild, 'AVATAR_C')}](${message.author.displayAvatarURL({format: 'png', dynamic: true, size:2048})}) ${languages(guild, 'AV_C')}`)
-
-          .setImage(message.author.displayAvatarURL({format: 'png', dynamic: true, size: 2048 }))
-
-          .setColor('RANDOM')
-
-        message.channel.send(embed);
-      }
-    },
-    aliases: ["av"],
-    description: "Mostra o Avatar do usuario!"
+    }
 }

@@ -40,20 +40,45 @@ module.exports = {
             return
         }
 
-        if(args[0] === 'foxgirl') {
-            const foxgirlEmbed = new MessageEmbed()
+        try{
+            if(args[0] === 'foxgirl') {
+                const foxgirlEmbed = new MessageEmbed()
+                    .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
+                    .setImage(await akaneko.foxgirl())
+                    .setColor('RANDOM')
+                    .setFooter(`${languages(guild, "RDA")}`)
+                message.reply(foxgirlEmbed)
+            } else if (args[0] === 'neko') {
+                const nekoEmbed = new MessageEmbed()
+                    .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
+                    .setImage(await akaneko.neko())
+                    .setColor('RANDOM')
+                    .setFooter(`Nyan, senpai~`)
+                message.reply(nekoEmbed)
+            }   
+        }catch(err){
+            const errEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setImage(await akaneko.foxgirl())
                 .setColor('RANDOM')
-                .setFooter(`${languages(guild, "RDA")}`)
-            message.reply(foxgirlEmbed)
-        } else if (args[0] === 'neko') {
-            const nekoEmbed = new MessageEmbed()
+                .setDescription(`${languages(guild, "mst5")}`)
+            const errDet = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-                .setImage(await akaneko.neko())
                 .setColor('RANDOM')
-                .setFooter(`Nyan, senpai~`)
-            message.reply(nekoEmbed)
+                .setDescription(`${languages(guild, "mst6")}`)
+                .addFields(
+                    {
+                        name: `${languages(guild, mst6)}`,
+                        value: `\`\`\`${err}\`\`\``
+                    }
+                )
+            pages = [
+                errEmbed,
+                errDet
+            ]
+            pageEmbed(message, pages)
+            
         }
+
+
     }
 }

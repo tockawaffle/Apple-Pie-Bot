@@ -29,9 +29,7 @@ module.exports = {
                 user.send(devInfo)
             }
             
-
-            console.log('Se você não usou isso, houve uma falha na segurança do bot!')
-        } else return console.log('Segurança funcionou')
+        }
         
     }, aliases: ['r'], description: 'Responde um usuário que fez algum reporte'
 }

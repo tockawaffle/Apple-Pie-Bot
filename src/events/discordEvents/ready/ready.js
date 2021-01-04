@@ -1,8 +1,8 @@
 module.exports = async (client) => {
 
-    const database = require('../../../db/db')
-        database.then(() => console.log(`${client.user.username} se conectou ao MongoDB!`)).catch(err => console.log(err))
-        const { loadLangs } = require('../../util/languages/languages')
+    const database = require('../../../../db/db')
+      database.then(() => console.log(`${client.user.username} se conectou ao MongoDB!`)).catch(err => console.log(err))
+    const { loadLangs } = require('../../../util/languages/languages')
     console.log(
         `
         ╠═════════════════════════════════════════════════╣
@@ -35,20 +35,20 @@ module.exports = async (client) => {
     }, 300 * 1000);
 
 
-    client.user.setAvatar('src/events/ready/imgs/avatar_festive.jpg').catch(err => console.log(`${err}`))
+    client.user.setAvatar('src/events/discordEvents/ready/imgs/specific/Natal/avatar_festive.jpg').catch(err => console.log(`${err}`))
     let av = 0
     setInterval(function() {
       if(av === 0) {
-        client.user.setAvatar('src/events/ready/imgs/avatar2.jpg')
+        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar2.jpg')
         av = 1
       } else if (av === 1) {
-        client.user.setAvatar('src/events/ready/imgs/avatar3.jpg')
+        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar3.jpg')
         av = 2
       } else if (av === 2 ) {
-        client.user.setAvatar('src/events/ready/imgs/avatar4.jpg')
+        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar4.jpg')
         av = 3
       } else if (av === 3) {
-        client.user.setAvatar('src/events/ready/imgs/avatar5.jpg')
+        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar5.jpg')
         av = 0
       } 
       
