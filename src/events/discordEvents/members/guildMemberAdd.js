@@ -15,7 +15,6 @@ module.exports = async(client, member) => {
         if(!channel) {
             return
         }
-        console.log('ok')
         const embed = new MessageEmbed()
             .setThumbnail(member.user.avatarURL())
             .setTitle(`${member.user.tag} ${languages(guild, 'GW_C3')}!`)

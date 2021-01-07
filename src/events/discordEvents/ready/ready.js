@@ -13,29 +13,29 @@ module.exports = async (client) => {
         `
     )
     
-    client.user.setActivity(`Happy Holidays!`, {type: 'PLAYING'});
+    client.user.setActivity(`_help`, {type: 'LISTENING'});
     let activNum = 0;
     setInterval(function() {
         if(activNum === 0) {
-            client.user.setActivity(`Drink with moderation, eat without moderation and stay safe!`)
+            client.user.setActivity(`_site`, {type: 'LISTENING'})
             activNum = 1;
         } else if (activNum === 1) {
-            client.user.setActivity("_help", {type: 'LISTENING'})
+            client.user.setActivity("Eu sou a Apple Pie! Você gosta de tortinhas? ", {type: 'PLAYING'})
             activNum = 2;
         } else if (activNum === 2) {
-            client.user.setActivity("_site", {type: 'LISTENING'})
+            client.user.setActivity("I'm Apple Pie! Do you like Apple pies?")
             activNum = 3;
         } else if (activNum === 3) {
-            client.user.setActivity(`Feliz Festividades! `)
+            client.user.setActivity(`Maçã é a melhor fruta! E não vale me refutar`)
             activNum = 4;
         } else if (activNum === 4) {
-            client.user.setActivity('Beba com moderação, coma sem moderação e fiquem seguros!', {type: 'PLAYING'})
+            client.user.setActivity(`Apple is the best fruit ever! And don\'t you dare to disagree!`)
             activNum = 0;
         }
     }, 300 * 1000);
 
 
-    client.user.setAvatar('src/events/discordEvents/ready/imgs/specific/Natal/avatar_festive.jpg').catch(err => console.log(`${err}`))
+    client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar1.jpg').catch(err => console.log(`${err}`))
     let av = 0
     setInterval(function() {
       if(av === 0) {
