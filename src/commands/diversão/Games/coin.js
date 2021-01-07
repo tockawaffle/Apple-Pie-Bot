@@ -24,10 +24,8 @@ module.exports = {
                     message.channel.send(`${languages(guild, 'COIN4')}`)
                 }
             }).catch(() => {
-            message.reply(`${languages(guild, 'COIN_ERR')}`)
+                message.reply(`${languages(guild, 'COIN_ERR')}`)
+            })
         })
-        })
-
-        console.log(random)
     }, aliases: [], description: ''
 }

@@ -6,10 +6,7 @@ module.exports = {
 
         const role = message.mentions.roles.first() || message.guild.roles.everyone
         const chn = message.mentions.channels.first() || message.channel
-        const flags = [
-            "SEND_MESSAGES",
-            "ADD_REACTIONS"
-        ]
+        const flags = ["SEND_MESSAGES","ADD_REACTIONS"]
 
         if(chn.permissionsFor(role).has(flags)) {
             const alreadySet = new MessageEmbed()

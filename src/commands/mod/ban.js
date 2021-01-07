@@ -3,8 +3,6 @@ const {MessageEmbed} = require('discord.js')
 module.exports = {
     run: async(client, message, args) => {
 
-        // const args = message.content.split(' ')
-        // args.shift(' ')
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const {guild} = message
 
