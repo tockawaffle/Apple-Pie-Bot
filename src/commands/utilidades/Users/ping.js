@@ -10,13 +10,13 @@ module.exports = {
             .setDescription(`🏓 Pinging. . .`)
             .setColor('RANDOM')
         message.reply(pinging).then((msg) => {
-            msg.delete({timeout: 2000})
+            msg.delete()
             const pingEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                 .setDescription(`This is my ping:`)
                 .addFields(
                     {
-                        name: `Bot Ping`,
+                        name: `${languages(guild, "P9")}`,
                         value: `\`\`\`${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms\`\`\``
                     },
                     {
@@ -35,13 +35,24 @@ module.exports = {
                     }
                 )
                 .setColor("RANDOM")
+            const pingFaQ= new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic:true}))
+                .setColor("RANDOM")
+                .setDescription(`${languages(guild, "P4")}`)
+                .addFields(
+                    {
+                        name: `${languages(guild, "P5")}`,
+                        value: `\`\`\`${languages(guild, "P6")}\n${languages(guild, "P7")}\n${languages(guild, "P8")}\`\`\``
+                    }
+                )
             pages = [
                 pingEmbed,
+                pingFaQ,
                 hostEmbed
             ]
             setTimeout(function() {
                 pageEmbed(message, pages)
-            }, 2500)
+            }, 20)
         })
         
         

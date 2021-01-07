@@ -507,46 +507,6 @@
 
 
 
-        "UF_C": {
-            "english": "Oops. Something went wrong.\nHow to use:",
-            "portugues": "Oops. Algo deu errado.\nComo usar:"
-        },
-        "UF_C2": {
-            "english": "New info coming directly from the oven!",
-            "portugues": "Informações quentinhas chegando!"
-        },
-        "UF_C3": {
-            "english": "Username:",
-            "portugues": "Nome de Usuário:"
-        },
-        "UF_C4": {
-            "english": "Account created at:",
-            "portugues": "Conta criada em:"
-        },
-        "UF_C5": {
-            "english": "What is the user doing?:",
-            "portugues": "O que o usuário faz?:"
-        },
-        "UF_C6": {
-            "english": "Presence Status:",
-            "portugues": "Status de Presença:"
-        },
-        "UF_ERR": {
-            "english": "I coudn't find the user with the mention or ID:",
-            "portugues": "Não consegui encontrar o usuário com o ID ou menção:"
-        },
-        "UF_ERR_2": {
-            "english": "maybe he turned into a pie!",
-            "portugues": "talvez ele tenha se tornado uma torta!"
-        },
-        "UF_C7": {
-            "english": "Do not Disturb",
-            "portugues": "Não Interromper"
-        },
-        "UF_C8": {
-            "english": "Idle",
-            "portugues": "Ausente"
-        },
 
         
         "BF_S": {
@@ -612,6 +572,30 @@
         "P3_C": {
             "english": "```OBS: The  bot is not in any means associated or sponsored by them.```",
             "portugues": "```OBS: O bot não é de nenhum modo associado ou patrocinado por eles.```"
+        },
+        "P4": {
+            "english": "Why does the ping varies so much?",
+            "portugues": "Por que o ping varia tanto?"
+        },
+        "P5": {
+            "english": "Simple thing to ask, check down below!",
+            "portugues": "Simples de se responder, cheque abaixo!"
+        },
+        "P6": {
+            "english": "First, the bot has a cooldown feature, it allows 2 commands each 2 seconds, for reasons of not being rate-limited.",
+            "portugues": "Primeiro, o bot tem uma função de cooldown, que permite 2 comandos a cada 2 segundos, para não ser limitado pelo Discord."
+        },
+        "P7": {
+            "english": "Second, the CD feature takes a while to process your message and verify if the bot is not requesting too much of the API.",
+            "portugues": "Segundo, a função de CD leva um tempo para processar sua mensagem e verificar se o bot não está requisitando muito da API."
+        },
+        "P8": {
+            "english": "Third, and the most obvious, it depends on where your server is located. The bot host is located at Virginia-US",
+            "portugues": "Terceiro, e o mais óbvio, depende do lugar em que o servidor estiver. A host do bot se encontra em Virginia-US"
+        },
+        "P9": {
+            "english": "This is my ping:",
+            "portugues": "Esse é o meu ping:"
         },
 
 
@@ -1743,6 +1727,55 @@
         "mst7":{ 
             "english": "The following error appeared!",
             "portugues": "O seguinte erro aconteceu!"
+        },
+
+        "uf": {
+            "english": "Do not Disturb",
+            "portugues": "Não Perturbe"
+        },
+        "uf1": {
+            "english": "Away from Keyboard (AFK)",
+            "portugues": "Longe do Teclado (AFK)"
+        },
+        "uf2": {
+            "english": "is peeking",
+            "portugues": "está observando"
+        },
+        "uf3": {
+            "english": "This is the user's username:",
+            "portugues": "Esse é o nome do usuário:"
+        },
+        "uf4": {
+            "english": "User ID",
+            "portugues": "ID do usuário"
+        },
+        "uf5": {
+            "english": "His presence at Discord:",
+            "portugues": "A presença dele no Discord"
+        },
+        "uf6":{
+            "english": "The day the account was created:",
+            "portugues": "O dia que a conta foi criada:"
+        },
+        "uf7": {
+            "english": "What is he doing now?",
+            "portugues": "O que ele está a fazer?"
+        },
+        "uf8": {
+            "english": "The day he joined this server",
+            "portugues": "O dia em que ele entrou neste servidor"
+        },
+        "uferr": {
+            "english": "❌Failed: Missing User.",
+            "portugues": "❌Falha: Faltando Usuário."
+        },
+        "uferr2": {
+            "english": "The following user was not found:",
+            "portugues": "O usuário abaixo não foi encontrado:"
+        },
+        "uferr3": {
+            "english": "Not Provided.",
+            "portugues": "Não Providenciado."
         }
 
     }

@@ -1,63 +1,105 @@
+const {MessageEmbed} = require('discord.js')
+const moment = require('moment')
+const languages = require('../../../util/languages/languages')
+
 module.exports = {
     run: async(client, message,args) => {
 
-        const languages = require('../../../util/languages/languages')
-        const { MessageEmbed } = require('discord.js');
-        const { guild } = message;
-        const moment = require('moment')
+        const {guild, author} = message
+        const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
+        const gUser = client.users.cache.get(args[0])
 
-        if(args.length > 1) {
-          message.channel.send(`${languages(guild, 'UF_C')}  -userinfo <user_id> | -userinfo @mention`);
-        } else if(args.length === 1) {
-            const member = message.mentions.members.size === 1 ? 
-                message.mentions.members.first() :
-                message.guild.members.cache.get(args[0]);
-            if(message.mentions.has(client.user)) {
-                const owner = client.users.cache.get('723185654044950539')
-                const created2 = moment(client.user.createdAt).locale('pt-br').format('l')
-        
-                const embed = new MessageEmbed()
-                    .setAuthor(`${guild.name}`, owner.avatarURL({ dynamic: true }))
-                    .setDescription(`${languages(guild, 'BF_S')}`)
-                    .setThumbnail(client.user.avatarURL({dynamic: true}))
-                    .setColor("E7B985")
-                    .addField(`${languages(guild, 'BF_C')}`, `\`\`\`${client.user.username}\`\`\``)
-                    .addField(`${languages(guild, 'BF_C2')}`, `\`\`\`${owner.tag}\`\`\``)
-                    .addField(`${languages(guild, 'BF_C3')}`, `\`\`\`${created2}\`\`\``)
-                    .addField(`${languages(guild, 'BF_C4')}`, `[${languages(guild, 'BF_C5')}](https://github.com/The-Crow-pleb/Apple-Pie-Bot)`)
-                message.reply(embed)
-                return
+        if(gUser && !member) {
+            const created = moment(gUser.createdAt).locale('pt-br').format('L')
+            let presence = gUser.presence.status
+            if(presence === 'dnd') {
+                presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
+            } else if (presence === 'idle') {
+                presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
+            } else if (presence === 'online') {
+                presence = '```Online```'
+            } else if (presence === 'offline') {
+                presence = '```Offline```'
             }
-            if(member) {
-                const created = moment(member.user.createdAt).locale('pt-br').format('L')
-                let presence = member.user.presence.status
-                if(presence === 'dnd') {
-                    presence = `\`\`\`${languages(guild, 'UF_C7')}\`\`\``
-                } else if (presence === 'idle') {
-                    presence = `\`\`\`${languages(guild, 'UF_C8')}\`\`\``
-                } else if (presence === 'online') {
-                    presence = '```Online```'
-                } else if (presence === 'offline') {
-                    presence = '```Offline```'
-                }
+            const memberEmbed = new MessageEmbed()
+                .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
+                .setDescription(`🔍🌎${author.username} ${languages(guild, "uf2")} ${gUser.username}!`)
+                .setThumbnail(gUser.avatarURL({dynamic: true}))
+                .setColor("RANDOM")
+                .addFields(
+                    {
+                        name: `${languages(guild, "uf3")}`,
+                        value: `\`\`\`${gUser.username}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf4")}`,
+                        value: `\`\`\`${gUser.id}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf5")}`,
+                        value: `${presence}`
+                    },
+                    {
+                        name: `${languages(guild, "uf6")}`,
+                        value: `\`\`\`${created}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf7")}`,
+                        value: `\`\`\`${gUser.presence.activities}.\`\`\``
+                    },
 
-
-                const embed = new MessageEmbed()
-                    .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-                    .setDescription(`${languages(guild, 'UF_C2')}  ${process.env.SRVC}`)
-                    .setThumbnail(member.user.avatarURL({dynamic: true}))
-                    .setColor("RANDOM")
-                    .addField(`${languages(guild, 'UF_C3')}`, `\`\`\`${member.user.username}\`\`\``)
-                    .addField(`ID:`, `\`\`\`${member.user.id}\`\`\``)
-                    .addField(`${languages(guild, 'UF_C4')} `, `\`\`\`${created}\`\`\``)
-                    .addField(`${languages(guild, 'UF_C6')} `, presence)
-                    .addField(`${languages(guild, 'UF_C5')} `, `\`\`\`${member.user.presence.activities}.\`\`\``)
-                message.channel.send(embed);
-            } else {
-                message.channel.send(`${languages(guild, 'UF_ERR')}  ${args[0]}, ${languages(guild, 'UF_ERR_2')}`);
-            }
-
+                )
+            message.reply(memberEmbed)
+            return
         }
+        if(member) {
+            let presence = member.user.presence.status
+            let richPresence = member.user.presence.activities
+            if(presence === 'dnd') {
+                presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
+            } else if (presence === 'idle') {
+                presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
+            } else if (presence === 'online') {
+                presence = '```Online```'
+            } else if (presence === 'offline') {
+                presence = '```Offline```'
+            }
+            const joined = moment(member.joinedAt).locale('pt-br').format('L')
+            const created = moment(member.createdAt).locale('pt-br').format('L')
+            const memberEmbed = new MessageEmbed()
+                .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
+                .setDescription(`🔍${author.username} ${languages(guild, "uf2")} ${member.user.username}!`)
+                .setThumbnail(member.user.avatarURL({dynamic: true}))
+                .setColor("RANDOM")
+                .addFields(
+                    {
+                        name: `${languages(guild, "uf3")}`,
+                        value: `\`\`\`${member.user.username}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf4")}`,
+                        value: `\`\`\`${member.user.id}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf5")}`,
+                        value: `${presence}`
+                    },
+                    {
+                        name: `${languages(guild, "uf7")}`,
+                        value: `\`\`\`${richPresence}.\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf6")}`,
+                        value: `\`\`\`${created}\`\`\``
+                    },
+                    {
+                        name: `${languages(guild, "uf8")}`,
+                        value: `\`\`\`${joined}\`\`\``
+                    },
+                )
+            message.reply(memberEmbed)
+        }
+
     },
     aliases: ["uf"],
     description: 'Userinfo'

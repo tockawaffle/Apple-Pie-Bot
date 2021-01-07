@@ -1,4 +1,5 @@
 const langSchema = require('../../../../db/schemas/language-schema')
+const { loadLangs } = require('../../../util/languages/languages')
 
 module.exports = async(client, guild) => {
     const guildId = guild.id
@@ -14,4 +15,5 @@ module.exports = async(client, guild) => {
         upsert: true,
       }
     )
+    loadLangs(client)
 }

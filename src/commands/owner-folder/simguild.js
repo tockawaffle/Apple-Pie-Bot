@@ -4,7 +4,7 @@ module.exports = {
         const owner = client.users.cache.get('723185654044950539')
         const {guild} = message
         if(message.author.id === owner.id) {
-            client.emit('guild.delete', guild)
+            client.emit('guildCreate', guild)
         }
 
     },aliases: ['simjoin'], description: ''

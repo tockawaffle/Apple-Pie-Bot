@@ -9,11 +9,9 @@ module.exports = {
         const { MessageEmbed } = require('discord.js')
         const user = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 
-        //Perm stuff
         if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply(`${languages(guild, 'KC_C')}`)
         if(!message.guild.me.hasPermission('KICK_MEMBERS')) return message.reply(`${languages(guild, 'KC_ERR')}`)
 
-        //Kick action
         try{
 
             if(user) {

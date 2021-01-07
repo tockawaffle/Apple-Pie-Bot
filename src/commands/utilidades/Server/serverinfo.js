@@ -3,10 +3,9 @@ const moment = require('moment')
 const languages = require('../../../util/languages/languages')
 
 module.exports = {
-    run: async(client, message, args) => {
+    run: async(client, message) => {
         const { guild } = message
         const created = moment(guild.createdAt).locale('pt-br').format('ll')
-        const date = moment().format('lll')
 
         try{
             const embed = new MessageEmbed()
