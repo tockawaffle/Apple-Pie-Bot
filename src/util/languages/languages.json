@@ -593,6 +593,10 @@
             "english": "Third, and the most obvious, it depends on where your server is located. The bot host is located at Virginia-US",
             "portugues": "Terceiro, e o mais óbvio, depende do lugar em que o servidor estiver. A host do bot se encontra em Virginia-US"
         },
+        "P9": {
+            "english": "This is my ping:",
+            "portugues": "Esse é o meu ping:"
+        }
 
 
 
