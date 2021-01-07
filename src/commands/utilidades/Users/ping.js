@@ -16,7 +16,7 @@ module.exports = {
                 .setDescription(`This is my ping:`)
                 .addFields(
                     {
-                        name: `Bot Ping`,
+                        name: `${languages(guild, "P9")}`,
                         value: `\`\`\`${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms\`\`\``
                     },
                     {
