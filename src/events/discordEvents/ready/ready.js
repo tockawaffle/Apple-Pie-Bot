@@ -1,8 +1,14 @@
 module.exports = async(client) => {
-
+    const newPrefixSchema = require('../../../configs/db/schemas/prefix-schema')
     const {loadLangs} = require('../../../util/languages/languages')
-    const status = require('../../../configs/status/statusA'); random = status[Math.floor(Math.random() * status.length)];
-    const ms = require('ms'); const db = require('../../../configs/db/db');
+    const status = require('../../../configs/status/statusA');
+    const random = status[Math.floor(Math.random() * status.length)];
+    const ms = require('ms');
+    const db = require('../../../configs/db/db');
+    
+    client.guilds.cache.forEach(async(guild) => {
+        await newPrefixSchema.insertMany({_id: guild.id, prefix: '_'})
+    })
 
     db.then(() => console.log(`${client.user.username} se conectou à DB!`)).catch(err => console.log(err))
     console.log('╠══════════════════════════════════ ( Login ) ═══════════════════════════════════════╣')
