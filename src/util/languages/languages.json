@@ -1812,6 +1812,38 @@
         "APFX4": {
             "english": "Something To Change To",
             "portugues": "Algo para mudar o prefixo"
+        },
+        "ncreate3": {
+            "english": "Correct Usage:",
+            "portugues": "Uso Correto:"
+        },
+        "nomemb": {
+            "english": "❌ Failed: Missing Member",
+            "portugues": "❌ Falha: Membro Não Encontrado"
+        },
+        "nomemb2": {
+            "english": "The following member was not found:",
+            "portugues": "O seguinte membro não foi encontrado:"
+        }, 
+        "sUsage": {
+            "english": "`<yourPrefix>slap <@member>`",
+            "portugues": "`<seuPrefixo>slap <@membro>`"
+        },
+        "kUsage": {
+            "english": "`<yourPrefix>kiss <@member>`",
+            "portugues": "`<seuPrefixo>kiss <@membro>`"
+        },
+        "mUsage": {
+            "english": "`<yourPrefix>unmute <@member>`",
+            "portugues": "`<seuPrefixo>unmute <@membro>`"
+        },
+        "pUsage": {
+            "english": "`<yourPrefix>pat <@member>`",
+            "portugues": "`<seuPrefixo>pat <@membro>`"
+        },
+        "hUsage": {
+            "english": "`<yourPrefix>hug <@member>`",
+            "portugues": "`<seuPrefixo>hug <@membro>`"
         }
 
     }
