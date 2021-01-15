@@ -1776,6 +1776,42 @@
         "uferr3": {
             "english": "Not Provided.",
             "portugues": "Não Providenciado."
+        },
+        "PFX": {
+            "english": "✅ Sucess!: Prefix Updated.",
+            "portugues": "✅ Sucesso!: Prefixo Configurado."
+        },
+        "PFX2": {
+            "english": "New Prefix is:",
+            "portugues": "Novo Prefixo é:"
+        },
+        "NPFX": {
+            "english": "❌ Failed: Missing Permissions",
+            "portugues": "❌ Falha: Faltando Permissões."
+        },
+        "NPFX2": {
+            "english": "Reason:",
+            "portugues": "Motivo:"
+        },
+        "NPFX3": {
+            "english": "Missing `'Manage Channels'` Permission for the user",
+            "portugues": "Faltando Permissão: `'Gerenciar Servidor'` para o usuário"
+        },
+        "APFX": {
+            "english": "❌ Failed: Missing Arguments",
+            "portugues": "❌ Falha: Faltando Argumentos"
+        },
+        "APFX2": {
+            "english": "You need to provide something for your prefix to change to!",
+            "portugues": "Você precisa providenciar algo para eu configurar o prefixo!"
+        },
+        "APFX3": {
+            "english": "Example:",
+            "portugues": "Exemplo:"
+        },
+        "APFX4": {
+            "english": "Something To Change To",
+            "portugues": "Algo para mudar o prefixo"
         }
 
     }

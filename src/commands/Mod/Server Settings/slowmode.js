@@ -1,5 +1,5 @@
 const { MessageEmbed} = require("discord.js");
-const languages = require('../../util/languages/languages')
+const languages = require('../../../util/languages/languages')
 const pageEmbed = require('discord.js-pagination')
 
 module.exports = {

@@ -1,5 +1,5 @@
-const mongoose = require('../../../db/db')
-const langSchema = require('../../../db/schemas/language-schema')
+const mongoose = require('../../configs/db/db')
+const langSchema = require('../../configs/db/schemas/language-schema')
 const languages = require('./languages.json')
 
 const guildLanguages = {}

@@ -1,58 +1,28 @@
-module.exports = async (client) => {
+module.exports = async(client) => {
 
-    const database = require('../../../../db/db')
-      database.then(() => console.log(`${client.user.username} se conectou ao MongoDB!`)).catch(err => console.log(err))
-    const { loadLangs } = require('../../../util/languages/languages')
-    console.log(
-        `
-        ╠═════════════════════════════════════════════════╣
-        ║    ∑${client.user.username} está pronta em:            ║
-        ║    ↣ ${client.guilds.cache.size} Servidores                               ║
-        ║    ↣ ${client.users.cache.size} Usuários                                ║
-        ╚═════════════════════════════════════════════════╝
-        `
-    )
-    
-    client.user.setActivity(`_help`, {type: 'LISTENING'});
-    let activNum = 0;
+    const {loadLangs} = require('../../../util/languages/languages')
+    const status = require('../../../configs/status/statusA'); random = status[Math.floor(Math.random() * status.length)];
+    const ms = require('ms'); const db = require('../../../configs/db/db');
+
+    db.then(() => console.log(`${client.user.username} se conectou à DB!`)).catch(err => console.log(err))
+    console.log('╠══════════════════════════════════ ( Login ) ═══════════════════════════════════════╣')
+    console.log(`║ > Entrou como ${client.user.tag}!                                                 ║`);
+    console.log('╠══════════════════════════════════ ( Servers ) ═════════════════════════════════════╣')
+    console.log(`║ > Ativo em ${client.guilds.cache.size} servers!                                                              ║`)
+    console.log('╚════════════════════════════════════════════════════════════════════════════════════╝	')
+
+    client.user.setActivity(random, {type: 'PLAYING'}); let actNum = 0
     setInterval(function() {
-        if(activNum === 0) {
-            client.user.setActivity(`_site`, {type: 'LISTENING'})
-            activNum = 1;
-        } else if (activNum === 1) {
-            client.user.setActivity("Eu sou a Apple Pie! Você gosta de tortinhas? ", {type: 'PLAYING'})
-            activNum = 2;
-        } else if (activNum === 2) {
-            client.user.setActivity("I'm Apple Pie! Do you like Apple pies?")
-            activNum = 3;
-        } else if (activNum === 3) {
-            client.user.setActivity(`Maçã é a melhor fruta! E não vale me refutar`)
-            activNum = 4;
-        } else if (activNum === 4) {
-            client.user.setActivity(`Apple is the best fruit ever! And don\'t you dare to disagree!`)
-            activNum = 0;
-        }
-    }, 300 * 1000);
+        if(actNum === 0) {const random2 = status[Math.floor(Math.random() * status.length)]; client.user.setActivity(random2, {type: 'PLAYING'}); actNum = 1}
+        else if(actNum === 1) {const random3 = status[Math.floor(Math.random() * status.length)]; client.user.setActivity(random3, {type: 'PLAYING'}); actNum = 0}
+    }, ms('1m'))
 
-
-    client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar1.jpg').catch(err => console.log(`${err}`))
-    let av = 0
+    client.user.setAvatar('src/configs/imgs/perfil/i1.jpg').catch(err => console.log(`${err}`)); let av = 0
     setInterval(function() {
-      if(av === 0) {
-        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar2.jpg')
-        av = 1
-      } else if (av === 1) {
-        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar3.jpg')
-        av = 2
-      } else if (av === 2 ) {
-        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar4.jpg')
-        av = 3
-      } else if (av === 3) {
-        client.user.setAvatar('src/events/discordEvents/ready/imgs/avatar5.jpg')
-        av = 0
-      } 
-      
-    }, 7200000);
-
+        if(av === 0) {client.user.setAvatar('src/configs/imgs/perfil/i2.jpg'); av = 1} 
+        else if (av === 1) {client.user.setAvatar('src/configs/imgs/perfil/i3.jpg'); av = 2} 
+        else if (av === 2 ) {client.user.setAvatar('src/configs/imgs/perfil/i4.png'); av = 3} 
+        else if (av === 3) {client.user.setAvatar('src/configs/imgs/perfil/i5.png'); av = 0} 
+    }, ms('2h'));
     loadLangs(client)
 }

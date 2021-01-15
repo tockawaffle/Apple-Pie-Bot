@@ -1,4 +1,4 @@
-const MemberLeftSchema = require('../../../../db/schemas/memberleft-schema')
+const MemberLeftSchema = require('../../../configs/db/schemas/memberleft-schema')
 const languages = require('../../../util/languages/languages')
 
 const cache = new Map()

@@ -1,4 +1,4 @@
-const welcomeGSchema = require('../../../../db/schemas/wgmsg-schema')
+const welcomeGSchema = require('../../../configs/db/schemas/wgmsg-schema')
 const languages = require('../../../util/languages/languages')
 
 module.exports = {

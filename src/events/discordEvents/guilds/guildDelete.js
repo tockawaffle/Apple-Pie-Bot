@@ -1,6 +1,6 @@
-const langSchema = require('../../../../db/schemas/language-schema')
-const welcomeGSchema = require('../../../../db/schemas/wgmsg-schema')
-const MemberLeftSchema = require('../../../../db/schemas/memberleft-schema')
+const langSchema = require('../../../configs/db/schemas/language-schema')
+const welcomeGSchema = require('../../../configs/db/schemas/wgmsg-schema')
+const MemberLeftSchema = require('../../../configs/db/schemas/memberleft-schema')
 
 module.exports = async(client, guild) => {
 

@@ -6,7 +6,6 @@ const reqString = {
 }
 
 const langSchema = mongoose.Schema({
-    //ID da Guilda
     _id: reqString,
     language: reqString,
 })
