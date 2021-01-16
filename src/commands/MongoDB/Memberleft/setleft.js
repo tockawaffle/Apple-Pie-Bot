@@ -1,9 +1,9 @@
-const welcomeGSchema = require('../../../../db/schemas/wgmsg-schema')
+const MemberLeftSchema = require('../../../configs/db/schemas/memberleft-schema')
 const languages = require('../../../util/languages/languages')
 
 const cache = new Map()
 const loadData = async() => {
-    const results = await welcomeGSchema.find()
+    const results = await MemberLeftSchema.find()
 
     for(const result of results) {
         cache.set(result._id, result.channelId)
@@ -17,11 +17,11 @@ module.exports = {
         const { guild, channel } = message
 
         if(!message.member.hasPermission('ADMINISTRATOR')) {
-            message.reply(`${languages(guild, 'GW_C')}`)
+            message.reply(`${languages(guild, 'LF_C')}`)
             return
         }
 
-        await welcomeGSchema.findOneAndUpdate(
+        await MemberLeftSchema.findOneAndUpdate(
             {
                 _id: guild.id
             },
@@ -37,11 +37,12 @@ module.exports = {
         cache.set(guild.id, channel.id)
         
         message.delete()
-        message.reply(`${languages(guild, 'GW_C2')}`).then((message) => {
+        message.reply(`${languages(guild, 'LF_C2')}`).then((message) => {
             message.delete({ timeout: 5000})
         })
+        //${languages(guild, 'GW_C2')}
 
-    }, aliases:['sgw'], description: 'Welcome message!'
+    }, aliases:['lft', 'setlft'], description: 'Member Left Message!'
 }
 
 module.exports.getChannelId = (guildId) => {

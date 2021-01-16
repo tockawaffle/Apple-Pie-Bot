@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const {getChannelId} = require('../../../commands/memberdb/Memberleft/setleft')
+const {getChannelId} = require('../../../commands/MongoDB/Memberleft/setleft')
 const languages = require('../../../util/languages/languages')
 
 module.exports = async(client, member) => {

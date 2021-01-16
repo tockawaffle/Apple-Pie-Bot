@@ -1,4 +1,4 @@
-const welcomeGSchema = require('../../../../db/schemas/wgmsg-schema')
+const MemberLeftSchema = require('../../../configs/db/schemas/memberleft-schema')
 const languages = require('../../../util/languages/languages')
 
 module.exports = {
@@ -10,16 +10,16 @@ module.exports = {
             return message.reply(`${languages(guild, 'GR_C')}`)
         }
 
-        const gwelcome = await welcomeGSchema.findOneAndRemove({_id: guild.id,},{_id: guild.id,channelId: channel.id,},)
+        const gwelcome = await MemberLeftSchema.findOneAndRemove({_id: guild.id,},{_id: guild.id,channelId: channel.id,},)
         try{
             if(gwelcome) {
-                message.channel.send(`${languages(guild, 'GR_C2')}`)
+                message.channel.send(`${languages(guild, 'RL_C')}`)
             } else if(!gwelcome) {
-                message.channel.send(`${languages(guild, 'GR_C3')}`)
+                message.channel.send(`${languages(guild, 'RL_C2')}`)
             }
         }catch(err) {
             console.log(err)
         }
 
-    }, aliases: ['rgw'], description: 'Remove a mensagem genérica de boas vindas'
+    }, aliases: ['rlft'], description: 'Remove a mensagem de saída do server'
 }

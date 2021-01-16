@@ -1,4 +1,4 @@
-const languages = require('../../util/languages/languages');
+const languages = require('../../../util/languages/languages')
 const { MessageEmbed } = require('discord.js');
 const pageEmbed = require('discord.js-pagination')
 
@@ -23,7 +23,7 @@ module.exports = {
                 },
                 {
                     name: `${languages(guild, "M_C4")}`,
-                    value: '```_mute <userID> or <@mention>```'
+                    value: languages(guild, "mUsage")
                 }
             )
             message.reply(invalidMember)
@@ -78,14 +78,8 @@ module.exports = {
                             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                             .setDescription(`${languages(guild, "M_E5")}`)
                             .addFields(
-                                {
-                                    name: `${languages(guild, "M_E6")}`,
-                                    value: `[Click Here](https://www.applepiebot.xyz/permission-flags)`
-                                },
-                                {
-                                    name: `${languages(guild, "M_E7")}`,
-                                    value: `${languages(guild, "M_E8")}`
-                                }
+                                {name: `${languages(guild, "M_E6")}`,value: `[${languages(guild, "clique")}](https://www.applepiebot.xyz/permission-flags)`},
+                                {name: `${languages(guild, "M_E7")}`,value: `${languages(guild, "M_E8")}`}
                             )
                         pages = [
                             embedError,
