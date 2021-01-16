@@ -1258,85 +1258,6 @@
         },
 
 
-
-        "M_C": {
-            "english": "You do not have permission to do this!",
-            "portugues": "Desculpe, você não tem permissão para fazer isso."
-        },
-        "M2_C": {
-            "english": "✅ Sucess: Mute",
-            "portugues": "✅ Sucesso: Silenciamento"
-        },
-        "M3_C": {
-            "english": "User Muted:",
-            "portugues": "Membro mutado:"
-        },
-        "M4_C": {
-            "english": "Mute done by",
-            "portugues": "Silenciamento realizado por"
-        },
-        "M_R": {
-            "english": "Muted",
-            "portugues": "Silenciado"
-        },
-        "M_C2": {
-            "english": "❌ Failed: Member already muted.",
-            "portugues": "❌ Falha: Membro já mutado."
-        },
-        "M_C3": {
-            "english": "❌ Failed: Member not found",
-            "portugues": "❌ Falha: Membro não encontrado"
-        },
-        "M_C4": {
-            "english": "Correct Usage:",
-            "portugues": "Uso Correto:"
-        },
-        "M_E": {
-            "english": "Error found!",
-            "portugues": "Erro encontrado!"
-        },
-        "M_E2": {
-            "english": "Error:",
-            "portugues": "Erro:"
-        },
-        "M_E3": {
-            "english": "Solution:",
-            "portugues": "Solução:"
-        },
-        "M_E4": {
-            "english": "Go to the next page.",
-            "portugues": "Vá para a próxima página."
-        },
-        "M_E5": {
-            "english": "Quickfix:",
-            "portugues": "Solução Rápida"
-        },
-        "M_E6": {
-            "english": "Check the bot's permissions, you can check which perms the bot need in the link below:",
-            "portugues": "Cheque as permissões do bot, você pode ver quais permissões ela precisa para funcionar no link abaixo:"
-        },
-        "M_E7": {
-            "english": "Check the bot role hierarchy.",
-            "portugues": "Cheque a hierarquia de cargos."
-        },
-        "M_E8": {
-            "english": "It's simple, if the user has a role higher than the bot's role, then the bot is unable to do something with that person.\nPlease, check that (Since it's the most common issue.)",
-            "portugues": "É simples, se o usuário tiver um cargo superior à do bot, o bot não poderá fazer algo com aquela pessoa.\nPor favor, verifique isso (já que é o problema mais comum.)"
-        },
-        "M_IV": {
-            "english": "Tried to find member:",
-            "portugues": "Tentei encontrar o membro:"
-        },
-        "M_IV2": {
-            "english": "Result:",
-            "portugues": "Resultado:"
-        },
-        "M_IV3": {
-            "english": "Invalid Member",
-            "portugues": "Membro inválido"
-        },
-
-
         "SM_C": {
             "english": "❌ Failed: Missing Time Argument",
             "portugues": "❌ Falha: Faltando Argumentos de Tempo"
@@ -1408,27 +1329,6 @@
         "SM_C18": {
             "english": "Using broken numbers, such as '1.5' are not supported by Discord.",
             "portugues": "O uso de números quebrados, como '1.5' não é compatível com o Discord."
-        },
-
-        "UN": {
-            "english": "❌ Failed: That user is not muted, please, check that before trying to unmute him.",
-            "portugues": "❌ Falha: Este usuário não está mutado, por favor, cheque isso antes de o desmutar."
-        },
-        "UN2": {
-            "english": "✅ Sucess: Unmute",
-            "portugues": "✅ Sucesso: Desmutar"
-        },
-        "UN3": {
-            "english": "User Unmuted:",
-            "portugues": "Membro Desmutado:"
-        },
-        "UN4": {
-            "english": "Unmuted by:",
-            "portugues": "Desmutado por:"
-        },
-        "UN5": {
-            "english": "Not Mentioned.",
-            "portugues": "Não Mencionado."
         },
 
         "FF": {
@@ -1844,6 +1744,192 @@
         "hUsage": {
             "english": "`<yourPrefix>hug <@member>`",
             "portugues": "`<seuPrefixo>hug <@membro>`"
+        },
+        "bUsage": {
+            "english": "`<yourPrefix>ban <@member>`",
+            "portugues": "`<seuPrefixo>ban <@membro>`"
+        },
+        "ubUsage": {
+            "english": "`<yourPrefix>unban <@member>`",
+            "portugues": "`<seuPrefixo>unban <@membro>`"
+        },
+        "umUsage": {
+            "english": "`<yourPrefix>mute <@member>`",
+            "portugues": "`<seuPrefixo>mute <@membro>`"
+        },
+        "unbm": {
+            "english": "I am not able to ban the following member:",
+            "portugues": "Eu não consigo banir o seguinte membro:"
+        },
+        "reason": {
+            "english": "Reason:",
+            "portugues": "Motivo:"
+        },
+        "unbm2": {
+            "english": "The user might have a bigger role than I do!",
+            "portugues": "O usuário pode ter um cargo maior que o meu!"
+        },
+        "noreason": {
+            "english": "Not Provided",
+            "portugues": "Não Informado"
+        },
+        "noperm": {
+            "english": "❌ Failed: Missing Permissions",
+            "portugues": "❌ Falha: Faltando Permissões de Usuário"
+        },
+        "noperm2": {
+            "english": "Missing:",
+            "portugues": "Faltando:"
+        },
+        "noperm3": {
+            "english": "Permission:",
+            "portugues": "Permissão:"
+        },
+        "nobotperm": {
+            "english": "❌ Failed: Missing Bot Permissions",
+            "portugues": "❌ Falha: Faltando Permissão de Bot"
+        }, 
+        "B": {
+            "english": "✅ Sucess!: User Banned.",
+            "portugues": "✅ Sucesso!: Usuário Banido."
+        },
+        "B2": {
+            "english": "The following user was banned:",
+            "portugues": "O seguinte usuário foi banido:"
+        },
+        "B3": {
+            "english": "Ban Reason:",
+            "portugues": "Motivo do Banimento:"
+        },
+        "B4": {
+            "english": "Banned by:",
+            "portugues": "Banimento realizado por:"
+        },
+        "UB": {
+            "english": "✅ Sucess!: User Unbanned.",
+            "portugues": "✅ Sucesso!: Usuário Desbanido."
+        },
+        "UB2": {
+            "english": "The following user was unbanned:",
+            "portugues": "O seguinte usuário foi desbanido:"
+        },
+        "UB3": {
+            "english": "Unban Reason:",
+            "portugues": "Motivo do Desbanimento:"
+        },
+        "UB4": {
+            "english": "Unbanned by:",
+            "portugues": "Desbanimento realizado por:"
+        },
+        "UBE": {
+            "english": "❌ Failed: Missing Ban",
+            "portugues": "❌ Falha: Banimento Inexistente"
+        },
+        "UBE2": {
+            "english": "The requested user is not banned/does not exist.",
+            "portugues": "O usuário providenciado não está banido/não existe."
+        },
+
+
+        "M_R": {
+            "english": "Muted",
+            "portugues": "Silenciado"
+        },
+        "UN": {
+            "english": "❌ Failed: That user is not muted, please, check that before trying to unmute him.",
+            "portugues": "❌ Falha: Este usuário não está mutado, por favor, cheque isso antes de o desmutar."
+        },
+        "UN2": {
+            "english": "✅ Sucess: Unmute",
+            "portugues": "✅ Sucesso: Desmutar"
+        },
+        "UN3": {
+            "english": "User Unmuted:",
+            "portugues": "Membro Desmutado:"
+        },
+        "UN4": {
+            "english": "Unmuted by:",
+            "portugues": "Desmutado por:"
+        },
+        "UN5": {
+            "english": "Not Mentioned.",
+            "portugues": "Não Mencionado."
+        },
+        "M_C": {
+            "english": "You do not have permission to do this!",
+            "portugues": "Desculpe, você não tem permissão para fazer isso."
+        },
+        "M2_C": {
+            "english": "✅ Sucess: Mute",
+            "portugues": "✅ Sucesso: Silenciamento"
+        },
+        "M3_C": {
+            "english": "User Muted:",
+            "portugues": "Membro mutado:"
+        },
+        "M4_C": {
+            "english": "Mute done by",
+            "portugues": "Silenciamento realizado por"
+        },
+        "M_C2": {
+            "english": "❌ Failed: Member already muted.",
+            "portugues": "❌ Falha: Membro já mutado."
+        },
+        "M_C3": {
+            "english": "❌ Failed: Member not found",
+            "portugues": "❌ Falha: Membro não encontrado"
+        },
+        "M_C4": {
+            "english": "Correct Usage:",
+            "portugues": "Uso Correto:"
+        },
+        "M_E": {
+            "english": "Error found!",
+            "portugues": "Erro encontrado!"
+        },
+        "M_E2": {
+            "english": "Error:",
+            "portugues": "Erro:"
+        },
+        "M_E3": {
+            "english": "Solution:",
+            "portugues": "Solução:"
+        },
+        "M_E4": {
+            "english": "Go to the next page.",
+            "portugues": "Vá para a próxima página."
+        },
+        "M_E5": {
+            "english": "Quickfix:",
+            "portugues": "Solução Rápida"
+        },
+        "M_E6": {
+            "english": "Check the bot's permissions, you can check which perms the bot need in the link below:",
+            "portugues": "Cheque as permissões do bot, você pode ver quais permissões ela precisa para funcionar no link abaixo:"
+        },
+        "M_E7": {
+            "english": "Check the bot role hierarchy.",
+            "portugues": "Cheque a hierarquia de cargos."
+        },
+        "M_E8": {
+            "english": "It's simple, if the user has a role higher than the bot's role, or the role you're trying to add/remove is bigger than the bot's role, then the bot is unable to do something with that person.\nPlease, check that (Since it's the most common issue.)",
+            "portugues": "É simples, se o usuário tiver um cargo superior à do bot, ou se o cargo for superior do que o do bot, o bot não poderá adicionar ou remover o cargo daquela pessoa.\nPor favor, verifique isso (já que é o problema mais comum.)"
+        },
+        "M_IV": {
+            "english": "Tried to find member:",
+            "portugues": "Tentei encontrar o membro:"
+        },
+        "M_IV2": {
+            "english": "Result:",
+            "portugues": "Resultado:"
+        },
+        "M_IV3": {
+            "english": "Invalid Member",
+            "portugues": "Membro inválido"
+        },
+        "clique": {
+            "english": "Click Here",
+            "portugues": "Clique Aqui"
         }
 
     }
