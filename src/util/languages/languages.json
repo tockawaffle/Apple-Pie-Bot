@@ -434,7 +434,62 @@
             "english": "Youtube Comment",
             "portugues": "Comentário do Youtube"
         },
-
+        "H_C30": {
+            "english": "Server Icon",
+            "portugues": "Ícone do Servidor"
+        },
+        "H_C31": {
+            "english": "User Info",
+            "portugues": "Info de Usuário"
+        },
+        "H_C32": {
+            "english": "Weather",
+            "portugues": "Clima"
+        },
+        "H_C33": {
+            "english": "Server Info",
+            "portugues": "Info do Servidor"
+        },
+        "H_C34": {
+            "english": "Music Commands",
+            "portugues": "Comandos de Música"
+        },
+        "H_C35": {
+            "english": "Ban Command",
+            "portugues": "Comando de Banimento"
+        },
+        "H_C36": {
+            "english": "Kick Command",
+            "portugues": "Comando de Expulsão"
+        },
+        "H_C37": {
+            "english": "Mute Command",
+            "portugues": "Comando de Silenciamento"
+        },
+        "H_C38": {
+            "english": "Unmute Command",
+            "portugues": "Comando de Desmutar"
+        },
+        "H_C39": {
+            "english": "Unban Command",
+            "portugues": "Comando de Desbanimento"
+        },
+        "H_C40": {
+            "english": "Slowmode",
+            "portugues": "Modo Lento"
+        },
+        "H_C41": {
+            "english": "Locking a Channel",
+            "portugues": "Trancando um Canal"
+        },
+        "H_C42": {
+            "english": "Unlocking a Channel",
+            "portugues": "Desbloqueando um Canal"
+        },
+        "H_C43": {
+            "english": "Change your Prefix:",
+            "portugues": "Mude seu Prefixo:"
+        },
 
 
 

@@ -21,7 +21,7 @@ module.exports = {
                     value: '```_avatar <@mention>, <userID>```'
                 },
                 {
-                    name: 'Server Icon:',
+                    name: languages(guild, "H_C30"),
                     value: '```_server-icon```'
                 },
                 {
@@ -29,11 +29,7 @@ module.exports = {
                     value: '```_ping```'
                 },
                 {
-                    name: 'Bot Info:',
-                    value: '```_botinfo```'
-                },
-                {
-                    name: 'User Info',
+                    name: languages(guild, "H_C31"),
                     value: '```_userinfo <@mention>, <userID>```'
                 },
                 {
@@ -41,15 +37,15 @@ module.exports = {
                     value: '```_github```'
                 },
                 {
-                    name: 'Weather:',
+                    name: languages(guild, "H_C32"),
                     value: '```_weather```'
                 },
                 {
-                    name: 'Server Info:',
+                    name: languages(guild, "H_C33"),
                     value: '```_serverinfo```'
                 },
                 {
-                    name: 'Music Commands',
+                    name: languages(guild, "H_C34"),
                     value: '```_music-help```'
                 }
             )
@@ -59,35 +55,35 @@ module.exports = {
             .setTitle(`Mod Commands`)
             .addFields(
                 {
-                    name: 'Ban Command:',
+                    name: languages(guild, "H_C35"),
                     value: '```_ban <@mention>, <userID>```'
                 },
                 {
-                    name: 'Kick Command:',
+                    name: languages(guild, "H_C36"),
                     value: '```_kick <@mention>, <userID>```'
                 },
                 {
-                    name: 'Mute Command:',
+                    name: languages(guild, "H_C37"),
                     value: '```_mute <@mention>, <userID>```'
                 },
                 {
-                    name: 'Unmute Command:',
+                    name: languages(guild, "H_C38"),
                     value: '```_unmute <@mention>, <userID>```'
                 },
                 {
-                    name: 'Unban Command:',
+                    name: languages(guild, "H_C39"),
                     value: '```_unban <userID>```'
                 },
                 {
-                    name: 'Slowmode:',
+                    name: languages(guild, "H_C40"),
                     value: '```_slowmode <#channel>```'
                 },
                 {
-                    name: 'Locking a Channel',
+                    name: languages(guild, "H_C41"),
                     value: '```_lock <#channelMention> <@roleMention> <reason>```'
                 },
                 {
-                    name: 'Unlocking a Channel:',
+                    name: languages(guild, "H_C42"),
                     value: '```_unlock <#channelMention> <@roleMention>```'
                 },
                 
@@ -156,6 +152,10 @@ module.exports = {
                     name: `${languages(guild, 'H_C18')}`,
                     value: '```_setleft (To add) _rmvleft (To remove)```'
                 },
+                {
+                    name: languages(guild, "H_C43"),
+                    value: '```_setprefix <Args>```'
+                }
             )
             .setColor('RANDOM')
         const helpPage = new MessageEmbed()

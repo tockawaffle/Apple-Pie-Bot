@@ -5,10 +5,6 @@ module.exports = async(client) => {
     const random = status[Math.floor(Math.random() * status.length)];
     const ms = require('ms');
     const db = require('../../../configs/db/db');
-    
-    client.guilds.cache.forEach(async(guild) => {
-        await newPrefixSchema.insertMany({_id: guild.id, prefix: '_'})
-    })
 
     db.then(() => console.log(`${client.user.username} se conectou à DB!`)).catch(err => console.log(err))
     console.log('╠══════════════════════════════════ ( Login ) ═══════════════════════════════════════╣')
@@ -27,8 +23,8 @@ module.exports = async(client) => {
     setInterval(function() {
         if(av === 0) {client.user.setAvatar('src/configs/imgs/perfil/i2.jpg'); av = 1} 
         else if (av === 1) {client.user.setAvatar('src/configs/imgs/perfil/i3.jpg'); av = 2} 
-        else if (av === 2 ) {client.user.setAvatar('src/configs/imgs/perfil/i4.png'); av = 3} 
-        else if (av === 3) {client.user.setAvatar('src/configs/imgs/perfil/i5.png'); av = 0} 
+        else if (av === 2 ) {client.user.setAvatar('src/configs/imgs/perfil/i4.jpg'); av = 3} 
+        else if (av === 3) {client.user.setAvatar('src/configs/imgs/perfil/i5.j´g'); av = 0} 
     }, ms('2h'));
     loadLangs(client)
 }
