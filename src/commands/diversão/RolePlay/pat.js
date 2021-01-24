@@ -8,7 +8,7 @@ module.exports = {
         const member = message.mentions.members.first()
         const {guild} = message
 
-        const pats = require('../../../../configs/comandos/pats/pat')
+        const pats = require('../../../configs/comandos/pats/pat')
         const random = pats[Math.floor(Math.random() * pats.length)]
         if (!args[0]) {
             if(args[0] === undefined) args[0] = languages(guild, "noreason")

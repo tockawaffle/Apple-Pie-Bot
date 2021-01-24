@@ -5,7 +5,7 @@ module.exports = {
         const user = message.mentions.users.first(); const me = message.mentions.has(client.user)
         const {guild} = message;
 
-        const huggies = require('../../../../configs/comandos/hug/hugging');
+        const huggies = require('../../../configs/comandos/hug/hugging');
         const randomHuggies = huggies[Math.floor(Math.random() * huggies.length)]
         if (!args[0]) {
             if(args[0] === undefined) args[0] = languages(guild, "noreason")

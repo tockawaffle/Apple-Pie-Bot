@@ -5,7 +5,7 @@ module.exports = {
     run: async(client, message, args) => {
 
         const { guild } = message
-        const slap = require('../../../../configs/comandos/slap/slap')
+        const slap = require('../../../configs/comandos/slap/slap')
         const random = slap[Math.floor(Math.random() * slap.length)]
  
         const me = message.mentions.has(client.user)

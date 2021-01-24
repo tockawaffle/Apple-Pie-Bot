@@ -7,7 +7,7 @@ module.exports = {
         const user = message.mentions.users.first();
         const me = message.mentions.has(client.user);
 
-        const kisses = require('../../../../configs/comandos/kiss/kisses')
+        const kisses = require('../../../configs/comandos/kiss/kisses')
         const randomKisses = kisses[Math.floor(Math.random() * kisses.length)]
 
         if (!args[0]) {
