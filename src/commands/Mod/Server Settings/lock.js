@@ -27,14 +27,8 @@ module.exports = {
                 .setDescription(`${languages(guild, "L_C3")}`)
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .addFields(
-                    {
-                        name: `${languages(guild, "L_C4")}`,
-                        value: `[${languages(guild, "H_C21")}](https://www.applepiebot.xyz/permission-flags)`
-                    },
-                    {
-                        name: `${languages(guild, "L_C6")}`,
-                        value: `\`\`\`${languages(guild, "L_C7")}\`\`\``
-                    }
+                    {name: `${languages(guild, "L_C4")}`,value: `[${languages(guild, "H_C21")}](https://www.applepiebot.xyz/permission-flags)`},
+                    {name: `${languages(guild, "L_C6")}`,value: `\`\`\`${languages(guild, "L_C7")}\`\`\``}
                 )
                 .setFooter(`${languages(guild, "L_C5")}`)
                 .setColor('RED')
@@ -46,7 +40,7 @@ module.exports = {
         const role = message.mentions.roles.first() || message.guild.roles.everyone
 
 
-        let reason = {}
+        let reason;
         if(!message.mentions.channels.first() && message.mentions.roles.first()) {
             reason = args.slice(1).join(' ')
         } else if (!message.mentions.channels.first() && !message.mentions.roles.first()) {
@@ -62,14 +56,8 @@ module.exports = {
             .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
             .setDescription(`${languages(guild, "L_C9")}`)
             .addFields(
-                {
-                    name: `${languages(guild, "L_C10")} \`\`\`${chn.name}\`\`\``,
-                    value: `${languages(guild, "L_C11")} \`\`\`${role.name}\`\`\``
-                },
-                {
-                    name: `${languages(guild, "L_C15")}`,
-                    value: `\`\`\`${reason ? reason: `${languages(guild, "B_C16")}`}\`\`\``
-                }
+                {name: `${languages(guild, "L_C10")} \`\`\`${chn.name}\`\`\``,value: `${languages(guild, "L_C11")} \`\`\`${role.name}\`\`\``},
+                {name: `${languages(guild, "L_C15")}`,value: `\`\`\`${reason ? reason: `${languages(guild, "noreason")}`}\`\`\``}
             )
             .setColor('RANDOM')
             .setFooter(`${languages(guild, "L_C13")} _lock <#Channel> <#Role> <Reason>\n${languages(guild, "L_C14")} _lock`)

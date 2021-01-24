@@ -4,7 +4,6 @@ module.exports = {
         const { guild } = message
         var rps = [`${languages(guild, 'RPS_P')}`, `${languages(guild, 'RPS_P2')}`, `${languages(guild, 'RPS_T')}`];
         var rpsChoice = rps[Math.floor(Math.random() * rps.length)];
-        //This looks disgusting AAAAAAAAAAAAAAA... But it works :3
 
         message.reply(`${languages(guild, 'RPS_C')}`).then(() => {
             message.channel.awaitMessages(response => response.content === `${languages(guild, 'RPS_P')}` || response.content === `${languages(guild, 'RPS_P2')}` || response.content === `${languages(guild, 'RPS_T')}`,  {

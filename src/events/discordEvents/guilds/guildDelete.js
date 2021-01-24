@@ -9,6 +9,5 @@ module.exports = async(client, guild) => {
     const gleft = await MemberLeftSchema.findOneAndRemove({_id: guild.id,},{_id: guild.id})
     const gwelcome = await welcomeGSchema.findOneAndRemove({_id: guild.id,},{_id: guild.id})
 
-    if(!gleft) return
-    if(!gwelcome) return
+    if(!gleft) return; if(!gwelcome) return
 }
