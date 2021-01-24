@@ -17,24 +17,15 @@ module.exports = {
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
-                    {
-                        name: `${languages(guild, "NARGS_2")}`,
-                        value: `${languages(guild, "NARGS_3")}.`
-                    }
+                    {name: `${languages(guild, "NARGS_2")}`,value: `${languages(guild, "NARGS_3")}.`}
                 )
                 .setColor("RED")
             const secondEmbed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setDescription(`${languages(guild, "BGNSFW")}`)
                 .addFields(
-                    {
-                        name: `PC:`,
-                        value: "```_bgnsfw pc```"
-                    },
-                    {
-                        name: `Mobile:`,
-                        value: "```_bgnsfw mobile```"
-                    }
+                    {name: `PC:`,value: "```_bgnsfw pc```"},
+                    {name: `Mobile:`,value: "```_bgnsfw mobile```"}
                 )
                 .setColor("RED")
             pages = [errorEmbed, secondEmbed]

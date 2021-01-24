@@ -13,10 +13,7 @@ module.exports = {
                 .setColor("RED")
                 .setDescription(languages(guild, "noperm"))
                 .addFields(
-                    {
-                        name: `${languages(guild, "noperm2")}`,
-                        value: `${languages(guild, "noperm3")} \`${perm}\``
-                    }
+                    {name: `${languages(guild, "noperm2")}`,value: `${languages(guild, "noperm3")} \`${perm}\``}
                 )
             message.reply(noPerm); return
         } else if(!message.guild.me.hasPermission(perm)) {
@@ -25,10 +22,7 @@ module.exports = {
                 .setColor("RED")
                 .setDescription(languages(guild, "nobotperm"))
                 .addFields(
-                    {
-                        name: `${languages(guild, "noperm2")}`,
-                        value: `${languages(guild, "noperm3")} \`${perm}\``
-                    }
+                    {name: `${languages(guild, "noperm2")}`,value: `${languages(guild, "noperm3")} \`${perm}\``}
                 )
             message.reply(noPerm); return
         }
@@ -39,14 +33,8 @@ module.exports = {
                 .setColor("RED")
                 .setDescription(languages(guild, "nomemb"))
                 .addFields(
-                    {
-                        name: languages(guild, "nomemb2"),
-                        value: `\`${args[0]}\``
-                    },
-                    {
-                        name: languages(guild, "ncreate3"),
-                        value: languages(guild, "ubUsage")
-                    }
+                    {name: languages(guild, "nomemb2"),value: `\`${args[0]}\``},
+                    {name: languages(guild, "ncreate3"),value: languages(guild, "ubUsage")}
                 )
             message.reply(noMember); return
         } 

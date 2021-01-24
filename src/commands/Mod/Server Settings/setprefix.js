@@ -16,10 +16,7 @@ module.exports = {
                 .setFooter(client.user.username, client.user.avatarURL())
                 .setDescription(languages(guild, "NPFX"))
                 .addFields(
-                    {
-                        name: languages(guild, "NPFX2"),
-                        value: languages(guild, "NPFX3")
-                    }
+                    {name: languages(guild, "NPFX2"),value: languages(guild, "NPFX3")}
                 )
             message.reply(noPerm)
             return
@@ -32,10 +29,7 @@ module.exports = {
                 .setFooter(client.user.username, client.user.avatarURL())
                 .setDescription(languages(guild, "APFX"))
                 .addFields(
-                    {
-                        name: languages(guild, "APFX2"),
-                        value: `${languages(guild, "APFX3")} \`${settings.prefix}setprefix <${languages(guild, "APFX4")}>\``
-                    }
+                    {name: languages(guild, "APFX2"),value: `${languages(guild, "APFX3")} \`${settings.prefix}setprefix <${languages(guild, "APFX4")}>\``}
                 )
             message.reply(noArgs)
             return
@@ -46,10 +40,7 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setDescription(`${languages(guild, "PFX")}`)
             .addFields(
-                {
-                    name: `${languages(guild, "PFX2")}`,
-                    value: `\`${args[0]}\``
-                }
+                {name: `${languages(guild, "PFX2")}`,value: `\`${args[0]}\``}
             )
             .setColor("RANDOM")
             .setFooter(client.user.username, client.user.avatarURL())

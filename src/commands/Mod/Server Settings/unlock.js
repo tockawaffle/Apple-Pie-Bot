@@ -13,10 +13,7 @@ module.exports = {
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .setDescription(`❌ Failed: Permissions already set`)
                 .addFields(
-                    {
-                        name: `Permissions already set for the role:`,
-                        value: `\`\`\`${role.name}\`\`\``
-                    }
+                    {name: `Permissions already set for the role:`,value: `\`\`\`${role.name}\`\`\``}
                 )
             message.reply(alreadySet)
             return
@@ -28,10 +25,7 @@ module.exports = {
                 .setDescription(`❌ Failed: Missing User Permissions`)
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .addFields(
-                    {
-                        name: `Reason:`,
-                        value: `Missing 'Manage Channels' permissions for the user`
-                    }
+                    {name: `Reason:`,value: `Missing 'Manage Channels' permissions for the user`}
                 )
                 .setColor('RED')
             message.reply(noUserPerm)
@@ -42,12 +36,8 @@ module.exports = {
                 .setDescription(`❌ Failed: Missing Bot Permissions`)
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .addFields(
-                    {
-                        name: `Check the link below to see wich permissions the bot need and enable them after:`,
-                        value: `[Click here](https://www.applepiebot.xyz/permission-flags)`
-                    }
+                    {name: `Check the link below to see wich permissions the bot need and enable them after:`,value: `[Click here](https://www.applepiebot.xyz/permission-flags)"It's safe to click. The link will bring you into the bot's website."`}
                 )
-                .setFooter(`It's safe to click. The link will bring you into the bot's website.`)
                 .setColor('RED')
             message.reply(noClientPerm)
             return
@@ -57,10 +47,7 @@ module.exports = {
             .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
             .setDescription(`✅ Sucess!: Channel unlock`)
             .addFields(
-                {
-                    name: `Channel unlocked:\n \`\`\`${chn.name}\`\`\``,
-                    value: `Unlocked for the role: \`\`\`${role.name}\`\`\``
-                }
+                {name: `Channel unlocked:\n \`\`\`${chn.name}\`\`\``,value: `Unlocked for the role: \`\`\`${role.name}\`\`\``}
             )
             .setColor('RANDOM')
         message.channel.send(sucess).then((msg) => {

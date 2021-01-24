@@ -24,74 +24,23 @@ module.exports = {
             const error2 = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .addFields(
-                    {
-                        name: `${languages(guild, "ASFW")}`,
-                        value: '```_anisfw ass```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW2")}`,
-                        value: '```_anisfw bdsm```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW3")}`,
-                        value: '```_anisfw blowjob```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW4")}`,
-                        value: '```_anisfw doujin```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW5")}`,
-                        value: '```_anisfw feet```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW6")}`,
-                        value: '```_anisfw femdom```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW7")}`,
-                        value: '```_anisfw foxgirls```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW8")}`,
-                        value: '```_anisfw gif```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW9")}`,
-                        value: '```_anisfw glasses```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW10")}`,
-                        value: '```_anisfw netorare```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW11")}`,
-                        value: '```_anisfw maid```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW12")}`,
-                        value: '```_anisfw panties```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW13")}`,
-                        value: '```_anisfw school```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW14")}`,
-                        value: '```_anisfw thighs```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW15")}`,
-                        value: '```_anisfw uniform```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW16")}`,
-                        value: '```_anisfw yuri```'
-                    },
-                    {
-                        name: `${languages(guild, "ASFW17")}`,
-                        value: '```_anisfw zettaiRyouiki```'
-                    },
+                    {name: `${languages(guild, "ASFW")}`,value: '```_anisfw ass```'},
+                    {name: `${languages(guild, "ASFW2")}`,value: '```_anisfw bdsm```'},
+                    {name: `${languages(guild, "ASFW3")}`,value: '```_anisfw blowjob```'},
+                    {name: `${languages(guild, "ASFW4")}`,value: '```_anisfw doujin```'},
+                    {name: `${languages(guild, "ASFW5")}`,value: '```_anisfw feet```'},
+                    {name: `${languages(guild, "ASFW6")}`,value: '```_anisfw femdom```'},
+                    {name: `${languages(guild, "ASFW7")}`,value: '```_anisfw foxgirls```'},
+                    {name: `${languages(guild, "ASFW8")}`,value: '```_anisfw gif```'},
+                    {name: `${languages(guild, "ASFW9")}`,value: '```_anisfw glasses```'},
+                    {name: `${languages(guild, "ASFW10")}`,value: '```_anisfw netorare```'},
+                    {name: `${languages(guild, "ASFW11")}`,value: '```_anisfw maid```'},
+                    {name: `${languages(guild, "ASFW12")}`,value: '```_anisfw panties```'},
+                    {name: `${languages(guild, "ASFW13")}`,value: '```_anisfw school```'},
+                    {name: `${languages(guild, "ASFW14")}`,value: '```_anisfw thighs```'},
+                    {name: `${languages(guild, "ASFW15")}`,value: '```_anisfw uniform```'},
+                    {name: `${languages(guild, "ASFW16")}`,value: '```_anisfw yuri```'},
+                    {name: `${languages(guild, "ASFW17")}`,value: '```_anisfw zettaiRyouiki```'},
                     
                 )
             pages = [

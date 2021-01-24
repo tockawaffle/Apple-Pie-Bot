@@ -15,24 +15,15 @@ module.exports = {
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
                 .setDescription(`${languages(guild, "NARGS")}`)
                 .addFields(
-                    {
-                        name: `${languages(guild, "NARGS_2")}`,
-                        value: `${languages(guild, "NARGS_3")}.`
-                    }
+                    {name: `${languages(guild, "NARGS_2")}`,value: `${languages(guild, "NARGS_3")}.`}
                 )
                 .setColor("RED")
             const pages = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                 .setDescription(`${languages(guild, "AN")}`)
                 .addFields(
-                    {
-                        name: `${languages(guild, "AN1")}`,
-                        value: '```_rda foxgirl```'
-                    },
-                    {
-                        name: `${languages(guild, "AN2")}`,
-                        value: '```_rda neko```'
-                    }
+                    {name: `${languages(guild, "AN1")}`,value: '```_rda foxgirl```'},
+                    {name: `${languages(guild, "AN2")}`,value: '```_rda neko```'}
                 )
                 .setColor("RED")
             page = [errorEmbed, pages]
@@ -66,15 +57,9 @@ module.exports = {
                 .setColor('RANDOM')
                 .setDescription(`${languages(guild, "mst6")}`)
                 .addFields(
-                    {
-                        name: `${languages(guild, mst6)}`,
-                        value: `\`\`\`${err}\`\`\``
-                    }
+                    {name: `${languages(guild, mst6)}`,value: `\`\`\`${err}\`\`\``}
                 )
-            pages = [
-                errEmbed,
-                errDet
-            ]
+            pages = [errEmbed,errDet]
             pageEmbed(message, pages)
             
         }

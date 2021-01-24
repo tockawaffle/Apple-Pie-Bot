@@ -160,167 +160,7 @@
             "portugues": "Você não deu um resposta válida, injusto!\n||Meu criador não quer que você saiba, mas, se você escrever a primeira letra maiúscula, eu não consigo ler o que você escreveu..||"
         },
 
-        
-        "IMG_RP": {
-            "english": "Curious about from where my images come from?",
-            "portugues": "Está curioso para saber de onde vem minhas imagens?"
-        },
-        "IMG_RP2": {
-            "english": "Okay then! All of them come from",
-            "portugues": "Pois bem! Todas elas vêm do"
-        },
-        "IMG_RP3": {
-            "english": "Download them while you can!",
-            "portugues": "Tire proveito por enquanto!"
-        },
-        "IMG_RP4": {
-            "english": "My creator want to do a local server to host these images",
-            "portugues": "Meu criador pretende fazer um servidor local para hostear essas imagens"
-        },
-
-
-        "B_C": {
-            "english": "Hello,",
-            "portugues": "Olá,"
-        },
-        "B_C2": {
-            "english": ", you cannot ban someone",
-            "portugues": ", você não pode banir"
-        },
-        "B_C3": {
-            "english": "Reason: Missing 'Ban Members' Permission",
-            "portugues": "Motivo: Faltando a permissão 'Banir Membros'"
-        },
-        "B_C4": {
-            "english": "❌ Failed: Missing User Permissions",
-            "portugues": "❌ Falha: Faltando Permissões de Usuário"
-        },
-        "B_C5": {
-            "english": "❌ Failed: Missing Bot Permissions",
-            "portugues": "❌ Falha: Faltando Permissões de Bot"
-        },
-        "B_C6": {
-            "english": ", I can't ban someone.",
-            "portugues": ", eu não posso banir alguém"
-        },
-        "B_C7": {
-            "english": "Reason: Missing 'Ban Members' Permission for the Bot",
-            "portugues": "Motivo: Faltando a permissão do bot: 'Ban Members'"
-        },
-        "B_C8": {
-            "english": "❌ Failed: Ban",
-            "portugues": "❌ Falha: Ban"
-        },
-        "B_C9": {
-            "english": "Please, mention someone or enter a valid userID:",
-            "portugues": "Por favor, mencione alguém ou use um userID válido"
-        },
-        "B_C10": {
-            "english": "❌ Failed: Member is not bannable",
-            "portugues": "❌ Falha: Não é possível banir este membro"
-        },
-        "B_C11": {
-            "english": ", I could not ban that user",
-            "portugues": ", eu não consegui banir o membro"
-        },
-        "B_C12": {
-            "english": "Reason: Either because he has a higher role than I do or because he is the guild owner.",
-            "portugues": "Motivo: O membro tem um cargo maior que o meu ou é dono do servidor."
-        },
-        "B_C13": {
-            "english": "✅Sucess: Ban",
-            "portugues": "✅Sucesso: Ban"
-        },
-        "B_C14": {
-            "english": "User Banned:",
-            "portugues": "Usuário Banido:"
-        },
-        "B_C15": {
-            "english": "Reason:",
-            "portugues": "Motivo"
-        },
-        "B_C16": {
-            "english": "Not Provided",
-            "portugues": "Não Providenciado"
-        },
-        "B_C17": {
-            "english": "User Banned By:",
-            "portugues": "Usuário Banido por:"
-        },
-
-
-
-
-
-        "UB_C": {
-            "english": "You do not have permissions to unban someone!",
-            "portugues": "Você não tem permissão para desbanir alguém!"
-        },
-        "UB_C2": {
-            "english": "I do not have permissions to unban someone. Please give me the 'Ban Members' permission.",
-            "portugues": "Eu não tenho permissão para desbanir alguém. Me dê a permissão 'Banir Membro' primeiro!"
-        },
-        "UB_C3": {
-            "english": "Action: Unban",
-            "portugues": "Ação: Desbanimento"
-        },
-        "UB_C4": {
-            "english": "was unbanned sucessfully!",
-            "portugues": "foi desbanido com sucesso!"
-        },
-        "UB_C5": {
-            "english": "Unbanned by:",
-            "portugues": "Desbanimento realizado por:"
-        },
-        "UB_ERR": {
-            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -unban <@mention> or <memberID>",
-            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -unban <@menção> ou <memberID>"
-        },
-
-
-
-        "KC_C": {
-            "english": "You do not have permissions!",
-            "portugues": "Você não tem permissões para isso!"
-        },
-        "KC_C1": {
-            "english": "Hey... You know that I can't kick you, right?",
-            "portugues": "Hey.. Você sabe que eu não posso te expulsar, né?"
-        },
-        "KC_C2": {
-            "english": "Impossible! That user has 'Kick Members' permissions",
-            "portugues": "Impossivel! Ele tem permissões para 'Expulsar Membros' também"
-        },
-        "KC_C3": {
-            "english": "Action: Kick",
-            "portugues": "Ação: Expulsão"
-        },
-        "KC_C4": {
-            "english": "was kicked from the server!",
-            "portugues": "foi expulso do servidor!"
-        },
-        "KC_C5": {
-            "english": "kicked",
-            "portugues": "expulsou"
-        },
-        "KC_ERR": {
-            "english": "I can't do that, missing permissions!",
-            "portugues": "Eu não posso fazer isso, faltando permissões!"
-        },
-        "KC_ERR2" : {
-            "english": "Hey! I can't kick and admin!",
-            "portugues": "Ei! Eu não posso expulsar um administrador!"
-        },
-        "KC_C6": {
-            "english": "He has the 'Ban Members' permissions, I cannot kick him!",
-            "portugues": "Ele tem as permissões de 'Banir Membros', não posso expulsar ele!"
-        },
-        "KC_ERR3": {
-            "english": "Hmmmm, something does not looks right, did you use the command in the right way?\nTry to use like this: -kick <@mention>",
-            "portugues": "Hmmm, algo não parece correto, você usou do modo certo?\nTente usar assim: -kick <memberID>"
-        },
-
-
+    
 
         "H_C": {
             "english": "Utilities",
@@ -1885,6 +1725,23 @@
             "portugues": "O usuário providenciado não está banido/não existe."
         },
 
+        
+        "K": {
+            "english": "✅ Sucess!: User Kicked",
+            "portugues": "✅ Sucesso! Usuário Expulso."
+        },
+        "K2": {
+            "english": "The following user was kicked:",
+            "portugues": "O seguinte usuário foi expulso:"
+        },
+        "KR": {
+            "english": "Kick Reason:",
+            "portugues": "Motivo de Expulsão:"
+        },
+        "KA": {
+            "english": "Kicked by:",
+            "portugues": "Expulso por:"
+        },
 
         "M_R": {
             "english": "Muted",
@@ -1967,8 +1824,8 @@
             "portugues": "Cheque a hierarquia de cargos."
         },
         "M_E8": {
-            "english": "It's simple, if the user has a role higher than the bot's role, or the role you're trying to add/remove is bigger than the bot's role, then the bot is unable to do something with that person.\nPlease, check that (Since it's the most common issue.)",
-            "portugues": "É simples, se o usuário tiver um cargo superior à do bot, ou se o cargo for superior do que o do bot, o bot não poderá adicionar ou remover o cargo daquela pessoa.\nPor favor, verifique isso (já que é o problema mais comum.)"
+            "english": "The muted role might be higher in the role hierarchy.",
+            "portugues": "O cargo de Silenciado talvez esteja numa posição maior que a minha na hierarquia de cargos."
         },
         "M_IV": {
             "english": "Tried to find member:",
@@ -1985,7 +1842,97 @@
         "clique": {
             "english": "Click Here",
             "portugues": "Clique Aqui"
+        },
+        "unkck": {
+            "english": "I am not able to kick the following member:",
+            "portugues": "Eu não consigo expulsar o seguinte membro:"
+        },
+        "moreperms": {
+            "english": "I'm not able to do something with him.",
+            "portugues": "Eu não posso fazer algo contra este membro."
+        },
+        "moreperms2": {
+            "english": "He has either more permissions than you or a specific permission:",
+            "portugues": "Ele tem ou mais permissões que você, ou uma permissão específica:"
+        },
+        "moreperms3": {
+            "english": "He has a higher role than you do.",
+            "portugues": "Ele tem um cargo maior que o seu."
+        },
+        "moreperms4": {
+            "english": "He has a specific permission.",
+            "portugues": "Ele têm uma permissão específica."
+        },
+        "owner": {
+            "english": "You mentioned the Guild Owner.",
+            "portugues": "Você mencionou o Dono do Servidor."
+        },
+        "owner2": {
+            "english": "You didn't expect that this would work, right?",
+            "portugues": "Você não esperava que isso funcionaria, né?"
+        },
+        "owner3": {
+            "english": "I am not able to do anything with the guild owner.",
+            "portugues": "Eu não sou permitida a fazer qualquer coisa contra o dono do servidor."
+        },
+        "same": {
+            "english": "You mentioned yourself, try again but now mentioning someone that is not you!",
+            "portugues": "Você mencionou a sí mesmo, tente novamente, mas dessa vez mencionando alguém diferente!"
+        },
+
+        "EMJ": {
+            "english": "❌ Error: Missing a name",
+            "portugues": "❌ Erro: Faltando um nome"
+        },
+        "EMJ2": {
+            "english": "<prefix>addemoji <name> (If you're using an attachment)",
+            "portugues": "<prefixo>addemoji <nome> (Se você estiver usando um anexo)"
+        },
+        "EMJ3": {
+            "english": "✅ Sucess!: Emoji Created",
+            "portugues": "✅ Sucesso!: Emoji Criado"
+        },
+        "EMJ4": {
+            "english": "Emoji Name:",
+            "portugues": "Nome do Emoji:"
+        },
+        "EMJ5": {
+            "english": "❌ Failed: Emoji ID Provided",
+            "portugues": "❌ Falha: ID de Emoji Providenciado"
+        },
+        "EMJ6": {
+            "english": "Please, do the following:",
+            "portugues": "Por favor, faça o seguinte:"
+        },
+        "EMJ7": {
+            "english": "Hover your mouse through the emoji, click with the right button of your mouse and then copy the link from the emoji.\nAfter, please, re-run this command with that link and a name:",
+            "portugues": "Passe o mouse sobre o emoji, clique com o botão direito do mouse e copie o link do emoji. \nDepois, execute novamente este comando com esse link e um nome:"
+        },
+        "EMJ8": {
+            "english": "<prefix>addemoji <emojiURL> <name>",
+            "portugues": "<prefixo>addemoji <URL do emoji> <nome>"
+        },
+        "eEMJ": {
+            "english": "❌ Oops: Something Went Wrong.",
+            "portugues": "❌ Oops: Algo deu Errado."
+        },
+        "eEMJ2": {
+            "english": "The following error showed up:",
+            "portugues": "O seguinte erro aconteceu:"
+        },
+        "eEMJ3": {
+            "english": "Maybe the link is invalid?",
+            "portugues": "Talvez o link seja inválido?"
+        },
+        "eEMJ4": {
+            "english": "to check",
+            "portugues": "para checar"
+        },
+        "eEMJ5": {
+            "english": "This is the link you provided.",
+            "portugues": "Esse é o link que você providenciou."
         }
+        
 
     }
 }

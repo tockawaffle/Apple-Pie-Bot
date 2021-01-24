@@ -13,6 +13,45 @@ module.exports = {
                `${languages(guild, 'M_C')}`
             );
         }
+
+        
+        let reasoning;
+        let other = ["ADMINISTRATOR" || "KICK_MEMBERS" || "KICK_MEMBERS" || "BAN_MEMBERS" || "MANAGE_CHANNELS" || "MANAGE_GUILD"]
+        if(member.id === message.author.id) {
+            const sameUser = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RED")
+                .setDescription(languages(guild, "same"))
+            return message.reply(sameUser).then(msg => msg.delete({timeout: 10000}))
+        } else if(member.id === guild.owner.id) {
+            const owner = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RED")
+                .setDescription(languages(guild, "owner"))
+                .addField(languages(guild, "owner2"), languages(guild, "owner3"))
+            return message.reply(owner).then(msg => msg.delete({timeout: 10000}))
+        } else if(message.member.roles.highest.position <= member.roles.highest.position && message.author.id !== message.guild.owner.id) {
+            reasoning = languages(guild, "moreperms3")
+            const hasPerm = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RED")
+                .setDescription(languages(guild, "moreperms"))
+                .addFields(
+                    {name: languages(guild, "moreperms2"), value: `\`\`\`${reasoning}\`\`\``}
+                )
+            return message.reply(hasPerm).then(msg => msg.delete({timeout: 10000}))
+        } else if(member.hasPermission(other) && message.author.id !== message.guild.owner.id) {
+            reasoning = languages(guild, "moreperms4")
+            const hasPerm = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RED")
+                .setDescription(languages(guild, "moreperms"))
+                .addFields(
+                    {name: languages(guild, "moreperms2"), value: `\`\`\`${reasoning}: ${other}\`\`\``}
+                )
+            return message.reply(hasPerm).then(msg => msg.delete({timeout: 10000}))
+        } 
+        
         if(!args[0]) {
             if(member === undefined) {
                 member = `${languages(guild, "UN5")}`
@@ -21,19 +60,12 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setDescription(`${languages(guild, "M_C3")}`)
             .addFields(
-                {
-                    name: `${languages(guild, "M_IV")}`,
-                    value: `\`\`\`${args[0] || member}\`\`\``
-                },
-                {
-                    name: `${languages(guild, "M_C4")}`,
-                    value: languages(guild, "umUsage")
-                }
+                {name: `${languages(guild, "M_IV")}`,value: `\`\`\`${args[0] || member}\`\`\``},
+                {name: `${languages(guild, "M_C4")}`, value: languages(guild, "umUsage")}
             )
             message.reply(invalidMember)
             return
         }
-
 
         try{
 
@@ -41,8 +73,7 @@ module.exports = {
                 const embed = new MessageEmbed()
                     .setDescription(`${languages(guild, 'M_C2')}`)
                     .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                message.reply(embed)
-                return
+                return message.reply(embed)
             }
 
             if(!mutedRole && member) {
@@ -58,20 +89,14 @@ module.exports = {
                     async(mutedRole) => {
                         message.guild.channels.cache.forEach(async (channel, id) => {
                             await channel.createOverwrite(mutedRole, {
-                               SEND_MESSAGES: false,
-                               SPEAK: false,
-                               READ_MESSAGES: false,
-                               ADD_REACTIONS: false
+                               SEND_MESSAGES: false, SPEAK: false, READ_MESSAGES: false, ADD_REACTIONS: false
                             });
                         })
                         const embed = new MessageEmbed()
                             .setDescription(`${languages(guild, 'M2_C')}`)
                             .setColor('RANDOM')
                             .addFields(
-                                {
-                                    name: `${languages(guild, "M3_C")}`,
-                                    value: `\`\`\`${member.user.username}\`\`\``
-                                }
+                                {name: `${languages(guild, "M3_C")}`, value: `\`\`\`${member.user.username}\`\`\``}
                             )
                             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
                             .setFooter(`${languages(guild, 'M4_C')} ${message.author.tag}`, message.author.displayAvatarURL({dynamic: true}));
@@ -82,14 +107,8 @@ module.exports = {
                                     .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                                     .setDescription(`${languages(guild, "M_E")}`)
                                     .addFields(
-                                        {
-                                            name: `${languages(guild, "M_E2")}`,
-                                            value: `\`\`\`${err}\`\`\``
-                                        },
-                                        {
-                                            name: `${languages(guild, "M_E3")}`,
-                                            value: `${languages(guild, "M_E4")}`
-                                        }
+                                        {name: `${languages(guild, "M_E2")}`, value: `\`\`\`${err}\`\`\``},
+                                        {name: `${languages(guild, "M_E3")}`, value: `${languages(guild, "M_E4")}`}
                                     )
                                 const solution = new MessageEmbed()
                                     .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -97,10 +116,7 @@ module.exports = {
                                     .addFields(
                                         {name: `${languages(guild, "M_E7")}`,value: `${languages(guild, "M_E8")}`}
                                     )
-                                pages = [
-                                    embedError,
-                                    solution
-                                ]
+                                pages = [embedError, solution]
                                 pageEmbed(message,pages)
                             })
                         })
@@ -110,10 +126,7 @@ module.exports = {
                 const embed = new MessageEmbed()
                     .setDescription(`${languages(guild, 'M2_C')}`)
                     .addFields(
-                        {
-                            name: `${languages(guild, "M3_C")}`,
-                            value: `\`\`\`${member.user.username}\`\`\``
-                        }
+                        {name: `${languages(guild, "M3_C")}`, value: `\`\`\`${member.user.username}\`\`\``}
                     )
                     .setColor('RANDOM')
                     .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
@@ -125,14 +138,8 @@ module.exports = {
                             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                             .setDescription(`${languages(guild, "M_E")}`)
                             .addFields(
-                                {
-                                    name: `${languages(guild, "M_E2")}`,
-                                    value: `\`\`\`${err}\`\`\``
-                                },
-                                {
-                                    name: `${languages(guild, "M_E3")}`,
-                                    value: `${languages(guild, "M_E4")}`
-                                }
+                                {name: `${languages(guild, "M_E2")}`, value: `\`\`\`${err}\`\`\``},
+                                {name: `${languages(guild, "M_E3")}`, value: `${languages(guild, "M_E4")}`}
                             )
                         const solution = new MessageEmbed()
                             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -154,14 +161,8 @@ module.exports = {
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                 .setDescription(`${languages(guild, "M_C3")}`)
                 .addFields(
-                    {
-                        name: `${languages(guild, "M_IV")}`,
-                        value: `\`\`\`${args[0] || member}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "M_IV2")}`,
-                        value: `\`\`\`${languages(guild, "M_IV3")}\`\`\``
-                    }
+                    {name: `${languages(guild, "M_IV")}`, value: `\`\`\`${args[0] || member}\`\`\``},
+                    {name: `${languages(guild, "M_IV2")}`,value: `\`\`\`${languages(guild, "M_IV3")}\`\`\``}
                 )
             message.reply(invalidMember)
 
