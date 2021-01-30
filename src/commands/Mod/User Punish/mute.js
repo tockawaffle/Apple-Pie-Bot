@@ -14,7 +14,17 @@ module.exports = {
             );
         }
 
-        
+        if(!member) {
+            const invalidMember = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setDescription(`${languages(guild, "M_C3")}`)
+            .addFields(
+                {name: `${languages(guild, "M_IV")}`,value: `\`\`\`${args[0]}\`\`\``},
+                {name: `${languages(guild, "M_C4")}`, value: languages(guild, "umUsage")}
+            )
+            message.reply(invalidMember)
+            return
+        }
         let reasoning;
         let other = ["ADMINISTRATOR" || "KICK_MEMBERS" || "KICK_MEMBERS" || "BAN_MEMBERS" || "MANAGE_CHANNELS" || "MANAGE_GUILD"]
         if(member.id === message.author.id) {
