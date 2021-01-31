@@ -35,7 +35,7 @@ module.exports = {
                 },
                 {
                     name: `Support:`,
-                    value: `If your server gets flagged, you can appeal at the [Support Server](https://discord.gg/z4hmnX7qkw)`
+                    value: `If your server gets flagged, you can appeal at the [Support Server](https://discord.gg/eyGX6pWa5V)`
                 },
                 {
                     name: `Report ID (Please, you should remember this ID.):`,

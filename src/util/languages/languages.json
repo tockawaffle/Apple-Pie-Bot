@@ -2282,8 +2282,8 @@
             "portugues": "Veja o erro abaixo e contate o"
         },
         "err_dev": {
-            "english": "Dev using the command \"<prefix>help-dev\"\n(This command will give you a invite to the support server.)",
-            "portugues": "Desenvolvedor usando o comando \"<prefixo>help-dev\"\n(Esse comando te mandará um convite ao servidor de suporte.)"
+            "english": "Dev using the command \"<prefix>help dev\"\n(This command will give you a invite to the support server.)",
+            "portugues": "Desenvolvedor usando o comando \"<prefixo>help dev\"\n(Esse comando te mandará um convite ao servidor de suporte.)"
         },
         "err3": {
             "english": "Check if you are in our DB, normally this error appears because you're not in our DB. Register first using the register command.",
@@ -2384,6 +2384,14 @@
         "no": {
             "english": "no",
             "portugues": "não"
+        },
+        "dev": {
+            "english": "Seems like you found something or have something to say, want to share?",
+            "portugues": "Parece que você encontrou algo ou têm algo interessante a se falar, que tal compartilhar?"
+        },
+        "dev2": {
+            "english": "Join the server below, it's my dev's server!",
+            "portugues": "Entre no server abaixo, é o servidor de meu dev!"
         }
 
     }

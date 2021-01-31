@@ -258,6 +258,21 @@ module.exports = {
             return message.reply(helpNSFW)
         } else if(args[0] === 'canvas') {
             return message.reply(helpCanvas)
+        } else if(args[0] === 'dev') {
+            const apple = client.user
+            if(message.author.bot) return;
+            const initial = new MessageEmbed()
+                .setDescription(`${languages(guild, "dev")}`)
+                .setAuthor(apple.username, apple.avatarURL())
+                .addFields(
+                    {
+                        name: `${languages(guild, "dev2")}`,
+                        value: `[${languages(guild, "BF_C5")}](https://discord.gg/eyGX6pWa5V)`
+                    }
+                )
+                .setFooter(`${languages(guild, "I3_C")}`)
+                .setColor('RANDOM')
+            return message.reply(initial)
         }
 
     }
