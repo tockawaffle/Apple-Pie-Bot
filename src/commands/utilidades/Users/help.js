@@ -4,7 +4,7 @@ const languages = require('../../../util/languages/languages')
 module.exports = {
     aliases: ['h'],
     description: 'Comando de help',
-    run: async(client, message) => {
+    run: async(client, message, args) => {
         const { guild } = message;
         const pageEmbed = require('discord.js-pagination')
         
@@ -14,39 +14,39 @@ module.exports = {
             .addFields(
                 {
                     name:  `${languages(guild, 'H_C2')}`,
-                    value: '```_invite```',
+                    value: '```<prefix>invite```',
                 },
                 {
                     name: 'Avatar:',
-                    value: '```_avatar <@mention>, <userID>```'
+                    value: '```<prefix>avatar <@mention>, <userID>```'
                 },
                 {
                     name: languages(guild, "H_C30"),
-                    value: '```_server-icon```'
+                    value: '```<prefix>server-icon```'
                 },
                 {
                     name: 'Ping:',
-                    value: '```_ping```'
+                    value: '```<prefix>ping```'
                 },
                 {
                     name: languages(guild, "H_C31"),
-                    value: '```_userinfo <@mention>, <userID>```'
+                    value: '```<prefix>userinfo <@mention>, <userID>```'
                 },
                 {
                     name: `${languages(guild, 'H_C3')}`,
-                    value: '```_github```'
+                    value: '```<prefix>github```'
                 },
                 {
                     name: languages(guild, "H_C32"),
-                    value: '```_weather```'
+                    value: '```<prefix>weather```'
                 },
                 {
                     name: languages(guild, "H_C33"),
-                    value: '```_serverinfo```'
+                    value: '```<prefix>serverinfo```'
                 },
                 {
                     name: languages(guild, "H_C34"),
-                    value: '```_music-help```'
+                    value: '```<prefix>music-help```'
                 }
             )
             .setColor('RANDOM')
@@ -56,36 +56,40 @@ module.exports = {
             .addFields(
                 {
                     name: languages(guild, "H_C35"),
-                    value: '```_ban <@mention>, <userID>```'
+                    value: '```<prefix>ban <@mention>, <userID>```'
                 },
                 {
                     name: languages(guild, "H_C36"),
-                    value: '```_kick <@mention>, <userID>```'
+                    value: '```<prefix>kick <@mention>, <userID>```'
                 },
                 {
                     name: languages(guild, "H_C37"),
-                    value: '```_mute <@mention>, <userID>```'
+                    value: '```<prefix>mute <@mention>, <userID>```'
                 },
                 {
                     name: languages(guild, "H_C38"),
-                    value: '```_unmute <@mention>, <userID>```'
+                    value: '```<prefix>unmute <@mention>, <userID>```'
                 },
                 {
                     name: languages(guild, "H_C39"),
-                    value: '```_unban <userID>```'
+                    value: '```<prefix>unban <userID>```'
                 },
                 {
                     name: languages(guild, "H_C40"),
-                    value: '```_slowmode <#channel>```'
+                    value: '```<prefix>slowmode <#channel>```'
                 },
                 {
                     name: languages(guild, "H_C41"),
-                    value: '```_lock <#channelMention> <@roleMention> <reason>```'
+                    value: '```<prefix>lock <#channelMention> <@roleMention> <reason>```'
                 },
                 {
                     name: languages(guild, "H_C42"),
-                    value: '```_unlock <#channelMention> <@roleMention>```'
+                    value: '```<prefix>unlock <#channelMention> <@roleMention>```'
                 },
+                {
+                    name: languages(guild, "H_C49"),
+                    value: `\`\`\`${languages(guild, "H_C50")}\`\`\``
+                }
                 
             )
             .setColor('RANDOM')
@@ -96,43 +100,43 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'H_C5')}`,
-                    value: '```_coin```'
+                    value: '```<prefix>coin```'
                 },
                 {
                     name: `${languages(guild, 'H_C6')}`,
-                    value: '```_dice```'
+                    value: '```<prefix>dice```'
                 },
                 {
                     name: `${languages(guild, 'H_C7')}`,
-                    value: '```_hug <@mention>```'
+                    value: '```<prefix>hug <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C8')}`,
-                    value: '```_kiss <@mention>```'
+                    value: '```<prefix>kiss <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C9')}`,
-                    value: '```_hug <@mention>```'
+                    value: '```<prefix>hug <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C10')}`,
-                    value: '```_randomanime```'
+                    value: '```<prefix>randomanime```'
                 },
                 {
                     name: `${languages(guild, 'H_C11')}`,
-                    value: '```_rps```'
+                    value: '```<prefix>rps```'
                 },
                 {
                     name: `${languages(guild, 'H_C12')}`,
-                    value: '```_slap <@mention>```'
+                    value: '```<prefix>slap <@mention>```'
                 },
                 {
                     name: `${languages(guild, 'H_C13')}`,
-                    value: '```_snakegame```',
+                    value: '```<prefix>snakegame```',
                 },
                 {
                     name: 'Anime',
-                    value: '```_rda```\n```_animebg```'                    
+                    value: '```<prefix>rda```\n```<prefix>animebg```'                    
                 }
 
             )
@@ -142,19 +146,11 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'H_C15')}`,
-                    value: '```_setlanguage <english or portuguese>```'
-                },
-                {
-                    name: `${languages(guild, 'H_C17')}`,
-                    value: '```_setgw (To add) _rgw (To remove)```'
-                },
-                {
-                    name: `${languages(guild, 'H_C18')}`,
-                    value: '```_setleft (To add) _rmvleft (To remove)```'
+                    value: '```<prefix>setlanguage <english or portuguese>```'
                 },
                 {
                     name: languages(guild, "H_C43"),
-                    value: '```_setprefix <Args>```'
+                    value: '```<prefix>setprefix <Args>```'
                 }
             )
             .setColor('RANDOM')
@@ -172,7 +168,7 @@ module.exports = {
             .addFields(
                 {
                     name: 'NSFW Anime:',
-                    value: '```_anisfw```\n```_bgnsfw```'
+                    value: '```<prefix>anisfw```\n```<prefix>bgnsfw```'
                 }
             )
             .setColor('RANDOM')
@@ -182,51 +178,87 @@ module.exports = {
             .addFields(
                 {
                     name: `Change my mind Meme`,
-                    value: "```_changemymind <text>```"
+                    value: "```<prefix>changemymind <text>```"
                 },
                 {
                     name: `Facepalm`,
-                    value: "```_facepalm <@mention>```"
+                    value: "```<prefix>facepalm <@mention>```"
                 },
                 {
                     name: `${languages(guild, "H_C23")}`,
-                    value: "```_monster <@mention>```"
+                    value: "```<prefix>monster <@mention>```"
                 },
                 {
                     name: `${languages(guild, "H_C24")}`,
-                    value: "```_ohno <text>```"
+                    value: "```<prefix>ohno <text>```"
                 },
                 {
                     name: `${languages(guild, "H_C25")}`,
-                    value: "```_ohshit <@mention>```"
+                    value: "```<prefix>ohshit <@mention>```"
                 },
                 {
                     name: `${languages(guild, "H_C26")}`,
-                    value: "```_opinion <@mention> <text>```"
+                    value: "```<prefix>opinion <@mention> <text>```"
                 },
                 {
                     name: `${languages(guild, "H_C27")}`,
-                    value: "```_phub <@mention> <text>```"
+                    value: "```<prefix>phub <@mention> <text>```"
                 },
                 {
                     name: `${languages(guild, "H_C28")}`,
-                    value: "```_trigger <@mention>```"
+                    value: "```<prefix>trigger <@mention>```"
                 },
                 {
                     name: `${languages(guild, "H_C29")}`,
-                    value: "```_ytb <@mention> <text>```"
+                    value: "```<prefix>ytb <@mention> <text>```"
+                },
+                {
+                    name: `Jail`,
+                    value: "```<prefix>jail <@mention>"
                 }
             )
             .setColor("RANDOM")
-        pages = [
-            helpPage,
-            helpEssentials,
-            helpUtil,
-            helpMod,
-            helpFun,
-            helpCanvas,
-            helpNSFW
-        ]
-        pageEmbed(message, pages)
+        const helpSteam = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setTitle(`${languages(guild, "H_C48")}`)
+            .addFields(
+                {
+                    name: languages(guild, "H_C44"),
+                    value: '```<prefix>steam-register <steamID64>```' 
+                },
+                {
+                    name: languages(guild, "H_C45"),
+                    value: `\`\`\`languages(guild, "H_C46")\`\`\``
+                },
+                {
+                    name: 'Dead by Daylight Stats',
+                    value: `\`\`\`${languages(guild, "H_C47")}\`\`\``
+                }
+            )
+            .setColor("RANDOM")
+        if(args[0] === undefined) {
+            pages = [
+                helpPage,helpEssentials,helpUtil,helpSteam,
+                helpMod,helpFun,helpCanvas,helpNSFW
+            ]
+            pageEmbed(message, pages)
+        }else if(args[0] === 'steam') {
+            return message.reply(helpSteam)
+        } else if(args[0] === 'page') {
+            return message.reply(helpPage)
+        } else if(args[0] === 'essentials') {
+            return message.reply(helpEssentials)
+        } else if(args[0] === 'util') {
+            return message.reply(helpUtil)
+        } else if(args[0] === 'mod') {
+            return message.reply(helpMod)
+        } else if(args[0] === 'fun') {
+            return message.reply(helpFun)
+        } else if(args[0] === 'nsfw') {
+            return message.reply(helpNSFW)
+        } else if(args[0] === 'canvas') {
+            return message.reply(helpCanvas)
+        }
+
     }
 }

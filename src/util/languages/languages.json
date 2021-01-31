@@ -330,9 +330,35 @@
             "english": "Change your Prefix:",
             "portugues": "Mude seu Prefixo:"
         },
-
-
-
+        "H_C44": {
+            "english": "Register yourself on my Steam DB! (To see supported games stats)",
+            "portugues": "Se registre em minha DB da Steam! (Para ver stats em jogos suportados)"
+        },
+        "H_C45": {
+            "english": "Registered Dead by Daylight Stats",
+            "portugues": "Stats de Dead by Daylight para Registrados"
+        },
+        "H_C46": {
+            "english": "For killers: <prefix>dbdl-k\nFor survivors: <prefix>dbdl-s",
+            "portugues": "Para killers: <prefix>dbdl-k\nPara sobreviventes: <prefix>dbdl-s"
+        },
+        "H_C47":{
+            "english": "For killers: <prefix>dbdk <steamID64 or steamURL>\nFor survivors: <prefix>dbd <steamID64 or steamURL>",
+            "portugues": "Para killers: <prefix>dbd <steamID64 ou steamURL>\nPara sobreviventes: <prefix>dbd <steamID64 ou steamURL>"
+        },
+        "H_C48": {
+            "english": "Steam API Integration!",
+            "portugues": "Integração com a API da Steam!"
+        },
+        "H_C49": {
+            "english": "Add a custom emoji!",
+            "portugues": "Adicione um emoji customizado!"
+        },
+        "H_C50":{
+            "english": "<prefix>addemoji <image attachment> or <discord image url>",
+            "portugues": "<prefix>addemoji <imagem anexada> ou <url do discord para imagens>"
+        },
+        
         
         "I_C": {
             "english": "Hello! Thank you for using me!",
@@ -1931,8 +1957,434 @@
         "eEMJ5": {
             "english": "This is the link you provided.",
             "portugues": "Esse é o link que você providenciou."
-        }
+        },
+
+        "nogame": {
+            "english": "Sorry, seems like you haven't played this game in the past 2 weeks.",
+            "portugues": "Desculpe, parece que você não têm jogado esse jogo pelas últimas duas semanas."
+        },
+        "nogame2": {
+            "english": "You need to play it in the past 2 weeks for me to be able to give your information about this game.",
+            "portugues":" Você precisa ter jogado este jogo nas últimas duas semanas para eu conseguir te dar suas informaçõoes no jogo."
+        },
+        "nogame3": {
+            "english": "This is due the SteamAPI not being able to get information about this game if you didn't play it in the past 2 weeks",
+            "portugues": "Isto é por causa da API da Steam não conseguir informações sobre os jogos que você não jogou a mais de duas semanas."
+        },
+
+
+        "DBD_S": {
+            "english": "🎮 Survivor Statistics from:",
+            "portugues": "🎮 Estátisticas de Sobrevivente do Jogador:"
+        },
+        "DBD_P": {
+            "english": "Survivor Rank (In points):",
+            "portugues": "Rank de Sobrevivente (Em pontos)"
+        },
+        "DBD_R": {
+            "english": "Escaped while crawling:",
+            "portugues": "Escapou enquanto rastejava:"
+        },
+        "DBD_H": {
+            "english": "Escaped after unhooking yourself:",
+            "portugues": "Escapou após se tirar do gancho:"
+        },
+        "DBD_HT":{
+            "english": "Escaped through the hatch:",
+            "portugues": "Escapou através da escotilha:"
+        },
+        "DBD_ALL": {
+            "english": "Everyone escaped through the hatch:",
+            "portugues": "Todos escaparam através da escotilha:"
+        },
+        "DBD_INJ": {
+            "english": "Escaped after getting downed once:",
+            "portugues": "Escapou após ser derrubado uma vez:"
+        },
+        "DBD_EI": {
+            "english": "Escaped from Crotus Prenn Asylum with no bloodloss:",
+            "portugues": "Escapou de Crotus Prenn Asylum sem perder sangue:"
+        },
+        "DBD_HC": {
+            "english": "Escaped through the hatch while crawling:",
+            "portugues": "Escapou através da escotilha enquanto estava caído:"
+        },
+        "DBD_SH": {
+            "english": "Survivors healed:",
+            "portugues": "Sobreviventes curados:"
+        },
+        "DBD_HB": {
+            "english": "Damaged generators repaired (once per generator):",
+            "portugues": "Geradores danificados reparados (uma vez por gerador):"
+        },
+        "DBD_GH": {
+            "english": "Generators repaired:",
+            "portugues": "Geradores reparados:"
+        },
+        "DBD_HS": {
+            "english": "Healed survivors while injured:",
+            "portugues": "Curou sobreviventes enquanto estava ferido:"
+        },
+        "DBD_PT": {
+            "english": "Protected survivors after the unhook:",
+            "portugues": "Protegeu sobreviventes após o tirar do gancho:"
+        },
+        "DBD_PHT": {
+            "english": "Protection hits while the killer was carrying a survivor:",
+            "portugues": "Hits de proteção enquanto o killer estava carregando um sobrevivente:"
+        },
+        "DBD_UNK": {
+            "english": "Unhooked yourself:",
+            "portugues": "Se tirou do gancho sozinho:"
+        },
+        "DBD_SKC": {
+            "english": "Successful skill checks:",
+            "portugues": "Skill checks feitas com sucesso:"
+        },
+
+        "DBD_TK": {
+            "english": "Totems cleansed:",
+            "portugues": "Totens purificados:"
+        },
+
+        "DBD_EXT": {
+            "english": "Exit gates opened:",
+            "portugues": "Portões de saída abertos:"
+        },
+        "DBD_HBR": {
+            "english": "Hooks broken:",
+            "portugues": "Ganchos quebrados:"
+        },
+
+        "DBD_DDS": {
+            "english": "Repaired saloon generator and escaped from Dead Dawg Saloon:",
+            "portugues": "Reparou o gerador do salão e escapou de Dead Dawg Saloon:"
+        },
+        "DBD_DW": {
+            "english": "Repaired 2nd floor generator and escaped from Disturbed Ward:",
+            "portugues": "Reparou o gerador do segundo andar e escapou de Disturbed Ward:"
+        },
+        "DBD_MY": {
+            "english": "Repaired Myers' house generator and escaped from Lampkin Lane:",
+            "portugues": "Reparou o gerador da casa de Myer e escapou de Lampkin Lane:"
+        },
+        "DBD_PR": {
+            "english": "Repaired steamboat generator and escaped from The Pale Rose:",
+            "portugues": "Reparou o gerador do barco a vapor e escapou de The Pale Rose:"
+        },
+        "DBD_CHP": {
+            "english": "Repaired chapel generator and escaped from Father Campbell's Chapel:",
+            "portugues": "Reparou o gerador da capela e escapou de Father Campbell's Chapel:"
+        },
+        "DBD_FR": {
+            "english": "Repaired residence generator and escaped from Family Residence:",
+            "portugues": "Reparou o gerador da residência e escapou de Family Residence:"
+        },
+        "DBD_OR": {
+            "english": "Repaired chalet generator and escaped from Mount Ormond Resort:",
+            "portugues": "Reparou o gerador da chalé e escapou de Mount Ormond Resort:"
+        },
+        "DBD_SR": {
+            "english": "Repaired upper shrine generator and escaped from Sanctum of Wrath:",
+            "portugues": "Reparou o gerador do santuário superior e escapou de Sanctum of Wrath:"
+        },
+        "DBD_MS": {
+            "english": "Repaired dwelling generator and escaped from Mother's Dwelling:",
+            "portugues": "Reparou o gerador da residência e escapou de Mother's Dwelling:"
+        },
+        "DBD_ToP": {
+            "english": "Repaired temple basement generator and escaped from The Temple of Purgation:",
+            "portugues": "Reparou o gerador do porão do templo e escapou de The Temple of Purgation:"
+        },
+        "DBD_UnD": {
+            "english": "Repaired isolation room generator and escaped from The Underground Complex:",
+            "portugues": "Reparou o gerador da sala de isolação e escapou de The Underground Complex:"
+        },
         
+        "DBD_KSS": {
+            "english": "🎮 Killer Statics from the player:",
+            "portugues": "🎮 Estátisticas de Killer do Jogador:"
+        },
+        "DBD_KLL": {
+            "english": "Survivors killed (mori, etc.):",
+            "portugues": "Sobreviventes mortos (mori, etc):"
+        },
+        "DBD_SCF": {
+            "english": "Survivors Sacrificed:",
+            "portugues": "Sobreviventes Sacrificados:"
+        },
+        "DBD_OBS": {
+            "english": "Obsessions sacrificed:",
+            "portugues": "Obssesões sacrificadas:"
+        },
+        "DBD_AGR": {
+            "english": "Survivors killed or sacrificed after all generators are repaired:",
+            "portugues": "Sobreviventes mortos ou sacrificados após todos os geradores terem sido reparados:"
+        },
+        "DBD_3S": {
+            "english": "Had at least 3 survivors hooked in the basement at same time:",
+            "portugues": "Teve pelo menos 3 sobreviventes pendurados no porão ao mesmo tempo:"
+        },
+        "DBD_AIJ": {
+            "english": "Hooked a survivor while everyone is injured:",
+            "portugues": "Pendurou um sobrevivente enquanto todo o resto estava ferido:"
+        },
+        "DBD_GTK": {
+            "english": "Survivors captured while cleansing a totem:",
+            "portugues": "Sobreviventes capturados enquanto purificavam um totem"
+        },
+        "DBD_GRP": {
+            "english": "Survivors captured while repairing a generator:",
+            "portugues": "Sobreviventes capturados enquanto reparavam um gerador:"
+        },
+        "DBD_DMG": {
+            "english": "Generators damaged with a survivor hooked:",
+            "portugues": "Geradores danificados enquanto um sobrevivente estava no gancho:"
+        },
+        "DBD_SCG": {
+            "english": "Sacrificed all survivors before last generator is repaired:",
+            "portugues": "Sacrificou todos os sobreviventes antes que o último gerador seja reparado:"
+        },
+        "DBD_DOW": {
+            "english": "Downed survivors while in max sickness (Plague)",
+            "portugues": "Derrubou sobreviventes enquanto estavam com a doença no máximo (praga)"
+        },
+        "DBD_HCS": {
+            "english": "Hatches closed:",
+            "portugues": "Alçapões fechados:"
+        },
+        "DBD_HSC": {
+            "english": "Hit a survivor while carrying another:",
+            "portugues": "Acertou um sobrevivente enquanto carregava outro:"
+        },
+        "DBD_KRN": {
+            "english": "Killer Rank:",
+            "portugues": "Rank de Killer:"
+        },
+        "DBD_BLD": {
+            "english": "BloodPoints earned:",
+            "portugues": "BloodPoints ganhos:"
+        },
+        "DBD_KPF": {
+            "english": "Perfect Games as Killer:",
+            "portugues": "Jogos perfeitos como Killer:"
+        },
+        "DBD_SPF": {
+            "english": "Perfect Games as Survivor:",
+            "portugues": "Jogos perfeitos como Sobrevivente:"
+        },
+        "DBD_BRT": {
+            "english": "Bear trap catches (Trapper):",
+            "portugues": "Capturados através da armadilha de urso:"
+        },
+        "DBD_CHS": {
+            "english": "Chainsaw hits (Hillbilly)",
+            "portugues": "Acertos com a motoserra (Hillbilly)"
+        },
+        "DBD_CLK": {
+            "english": "Uncloack attacks (Wraith)",
+            "portugues": "Ataques desvendados (Wraith)"
+        },
+        "DBD_BLK": {
+            "english": "Blink attacks (Nurse)",
+            "portugues": "Ataques de \"piscadas\" (Nurse)"
+        },
+        "DBD_TPU": {
+            "english": "Evil Within tiers ups (Myers)",
+            "portugues": "Evil Within sobe de nível (Myers)"
+        },
+        "DBD_HAG": {
+            "english": "Phantasms triggered (Hag)",
+            "portugues": "Fantasmas acordados (Hag)"
+        },
+        "DBD_DOC": {
+            "english": "Shocks (Doctor)",
+            "portugues": "Choques (Doutor)"
+        },
+        "DBD_TRI": {
+            "english": "Trials with all survivors in madness tier 3 (Doctor)",
+            "portugues": "Julgamentos com todos os sobreviventes enquanto em \"loucura\" tier 3 (Doutor)"
+        },
+        "DBD_HTC": {
+            "english": "Hatchets thrown (Huntress)",
+            "portugues": "Machados jogados (Caçadora)"
+        },
+        "DBD_LTF": {
+            "english": "Downed survivors with chainsaw (Leatherface)",
+            "portugues": "Derrubou sobreviventes com a motoserra (Leatherface)"
+        },
+        "DBD_KRU": {
+            "english": "Survivors to dream state (Krueger)",
+            "portugues": "Sobreviventes em estado sonolento (Krueger)"
+        },
+        "DBD_BSH": {
+            "english": "Survivors hooked in the basement (once per survivor)",
+            "portugues": "Sobreviventes pendurados no porão (uma vez por sobrevivente)"
+        },
+        "DBD_PIG": {
+            "english": "Reverse bear traps placed (Pig)",
+            "portugues": "Armadilhas de urso reversas colocadas (Porco)"
+        },
+        "DBD_CLO": {
+            "english": "Downed survivors while intoxicated (Clown)",
+            "portugues": "Derrubou sobreviventes enquanto intoxicado (Palhaço)"
+        },
+        "DBD_SPI": {
+            "english": "Downed survivors after haunting (Spirit)",
+            "portugues": "Derrubou sobreviventes após assombrar (Espíritos)"
+        },
+        "DBD_LEG": {
+            "english": "Downed survivors while in deep wound (Legion)",
+            "portugues": "Derrubou sobreviventes com feridas profundas (Legião)"
+        },
+        "DBD_GHS": {
+            "english": "Downed marked survivors (Ghostface)",
+            "portugues": "Derrubou sobreviventes marcados (Ghostface)"
+        },
+        "DBD_DEM": {
+            "english": "Downed survivors using shred (Demogorgon)",
+            "portugues": "Derrubou sobreviventes os retalhando (Demogorgon)"
+        },
+        "DBD_ONI": {
+            "english": "Downed survivors while using blood fury (Oni)",
+            "portugues": "Derrubou sobreviventes enquanto usava Fúria de Sangue (Oni)"
+        },
+        "DBD_DSL": {
+            "english": "Downed survivors while speared (Deathslinger)",
+            "portugues": "Derrubou sobreviventes enquanto perfurados (Deathslinger)"
+        },
+        "games": {
+            "english": "games",
+            "portugues": "jogos"
+        },
+        "times": {
+            "english": "Times",
+            "portugues": "vezes"
+        },
+        "points": {
+            "english": "Pips",
+            "portugues": "Pontos"
+        },
+        "gametime": {
+            "english": "Hours of Game Time",
+            "portugues": "Horas de Tempo de Jogo"
+        },
+        "totens": {
+            "english": "Totems",
+            "portugues": "Totens"
+        },
+        "err": {
+            "english": "❌ Oops, something went wrong.",
+            "portugues": "❌ Oops, algo deu errado."
+        },
+        "err2": {
+            "english": "See the error below and contact the",
+            "portugues": "Veja o erro abaixo e contate o"
+        },
+        "err_dev": {
+            "english": "Dev using the command \"<prefix>help-dev\"\n(This command will give you a invite to the support server.)",
+            "portugues": "Desenvolvedor usando o comando \"<prefixo>help-dev\"\n(Esse comando te mandará um convite ao servidor de suporte.)"
+        },
+        "err3": {
+            "english": "Check if you are in our DB, normally this error appears because you're not in our DB. Register first using the register command.",
+            "portugues": "Cheque se você está em nossa DB, normalmente esse erro ocorre pois você não está na DB. Use o comando para se registrar primeiro."
+        },
+        "mortos": {
+            "english": "survivors killed",
+            "portugues": "sobreviventes mortos"
+        },
+        "sacrificed": {
+            "english": "survivors sacrificed",
+            "portugues": "sobreviventes sacrificados"
+        },
+        "obssesão": {
+            "english": "obssesions sacrificed",
+            "portugues": "obssesões sacrificadas"
+        },
+        "geradores": {
+            "english": "generators",
+            "portugues": "geradores"
+        },
+        "hits": {
+            "english": "hits",
+            "portugues": "acertos"
+        },
+        "atks": {
+            "english": "attacks",
+            "portugues": "ataques"
+        },
+        "ftms": {
+            "english": "phantasms",
+            "portugues": "fantasmas"
+        },
+        "shock": {
+            "english": "shocks",
+            "portugues": "choques"
+        },
+        "trial": {
+            "english": "trials",
+            "portugues": "julgamentos"
+        },
+        "htc": {
+            "english": "hatchets thrown",
+            "portugues": "machados jogados"
+        },
+        "sur": {
+            "english": "survivors",
+            "portugues": "sobreviventes"
+        },
+        "traps": {
+            "english": "traps placed",
+            "portugues": "armadilhas colocadas"
+        },
+        "prefix": {
+            "english": "<prefix>",
+            "portugues": "<prefixo>"
+        },
+        "steamid": {
+            "english": "Your SteamID64",
+            "portugues": "Seu SteamID64"
+        },
+        "steamr": {
+            "english": "Is the Steam User:",
+            "portugues": "Você é o:"
+        },
+        "steamr2": {
+            "english": "you?",
+            "portugues": "na Steam?"
+        },
+        "steamr3":{
+            "english": "If you are",
+            "portugues": "Se você for"
+        },
+        "steamr4":{
+            "english": "on steam, answer me with \"yes\" or \"no\"",
+            "portugues": "na steam, me responda com \"sim\" ou \"não\""
+        },
+        "steamr-y": {
+            "english": "You are now registered in our Steam DB.",
+            "portugues": "Você agora está registrado em nossa DB da Steam."
+        },
+        "steamr-y2": {
+            "english": "NOTE:",
+            "portugues": "NOTA:"
+        },
+        "steamr-y3": {
+            "english": "If you experience errors, please, remember that this feature is still in beta.\nIf you experience some errors, just use this command again.",
+            "portugues": "Se você experenciar erros, por favor, lembre-se que essa feature ainda está em beta.\nSe você experenciar alguns erros, apenas use o comando novamente."
+        },
+        "steamr-n": {
+            "english": "Action Aborted.",
+            "portugues": "Ação abortada."
+        },
+        "yes": {
+            "english": "yes",
+            "portugues": "sim"
+        },
+        "no": {
+            "english": "no",
+            "portugues": "não"
+        }
 
     }
 }

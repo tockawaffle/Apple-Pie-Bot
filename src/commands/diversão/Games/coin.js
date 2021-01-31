@@ -16,8 +16,8 @@ module.exports = {
                 errors: ['time'],
             }).then((collected) => {
                 let response = collected.first().content.toLowerCase()
-            if(response ==  `${languages(guild, 'COIN_C')}` && rdmChoice == `${languages(guild, 'COIN_C2')}`) {
-                    message.channel.send(`${languages(guild, 'COIN2')}\n${languages(guild, 'COIN3')} ${rdmChoice}`)
+                if(response ==  `${languages(guild, 'COIN_C')}` && rdmChoice == `${languages(guild, 'COIN_C2')}`) {
+                        message.channel.send(`${languages(guild, 'COIN2')}\n${languages(guild, 'COIN3')} ${rdmChoice}`)
                 } else if( response == `${languages(guild, 'COIN_C2')}` && rdmChoice == `${languages(guild, 'COIN_C')}`) {
                     message.channel.send(`${languages(guild, 'COIN2')}\n${languages(guild, 'COIN3')} ${rdmChoice}`)
                 } else if ( response === rdmChoice ) {

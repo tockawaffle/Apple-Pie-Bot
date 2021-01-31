@@ -65,7 +65,7 @@ module.exports = {
                 presence = '```Offline```'
             }
             const joined = moment(member.joinedAt).locale('pt-br').format('L')
-            const created = moment(member.createdAt).locale('pt-br').format('L')
+            const created = moment(member.user.createdAt).locale('pt-br').format('L')
             const memberEmbed = new MessageEmbed()
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
                 .setDescription(`🔍${author.username} ${languages(guild, "uf2")} ${member.user.username}!`)
