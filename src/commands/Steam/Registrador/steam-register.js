@@ -1,5 +1,4 @@
 const dbdSchema = require('../../../configs/db/schemas/dbd-id-schema')
-const ssteam = require('steamapi'); const s = new ssteam(process.env.STEAM_TOKEN)
 const {MessageEmbed} = require('discord.js')
 const lang = require('../../../util/languages/languages')
 
@@ -7,6 +6,8 @@ module.exports = {
     aliases:['steamr', 'registrar-steam', 'r-steam', 'rsteam'],
     description: '',
     run: async(client, message, args) => {
+
+        const s = client.steam
         const {guild} = message
         let userId = message.author.id;
         let steamID = args[0];

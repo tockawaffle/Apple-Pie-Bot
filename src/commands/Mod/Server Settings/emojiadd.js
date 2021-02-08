@@ -72,7 +72,7 @@ module.exports = {
                     {name: languages(guild, "EMJ6"), value: `\`\`\`${languages(guild, "EMJ7")}\n\n${languages(guild, "EMJ8")}\`\`\``}
                 )
             return message.reply(emojiID).then(msg => msg.delete({timeout: ms('15s')}))
-        } else if(message.content.match('(https?:\/\/)?(cdn\.)?(discordapp\.com\/emojis)\/[a-zA-Z0-9_.]{18}(.gif|.png|.jpg|.jpeg).v=1') || '(https?:\/\/)?(cdn\.)?(discordapp\.com\/attachments)\/[0-9]{18}\/[0-9]{18}\/[a-zA-Z0-9-_]+(.png||.gif||.jpeg||.jpg)') {
+        } else if(message.content.match('(https?:\/\/)?(cdn\.)?(discordapp\.com\/emojis)\/[a-zA-Z0-9_.]{18}(.gif|.png|.jpg|.jpeg).v=1') || '(https?:\/\/)?(cdn\.|media\.)?(discordapp\.(com|net)\/attachments)\/[0-9]{18}\/[0-9]{18}\/[a-zA-Z0-9-_]+(.png|.gif|.jpeg|.jpg)') {
             let attachment = args[0]; let name = args[1]
             if(!name) {
                 message.delete()

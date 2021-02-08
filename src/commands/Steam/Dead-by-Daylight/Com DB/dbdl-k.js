@@ -1,4 +1,3 @@
-const ssteam = require('steamapi'); const s = new ssteam(process.env.STEAM_TOKEN)
 const {MessageEmbed} = require('discord.js'); const page = require('discord.js-pagination')
 const lang = require('../../../../util/languages/languages')
 const dbdSchema = require('../../../../configs/db/schemas/dbd-id-schema')
@@ -7,6 +6,7 @@ module.exports = {
     aliases: ['dbd-login', 'dbdlogin', 'ldbd'],
     description: '',
     run: async(client, message, args) => {
+        const s = client.steam
         const {guild} = message
         await dbdSchema.findOne({userID: message.author.id}).then(async(result) => {
             let id = result._id

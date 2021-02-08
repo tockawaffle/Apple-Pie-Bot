@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const discord = require('discord.js');const partial = ["USER", "REACTION", "GUILD_MEMBER", "CHANNEL"]; const client = new discord.Client({disableMentions: "everyone", partials: [partial]});
-const { Player } = require('discord-player'); const player = new Player(client);
+const { Player } = require('discord-player'); const player = new Player(client); const teemo = require('teemojs'); const api = teemo(process.env.RGKEY)
 const DBL = require('dblapi.js');
  const dbl = new DBL(`${process.env.TOPGG_TOKEN}`, client);
 
