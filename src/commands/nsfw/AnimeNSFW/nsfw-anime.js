@@ -183,7 +183,7 @@ module.exports = {
                 .setDescription(`${languages(guild, "mst6")}`)
                 .addFields(
                     {
-                        name: `${languages(guild, mst6)}`,
+                        name: `${languages(guild, "mst6")}`,
                         value: `\`\`\`${err}\`\`\``
                     }
                 )
