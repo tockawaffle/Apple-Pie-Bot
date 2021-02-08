@@ -1,12 +1,11 @@
 const { MessageEmbed } = require('discord.js'); const page = require('discord.js-pagination')
-const ssteam = require('steamapi'); const s = new ssteam(process.env.STEAM_TOKEN)
 const lang = require('../../../../util/languages/languages')
 
 module.exports = {
     aliases:['dbdk', 'killer'],
     description: '',
     run:async(client, message, args) => {
-
+        const s = client.steam
         const {guild, author} = message
         const verify = new RegExp('(?:https?:\/\/)?steamcommunity\.com\/(?:profiles|id)\/[a-zA-Z0-9]+')
         let id = message.content.match(verify)

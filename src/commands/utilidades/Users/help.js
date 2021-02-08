@@ -227,8 +227,12 @@ module.exports = {
                     value: '```<prefix>steam-register <steamID64>```' 
                 },
                 {
+                    name: 'Steam User Info:',
+                    value: '```<prefix>steamuser <steamID64>```'
+                },
+                {
                     name: languages(guild, "H_C45"),
-                    value: `\`\`\`languages(guild, "H_C46")\`\`\``
+                    value: `\`\`\`${languages(guild, "H_C46")}\`\`\``
                 },
                 {
                     name: 'Dead by Daylight Stats',
@@ -265,10 +269,7 @@ module.exports = {
                 .setDescription(`${languages(guild, "dev")}`)
                 .setAuthor(apple.username, apple.avatarURL())
                 .addFields(
-                    {
-                        name: `${languages(guild, "dev2")}`,
-                        value: `[${languages(guild, "BF_C5")}](https://discord.gg/eyGX6pWa5V)`
-                    }
+                    {name: `${languages(guild, "dev2")}`, value: `[${languages(guild, "BF_C5")}](https://discord.gg/eyGX6pWa5V)`}
                 )
                 .setFooter(`${languages(guild, "I3_C")}`)
                 .setColor('RANDOM')

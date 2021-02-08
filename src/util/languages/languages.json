@@ -2392,6 +2392,102 @@
         "dev2": {
             "english": "Join the server below, it's my dev's server!",
             "portugues": "Entre no server abaixo, é o servidor de meu dev!"
+        },
+        "stu_private": {
+            "english": "This data is not public.",
+            "portugues": "Essa informação não é pública"
+        },
+        "stu_banned": {
+            "english": "Banned",
+            "portugues": "Banido"
+        },
+        "stu_notbanned": {
+            "english": "Not Banned.",
+            "portugues": "Não Banido."
+        },
+        "stu_games": {
+            "english": "Games",
+            "portugues": "Jogos"
+        },
+        "stu_invalidDate": {
+            "english": "Could not retrieve this information.",
+            "portugues": "Não consegui recuperar essa informação."
+        },
+        "stu_snooze": {
+            "english": "Snoozing",
+            "portugues": "Tirando um cochilo"
+        },
+        "stu_tradePlay": {
+            "english": "Looking for someone to trade/play",
+            "portugues": "Procurando alguém para jogar/trade"
+        },
+        "stu_privC": {
+            "english": "Private Profile (Private for Public, Friends only, etc)",
+            "portugues": "Perfil privado (Privado para o público, apenas amigos, etc)"
+        },
+        "stu_pricO": {
+            "english": "Public Profile",
+            "portugues": "Perfil Público"
+        },
+        "stu_64": {
+            "english": "User Steam64ID:",
+            "portugues": "Steam64ID do Usuário:"
+        },
+        "stu_created": {
+            "english": "Account created at:",
+            "portugues": "Conta criada em:"
+        },
+        "stu_logoff": {
+            "english": "Last logoff:",
+            "portugues": "Última vez que saiu:"
+        },
+        "stu_presence": {
+            "english": "User Presence:",
+            "portugues": "Presença do Usuário:"
+        },
+        "stu_friends": {
+            "english": "Total friends:",
+            "portugues": "Total de amigos:"
+        },
+        "stu_lvl": {
+            "english": "User level:",
+            "portugues": "Nível do Usuário:"
+        },
+        "stu_priv": {
+            "english": "User Account Privacy:",
+            "portugues": "Privacidade da Conta do Usuário:"
+        },
+        "stu_gamesowned": {
+            "english": "Total Games Owned:",
+            "portugues": "Total de jogos possuídos:"
+        },
+        "stu_vac": {
+            "english": "Community Banned?",
+            "portugues": "Banido da Comunidade:"
+        },
+        "stu_econBan": {
+            "english": "Community Banned?",
+            "portugues": "Banido da Comunidade?"
+        },
+        "stu_recent": {
+            "english": "Recent Games (Past 2 Weeks)",
+            "portugues": "Últimos Jogos (Últimas 2 semanas)"
+        },
+        "stu_playtime": {
+            "english": "Playtime:",
+            "portugues": "Horas de Jogo:"
+        },
+        "stu_user": {
+            "english": "Looking into Steam User:",
+            "portugues": "Informações sobre o Usuário da Steam:"
+        },
+        "stu_userban": {
+            "english": "Looking into the bans of",
+            "portugues": "Informações sobre bans de"
+        },
+        "stu_dlb": {
+            "english": "days since last ban",
+            "portugues": "dias desde o último banimento"
         }
 
     }
