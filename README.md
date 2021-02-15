@@ -36,11 +36,7 @@ PS: If you're going to download it and use it as a base for your bot (or somethi
 
 # **Informações Úteis / Useful Info:**
 
-Como usar os comandos de boas-vindas: [Clique aqui](https://github.com/The-Crow-pleb/Junk/blob/master/Atalhos/Apple%20Pie/WelcomeTypes/README.md)
-
-How to user the welcome commands: [Click here](https://github.com/The-Crow-pleb/Junk/blob/master/Atalhos/Apple%20Pie/WelcomeTypes/README.md)
-
-[Servidor de suporte / Support Server](https://discord.gg/sGgzNQ6)
+[Servidor de suporte / Support Server](https://discord.com/invite/eyGX6pWa5V)
 
 Versão do bot / Bot Version: 6.0
 
@@ -62,11 +58,11 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 
 - [X] Command Handler + Event Handler
 
-- [X] Base de dados / Database Code
+- [X] Base de dados / Database
 
 - [X] Função Multilingual / Multilanguage functionality 
 
-- [ ] Mudança de Prefixo / Change Prefix Command
+- [X] Mudança de Prefixo / Change Prefix Command
 
 - [X] Comandos de Música / Music Commands
 
