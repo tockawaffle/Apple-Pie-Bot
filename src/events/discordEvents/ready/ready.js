@@ -20,7 +20,7 @@ module.exports = async(client) => {
     setInterval(function() {
         if(actNum === 0) {const random2 = status[Math.floor(Math.random() * status.length)]; client.user.setActivity(random2, {type: 'PLAYING'}); actNum = 1}
         else if(actNum === 1) {const random3 = status[Math.floor(Math.random() * status.length)]; client.user.setActivity(random3, {type: 'PLAYING'}); actNum = 0}
-    }, ms('1m'))
+    }, ms('5m'))
 
     client.user.setAvatar('src/configs/imgs/perfil/i1.jpg').catch(err => console.log(`${err}`)); let av = 0
     setInterval(function() {
