@@ -2488,6 +2488,52 @@
         "stu_dlb": {
             "english": "days since last ban",
             "portugues": "dias desde o último banimento"
+        },
+
+
+        "crypt_price": {
+            "english": "Current Price:",
+            "portugues": "Preço Atual:"
+        },
+        "crypt_h24": {
+            "english": "Highest Price in the last 24hrs:",
+            "portugues": "Maior Preço nas últimas 24hrs:"
+        },
+        "crypt_l24": {
+            "english": "Lowest Price in the last 24hrs:",
+            "portugues": "Menor Preço nas últimas 24hrs:"
+        },
+        "crypt_c24": {
+            "english": "Price Change in the last 24hrs:",
+            "portugues": "Mudança de Preço nas últimas 24hrs:"
+        },
+        "crypt_p24": {
+            "english": "Price Change in % in the last 24hrs:",
+            "portugues": "Mudança do Preço em % nas últimas 24hrs:"
+        },
+        "crypt_API": {
+            "english": "Last time API Updated (CoinGecko):",
+            "portugues": "Última vez em que a API atualizou (CoinGecko):"
+        },
+        "crypt_err": {
+            "english": "Oops, something went wrong.",
+            "portugues": "Oops, algo deu errado."
+        },
+        "crypt_err2": {
+            "english" :"Check the field below for the error:",
+            "portugues": "Cheque o campo abaixo para ver o erro:"
+        },
+        "crypt_curr": {
+            "english": "❌ Failed: Please, select a Currency to use.\nPlease, remember to use market data currencies, such as: 'usd', 'jpy' and etc.",
+            "portugues": "❌ Falha: Por favor, selecione uma Moeda para utilizar\nPor favor, lembre-se de utilizar Moedas da Market Data, como por exemplo: 'usd', 'jpy' e etc." 
+        },
+        "crypt_help": {
+            "english": "Check the help page of cryptocurrencies!:",
+            "portugues": "Cheque a página de ajuda para cryptocurrencies!:"
+        },
+        "crypt_help2": {
+            "english": "Cryptocurrencies",
+            "portugues": "Moedas Virtuais"
         }
 
     }

@@ -14,7 +14,7 @@ module.exports = {
                 .addFields(
                     {
                         name: `${languages(guild, "W_A2")}`,
-                        value: '```_weather <city/state>```'
+                        value: '```<prefix>weather <city/state>```'
                     }
                 )
             message.reply(embed)

@@ -25,7 +25,7 @@ module.exports = {
             let comBan; let vacBan; let econBan; let gameBans;
             if(userBans.communityBanned === false) comBan = lang(guild, "stu_notbanned")
             else comBan = lang(guild, "stu_banned")
-            if(userBans.vacBanned === false) bans = lang(guild, "stu_notbanned")
+            if(userBans.vacBanned === 0) vacBan = lang(guild, "stu_notbanned")
             else vacBan = `${lang(guild, "stu_banned")} ${userBans.vacBans} ${lang(guild, "times")}\n${userBans.daysSinceLastBan} ${lang(guild, "stu_dlb")}`
             if(userBans.economyBan === 'none') econBan = lang(guild, "stu_notbanned")
             else econBan = lang(guild, "stu_banned")
@@ -113,7 +113,7 @@ module.exports = {
             let comBan; let vacBan; let econBan; let gameBans;
             if(userBans.communityBanned === false) comBan = lang(guild, "stu_notbanned")
             else comBan = lang(guild, "stu_banned")
-            if(userBans.vacBanned === false) bans = lang(guild, "stu_notbanned")
+            if(userBans.vacBanned === 0) vacBan = lang(guild, "stu_notbanned")
             else vacBan = `${lang(guild, "stu_banned")} ${userBans.vacBans} ${lang(guild, "times")}\n${userBans.daysSinceLastBan} ${lang(guild, "stu_dlb")}`
             if(userBans.economyBan === 'none') econBan = lang(guild, "stu_notbanned")
             else econBan = lang(guild, "stu_banned")
@@ -201,7 +201,7 @@ module.exports = {
             let comBan; let vacBan; let econBan; let gameBans;
             if(userBans.communityBanned === false) comBan = lang(guild, "stu_notbanned")
             else comBan = lang(guild, "stu_banned")
-            if(userBans.vacBanned === false) bans = lang(guild, "stu_notbanned")
+            if(userBans.vacBanned === 0) vacBan = lang(guild, "stu_notbanned")
             else vacBan = `${lang(guild, "stu_banned")} ${userBans.vacBans} ${lang(guild, "times")}\n${userBans.daysSinceLastBan} ${lang(guild, "stu_dlb")}`
             if(userBans.economyBan === 'none') econBan = lang(guild, "stu_notbanned")
             else econBan = lang(guild, "stu_banned")

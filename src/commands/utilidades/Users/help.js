@@ -33,10 +33,6 @@ module.exports = {
                     value: '```<prefix>userinfo <@mention>, <userID>```'
                 },
                 {
-                    name: `${languages(guild, 'H_C3')}`,
-                    value: '```<prefix>github```'
-                },
-                {
                     name: languages(guild, "H_C32"),
                     value: '```<prefix>weather```'
                 },
@@ -240,9 +236,16 @@ module.exports = {
                 }
             )
             .setColor("RANDOM")
+        const helpCrypto = new MessageEmbed()
+        .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+        .setColor("RANDOM")
+        .setTitle(`<:bitcoin:811435136678756402> ${languages(guild, 'crypt_help2')}`)
+        .addFields(
+            {name: languages(guild, 'crypt_help'), value: '```<prefix>crypto-help```'}
+        )
         if(args[0] === undefined) {
             pages = [
-                helpPage,helpEssentials,helpUtil,helpSteam,
+                helpPage,helpEssentials,helpUtil,helpCrypto,helpSteam,
                 helpMod,helpFun,helpCanvas,helpNSFW
             ]
             pageEmbed(message, pages)

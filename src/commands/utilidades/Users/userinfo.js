@@ -27,27 +27,11 @@ module.exports = {
                 .setThumbnail(gUser.avatarURL({dynamic: true}))
                 .setColor("RANDOM")
                 .addFields(
-                    {
-                        name: `${languages(guild, "uf3")}`,
-                        value: `\`\`\`${gUser.username}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf4")}`,
-                        value: `\`\`\`${gUser.id}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf5")}`,
-                        value: `${presence}`
-                    },
-                    {
-                        name: `${languages(guild, "uf6")}`,
-                        value: `\`\`\`${created}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf7")}`,
-                        value: `\`\`\`${gUser.presence.activities}.\`\`\``
-                    },
-
+                    {name: `${languages(guild, "uf3")}`, value: `\`\`\`${gUser.username}\`\`\``},
+                    {name: `${languages(guild, "uf4")}`,value: `\`\`\`${gUser.id}\`\`\``},
+                    {name: `${languages(guild, "uf5")}`,value: `${presence}`},
+                    {name: `${languages(guild, "uf6")}`,value: `\`\`\`${created}\`\`\``},
+                    {name: `${languages(guild, "uf7")}`, value: `\`\`\`${gUser.presence.activities}.\`\`\``,}
                 )
             message.reply(memberEmbed)
             return
@@ -72,30 +56,12 @@ module.exports = {
                 .setThumbnail(member.user.avatarURL({dynamic: true}))
                 .setColor("RANDOM")
                 .addFields(
-                    {
-                        name: `${languages(guild, "uf3")}`,
-                        value: `\`\`\`${member.user.username}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf4")}`,
-                        value: `\`\`\`${member.user.id}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf5")}`,
-                        value: `${presence}`
-                    },
-                    {
-                        name: `${languages(guild, "uf7")}`,
-                        value: `\`\`\`${richPresence}.\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf6")}`,
-                        value: `\`\`\`${created}\`\`\``
-                    },
-                    {
-                        name: `${languages(guild, "uf8")}`,
-                        value: `\`\`\`${joined}\`\`\``
-                    },
+                    {name: `${languages(guild, "uf3")}`,value: `\`\`\`${member.user.username}\`\`\``},
+                    {name: `${languages(guild, "uf4")}`,value: `\`\`\`${member.user.id}\`\`\``},
+                    {name: `${languages(guild, "uf5")}`,value: `${presence}`},
+                    {name: `${languages(guild, "uf7")}`,value: `\`\`\`${richPresence}.\`\`\``},
+                    {name: `${languages(guild, "uf6")}`,value: `\`\`\`${created}\`\`\``},
+                    {name: `${languages(guild, "uf8")}`,value: `\`\`\`${joined}\`\`\``},
                 )
             message.reply(memberEmbed)
         }
