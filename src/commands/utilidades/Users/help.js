@@ -10,7 +10,7 @@ module.exports = {
         
         const helpUtil = new MessageEmbed()
             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-            .setTitle(`${languages(guild, 'H_C')}`)
+            .setTitle(`⚙ ${languages(guild, 'H_C')}`)
             .addFields(
                 {
                     name:  `${languages(guild, 'H_C2')}`,
@@ -48,7 +48,7 @@ module.exports = {
             .setColor('RANDOM')
         const helpMod = new MessageEmbed()
             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-            .setTitle(`Mod Commands`)
+            .setTitle(`🚔 Mod Commands`)
             .addFields(
                 {
                     name: languages(guild, "H_C35"),
@@ -91,7 +91,7 @@ module.exports = {
             .setColor('RANDOM')
         const helpFun = new MessageEmbed()
             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
-            .setTitle(`${languages(guild, 'H_C4')}`)
+            .setTitle(`🎭 ${languages(guild, 'H_C4')}`)
             .setColor('RANDOM')
             .addFields(
                 {
@@ -138,7 +138,7 @@ module.exports = {
             )
         const helpEssentials = new MessageEmbed()
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-            .setTitle(`${languages(guild, 'H_C14')}`)
+            .setTitle(`🛠 ${languages(guild, 'H_C14')}`)
             .addFields(
                 {
                     name: `${languages(guild, 'H_C15')}`,
@@ -160,7 +160,7 @@ module.exports = {
             .setColor('RANDOM')
         const helpNSFW = new MessageEmbed()
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-            .setTitle('NSFW Commands')
+            .setTitle('🔞 NSFW')
             .addFields(
                 {
                     name: 'NSFW Anime:',
@@ -170,7 +170,7 @@ module.exports = {
             .setColor('RANDOM')
         const helpCanvas = new MessageEmbed()
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-            .setTitle(`${languages(guild, "H_C22")}`)
+            .setTitle(`🖼 ${languages(guild, "H_C22")}`)
             .addFields(
                 {
                     name: `Change my mind Meme`,
@@ -210,7 +210,7 @@ module.exports = {
                 },
                 {
                     name: `Jail`,
-                    value: "```<prefix>jail <@mention>"
+                    value: "```<prefix>jail <@mention>```"
                 }
             )
             .setColor("RANDOM")
