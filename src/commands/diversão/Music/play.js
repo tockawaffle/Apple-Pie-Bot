@@ -23,7 +23,7 @@ module.exports = {
             message.reply(noArgs)
             return
         }
-        client.player.play(message, args.join(' '), message.member)
+        client.player.play(message, args.join(' '), true)
         
     }
 }   

@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const languages = require('../../util/languages/languages')
 
-module.exports = (client, message, track) => {
+module.exports = (player, message, track) => {
     const {guild} = message
     const started = new MessageEmbed()
         .setTitle(`${track.requestedBy.username} ${languages(guild, 'MEVT')}`, track.thumbnail)

@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const languages = require('../../util/languages/languages')
 
-module.exports = (client, message, query, tracks) => {
+module.exports = (player, message, query, tracks) => {
 
     const {guild} = message
 
