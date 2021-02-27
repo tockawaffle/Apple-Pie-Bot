@@ -41,7 +41,7 @@ module.exports = {
             .setDescription(lang(guild, "crypto_faq")+ '\n' + lang(guild, "crypto_faq4"))
             .addFields(
                 {name: lang(guild, "crypto_faq2"), value: `[Binance](https://www.binancezh.cc/pt-BR/register?ref=71034648)\n[Mercado Bitcoin](https://www.mercadobitcoin.com.br/)`},
-                {name: lang(guild, "crypto_faq3"), value: `[Nicehas](https://www.nicehash.com)`},
+                {name: lang(guild, "crypto_faq3"), value: `[Nicehash](https://www.nicehash.com)\n[Ezil Pool](https://ezil.me/?p=5a70) OBS: Promo code: 5a70`},
             )
 
         page = [CryptoFAQ, CryptoHelp, CryptoDonate]
