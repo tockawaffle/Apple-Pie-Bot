@@ -7,7 +7,7 @@ module.exports = (player, message, query, tracks) => {
 
     message.channel.send({
         embed: {
-            color: 'BLUE',
+            color: 'RANDOM',
             author: { name: `${languages(guild, 'SEVT')} ${query}` },
             timestamp: new Date(),
             description: `${tracks.map((t, i) => `**${i + 1}** - ${t.title}`).join('\n')}`,

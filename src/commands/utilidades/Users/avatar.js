@@ -28,7 +28,6 @@ module.exports = {
             pages = [gUserAv, authorAv]
             page(message, pages)    
         } else if(member){
-            const avatar2 = message.author.avatarURL({dynamic: true, size: 2048, format: 'png'})
             const avatar = member.user.avatarURL({dynamic: true, size: 2048, format: 'png'})
             const memberAv = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -36,14 +35,7 @@ module.exports = {
                 .setTitle(`🔎 ${member.user.username}`)
                 .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C2")}`)
                 .setImage(await avatar)
-            const authorAv = new MessageEmbed()
-                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setTitle(`🔍${message.author.username}`)
-                .setColor("RANDOM")
-                .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar2}) ${languages(guild, "AV_C")}`)
-                .setImage(await avatar2)
-            pages = [memberAv,authorAv]
-            page(message, pages)
+            message.reply(memberAv)
         } else if(!member && !gUser) {
             const avatar = message.author.avatarURL({dynamic: true, size: 2048, format: 'png'})
             const authorAv = new MessageEmbed()

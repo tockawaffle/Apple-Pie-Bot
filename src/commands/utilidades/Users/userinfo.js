@@ -12,15 +12,11 @@ module.exports = {
         if(gUser && !member) {
             const created = moment(gUser.createdAt).locale('pt-br').format('L')
             let presence = gUser.presence.status
-            if(presence === 'dnd') {
-                presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
-            } else if (presence === 'idle') {
-                presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
-            } else if (presence === 'online') {
-                presence = '```Online```'
-            } else if (presence === 'offline') {
-                presence = '```Offline```'
-            }
+            if(presence === 'dnd') presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
+            else if (presence === 'idle') presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
+            else if (presence === 'online') presence = '```Online```'
+            else if (presence === 'offline') presence = '```Offline```'
+            
             const memberEmbed = new MessageEmbed()
                 .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))
                 .setDescription(`🔍🌎${author.username} ${languages(guild, "uf2")} ${gUser.username}!`)
@@ -39,15 +35,11 @@ module.exports = {
         if(member) {
             let presence = member.user.presence.status
             let richPresence = member.user.presence.activities
-            if(presence === 'dnd') {
-                presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
-            } else if (presence === 'idle') {
-                presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
-            } else if (presence === 'online') {
-                presence = '```Online```'
-            } else if (presence === 'offline') {
-                presence = '```Offline```'
-            }
+            if(presence === 'dnd') presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
+            else if (presence === 'idle') presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
+            else if (presence === 'online') presence = '```Online```'
+            else if (presence === 'offline') presence = '```Offline```'
+            
             const joined = moment(member.joinedAt).locale('pt-br').format('L')
             const created = moment(member.user.createdAt).locale('pt-br').format('L')
             const memberEmbed = new MessageEmbed()

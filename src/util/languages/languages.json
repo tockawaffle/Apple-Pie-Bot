@@ -848,7 +848,10 @@
             "english": "Music stopped because I was disconnected!",
             "portugues": "Música parou pois fui desconectada!"
         },
-
+        "MEVT_3" :{
+            "english": "How many songs till this song is played?:",
+            "portugues": "Quantas músicas até este tocar?:"
+        },
 
 
 
@@ -2534,6 +2537,22 @@
         "crypt_help2": {
             "english": "Cryptocurrencies",
             "portugues": "Moedas Virtuais"
+        },
+        "crypto_faq": {
+            "english": "Want to know what exactly is a cryptocurrency? Easy! check [this](https://en.wikipedia.org/wiki/Cryptocurrency) link!",
+            "portugues": "Quer saber o quê exatamente é uma criptomoeda? Fácil! Cheque [este](https://www.politize.com.br/criptomoedas-o-que-sao-e-como-funcionam/) link!"
+        },
+        "crypto_faq2": {
+            "english": "After reading, you should take a look at some exchanges:",
+            "portugues": "Após ler, você deveria dar uma olhada em algumas exchanges:"
+        },
+        "crypto_faq3": {
+            "english": "Want to mine some Bitcoin or Ethereum?:",
+            "portugues": "Quer minerar um pouco de Bitcoin ou Ethereum?:"
+        },
+        "crypto_faq4": {
+            "english": "**OBS:** I am **not** responsible if you choose to invest or mine cryptocurrencies. Please, read my [Privacy Policy](https://www.applepiebot.xyz/privacy-service-terms)",
+            "portugues": "**OBS:** Eu **não** sou responsável caso você decida investir ou minerar criptomoedas. Por favor, leia minha [Privacy Policy](https://www.applepiebot.xyz/privacy-service-terms)"
         }
 
     }

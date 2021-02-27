@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const lang = require('../../../util/languages/languages')
 module.exports = {
-    aliases:[],
+    aliases:['btc'],
     description: 'Bitcoin',
     run: async(client, message, args) => {
 

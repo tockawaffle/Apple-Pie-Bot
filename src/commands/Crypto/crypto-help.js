@@ -1,7 +1,8 @@
 const { MessageEmbed } = require("discord.js")
 const pages = require('discord.js-pagination')
+const lang = require('../../util/languages/languages')
 module.exports = {
-    aliases: [],
+    aliases: ['cryptoh', 'cryptohelp'],
     description: 'CryptoHelp',
     run: async(client, message, args) => {
 
@@ -34,7 +35,16 @@ module.exports = {
                 {name: '<:nanocoin:811416752026157066> Nano Coin Wallet:', value: '```nano_1w5dof5cb6ss3aqubsweybkg6os4xtbisnwfqghogooswdhi37qt93umtmt8```'},
                 {name: '<:basicattentiontoken:811443748486512678> BAT (Basic Attention Token) Wallet:', value: '```0x8ebe9261111ff32a24fa311668d328724a309f96  -  Gas Limit: 36,000```'}
             )
-        page = [CryptoHelp, CryptoDonate]
+        const CryptoFAQ = new MessageEmbed()
+            .setColor("RANDOM")
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setDescription(lang(guild, "crypto_faq")+ '\n' + lang(guild, "crypto_faq4"))
+            .addFields(
+                {name: lang(guild, "crypto_faq2"), value: `[Binance](https://www.binancezh.cc/pt-BR/register?ref=71034648)\n[Mercado Bitcoin](https://www.mercadobitcoin.com.br/)`},
+                {name: lang(guild, "crypto_faq3"), value: `[Nicehas](https://www.nicehash.com)`},
+            )
+
+        page = [CryptoFAQ, CryptoHelp, CryptoDonate]
         pages(message, page)
 
     }
