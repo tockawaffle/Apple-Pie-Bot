@@ -25,7 +25,7 @@ module.exports = {
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(`<:basicattentiontoken:811443748486512678> BAT`)
+                .setDescription(`<:basic:815671583573409832> BAT`)
                 .setColor('#FA5407')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},

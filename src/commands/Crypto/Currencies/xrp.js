@@ -25,7 +25,7 @@ module.exports = {
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(`<:xrp:811433454209073192> XRP (Ripple)`)
+                .setDescription(`<:xrp:815670503594524672> XRP (Ripple)`)
                 .setColor('#2D3436')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},

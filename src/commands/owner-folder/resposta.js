@@ -17,7 +17,7 @@ module.exports = {
                 const devInfo = new MessageEmbed()
                     .setTitle(`The dev: ${message.author.username} answered your repport`)
                     .setDescription(`${args.join(' ')}`)
-                    .setFooter(`We appreciate that you sent us a repport!`)
+                    .setFooter(`We appreciate that you sent us a report!`)
                     .setColor(`GREEN`)
                     .addFields(
                         {

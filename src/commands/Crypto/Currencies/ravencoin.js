@@ -25,7 +25,7 @@ module.exports = {
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(`<:ravencoin:811438538721067038> Ravencoin`)
+                .setDescription(`<:ravencoin:815670629553668126> Ravencoin`)
                 .setColor('#808080')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},

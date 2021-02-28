@@ -14,14 +14,6 @@ module.exports = {
                     value: `[${languages(guild, 'VT_C2')}](https://top.gg/bot/762077336812126228)`
                 },
                 {
-                    name: 'Discord Bot List:',
-                    value: `[${languages(guild, 'VT_C2')}](https://discord.ly/apple-pie)`
-                },
-                {
-                    name: "Botrix:",
-                    value: `[${languages(guild, 'VT_C2')}](https://botrix.cc/bots/762077336812126228)`
-                },
-                {
                     name: `${languages(guild, "VT_C4")}`,
                     value: `[${languages(guild, "VT_C2")}](https://www.applepiebot.xyz/)`
                 }

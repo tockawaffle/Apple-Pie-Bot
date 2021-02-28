@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const lang = require('../../../util/languages/languages')
 module.exports = {
-    aliases:[],
+    aliases:['nanocoin'],
     description: 'Nanocoin',
     run: async(client, message, args) => {
 
@@ -25,7 +25,7 @@ module.exports = {
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(`<:nanocoin:811416752026157066> Nano`)
+                .setDescription(`<:nanocoin:815670455984848936> Nano`)
                 .setColor('#4B93E3')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},
