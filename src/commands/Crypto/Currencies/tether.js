@@ -19,7 +19,6 @@ module.exports = {
         currency.toLowerCase()
         let up = ' ' + currency.toUpperCase()
         let nano = await crypto.coins.markets({vs_currency: currency, ids: 'tether'})
-        console.log(nano)
 
         if(nano.success === true) {
             let data = nano.data
