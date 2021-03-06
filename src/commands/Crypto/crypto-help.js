@@ -22,7 +22,8 @@ module.exports = {
                 {name: '<:ravencoin:815670629553668126> Ravencoin', value: `\`\`\`<prefix>ravencoin <currency>\`\`\``},
                 {name: '<:xrp:815670503594524672> XRP (Ripple)', value: `\`\`\`<prefix>xrp <currency>\`\`\``},
                 {name: '<:basic:815671583573409832> BAT', value: '```<prefix>bat <currency>```'},
-                {name: '<:tether:815672050702090241> Tether (USDT)', value: '```<prefix>tether <currency>```'}
+                {name: '<:tether:815672050702090241> Tether (USDT)', value: '```<prefix>tether <currency>```'},
+                {name: lang(guild, "crypto_h"), value: '```<prefix>price <criptoName> <currency> <amountOfCripto>```'}
             )
         const CryptoDonate = new MessageEmbed()
             .setColor("RANDOM")

@@ -2553,6 +2553,26 @@
         "crypto_faq4": {
             "english": "**OBS:** I am **not** responsible if you choose to invest or mine cryptocurrencies. Please, read my [Privacy Policy](https://www.applepiebot.xyz/privacy-service-terms). I must also say, **I am NOT** connected in any way to the links below.",
             "portugues": "**OBS:** Eu **não** sou responsável caso você decida investir ou minerar criptomoedas. Por favor, leia minha [Privacy Policy](https://www.applepiebot.xyz/privacy-service-terms). Também devo dizer, não sou ligada de **NENHUM MODO** aos links abaixo."
+        },
+
+        "nan": {
+            "english": "is not a valid number, please, retry using a valid number.\nTry not to use commas, only points or integers. Ex: instead of using \"1,500\", use \"1.500\" or \"1500\"(Best Option)",
+            "portugues": "não é um número válido, por favor, tente novamente usando um número válido.\nTente também não utilizar vírgulas no número, apenas pontuações ou números inteiros. Ex: ao invés de \"1.500\", utilize \"1.500\" ou \"1500\" (Melhor Opção)"
+        },
+
+        "nac": {
+            "english": "is not a valid currency, please use the crypto market-name.\nExample: \"ethereum\" instead of \"eth\"",
+            "portugues": "não é uma moeda válida, por favor, use o nome de mercado da cripto.\nExemplo: \"ethereum\" ao invés de \"eth\""
+        },
+
+        "noAmount":  {
+            "english": "Please, input an amount of cripto!",
+            "portugues": "Por favor, coloque uma quantidade de cripto!"
+        },
+
+        "crypto_h": {
+            "english": "Calculate how much you're earning in crypto!",
+            "portugues": "Calcule o quanto você está ganhando em cripto!"
         }
 
     }

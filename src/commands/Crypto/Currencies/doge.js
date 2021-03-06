@@ -12,7 +12,7 @@ module.exports = {
         if(!currency) {
             const noCurrency = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(lang(guild, "crypt_curr"))
+                .setTitle(lang(guild, "crypt_curr"))
                 .setColor('#ff0000')
             return message.reply(noCurrency)
         }
@@ -25,7 +25,7 @@ module.exports = {
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(`<:dogecoin:815670341502369832> Doge`)
+                .setTitle(`<:dogecoin:815670341502369832> Doge`)
                 .setColor('YELLOW')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},
@@ -42,7 +42,7 @@ module.exports = {
             const errorEmbed = new MessageEmbed()
                 .setColor('#ff0000')
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setDescription(lang(guild, "crypt_err"))
+                .setTitle(lang(guild, "crypt_err"))
                 .addField(lang(guild, "crypt_err2"), `\`\`\`${error}\`\`\``)
             return message.reply(errorEmbed)
             
