@@ -6,12 +6,11 @@ module.exports = {
     description: 'CryptoHelp',
     run: async(client, message, args) => {
 
-        if(args.lenght > 2) return message.reply('no')
         const {guild} = message
+        if(args.length > 3) return message.reply(`${lang(guild, "maxArgsExc")} 3`)
 
         const crypto = client.crypto
-        let currency = args[1]
-        let coin = args[0]
+        let currency = args[1]; let coin = args[0]
         if(!currency) {
             const noCurrency = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -29,10 +28,19 @@ module.exports = {
         let up = ' ' + currency.toUpperCase()
         let nano = await crypto.coins.markets({vs_currency: currency, ids: coin})
         const data = nano.data
-        if(data.map(x => x.name).length === 0) {
+        console.log(data)
+        if(nano.data.error) {
+            let error = nano.data.error
+            if(error === 'invalid vs_currency') error = `Invalid Currency: ${up}`
+            const errorEmbed = new MessageEmbed()
+                .setColor('#ff0000')
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setTitle(lang(guild, "crypt_err"))
+                .addField(lang(guild, "crypt_err2"), `\`\`\`${error}\`\`\``)
+            return message.reply(errorEmbed)
+        }else if(data.map(x => x.name).length === 0) {
             return message.reply(`**${coin.toUpperCase()}** ${lang(guild, "nac")}`).then(msg => msg.delete({timeout: 10000}))
         } else if(nano.success === true) {
-            
             let amount = args[2]
             if(!amount) {
                 return message.reply(`${lang(guild, "noAmount")}`).then(msg => msg.delete({timeout: 10000}))
