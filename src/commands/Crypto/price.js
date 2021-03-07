@@ -28,7 +28,6 @@ module.exports = {
         let up = ' ' + currency.toUpperCase()
         let nano = await crypto.coins.markets({vs_currency: currency, ids: coin})
         const data = nano.data
-        console.log(data)
         if(nano.data.error) {
             let error = nano.data.error
             if(error === 'invalid vs_currency') error = `Invalid Currency: ${up}`

@@ -46,10 +46,9 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setDescription(lang(guild, "crypto_faq")+ '\n' + lang(guild, "crypto_faq4"))
             .addFields(
-                {name: lang(guild, "crypto_faq2"), value: `[Binance](https://www.binancezh.cc/pt-BR/register?ref=71034648)\n[Mercado Bitcoin](https://www.mercadobitcoin.com.br/)`},
+                {name: lang(guild, "crypto_faq2"), value: `[Binance](https://www.binancezh.cc/pt-BR/register?ref=71034648)\n[Mercado Bitcoin](https://www.mercadobitcoin.com.br/)\n[Kucoin](https://www.kucoin.com/ucenter/signup?rcode=rJ8DT7J)`},
                 {name: lang(guild, "crypto_faq3"), value: `[Nicehash](https://www.nicehash.com)\n[Ezil Pool](https://ezil.me/?p=5a70)\n[Binance Pool](https://accounts.binance.com/en/register?ref=M5N9Y8O0)`},
             )
-
         page = [CryptoFAQ, CryptoHelp, CryptoDonate]
         pages(message, page)
 

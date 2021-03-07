@@ -7,8 +7,7 @@ module.exports = {
 
         const {guild, author} = message
 
-        const crypto = client.crypto
-        let currency = args[0]
+        const crypto = client.crypto; let currency = args[0]
         if(!currency) {
             const noCurrency = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -25,7 +24,7 @@ module.exports = {
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setTitle(`<:nanocoin:815670455984848936> Nano`)
+                .setTitle(`<:nanocoin:815670455984848936> Nano ➪ ${up}`)
                 .setColor('#4B93E3')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},

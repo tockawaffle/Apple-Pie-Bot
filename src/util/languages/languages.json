@@ -358,6 +358,26 @@
             "english": "<prefix>addemoji <image attachment> or <discord image url>",
             "portugues": "<prefix>addemoji <imagem anexada> ou <url do discord para imagens>"
         },
+        "H_C51": {
+            "english": "Math!",
+            "portugues": "Matemática!"
+        },
+        "H_C52": {
+            "english": "Addition:",
+            "portugues": "Adição:"
+        },
+        "H_C53": {
+            "english": "Subtraction:",
+            "portugues": "Subtração:"
+        },
+        "H_C54": {
+            "english": "Multiplication:",
+            "portugues": "Multiplicação:"
+        },
+        "H_C55": {
+            "english": "Division:",
+            "portugues": "Divisão:"
+        },
         
         
         "I_C": {
@@ -2573,6 +2593,11 @@
         "crypto_h": {
             "english": "Calculate how much you're earning in crypto!",
             "portugues": "Calcule o quanto você está ganhando em cripto!"
+        },
+
+        "maxArgsExc": {
+            "english": "Sorry, the limit of arguments for this command is:",
+            "portugues": "Desculpe, o limite de argumentos para este comando é:"
         }
 
     }
