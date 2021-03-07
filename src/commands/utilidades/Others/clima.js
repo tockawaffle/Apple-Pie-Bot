@@ -27,12 +27,12 @@ module.exports = {
                     .setColor('RANDOM')
                     .setFooter(`${languages(guild, 'W9_C')}`)
                     .setDescription(`${languages(guild, 'W2_C')}`)
-                    .addField(`${languages(guild, 'W3_C')} `, `${result[0].current.temperature}ºC`, true)
-                    .addField(`${languages(guild, 'W4_C')} `, result[0].current.skytext, true)
-                    .addField(`${languages(guild, 'W5_C')} `, `${result[0].current.humidity}%`, true)
-                    .addField(`${languages(guild, 'W6_C')} `, result[0].current.windspeed, true)
-                    .addField(`${languages(guild, 'W7_C')} `, result[0].current.observationtime, true)
-                    .addField(`${languages(guild, 'W8_C')} `, result[0].current.winddisplay, true)
+                    .addField(`${languages(guild, 'W3_C')} `, `\`\`\`${result[0].current.temperature}ºC\`\`\``)
+                    .addField(`${languages(guild, 'W4_C')} `, `\`\`\`${result[0].current.skytext}\`\`\``)
+                    .addField(`${languages(guild, 'W5_C')} `, `\`\`\`${result[0].current.humidity}%\`\`\``)
+                    .addField(`${languages(guild, 'W6_C')} `, `\`\`\`${result[0].current.windspeed}\`\`\``)
+                    .addField(`${languages(guild, 'W7_C')} `, `\`\`\`${result[0].current.observationtime}\`\`\``)
+                    .addField(`${languages(guild, 'W8_C')} `, `\`\`\`${result[0].current.winddisplay}\`\`\``)
                     .setThumbnail(result[0].current.imageUrl);
                 message.channel.send(embed)
         } catch(err) {
