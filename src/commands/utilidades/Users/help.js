@@ -243,13 +243,33 @@ module.exports = {
         .addFields(
             {name: languages(guild, 'crypt_help'), value: '```<prefix>crypto-help```'}
         )
+        const helpMath = new MessageEmbed()
+            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+            .setTitle(`${languages(guild, "H_C51")}`)
+            .setColor("RANDOM")
+            .addFields(
+                {
+                    name: languages(guild, "H_C52"), value: "```<prefix>add <number1> <number2>```"
+                },
+                {
+                    name: languages(guild, "H_C53"), value: "```<prefix>minus <number1> <number2>```" 
+                },
+                {
+                    name: languages(guild, "H_C54"), value: "```<prefix>mp <number1> <number2>```" 
+                },
+                {
+                    name: languages(guild, "H_C55"), value: "```<prefix>dvs <number1> number2>```" 
+                }
+            )
         if(args[0] === undefined) {
             pages = [
                 helpPage,helpEssentials,helpUtil,helpCrypto,helpSteam,
-                helpMod,helpFun,helpCanvas,helpNSFW
+                helpMod,helpMath,helpFun,helpCanvas,helpNSFW
             ]
             pageEmbed(message, pages)
-        }else if(args[0] === 'steam') {
+        } else if(args[0] === "math") {
+            return message.reply(helpMath)
+        } else if(args[0] === 'steam') {
             return message.reply(helpSteam)
         } else if(args[0] === 'page') {
             return message.reply(helpPage)
