@@ -1,57 +1,45 @@
 const lang = require('../../../util/languages/languages')
-const { MessageEmbed } = require("discord.js")
+const math = require('mathjs')
 const pages = require('discord.js-pagination')
+const { MessageEmbed } = require("discord.js")
 
 module.exports = {
     aliases: ['bm', 'bnnm'],
     description: 'Calcula o quanto de banano você vai receber do f@h',
     run: async(client, message, args) => {
+
         let PPD = args[0];
         let currency = args[1];
         const {guild} = message
-
-        if(PPD.includes(',')) {
-            PPD = PPD.replace(',', '.')
-        }
-
-        // Might not use this for now:
-        // 
-        // else if (PPD.length > 5 && !PPD.includes('.')) {
-        //     thisSlice = [PPD.slice(0,3), '.', PPD.slice(3)].join('')
-        //     if(thisSlice.length > 5) {
-        //         PPD = thisSlice.slice(0, 6)
-        //     } else PPD = thisSlice
-        // }
+        
 
         if(!PPD) {
             return message.reply("Você precisa inserir uma quantidade de PPD para que eu possa calcular!\nVocê também pode inserir uma moeda na qual seja válida para que eu calcule o valor dela.")
         } else if(!currency) {
-            let PPDtotal = 2.2 * (PPD / 2 ) ^ 0.44
-            let PPDAlt = Math(0.955793*(PPD^0.430331))
+            
+            let PPDfirst = {fExp:2.2, ppd:PPD, sExp:2, tExp: 0.44}
+            let PPDtotal = math.evaluate('fExp * (ppd / sExp ) ^ tExp', PPDfirst)
 
+            let scope = {fExp:0.955793, ppd:PPD, sExp:0.430331}
+            let PPDAlt = math.evaluate('fExp * (ppd^sExp)', scope)
+ 
             message.reply(`Certo, seu PPD é de ${PPD}, irei calcular para você, me dê um segundo. . .`).then(async(msg) => {
                 const dlt = msg.delete({timeout: 3000})
                 message.channel.startTyping()
                 const obs = new MessageEmbed()
                     .setAuthor(guild.name, 'https://cdn.discordapp.com/emojis/815713271918231564.gif?v=1')
                     .setColor("#FA5407")
-                    .setTitle('AVISO')
-                    .setDescription('Os cálculos se baseiam em DOIS cálculos, um mais conhecido e outro não tanto, considere ambos na hora de ver seus pontos e >> NÃO << leve nenhum dos dois como valor absoluto do que você irá ganhar. Mas provavelmente o segundo cálculo é mais confiável.\n\nVocê irá encontrar nas próximas páginas os dois cálculos.')                
+                    .setTitle('OBSERVAÇÃO')
+                    .setDescription('Os cálculos se baseiam em DUAS fórmulas, uma mais conhecida e outra mais nova, considere ambas na hora de ver seus pontos e >> NÃO << leve nenhuma das duas como valor absoluto do que você irá ganhar. Mas provavelmente o segundo cálculo é mais confiável.\n\nVocê irá encontrar nas próximas páginas os dois cálculos.')                
                 const calculoUm = new MessageEmbed()
                     .setAuthor(guild.name, 'https://cdn.discordapp.com/emojis/815713271918231564.gif?v=1')
-                    .setDescription(
-                        `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDtotal} Bananos\n\n-Fórmula utilizada: 2.2 * (PPD / 2 ) ^ 0.44\`\`\``
+                    .addFields(
+                        {name: 'Fórmula utilizada: 2.2 * (PPD / 2 ) ^ 0.44', value: `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDtotal} Bananos\`\`\``},
+                        {name: 'Fórmula utilizada: 0.955793 * (PPD ^ 0.430331)', value: `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDAlt} Bananos\n\n---Autoria da Fórmula: ZZMthesurand#4965\`\`\``}
                     )
                     .setColor("#FA5407")
-                const calculoDois = new MessageEmbed()
-                    .setAuthor(guild.name, 'https://cdn.discordapp.com/emojis/815713271918231564.gif?v=1')
-                    .setDescription(
-                        `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDAlt} Bananos\n\n-Fórmula utilizada: 0.955793*(PPD^0.430331)\n   Autoria da Fórmula: ZZMthesurand#4965\`\`\``
-                    )
-                    .setColor("#FA5407")
-                pgs=[obs, calculoUm, calculoDois]
-                await dlt
-                message.channel.stopTyping()
+                pgs=[obs, calculoUm]
+                await dlt; message.channel.stopTyping()
                 pages(message, pgs)
             })
         } else {
@@ -68,31 +56,30 @@ module.exports = {
                 return message.reply(errorEmbed)
             } else if(banano.success === true) {
                 let price = await data.map(x => x.current_price);
-                let PPDtotal = 2.2 * (PPD / 2 ) ^ 0.44
-                let PPDAlt = 0.955793*(PPD^0.430331)
+
+                let PPDfirst = {fExp:2.2, ppd:PPD, sExp:2, tExp: 0.44}
+                let PPDtotal = math.evaluate('fExp * (ppd / sExp ) ^ tExp', PPDfirst)
+    
+                let scope = {fExp:0.955793, ppd:PPD, sExp:0.430331}
+                let PPDAlt = math.evaluate('fExp * (ppd^sExp)', scope)
+
                 message.reply(`Certo, seu PPD é de ${PPD}, irei calcular para você, me dê um segundo. . .`).then(async(msg) => {
                     const dlt = msg.delete({timeout: 3000})
                     message.channel.startTyping()
                     const obs = new MessageEmbed()
                         .setAuthor(guild.name, 'https://cdn.discordapp.com/emojis/815713271918231564.gif?v=1')
                         .setColor("#FA5407")
-                        .setTitle('AVISO')
-                        .setDescription('Os cálculos se baseiam em DOIS cálculos, um mais conhecido e outro não tanto, considere ambos na hora de ver seus pontos e >> NÃO << leve nenhum dos dois como valor absoluto do que você irá ganhar. Mas provavelmente o segundo cálculo é mais confiável.\n\nVocê irá encontrar nas próximas páginas os dois cálculos.')                
+                        .setTitle('OBSERVAÇÃO')
+                        .setDescription('Os cálculos se baseiam em DUAS fórmulas, uma mais conhecida e outra mais nova, considere ambas na hora de ver seus pontos e >> NÃO << leve nenhuma das duas como valor absoluto do que você irá ganhar. Mas provavelmente o segundo cálculo é mais confiável.\n\nVocê irá encontrar nas próximas páginas os dois cálculos.')                
                     const calculoUm = new MessageEmbed()
                         .setAuthor(guild.name, 'https://cdn.discordapp.com/emojis/815713271918231564.gif?v=1')
-                        .setDescription(
-                            `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDtotal} Bananos\n\n+Estimativa de Moeda: ${price * PPDtotal} ${currency.toUpperCase()}\n\n-Fórmula utilizada: 2.2 * (PPD / 2 ) ^ 0.44\`\`\``
+                        .addFields(
+                            {name: 'Fórmula utilizada: 2.2 * (PPD / 2 ) ^ 0.44', value: `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDtotal} Bananos\n\n+Estimativa de Moeda: ${price * PPDtotal} ${currency.toUpperCase()}\`\`\``},
+                            {name: 'Fórmula utilizada: 0.955793*(PPD^0.430331)', value: `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDAlt} Bananos\n\n+Estimativa de Moeda: ${price * PPDAlt} ${currency.toUpperCase()}\n\n---Autoria da Fórmula: ZZMthesurand#4965\`\`\``}
                         )
                         .setColor("#FA5407")
-                    const calculoDois = new MessageEmbed()
-                        .setAuthor(guild.name, 'https://cdn.discordapp.com/emojis/815713271918231564.gif?v=1')
-                        .setDescription(
-                            `\`\`\`diff\n-Pontos por Dia (PPD): ${PPD}\n\n+Estimativa de Bananos: ${PPDAlt} Bananos\n\n+Estimativa de Moeda: ${price * PPDAlt} ${currency.toUpperCase()}\n\n-Fórmula utilizada: 0.955793*(PPD^0.430331)\n   Autoria da Fórmula: ZZMthesurand#4965\`\`\``
-                        )
-                        .setColor("#FA5407")
-                    pgs=[obs, calculoUm, calculoDois]
-                    await dlt
-                    message.channel.stopTyping()
+                    pgs=[obs, calculoUm]
+                    await dlt; message.channel.stopTyping()
                     pages(message, pgs)
                 })
 

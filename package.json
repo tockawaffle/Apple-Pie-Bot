@@ -22,6 +22,7 @@
     "discord.js-rate-limiter": "^1.0.5",
     "dotenv": "^8.2.0",
     "jsdom": "^16.4.0",
+    "mathjs": "^9.3.0",
     "moment": "^2.29.1",
     "mongoose": "^5.11.13",
     "ms": "^2.1.3",
