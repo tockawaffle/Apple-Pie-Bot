@@ -2594,10 +2594,9 @@
             "english": "Calculate how much you're earning in crypto!",
             "portugues": "Calcule o quanto você está ganhando em cripto!"
         },
-
         "maxArgsExc": {
-            "english": "Sorry, the limit of arguments for this command is:",
-            "portugues": "Desculpe, o limite de argumentos para este comando é:"
+            "english": "Max. Arguments exceeded. Max args allowed:",
+            "portugues": "Máximo de Argumentos excedidos. Máximo permitido:"
         }
 
     }
