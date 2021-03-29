@@ -29,7 +29,7 @@
     "nodemon": "^2.0.7",
     "parse-ms": "^2.1.0",
     "reverbnation-scraper": "^2.0.0",
-    "snakecord": "0.0.6",
+    "snakecord": "^1.0.5",
     "steamapi": "^2.1.2",
     "weather-js": "^2.0.0"
   }
