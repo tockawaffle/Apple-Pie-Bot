@@ -1,5 +1,3 @@
-[![Discord Bots](https://top.gg/api/widget/762077336812126228.svg)](https://top.gg/bot/762077336812126228)
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # **Introdução / Intro**
 
@@ -36,13 +34,9 @@ PS: If you're going to download it and use it as a base for your bot (or somethi
 
 # **Informações Úteis / Useful Info:**
 
-[Servidor de suporte / Support Server](https://discord.com/invite/eyGX6pWa5V)
+[Servidor de suporte / Support Server](https://discord.gg/G4bv4Buf4E)
 
-Versão do bot / Bot Version: 6.0
-
-[Repositório de Imagens / Image Repo](https://pin.it/6gAWnUp)
-
-[Bot host link](https://fantasyhosting.com.br/) (É uma host Brasileira / Brazilian host)
+Versão do bot / Bot Version: 10.0
 
 Todos as dependências estão no arquivo "package.json", é só utilizar: ```npm install```
 
