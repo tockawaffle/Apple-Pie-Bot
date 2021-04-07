@@ -23,13 +23,6 @@ module.exports = {
                     {name: 'Uptime', value: `\`\`\`I've been online for: ${uptimeFormat}!\`\`\``}
                 )
                 .setColor("RANDOM")
-            const hostEmbed = new MessageEmbed()
-                .setAuthor(guild.name, guild.iconURL({dynamic:true}))
-                .setDescription(`${languages(guild, "P_C")}`)
-                .addFields(
-                    {name: `${languages(guild, "P2_C")}`,value: `[${languages(guild, "VT_C2")}](https://fantasyhosting.com.br/)\n${languages(guild, "P3_C")}`}
-                )
-                .setColor("RANDOM")
             const pingFaQ= new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic:true}))
                 .setColor("RANDOM")
@@ -39,8 +32,7 @@ module.exports = {
                 )
             pages = [
                 pingEmbed,
-                pingFaQ,
-                hostEmbed
+                pingFaQ
             ]
             setTimeout(function() {
                 pageEmbed(message, pages)

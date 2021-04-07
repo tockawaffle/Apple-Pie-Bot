@@ -95,6 +95,6 @@ module.exports = {
             )
             .setFooter(`${languages(guild, "K4")} ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
         message.reply(sucess)
-        await member.kick(`${reason ? reason: languages(guild, "noreason")}`)
+        member.kick(`${reason ? reason: languages(guild, "noreason")}`)
     }
 }

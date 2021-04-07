@@ -261,6 +261,13 @@ module.exports = {
                     name: languages(guild, "H_C55"), value: "```<prefix>dvs <number1> number2>```" 
                 }
             )
+        if(!args) {
+            pages = [
+                helpPage,helpEssentials,helpUtil,helpCrypto,helpSteam,
+                helpMod,helpMath,helpFun,helpCanvas,helpNSFW
+            ]
+            return pageEmbed(message, pages)
+        }
         if(args[0] === undefined) {
             pages = [
                 helpPage,helpEssentials,helpUtil,helpCrypto,helpSteam,

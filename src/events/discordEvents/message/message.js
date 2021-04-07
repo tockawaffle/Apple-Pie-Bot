@@ -25,5 +25,8 @@ module.exports = async(client, message) => {
             if(client.commands.get(cmdName)) {client.commands.get(cmdName)(client, message, cmdArgs)}
             else return
         }
+    } else if(message.mentions.has(client.user)) {
+        const mention = message.mentions.has(client.user)
+        if(client.commands.get('help')) {client.commands.get('help')(client,message)}
     }
 }
