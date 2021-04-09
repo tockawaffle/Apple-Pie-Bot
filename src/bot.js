@@ -9,7 +9,6 @@ const { Player } = require('discord-player'); const player = new Player(client);
 const { registerCommands, registerEvents, registerPlayerEvents } = require('./util/registry');
 (async () => {
     client.login(process.env.BOT_TOKEN); client.player = player; client.steam = steam; ; client.crypto = CoinGeckoClient
-    client.dbl = dbl;
     client.commands = new Map(); client.filters = require('./configs/music/filters.json');
     await registerEvents(client, '../events/discordEvents'); await registerCommands(client, '../commands'); await registerPlayerEvents(player, '../events/player-event');
 })();
