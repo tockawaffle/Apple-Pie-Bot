@@ -14,50 +14,36 @@ module.exports = {
                 .addFields(
                     {
                         name: `${languages(guild, 'SI_C')}`,
-                        value: `${guild.owner.user.tag}`
+                        value: `\`\`\`${guild.owner.user.tag}\`\`\``
                     },
                     {
                         name: `${languages(guild, 'SI_C2')}`,
-                        value: `${guild.members.cache.filter(member => !member.user.bot).size} ${languages(guild, 'SI_MB')}`,
-                        inline: true
+                        value: `\`\`\`${guild.members.cache.filter(member => !member.user.bot).size} ${languages(guild, 'SI_MB')}\`\`\``
                     },
                     {
                         name: `${languages(guild, 'SI_C8')}`,
-                        value: `${guild.members.cache.filter(member => member.user.bot).size} bots`,
-                        inline: true
+                        value: `\`\`\`${guild.members.cache.filter(member => member.user.bot).size} bots\`\`\``,
                     },
                     {
                         name: `${languages(guild, 'SI_C3')}`,
-                        value: `
-                            ${guild.members.cache.filter(member => member.presence.status !== "offline").size} ${languages(guild, 'SI_ST')}
-                            ${guild.members.cache.filter(member => member.presence.status == "idle").size} ${languages(guild, 'SI_ST2')}
-                            ${guild.members.cache.filter(member => member.presence.status == "dnd").size} ${languages(guild, 'SI_ST3')}
-                            ${guild.members.cache.filter(member => member.presence.status == "offline").size} ${languages(guild, 'SI_ST4')}
-                        `,
-                        inline: true
+                        value: `\`\`\`${guild.members.cache.filter(member => member.presence.status !== "offline").size} ${languages(guild, 'SI_ST')}\n${guild.members.cache.filter(member => member.presence.status == "idle").size} ${languages(guild, 'SI_ST2')}\n${guild.members.cache.filter(member => member.presence.status == "dnd").size} ${languages(guild, 'SI_ST3')}\n${guild.members.cache.filter(member => member.presence.status == "offline").size} ${languages(guild, 'SI_ST4')}\`\`\``,
                     },
                     {
                         name: `${languages(guild, 'SI_C4')}`,
-                        value: `${guild.roles.cache.size} ${languages(guild, 'SI_RC')}`,
-                        inline: true
+                        value: `\`\`\`${guild.roles.cache.size} ${languages(guild, 'SI_RC')}\`\`\``,
                     },
                     {
                         name: `${languages(guild, 'SI_C5')}`,
-                        value: `
-                            ${guild.channels.cache.filter(channel => channel.type == "text").size} ${languages(guild, 'SI_CC')}
-                            ${guild.channels.cache.filter(channel => channel.type == "voice").size} ${languages(guild, 'SI_CC2')}
-                        `,
-                        inline: true
+                        value: `\`\`\`${guild.channels.cache.filter(channel => channel.type == "text").size} ${languages(guild, 'SI_CC')}\n${guild.channels.cache.filter(channel => channel.type == "voice").size} ${languages(guild, 'SI_CC2')}\`\`\``,
                     },
                     {
                         name: `${languages(guild, 'SI_C6')}`,
-                        value: `${created}`,
-                        inline: true
+                        value: `\`\`\`${created}\`\`\``,
                     },
                     {
                         name: `${languages(guild, 'SI_C7')}`,
-                        value: `${guild.emojis.cache.size} ${languages(guild, 'SI_EM')}`,
-                        inline: true
+                        value: `\`\`\`${guild.emojis.cache.size} ${languages(guild, 'SI_EM')}\`\`\``,
+
                     }
                 )
                 .setTimestamp()

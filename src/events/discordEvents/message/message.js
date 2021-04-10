@@ -14,6 +14,8 @@ module.exports = async(client, message) => {
 
     let limited = limiter.take(author.id)
 
+    const clientMention = message.mentions.has(client.user)
+    
     if(message.channel.type === 'dm' && !ids) return
     if(message.content.startsWith(PREFIX)) {
         if (limited) return
@@ -25,8 +27,5 @@ module.exports = async(client, message) => {
             if(client.commands.get(cmdName)) {client.commands.get(cmdName)(client, message, cmdArgs)}
             else return
         }
-    } else if(message.mentions.has(client.user)) {
-        const mention = message.mentions.has(client.user)
-        if(client.commands.get('help')) {client.commands.get('help')(client,message)}
     }
 }

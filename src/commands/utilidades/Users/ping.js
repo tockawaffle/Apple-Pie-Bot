@@ -12,8 +12,9 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setDescription(`🏓 Pinging. . .`)
             .setColor('RANDOM')
-        message.reply(pinging).then((msg) => {
-            msg.delete()
+        message.reply(pinging).then(async(msg) => {
+            let msgEdit = msg.edit(pinging)
+            await msgEdit; let msgDel = msg.delete()
             const pingEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                 .setDescription(`This is my ping:`)
@@ -23,20 +24,7 @@ module.exports = {
                     {name: 'Uptime', value: `\`\`\`I've been online for: ${uptimeFormat}!\`\`\``}
                 )
                 .setColor("RANDOM")
-            const pingFaQ= new MessageEmbed()
-                .setAuthor(guild.name, guild.iconURL({dynamic:true}))
-                .setColor("RANDOM")
-                .setDescription(`${languages(guild, "P4")}`)
-                .addFields(
-                    {name: `${languages(guild, "P5")}`,value: `\`\`\`${languages(guild, "P6")}\n${languages(guild, "P7")}\n${languages(guild, "P8")}\`\`\``}
-                )
-            pages = [
-                pingEmbed,
-                pingFaQ
-            ]
-            setTimeout(function() {
-                pageEmbed(message, pages)
-            }, 20)
+            await msgDel; message.reply(pingEmbed)
         })
         
         

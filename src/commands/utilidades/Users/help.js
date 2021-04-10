@@ -1,11 +1,15 @@
 const { MessageEmbed } = require('discord.js')
 const languages = require('../../../util/languages/languages')
+const newPrefixSchema = require('../../../configs/db/schemas/prefix-schema')
 
 module.exports = {
     aliases: ['h'],
     description: 'Comando de help',
     run: async(client, message, args) => {
+        
         const { guild } = message;
+        const prefix = await newPrefixSchema.findOne({_id: guild.id})
+        const realPrefix = prefix.prefix
         const pageEmbed = require('discord.js-pagination')
         
         const helpUtil = new MessageEmbed()
@@ -13,36 +17,32 @@ module.exports = {
             .setTitle(`⚙ ${languages(guild, 'H_C')}`)
             .addFields(
                 {
-                    name:  `${languages(guild, 'H_C2')}`,
-                    value: '```<prefix>invite```',
-                },
-                {
                     name: 'Avatar:',
-                    value: '```<prefix>avatar <@mention>, <userID>```'
+                    value: `\`\`\`${realPrefix}avatar <@mention>, <userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C30"),
-                    value: '```<prefix>server-icon```'
+                    value: `\`\`\`${realPrefix}server-icon\`\`\``
                 },
                 {
                     name: 'Ping:',
-                    value: '```<prefix>ping```'
+                    value: `\`\`\`${realPrefix}ping\`\`\``
                 },
                 {
                     name: languages(guild, "H_C31"),
-                    value: '```<prefix>userinfo <@mention>, <userID>```'
+                    value: `\`\`\`${realPrefix}userinfo <?@mention>, <?userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C32"),
-                    value: '```<prefix>weather```'
+                    value: `\`\`\`${realPrefix}weather\`\`\``
                 },
                 {
                     name: languages(guild, "H_C33"),
-                    value: '```<prefix>serverinfo```'
+                    value: `\`\`\`${realPrefix}serverinfo\`\`\``
                 },
                 {
                     name: languages(guild, "H_C34"),
-                    value: '```<prefix>music-help```'
+                    value: `\`\`\`${realPrefix}music-help\`\`\``
                 }
             )
             .setColor('RANDOM')
@@ -52,35 +52,35 @@ module.exports = {
             .addFields(
                 {
                     name: languages(guild, "H_C35"),
-                    value: '```<prefix>ban <@mention>, <userID>```'
+                    value: `\`\`\`${realPrefix}ban <@mention>, <userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C36"),
-                    value: '```<prefix>kick <@mention>, <userID>```'
+                    value: `\`\`\`${realPrefix}kick <@mention>, <userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C37"),
-                    value: '```<prefix>mute <@mention>, <userID>```'
+                    value: `\`\`\`${realPrefix}mute <@mention>, <userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C38"),
-                    value: '```<prefix>unmute <@mention>, <userID>```'
+                    value: `\`\`\`${realPrefix}unmute <@mention>, <userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C39"),
-                    value: '```<prefix>unban <userID>```'
+                    value: `\`\`\`${realPrefix}unban <userID>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C40"),
-                    value: '```<prefix>slowmode <#channel>```'
+                    value: `\`\`\`${realPrefix}slowmode <#channel>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C41"),
-                    value: '```<prefix>lock <#channelMention> <@roleMention> <reason>```'
+                    value: `\`\`\`${realPrefix}lock <#channelMention> <@roleMention> <reason>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C42"),
-                    value: '```<prefix>unlock <#channelMention> <@roleMention>```'
+                    value: `\`\`\`${realPrefix}unlock <#channelMention> <@roleMention>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C49"),
@@ -96,43 +96,43 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'H_C5')}`,
-                    value: '```<prefix>coin```'
+                    value: `\`\`\`${realPrefix}coin\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C6')}`,
-                    value: '```<prefix>dice```'
+                    value: `\`\`\`${realPrefix}dice\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C7')}`,
-                    value: '```<prefix>hug <@mention>```'
+                    value: `\`\`\`${realPrefix}hug <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C8')}`,
-                    value: '```<prefix>kiss <@mention>```'
+                    value: `\`\`\`${realPrefix}kiss <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C9')}`,
-                    value: '```<prefix>hug <@mention>```'
+                    value: `\`\`\`${realPrefix}hug <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C10')}`,
-                    value: '```<prefix>randomanime```'
+                    value: `\`\`\`${realPrefix}randomanime\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C11')}`,
-                    value: '```<prefix>rps```'
+                    value: `\`\`\`${realPrefix}rps\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C12')}`,
-                    value: '```<prefix>slap <@mention>```'
+                    value: `\`\`\`${realPrefix}slap <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, 'H_C13')}`,
-                    value: '```<prefix>snakegame```',
+                    value: `\`\`\`${realPrefix}snakegame\`\`\``,
                 },
                 {
                     name: 'Anime',
-                    value: '```<prefix>rda```\n```<prefix>animebg```'                    
+                    value: `\`\`\`${realPrefix}rda\n${realPrefix}animebg\`\`\``                    
                 }
 
             )
@@ -142,11 +142,11 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, 'H_C15')}`,
-                    value: '```<prefix>setlanguage <english or portuguese>```'
+                    value: `\`\`\`${realPrefix}setlanguage <english or portuguese>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C43"),
-                    value: '```<prefix>setprefix <Args>```'
+                    value: `\`\`\`${realPrefix}setprefix <Args>\`\`\``
                 }
             )
             .setColor('RANDOM')
@@ -164,7 +164,7 @@ module.exports = {
             .addFields(
                 {
                     name: 'NSFW Anime:',
-                    value: '```<prefix>anisfw```\n```<prefix>bgnsfw```'
+                    value: `\`\`\`${realPrefix}anisfw\n${realPrefix}bgnsfw\`\`\``
                 }
             )
             .setColor('RANDOM')
@@ -174,43 +174,43 @@ module.exports = {
             .addFields(
                 {
                     name: `Change my mind Meme`,
-                    value: "```<prefix>changemymind <text>```"
+                    value: `\`\`\`${realPrefix}changemymind <text>\`\`\``
                 },
                 {
                     name: `Facepalm`,
-                    value: "```<prefix>facepalm <@mention>```"
+                    value: `\`\`\`${realPrefix}facepalm <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C23")}`,
-                    value: "```<prefix>monster <@mention>```"
+                    value: `\`\`\`${realPrefix}monster <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C24")}`,
-                    value: "```<prefix>ohno <text>```"
+                    value: `\`\`\`${realPrefix}ohno <text>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C25")}`,
-                    value: "```<prefix>ohshit <@mention>```"
+                    value: `\`\`\`${realPrefix}ohshit <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C26")}`,
-                    value: "```<prefix>opinion <@mention> <text>```"
+                    value: `\`\`\`${realPrefix}opinion <@mention> <text>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C27")}`,
-                    value: "```<prefix>phub <@mention> <text>```"
+                    value: `\`\`\`${realPrefix}phub <@mention> <text>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C28")}`,
-                    value: "```<prefix>trigger <@mention>```"
+                    value: `\`\`\`${realPrefix}trigger <@mention>\`\`\``
                 },
                 {
                     name: `${languages(guild, "H_C29")}`,
-                    value: "```<prefix>ytb <@mention> <text>```"
+                    value: `\`\`\`${realPrefix}ytb <@mention> <text>\`\`\``
                 },
                 {
                     name: `Jail`,
-                    value: "```<prefix>jail <@mention>```"
+                    value: `\`\`\`${realPrefix}jail <@mention>\`\`\``
                 }
             )
             .setColor("RANDOM")
@@ -220,11 +220,11 @@ module.exports = {
             .addFields(
                 {
                     name: languages(guild, "H_C44"),
-                    value: '```<prefix>steam-register <steamID64>```' 
+                    value: `\`\`\`${realPrefix}steam-register <steamID64>\`\`\`` 
                 },
                 {
                     name: 'Steam User Info:',
-                    value: '```<prefix>steamuser <steamID64>```'
+                    value: `\`\`\`${realPrefix}steamuser <steamID64>\`\`\``
                 },
                 {
                     name: languages(guild, "H_C45"),
@@ -241,7 +241,7 @@ module.exports = {
         .setColor("RANDOM")
         .setTitle(`<:bitcoin:811435136678756402> ${languages(guild, 'crypt_help2')}`)
         .addFields(
-            {name: languages(guild, 'crypt_help'), value: '```<prefix>crypto-help```'}
+            {name: languages(guild, 'crypt_help'), value: `\`\`\`${realPrefix}crypto-help\`\`\``}
         )
         const helpMath = new MessageEmbed()
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -249,16 +249,16 @@ module.exports = {
             .setColor("RANDOM")
             .addFields(
                 {
-                    name: languages(guild, "H_C52"), value: "```<prefix>add <number1> <number2>```"
+                    name: languages(guild, "H_C52"), value: `\`\`\`${realPrefix}add <number1> <number2>\`\`\``
                 },
                 {
-                    name: languages(guild, "H_C53"), value: "```<prefix>minus <number1> <number2>```" 
+                    name: languages(guild, "H_C53"), value: `\`\`\`${realPrefix}minus <number1> <number2>\`\`\`` 
                 },
                 {
-                    name: languages(guild, "H_C54"), value: "```<prefix>mp <number1> <number2>```" 
+                    name: languages(guild, "H_C54"), value: `\`\`\`${realPrefix}mp <number1> <number2>\`\`\`` 
                 },
                 {
-                    name: languages(guild, "H_C55"), value: "```<prefix>dvs <number1> number2>```" 
+                    name: languages(guild, "H_C55"), value: `\`\`\`${realPrefix}dvs <number1> number2>\`\`\`` 
                 }
             )
         if(!args) {

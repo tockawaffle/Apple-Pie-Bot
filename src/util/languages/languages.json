@@ -514,26 +514,6 @@
             "english": "```OBS: The  bot is not in any means associated or sponsored by them.```",
             "portugues": "```OBS: O bot não é de nenhum modo associado ou patrocinado por eles.```"
         },
-        "P4": {
-            "english": "Why does the ping varies so much?",
-            "portugues": "Por que o ping varia tanto?"
-        },
-        "P5": {
-            "english": "Simple thing to ask, check down below!",
-            "portugues": "Simples de se responder, cheque abaixo!"
-        },
-        "P6": {
-            "english": "First, the bot has a cooldown feature, it allows 2 commands each 2 seconds, for reasons of not being rate-limited.",
-            "portugues": "Primeiro, o bot tem uma função de cooldown, que permite 2 comandos a cada 2 segundos, para não ser limitado pelo Discord."
-        },
-        "P7": {
-            "english": "Second, the CD feature takes a while to process your message and verify if the bot is not requesting too much of the API.",
-            "portugues": "Segundo, a função de CD leva um tempo para processar sua mensagem e verificar se o bot não está requisitando muito da API."
-        },
-        "P8": {
-            "english": "Third, and the most obvious, it depends on where your server is located. The bot host is located at Virginia-US",
-            "portugues": "Terceiro, e o mais óbvio, depende do lugar em que o servidor estiver. A host do bot se encontra em Virginia-US"
-        },
         "P9": {
             "english": "This is my ping:",
             "portugues": "Esse é o meu ping:"
@@ -1467,6 +1447,10 @@
         "CASFW2": {
             "english": "So you prefer to test your luck?",
             "portugues": "Então você prefere testar sua sorte?"
+        },
+        "CASFW3": {
+            "english": "Random Doujin Page!",
+            "portugues": "Página aleatoria de um Doujin."
         },
         "CASFW4": {
             "english": "I can be your dom, if you want heh~<3",
