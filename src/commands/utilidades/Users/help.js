@@ -1,16 +1,13 @@
 const { MessageEmbed } = require('discord.js')
 const languages = require('../../../util/languages/languages')
-const newPrefixSchema = require('../../../configs/db/schemas/prefix-schema')
+const pageEmbed = require('discord.js-pagination')
 
 module.exports = {
     aliases: ['h'],
     description: 'Comando de help',
     run: async(client, message, args) => {
         
-        const { guild } = message;
-        const prefix = await newPrefixSchema.findOne({_id: guild.id})
-        const realPrefix = prefix.prefix
-        const pageEmbed = require('discord.js-pagination')
+        const { guild } = message; const realPrefix = message.prefix
         
         const helpUtil = new MessageEmbed()
             .setAuthor(`${guild.name}`, guild.iconURL({ dynamic: true }))

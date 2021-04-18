@@ -1,6 +1,7 @@
 const {RateLimiter} = require('discord.js-rate-limiter')
 let limiter = new RateLimiter(2, 2000)
 const newPrefixSchema = require('../../../configs/db/schemas/prefix-schema')
+
 module.exports = async(client, message) => {
     
     if(message.author.bot) return
@@ -10,11 +11,8 @@ module.exports = async(client, message) => {
         newGuild.save()
         return
     }})
-    let PREFIX = settings.prefix
-
+    let PREFIX = settings.prefix; message.prefix = PREFIX
     let limited = limiter.take(author.id)
-
-    const clientMention = message.mentions.has(client.user)
     
     if(message.channel.type === 'dm' && !ids) return
     if(message.content.startsWith(PREFIX)) {

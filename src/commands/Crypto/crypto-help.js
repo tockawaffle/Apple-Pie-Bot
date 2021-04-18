@@ -13,17 +13,17 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setDescription(`Here you can get help with the cryptos avaiable!`)
             .addFields(
-                {name: '<:bitcoin:815670555797749800> Bitcoin', value: `\`\`\`<prefix>bitcoin <currency>\`\`\``},
-                {name: '<:ethereum:815670388822376459> Ethereum', value: `\`\`\`<prefix>ethereum <currency>\`\`\``},
-                {name: '<:litecoin:815670591028723732> Litecoin', value: `\`\`\`<prefix>litecoin <currency>\`\`\``},
-                {name: '<:dogecoin:815670341502369832> Dogecoin', value: `\`\`\`<prefix>dogecoin <currency>\`\`\``},
-                {name: '<:nanocoin:815670455984848936> Nano', value: `\`\`\`<prefix>nano <currency>\`\`\``},
-                {name: '<:banano:815670286111473674> Banano', value: `\`\`\`<prefix>banano <currency>\`\`\``},
-                {name: '<:ravencoin:815670629553668126> Ravencoin', value: `\`\`\`<prefix>ravencoin <currency>\`\`\``},
-                {name: '<:xrp:815670503594524672> XRP (Ripple)', value: `\`\`\`<prefix>xrp <currency>\`\`\``},
-                {name: '<:basic:815671583573409832> BAT', value: '```<prefix>bat <currency>```'},
-                {name: '<:tether:815672050702090241> Tether (USDT)', value: '```<prefix>tether <currency>```'},
-                {name: lang(guild, "crypto_h"), value: '```<prefix>price <criptoName> <currency> <amountOfCripto>```'}
+                {name: '<:bitcoin:815670555797749800> Bitcoin', value: `\`\`\`${message.prefix}bitcoin <currency>\`\`\``},
+                {name: '<:ethereum:815670388822376459> Ethereum', value: `\`\`\`${message.prefix}ethereum <currency>\`\`\``},
+                {name: '<:litecoin:815670591028723732> Litecoin', value: `\`\`\`${message.prefix}litecoin <currency>\`\`\``},
+                {name: '<:dogecoin:815670341502369832> Dogecoin', value: `\`\`\`${message.prefix}dogecoin <currency>\`\`\``},
+                {name: '<:nanocoin:815670455984848936> Nano', value: `\`\`\`${message.prefix}nano <currency>\`\`\``},
+                {name: '<:banano:815670286111473674> Banano', value: `\`\`\`${message.prefix}banano <currency>\`\`\``},
+                {name: '<:ravencoin:815670629553668126> Ravencoin', value: `\`\`\`${message.prefix}ravencoin <currency>\`\`\``},
+                {name: '<:xrp:815670503594524672> XRP (Ripple)', value: `\`\`\`${message.prefix}xrp <currency>\`\`\``},
+                {name: '<:basic:815671583573409832> BAT', value: `\`\`\`\`${message.prefix}bat <currency>\`\`\``},
+                {name: '<:tether:815672050702090241> Tether (USDT)', value: `\`\`\`${message.prefix}tether <currency>\`\`\``},
+                {name: lang(guild, "crypto_h"), value: `\`\`\`${message.prefix}price <criptoName> <currency> <amountOfCripto>\`\`\``}
             )
         const CryptoDonate = new MessageEmbed()
             .setColor("RANDOM")

@@ -5,11 +5,20 @@ module.exports = {
     description: "Mostra o avatar de um usuário",
     run: async(client, message, args) => {
 
-        const {guild} = message
-        const member = message.mentions.members.first() || guild.members.cache.get(args[0])
-        const gUser = client.users.cache.get(args[0])
+        const {guild} = message; const fArg = args[0]
+        const member = message.mentions.members.first() || guild.members.cache.get(fArg)
+        const gUser = client.users.cache.get(fArg)
 
-        if(gUser && !member) {
+        if(!fArg) {
+            const avatar = message.author.avatarURL({dynamic: true, size: 2048, format: 'png'})
+            const authorAv = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("RANDOM")
+                .setTitle(`🔍${message.author.username}`)
+                .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C")}`)
+                .setImage(await avatar)
+            message.reply(authorAv); return
+        } else if(gUser && !member) {
             const avatar = gUser.avatarURL({dynamic: true, size: 2048, format: 'png'})
             const gUserAv = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
@@ -17,7 +26,7 @@ module.exports = {
                 .setTitle(`🌎🔎 ${gUser.username}`)
                 .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C2")}`)
                 .setImage(await avatar)
-            message.reply(gUserAv) 
+            message.reply(gUserAv); return
         } else if(member){
             const avatar = member.user.avatarURL({dynamic: true, size: 2048, format: 'png'})
             const memberAv = new MessageEmbed()
@@ -26,17 +35,13 @@ module.exports = {
                 .setTitle(`🔎 ${member.user.username}`)
                 .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C2")}`)
                 .setImage(await avatar)
-            message.reply(memberAv)
+            message.reply(memberAv); return
         } else if(!member && !gUser) {
-            const avatar = message.author.avatarURL({dynamic: true, size: 2048, format: 'png'})
-            const authorAv = new MessageEmbed()
+            const notFound = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                 .setColor("RANDOM")
-                .setTitle(`🔍${message.author.username}`)
-                .setDescription(`[${languages(guild, "AVATAR_C")}](${avatar}) ${languages(guild, "AV_C")}`)
-                .setImage(await avatar)
-            message.reply(authorAv)
-            return
+                .setDescription(`❌ - ${languages(guild, "AV_ERR")} \`${fArg}\`\n${languages(guild, "AV_ERR2")} `)
+            message.reply(notFound)
         }
     }
 }

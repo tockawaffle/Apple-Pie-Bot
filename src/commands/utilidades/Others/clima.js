@@ -1,11 +1,10 @@
 const weather = require('weather-js');
 const {MessageEmbed} = require('discord.js')
-const languages = require('../../../util/languages/languages')
-
+const languages = require('../../../util/languages/languages');
 
 module.exports = {
     run: async(client, message, args) => {
-
+        
         const { guild } = message;
         if(!args[0]) {
             const embed = new MessageEmbed()
@@ -14,7 +13,7 @@ module.exports = {
                 .addFields(
                     {
                         name: `${languages(guild, "W_A2")}`,
-                        value: '```<prefix>weather <city/state>```'
+                        value: `\`\`\`${message.prefix}weather <city/state>\`\`\``
                     }
                 )
             message.reply(embed)

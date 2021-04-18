@@ -14,7 +14,14 @@
             "english": "is the mentioned user PFP:",
             "portugues": "é a imagem que o usuário utiliza no momento:"
         },
-
+        "AV_ERR": {
+            "english": "No one was found with the ID:",
+            "portugues": "Nínguem foi encontrado com o ID:"
+        },
+        "AV_ERR2": {
+            "english": "Maybe I don't have a common server with that person?",
+            "portugues": "Talvez eu não tenha um servidor em comum com ela?"
+        },
 
         "PT_C": {
             "english": "These are the bot sponsors!",
