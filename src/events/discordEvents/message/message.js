@@ -1,5 +1,4 @@
-const {RateLimiter} = require('discord.js-rate-limiter')
-let limiter = new RateLimiter(2, 2000)
+const {RateLimiter} = require('discord.js-rate-limiter'); let limiter = new RateLimiter(2, 2000)
 const newPrefixSchema = require('../../../configs/db/schemas/prefix-schema')
 
 module.exports = async(client, message) => {
