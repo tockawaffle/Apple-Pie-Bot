@@ -30,7 +30,7 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setDescription('Consider Donating!')
             .addFields(
-                {name: '<:bitcoin:815670555797749800> Bitcoin Wallet:', value: '\`\`\`bc1qtgkxy2zcgvxyk9kwt9nhc4gzfyytrjzhc3q97y\`\`\`'},
+                {name: '<:bitcoin:815670555797749800> Bitcoin Wallet:', value: '```bc1qtgkxy2zcgvxyk9kwt9nhc4gzfyytrjzhc3q97y```'},
                 {name: '<:ethereum:815670388822376459> Ethereum Wallet:', value: '```0x208f7243e8d0295dd023e9e102d54eb079bab2e1  -  Gas Limit: 36,000```'},
                 {name: '<:litecoin:815670591028723732> Litecoin Wallet:', value: '```MRvTvzDwWbiVUARt4P1HSBR4g2FYEGx8g1```'},
                 {name: '<:dogecoin:815670341502369832> Dogecoin Wallet', value: '```D59E7bDkVLwVnwk2phmHBRy7bh3Pnycg8Z```'},

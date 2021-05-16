@@ -11,10 +11,7 @@ module.exports = {
                 .setAuthor(message.guild.name, guild.iconURL({dynamic: true}))
                 .setDescription(`${languages(guild, "W_A")}`)
                 .addFields(
-                    {
-                        name: `${languages(guild, "W_A2")}`,
-                        value: `\`\`\`${message.prefix}weather <city/state>\`\`\``
-                    }
+                    {name: `${languages(guild, "W_A2")}`,value: `\`\`\`${message.prefix}weather <city/state>\`\`\``}
                 )
             message.reply(embed)
             return
@@ -26,12 +23,15 @@ module.exports = {
                     .setColor('RANDOM')
                     .setFooter(`${languages(guild, 'W9_C')}`)
                     .setDescription(`${languages(guild, 'W2_C')}`)
-                    .addField(`${languages(guild, 'W3_C')} `, `\`\`\`${result[0].current.temperature}ºC\`\`\``)
-                    .addField(`${languages(guild, 'W4_C')} `, `\`\`\`${result[0].current.skytext}\`\`\``)
-                    .addField(`${languages(guild, 'W5_C')} `, `\`\`\`${result[0].current.humidity}%\`\`\``)
-                    .addField(`${languages(guild, 'W6_C')} `, `\`\`\`${result[0].current.windspeed}\`\`\``)
-                    .addField(`${languages(guild, 'W7_C')} `, `\`\`\`${result[0].current.observationtime}\`\`\``)
-                    .addField(`${languages(guild, 'W8_C')} `, `\`\`\`${result[0].current.winddisplay}\`\`\``)
+                    .addFields(
+                        {name: languages(guild, 'W3_C'), value: `\`\`\`${result[0].current.temperature}ºC\`\`\``},
+                        {name: languages(guild, 'W4_C'), value: `\`\`\`${result[0].current.skytext}\`\`\``},
+                        {name: languages(guild, 'W5_C'), value: `\`\`\`${result[0].current.humidity}%\`\`\``},
+                        {name: languages(guild, 'W6_C'), value: `\`\`\`${result[0].current.windspeed}\`\`\``},
+                        {name: languages(guild, 'W7_C'), value: `\`\`\`${result[0].current.observationtime}\`\`\``},
+                        {name: languages(guild, 'W8_C'), value: `\`\`\`${result[0].current.winddisplay}\`\`\``},
+                        
+                    )
                     .setThumbnail(result[0].current.imageUrl);
                 message.channel.send(embed)
         } catch(err) {

@@ -1,5 +1,4 @@
 module.exports = async(client) => {
-    const newPrefixSchema = require('../../../configs/db/schemas/prefix-schema')
     const {loadLangs} = require('../../../util/languages/languages')
     const status = require('../../../configs/status/statusA');
     const random = status[Math.floor(Math.random() * status.length)];
@@ -22,7 +21,7 @@ module.exports = async(client) => {
         else if(actNum === 1) {const random3 = status[Math.floor(Math.random() * status.length)]; client.user.setActivity(random3, {type: 'PLAYING'}); actNum = 0}
     }, ms('5m'))
 
-    client.user.setAvatar('src/configs/imgs/perfil/i1.jpg').catch(err => console.log(`${err}`)); let av = 0
+    client.user.setAvatar('src/configs/imgs/perfil/i1.png').catch(err => console.log(`${err}`)); let av = 0
     setInterval(function() {
         if(av === 0) {client.user.setAvatar('src/configs/imgs/perfil/i2.jpg'); av = 1} 
         else if (av === 1) {client.user.setAvatar('src/configs/imgs/perfil/i3.jpg'); av = 2} 
