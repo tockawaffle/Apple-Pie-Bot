@@ -27,7 +27,7 @@ module.exports = {
                 .setDescription(`${languages(guild, "L_C3")}`)
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .addFields(
-                    {name: `${languages(guild, "L_C4")}`,value: `[${languages(guild, "H_C21")}](https://www.applepiebot.xyz/permission-flags)`},
+                    {name: `${languages(guild, "L_C4")}`,value: `[${languages(guild, "H_C21")}](https://www.tockanest.com/apple-home/permission-flags)`},
                     {name: `${languages(guild, "L_C6")}`,value: `\`\`\`${languages(guild, "L_C7")}\`\`\``}
                 )
                 .setFooter(`${languages(guild, "L_C5")}`)

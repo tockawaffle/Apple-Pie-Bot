@@ -13,7 +13,7 @@ module.exports = {
             .addFields(
                 {
                     name: `${languages(guild, "I2_C")}`,
-                    value: `[${languages(guild, "BF_C5")}](https://www.applepiebot.xyz/invite-me)`
+                    value: `[${languages(guild, "BF_C5")}](https://www.tockanest.com/apple-home)`
                 }
             )
             .setFooter(`${languages(guild, "I3_C")}`)

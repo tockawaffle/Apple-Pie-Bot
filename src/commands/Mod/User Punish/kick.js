@@ -83,18 +83,30 @@ module.exports = {
                 )
             return message.reply(hasPerm).then(msg => msg.delete({timeout: 10000}))
         }
-
-        let reason = args.slice(1).join(' ')
-        const sucess = new MessageEmbed()
-            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-            .setColor("GREEN")
-            .setDescription(languages(guild, "K"))
-            .addFields(
-                {name: languages(guild, "K2"), value: `\`${member.user.username}\``},
-                {name: languages(guild, "K3"), value: `\`${reason ? reason: languages(guild, "noreason")}\``}
-            )
-            .setFooter(`${languages(guild, "K4")} ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
-        message.reply(sucess)
-        member.kick(`${reason ? reason: languages(guild, "noreason")}`)
+        try {
+            let reason = args.slice(1).join(' ')
+            const sucess = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("GREEN")
+                .setDescription(languages(guild, "K"))
+                .addFields(
+                    {name: languages(guild, "K2"), value: `\`${member.user.username}\``},
+                    {name: languages(guild, "KR"), value: `\`${reason ? reason: languages(guild, "noreason")}\``}
+                )
+                .setFooter(`${languages(guild, "KA")} ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
+            message.reply(sucess)
+            member.kick(`${reason ? reason: languages(guild, "noreason")}`)
+        } catch (error) {
+            const {guild} = message
+            const { MessageEmbed: {ErrorMessage} } = require("discord.js")
+            const universalErrorMessage = new ErrorMessage()
+                .setAuthor(guild.name, guild.iconURL)
+                .setColor('RANDOM')
+                .setTitle(languages(guild, "mst7"))
+                .addFields(
+                    {name: languages(guild, "universal-error-message"), value: `\`${error}\``}
+                )
+            return message.reply(universalErrorMessage)
+        }
     }
 }

@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const lang = require('../../../util/languages/languages')
-
+const {evaluate} = require('mathjs')
 module.exports = {
     aliases: ['vezes', 'mp', 'x', 'times'],
     description: 'Multiplicação garaio',

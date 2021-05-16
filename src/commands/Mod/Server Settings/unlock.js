@@ -36,7 +36,7 @@ module.exports = {
                 .setDescription(`❌ Failed: Missing Bot Permissions`)
                 .setAuthor(message.guild.name, message.guild.iconURL({dynamic: true}))
                 .addFields(
-                    {name: `Check the link below to see wich permissions the bot need and enable them after:`,value: `[Click here](https://www.applepiebot.xyz/permission-flags)"It's safe to click. The link will bring you into the bot's website."`}
+                    {name: `Check the link below to see wich permissions the bot need and enable them after:`,value: `[Click here](https://www.tockanest.com/apple-home/permission-flags)"It's safe to click. The link will bring you into the bot's website."`}
                 )
                 .setColor('RED')
             message.reply(noClientPerm)

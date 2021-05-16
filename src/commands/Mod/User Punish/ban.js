@@ -5,6 +5,7 @@ module.exports = {
     aliases: ['b'],
     description: 'Para banir um usuário',
     run: async(client, message, args) => {
+
         const {guild} = message
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const other = ["ADMINISTRATOR" || "KICK_MEMBERS" ||  "KICK_MEMBERS" || "BAN_MEMBERS" || "MANAGE_CHANNELS" || "MANAGE_GUILD"]
@@ -85,17 +86,30 @@ module.exports = {
             return message.reply(hasPerm).then(msg => msg.delete({timeout: 10000}))
         }
 
-        let reason = args.slice(1).join(' ')
-        const sucess = new MessageEmbed()
-            .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-            .setColor("GREEN")
-            .setDescription(languages(guild, "B"))
-            .addFields(
-                {name: languages(guild, "B2"), value: `\`${member.user.username}\``},
-                {name: languages(guild, "B3"), value: `\`${reason ? reason: languages(guild, "noreason")}\``}
-            )
-            .setFooter(`${languages(guild, "B4")} ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
-        message.reply(sucess)
-        await member.ban({reason: `${reason ? reason: languages(guild, "noreason")}`})
+        try {
+            let reason = args.slice(1).join(' ')
+            const sucess = new MessageEmbed()
+                .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                .setColor("GREEN")
+                .setDescription(languages(guild, "B"))
+                .addFields(
+                    {name: languages(guild, "B2"), value: `\`${member.user.username}\``},
+                    {name: languages(guild, "B3"), value: `\`${reason ? reason: languages(guild, "noreason")}\``}
+                )
+                .setFooter(`${languages(guild, "B4")} ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
+            message.reply(sucess)
+            await member.ban({reason: `${reason ? reason: languages(guild, "noreason")}`})
+        } catch (error) {
+            const {guild} = message
+            const { MessageEmbed: {ErrorMessage} } = require("discord.js")
+            const universalErrorMessage = new ErrorMessage()
+                .setAuthor(guild.name, guild.iconURL)
+                .setColor('RANDOM')
+                .setTitle(languages(guild, "mst7"))
+                .addFields(
+                    {name: languages(guild, "universal-error-message"), value: `\`${error}\``}
+                )
+            return message.reply(universalErrorMessage)
+        }
     }
 }

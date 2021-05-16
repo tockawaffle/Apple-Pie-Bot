@@ -152,7 +152,7 @@ module.exports = {
             .setTitle(`${languages(guild, 'H_C19')}`)
             .addFields({
                 name: `${languages(guild, 'H_C20')}`,
-                value: `[${languages(guild, 'H_C21')}](https://www.applepiebot.xyz/)`
+                value: `[${languages(guild, 'H_C21')}](https://www.tockanest.com/apple-home/)`
             })
             .setColor('RANDOM')
         const helpNSFW = new MessageEmbed()

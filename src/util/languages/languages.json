@@ -2588,6 +2588,10 @@
         "maxArgsExc": {
             "english": "Max. Arguments exceeded. Max args allowed:",
             "portugues": "Máximo de Argumentos excedidos. Máximo permitido:"
+        },
+        "universal-error-message": {
+            "english": "Seems like something went wrong, can you re-check your arguments?. If this error insists, please, open an issue at my Github page.",
+            "portugues": "Parece que algo deu errado, você pode rechecar suas opções e argumentos de comando?. Se esse erro insistir, por favor, abra um \"issue\" em minha página do Github."
         }
 
     }

@@ -155,7 +155,7 @@ module.exports = {
                             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                             .setDescription(`${languages(guild, "M_E5")}`)
                             .addFields(
-                                {name: `${languages(guild, "M_E6")}`,value: `[${languages(guild, "clique")}](https://www.applepiebot.xyz/permission-flags)`},
+                                {name: `${languages(guild, "M_E6")}`,value: `[${languages(guild, "clique")}](https://www.tockanest.com/apple-home/permission-flags)`},
                                 {name: `${languages(guild, "M_E7")}`,value: `${languages(guild, "M_E8")}`}
                             )
                         pages = [
