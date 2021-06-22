@@ -58,7 +58,6 @@ module.exports = {
                 message.channel.stopTyping()
                 return message.reply(sucessEmbed);
             } else if(def === 'languageConfig') {
-
                 const lang = require('../../../util/languages/languages')
                 const targetLanguage = args[1]
 
@@ -74,7 +73,6 @@ module.exports = {
                     console.log(lang(guild, "config_lang_err_noargs-nolang_2"))
                     return message.reply(noargs)
                 }
-
                 const { languages } = require('../../../util/languages/languages.json')
                 
                 if (!languages.includes(targetLanguage)) {
@@ -111,8 +109,7 @@ module.exports = {
             const errorEmbed = new MessageEmbed()
                 .setColor('#ffe135')
                 .setAuthor(message.author.username, 'https://cdn.discordapp.com/emojis/821190159995371521.gif?v=1')
-                .setDescription(`Oops, Something went wrong!:\n\n\`\`\`diff\n +Error: ${error}\`\`\`\nIf this error persists, please, open an issue at my GitHub page.`)
-                
+                .setDescription(`Oops, Something went wrong!:\n\n\`\`\`diff\n +Error: ${error}\`\`\`\nIf this error persists, please, open an issue at my GitHub page.`) 
             message.reply(errorEmbed)
             message.channel.stopTyping()
         }
