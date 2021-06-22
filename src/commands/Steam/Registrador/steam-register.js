@@ -1,4 +1,4 @@
-const dbdSchema = require('../../../configs/db/schemas/dbd-id-schema')
+const dbdSchema = require('../../../configs/db/schemas/steam-schema')
 const {MessageEmbed} = require('discord.js')
 const lang = require('../../../util/languages/languages')
 

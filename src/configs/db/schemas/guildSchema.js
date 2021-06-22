@@ -5,9 +5,11 @@ const reqString = {
     required: true
 }
 
-const langSchema = mongoose.Schema({
+const guildSchema = mongoose.Schema({
     _id: reqString,
+    name: String,
     language: reqString,
+    prefix: String
 })
 
-module.exports = mongoose.model('languages', langSchema)
+module.exports = mongoose.model('guilds', guildSchema)

@@ -59,8 +59,9 @@ module.exports = {
             .setAuthor(guild.name, guild.iconURL({dynamic: true}))
             .setTitle(`🛠 ${languages(guild, 'H_C14')}`)
             .addFields(
-                {name: `${languages(guild, 'H_C15')}`,value: `\`\`\`${realPrefix}setlanguage <english or portuguese>\`\`\``},
-                {name: languages(guild, "H_C43"),value: `\`\`\`${realPrefix}setprefix <Args>\`\`\``}
+                {name: languages(guild, 'H_C15'),   value: `\`\`\`${realPrefix}config language <english | portuguese>\`\`\``},
+                {name: languages(guild, "H_C43"),   value: `\`\`\`${realPrefix}config prefix <Prefix>\`\`\``},
+                {name: languages(guild, "H_C56"),   value: `\`\`\`${realPrefix}config help\`\`\``}
             )
             .setColor('RANDOM')
         const helpPage = new MessageEmbed()

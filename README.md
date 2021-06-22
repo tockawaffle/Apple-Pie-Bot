@@ -34,9 +34,7 @@ PS: If you're going to download it and use it as a base for your bot (or somethi
 
 # **Informações Úteis / Useful Info:**
 
-[Servidor de suporte / Support Server](https://discord.gg/G4bv4Buf4E)
-
-Versão do bot / Bot Version: 10.0
+Versão do bot / Bot Version: 12.0
 
 Todos as dependências estão no arquivo "package.json", é só utilizar: ```npm install```
 

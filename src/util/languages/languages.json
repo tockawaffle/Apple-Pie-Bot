@@ -385,6 +385,10 @@
             "english": "Division:",
             "portugues": "Divisão:"
         },
+        "H_C56": {
+            "english": "Other configs:",
+            "portugues": "Outras configurações:"
+        },
         
         
         "I_C": {
@@ -1076,7 +1080,7 @@
 
 
         "LCK": {
-            "english": "✅ Sucess: Channel Lock",
+            "english": "✅ Success: Channel Lock",
             "portugues": "✅ Sucesso: Lock de Canal"
         },
         "LCK_C": {
@@ -1107,7 +1111,7 @@
 
 
         "UNLC": {
-            "english": "✅ Sucess: Channel Lock",
+            "english": "✅ Success: Channel Lock",
             "portugues": "✅ Sucesso: Canal Bloqueado"
         },
         "UNLC_C": {
@@ -1156,7 +1160,7 @@
             "portugues": "Faltando permissão 'Gerenciar Canais' para o usuário"
         },
         "L_C9": {
-            "english": "✅ Sucess!: Channel Lock",
+            "english": "✅ Success!: Channel Lock",
             "portugues": "✅ Sucesso!: Bloqueio de Canal"
         },
         "L_C10": {
@@ -1234,7 +1238,7 @@
             "portugues": "NOTA: Não use o tempo como '10s', o bot vai reconhecê-lo como um número não inteiro"
         },
         "SM_C13": {
-            "english": "✅ Sucess!: Slowmode",
+            "english": "✅ Success!: Slowmode",
             "portugues": "✅ Sucesso!: Slowmode"
         },
         "SM_C14": {
@@ -1301,7 +1305,7 @@
             "portugues": "O cargo de DJ está sendo criado, me dê um segundo. . ."
         },
         "DJ_C2": {
-            "english": "Dj Role was created sucessfully, now give it to someone!",
+            "english": "Dj Role was created successfully, now give it to someone!",
             "portugues": "O cargo de DJ foi criado com sucesso!, agora dê ela para alguém!"
         },
 
@@ -1608,14 +1612,6 @@
             "english": "Not Provided.",
             "portugues": "Não Providenciado."
         },
-        "PFX": {
-            "english": "✅ Sucess!: Prefix Updated.",
-            "portugues": "✅ Sucesso!: Prefixo Configurado."
-        },
-        "PFX2": {
-            "english": "New Prefix is:",
-            "portugues": "Novo Prefixo é:"
-        },
         "NPFX": {
             "english": "❌ Failed: Missing Permissions",
             "portugues": "❌ Falha: Faltando Permissões."
@@ -1627,22 +1623,6 @@
         "NPFX3": {
             "english": "Missing `'Manage Channels'` Permission for the user",
             "portugues": "Faltando Permissão: `'Gerenciar Servidor'` para o usuário"
-        },
-        "APFX": {
-            "english": "❌ Failed: Missing Arguments",
-            "portugues": "❌ Falha: Faltando Argumentos"
-        },
-        "APFX2": {
-            "english": "You need to provide something for your prefix to change to!",
-            "portugues": "Você precisa providenciar algo para eu configurar o prefixo!"
-        },
-        "APFX3": {
-            "english": "Example:",
-            "portugues": "Exemplo:"
-        },
-        "APFX4": {
-            "english": "Something To Change To",
-            "portugues": "Algo para mudar o prefixo"
         },
         "ncreate3": {
             "english": "Correct Usage:",
@@ -1721,7 +1701,7 @@
             "portugues": "❌ Falha: Faltando Permissão de Bot"
         }, 
         "B": {
-            "english": "✅ Sucess!: User Banned.",
+            "english": "✅ Success!: User Banned.",
             "portugues": "✅ Sucesso!: Usuário Banido."
         },
         "B2": {
@@ -1737,7 +1717,7 @@
             "portugues": "Banimento realizado por:"
         },
         "UB": {
-            "english": "✅ Sucess!: User Unbanned.",
+            "english": "✅ Success!: User Unbanned.",
             "portugues": "✅ Sucesso!: Usuário Desbanido."
         },
         "UB2": {
@@ -1763,7 +1743,7 @@
 
         
         "K": {
-            "english": "✅ Sucess!: User Kicked",
+            "english": "✅ Success!: User Kicked",
             "portugues": "✅ Sucesso! Usuário Expulso."
         },
         "K2": {
@@ -1788,7 +1768,7 @@
             "portugues": "❌ Falha: Este usuário não está mutado, por favor, cheque isso antes de o desmutar."
         },
         "UN2": {
-            "english": "✅ Sucess: Unmute",
+            "english": "✅ Success: Unmute",
             "portugues": "✅ Sucesso: Desmutar"
         },
         "UN3": {
@@ -1808,7 +1788,7 @@
             "portugues": "Desculpe, você não tem permissão para fazer isso."
         },
         "M2_C": {
-            "english": "✅ Sucess: Mute",
+            "english": "✅ Success: Mute",
             "portugues": "✅ Sucesso: Silenciamento"
         },
         "M3_C": {
@@ -1925,7 +1905,7 @@
             "portugues": "<prefixo>addemoji <nome> (Se você estiver usando um anexo)"
         },
         "EMJ3": {
-            "english": "✅ Sucess!: Emoji Created",
+            "english": "✅ Success!: Emoji Created",
             "portugues": "✅ Sucesso!: Emoji Criado"
         },
         "EMJ4": {
@@ -2588,6 +2568,74 @@
         "universal-error-message": {
             "english": "Seems like something went wrong, can you re-check your arguments?. If this error insists, please, open an issue at my Github page.",
             "portugues": "Parece que algo deu errado, você pode rechecar suas opções e argumentos de comando?. Se esse erro insistir, por favor, abra um \"issue\" em minha página do Github."
+        },
+        "config_1": {
+            "english": "The current avaiable config options are:",
+            "portugues": "As configurações disponiveis são:"
+        },
+        "config_1_a": {
+            "english": "To set a language.",
+            "portugues": "Para configurar um idioma."
+        },
+        "config_1_b": {
+            "english": "To set a prefix.",
+            "portugues":"Para configurar um prefixo."
+        },
+        "config_1_c": {
+            "english": "Shows this page",
+            "portugues": "Mostra esta página"
+        },
+        "config_1_d": {
+            "english": "Show all information that is stored from this server.",
+            "portugues": "Mostra todas as configurações que são guardadas deste servidor."
+        },
+        "config_1_e": {
+            "english": "Uses the default config for this bot.",
+            "portugues": "Usa as configurações de fábrica do bot."
+        },
+        "config_2": {
+            "english": "To use this command, please use:",
+            "portugues": "Para usar este comando, utilize:"
+        },
+        "config_2_a": {
+            "english": "<option> <args>",
+            "portugues": "<opção> <args>"
+        },
+        "config_prefix_err_noargs": {
+            "english": "You forgot what I should use as a prefix.",
+            "portugues": "Você não me disse o que eu deveria utilizar como prefixo"
+        },
+        "config_prefix_set": {
+            "english": "✅ Success!: Prefix Updated.",
+            "portugues": "✅ Sucesso!: Prefixo Configurado."
+        },
+        "config_lang_err_noargs": {
+            "english": "❌Failed: Missing Args.",
+            "portugues": "❌Falha: Faltando Argumentos"
+        },
+        "config_lang_err_noargs-nolang_2": {
+            "english": "You can choose between those languages:",
+            "portugues": "Você pode escolher entre estes idiomas:"
+        },
+        "config_lang_err_nolang": {
+            "english": "The following language is not supported!",
+            "portugues": "O idioma a seguir não é suportado!"
+        },
+        "config_lang_err_nolang_2": {
+            "english": "Language not supported:",
+            "portugues": "Idioma não suportado:"
+        },
+        "config_lang_err_nolang_3": {
+            "english": "",
+            "portugues": ""
+        },
+        "config_lang_set": {
+            "english": "The language has been set!",
+            "portugues": "O idioma foi configurado!"
+        },
+        "config_lang_set_1": {
+            "english": "New language:",
+            "portugues": "Novo idioma:"
         }
 
     }
