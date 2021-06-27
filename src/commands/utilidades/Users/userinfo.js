@@ -31,14 +31,16 @@ module.exports = {
                 )
             message.reply(memberEmbed)
             return
-        }
-        if(member) {
+        }else if(member) {
             let presence = member.user.presence.status
             let richPresence = member.user.presence.activities
-            if(presence === 'dnd') presence = `\`\`\`${languages(guild, 'uf')}\`\`\``
-            else if (presence === 'idle') presence = `\`\`\`${languages(guild, 'uf1')}\`\`\``
-            else if (presence === 'online') presence = '```Online```'
-            else if (presence === 'offline') presence = '```Offline```'
+            if(richPresence[0].name === 'Custom Status' && !richPresence[1]) { richPresence = '' } 
+            else if (richPresence[0].name === 'Custom Status' && richPresence[1]) { richPresence = richPresence[1].name}
+
+            if(presence === 'dnd') presence = `${languages(guild, 'uf')}`
+            else if (presence === 'idle') presence = `${languages(guild, 'uf1')}`
+            else if (presence === 'online') presence = 'Online'
+            else if (presence === 'offline') presence = 'Offline'
             
             const joined = moment(member.joinedAt).locale('pt-br').format('L')
             const created = moment(member.user.createdAt).locale('pt-br').format('L')
@@ -51,13 +53,12 @@ module.exports = {
                     {name: `${languages(guild, "uf3")}`,value: `\`\`\`${member.user.username}\`\`\``},
                     {name: `${languages(guild, "uf4")}`,value: `\`\`\`${member.user.id}\`\`\``},
                     {name: `${languages(guild, "uf5")}`,value: `\`\`\`${presence}\`\`\``},
-                    {name: `${languages(guild, "uf7")}`,value: `\`\`\`${richPresence}.\`\`\``},
+                    {name: `${languages(guild, "uf7")}`,value: `\`\`\`${richPresence}\`\`\``},
                     {name: `${languages(guild, "uf6")}`,value: `\`\`\`${created}\`\`\``},
                     {name: `${languages(guild, "uf8")}`,value: `\`\`\`${joined}\`\`\``},
                 )
             message.reply(memberEmbed)
         }
-
     },
     aliases: ["uf"],
     description: 'Userinfo'
