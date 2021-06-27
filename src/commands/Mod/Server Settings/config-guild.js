@@ -108,7 +108,7 @@ module.exports = {
         } catch (error) {
             const errorEmbed = new MessageEmbed()
                 .setColor('#ffe135')
-                .setAuthor(message.author.username, 'https://cdn.discordapp.com/emojis/821190159995371521.gif?v=1')
+                .setAuthor(message.author.username, message.author.displayAvatarURL({dynamyc: true}))
                 .setDescription(`Oops, Something went wrong!:\n\n\`\`\`diff\n +Error: ${error}\`\`\`\nIf this error persists, please, open an issue at my GitHub page.`) 
             message.reply(errorEmbed)
             message.channel.stopTyping()
