@@ -2636,6 +2636,126 @@
         "config_lang_set_1": {
             "english": "New language:",
             "portugues": "Novo idioma:"
+        },
+        "coins": {
+            "english": "coins",
+            "portugues": "moedas"
+        },
+        "atm": {
+            "english": "You have",
+            "portugues": "Você tem"
+        },
+        "atm_2": {
+            "english": "coins! Use them wisely.",
+            "portugues": "moedas! Use-os de modo inteligente."
+        },
+        "atm_bet": {
+            "english": "You've already betted:",
+            "portugues": "Você já apostou:"
+        },
+        "atm_paid": {
+            "english": "You've already paid:",
+            "portugues": "Você já pagou:"
+        },
+        "atm_paid2": {
+            "english": "to other users.",
+            "portugues": "para outros usuários."
+        },
+        "pay": {
+            "english": "You've paid",
+            "portugues": "Você pagou"
+        },
+        "pay_2": {
+            "english": "to",
+            "portugues": "para"
+        },
+        "pay_redo": {
+            "english": "Please, redo this command. You or the receiver didn't had an account.",
+            "portugues": "Por favor, refaça este comando. Você ou quem receberá não tinha uma conta registrada."
+        },
+        "payS": {
+            "english": "you payed",
+            "portugues": "você pagou"
+        },
+        "http_error-504": {
+            "english": "Gateway timeout",
+            "portugues": "Tempo Limite Excedido"
+        },
+        "http_error-400": {
+            "english": "Bad request",
+            "portugues": "Requisição Mal-Feita"
+        },
+        "http_error-401": {
+            "english": "Unauthorized Request (Try again tomorrow)",
+            "portugues": "Requisição Não Autorizada (Tente Novamente Amanhã)"
+        },
+        "http_error-403": {
+            "english": "Forbidden Request (Try again tomorrow)",
+            "portugues": "Requisição Proibida (Tente Novamente Amanhã)"
+        },
+        "http_error-404": {
+            "english": "Data not found",
+            "portugues": "Informações Não Encontradas"
+        },
+        "http_error-405": {
+            "english": "Method not allowed",
+            "portugues": "Método não autorizado"
+        },
+        "http_error-415": {
+            "english": "Unsupported media type",
+            "portugues": "Tipo de mídia não suportada"
+        },
+        "http_error-429": {
+            "english": "Rate limit exceeded (Try again in a couple of minutes)",
+            "portugues": "Limite de Requisições Excedido (Tente Novamente em alguns minutos)"
+        },
+        "http_error-500": {
+            "english": "Internal server error",
+            "portugues": "Erro interno de Servidor"
+        },
+        "http_error-502": {
+            "english": "Bad gateway",
+            "portugues": "Gateway Ruim"
+        },
+        "http_error-503": {
+            "english": "Service unavailable",
+            "portugues": "Serviço não disponivel"
+        },
+        "lr-err": {
+            "english": "Please, inform me your {err} so I can retrieve your information from the API.\nYou can get your {err} from below your name on the client, as shown in the image below.",
+            "portugues": "Por favor, informe {err} para que eu consiga te registrar.\nVocê consegue sua {err} do modo que a imagem abaixo mostra."
+        },
+        "lr-err-1": {
+            "english": "region",
+            "portugues": "sua região"
+        },
+        "lr-err-1-b": {
+            "english": "username",
+            "portugues": "seu username"
+        },
+        "lr-err-404": {
+            "english": "The Summoner with the username \"{name}\" was not found by the Riot API on the region \"{region}\", please, recheck your username. Also, don't forget that you need to use the username below your game name, like in the image below.",
+            "portugues": "O invocador com o username \"{name}\" não foi encontrado na região \"{region}\", por favor, cheque novamente seu username e região. Você consegue ambos como é mostrado na imagem abaixo."
+        },
+        "lr-err-ivdRg": {
+            "english": "Invalid Region.",
+            "portugues": "Região Inválida."
+        },
+        "lr-err-ivdArg": {
+            "english": "Missing Args.",
+            "portugues": "Faltando Informações."
+        },
+        "lr-done": {
+            "english": "✅ Success!: Registered.",
+            "portugues": "✅ Sucesso!: Registrado."
+        },
+        "lr-done-desc": {
+            "english": "```You are now registered under the Summoner \"{name}\" on the region \"{region}\".\nIf you wish to unregister, please, run the command {prefix}unregister.```",
+            "portugues": "```Você está agora registrado através do Invocador \"{name}\" da região \"{region}\".\nCaso você queira apagar o registro, use o comando {prefix}unregister```"
+        },
+        "lr-al-reg": {
+            "english": "❌ Failed: User Already Registered.",
+            "portugues": "❌ Falha: Usuário Já Registrado."
         }
 
     }

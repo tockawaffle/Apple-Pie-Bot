@@ -1,6 +1,5 @@
-const dbdSchema = require('../../../configs/db/schemas/steam-schema')
 const {MessageEmbed} = require('discord.js')
-const lang = require('../../../util/languages/languages')
+const lang = require('../../../../util/languages/languages'); const steamSchema = require('../../../../configs/db/schemas/steam-schema')
 
 module.exports = {
     aliases:['steamr', 'registrar-steam', 'r-steam', 'rsteam'],
@@ -27,7 +26,7 @@ module.exports = {
                 }).then(async(clt) => {
                     let rps = clt.first().content.toLowerCase()
                     if(rps === lang(guild, "yes")) {
-                        await dbdSchema.findOneAndUpdate(
+                        await steamSchema.findOneAndUpdate(
                             {_id: steamID},
                             {_id: steamID, userID: userId },
                             {upsert: true}

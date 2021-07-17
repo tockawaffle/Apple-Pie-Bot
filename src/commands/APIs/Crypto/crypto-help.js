@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js")
 const pages = require('discord.js-pagination')
-const lang = require('../../util/languages/languages')
+const lang = require('../../../util/languages/languages')
 module.exports = {
     aliases: ['cryptoh', 'cryptohelp'],
     description: 'CryptoHelp',
@@ -21,7 +21,7 @@ module.exports = {
                 {name: '<:banano:815670286111473674> Banano', value: `\`\`\`${message.prefix}banano <currency>\`\`\``},
                 {name: '<:ravencoin:815670629553668126> Ravencoin', value: `\`\`\`${message.prefix}ravencoin <currency>\`\`\``},
                 {name: '<:xrp:815670503594524672> XRP (Ripple)', value: `\`\`\`${message.prefix}xrp <currency>\`\`\``},
-                {name: '<:basic:815671583573409832> BAT', value: `\`\`\`\`${message.prefix}bat <currency>\`\`\``},
+                {name: '<:basic:815671583573409832> BAT', value: `\`\`\`${message.prefix}bat <currency>\`\`\``},
                 {name: '<:tether:815672050702090241> Tether (USDT)', value: `\`\`\`${message.prefix}tether <currency>\`\`\``},
                 {name: lang(guild, "crypto_h"), value: `\`\`\`${message.prefix}price <criptoName> <currency> <amountOfCripto>\`\`\``}
             )

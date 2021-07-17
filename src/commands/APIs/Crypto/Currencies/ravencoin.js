@@ -1,11 +1,11 @@
 const { MessageEmbed } = require("discord.js")
-const lang = require('../../../util/languages/languages')
+const lang = require('../../../../util/languages/languages')
 module.exports = {
-    aliases:['dogecoin'],
-    description: 'Dogecoin',
+    aliases:['rvn'],
+    description: 'Nanocoin',
     run: async(client, message, args) => {
 
-        const {guild} = message
+        const {guild, author} = message
 
         const crypto = client.crypto; let currency = args[0]
         if(!currency) {
@@ -17,15 +17,15 @@ module.exports = {
         }
         currency.toLowerCase()
         let up = ' ' + currency.toUpperCase()
-        let nano = await crypto.coins.markets({vs_currency: currency, ids: 'dogecoin'})
+        let nano = await crypto.coins.markets({vs_currency: currency, ids: 'ravencoin'})
 
         if(nano.success === true) {
             let data = nano.data
 
             const nanoEmbed = new MessageEmbed()
                 .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                .setTitle(`<:dogecoin:815670341502369832> Doge ➪ ${up}`)
-                .setColor('YELLOW')
+                .setTitle(`<:ravencoin:815670629553668126> Ravencoin ➪ ${up}`)
+                .setColor('#808080')
                 .addFields(
                     {name: lang(guild, "crypt_price"), value: `\`\`\`${data.map(x => x.current_price) + up}\`\`\``},
                     {name: lang(guild, "crypt_h24"), value: `\`\`\`${data.map(x => x.high_24h) + up}\`\`\``},

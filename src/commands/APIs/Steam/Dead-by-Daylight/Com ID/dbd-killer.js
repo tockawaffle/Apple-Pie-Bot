@@ -1,12 +1,12 @@
 const { MessageEmbed } = require('discord.js'); const page = require('discord.js-pagination')
-const lang = require('../../../../util/languages/languages'); const dbdSchema = require('../../../../configs/db/schemas/steam-schema')
+const lang = require('../../../../../util/languages/languages'); const steamSchema = require('../../../../../configs/db/schemas/steam-schema')
 
 module.exports = {
     aliases: ['dbdk', 'killer'], description: '',
     run: async(client, message, args) => {
         const {guild} = message
             
-        let steamDB = await dbdSchema.findOne({userID: message.author.id})
+        let steamDB = await steamSchema.findOne({userID: message.author.id})
         let fArg = args[0]; const s = client.steam; let id; let checker;
         try {
             if(!steamDB && !fArg) {

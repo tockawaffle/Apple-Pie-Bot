@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js")
-const pages = require('discord.js-pagination')
-const lang = require('../../../util/languages/languages')
+const lang = require('../../../../util/languages/languages')
+
 module.exports = {
     aliases: [],
     description: 'CryptoHelp',

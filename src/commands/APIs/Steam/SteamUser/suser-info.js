@@ -1,5 +1,6 @@
 const {MessageEmbed} = require('discord.js'); const page = require('discord.js-pagination')
-const lang = require('../../../util/languages/languages'); const moment = require('moment')
+const lang = require('../../../../util/languages/languages'); const moment = require('moment')
+
 module.exports = {
     aliases: ['user-steam','steam-u','steamuser', 'steamu'],
     description: 'Busca informações sobre um usuário da Steam',
