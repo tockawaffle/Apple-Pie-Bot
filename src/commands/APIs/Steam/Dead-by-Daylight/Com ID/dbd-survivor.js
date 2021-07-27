@@ -41,7 +41,8 @@ module.exports = {
                             {name: lang(guild, "nogame2"), value: lang(guild, "nogame2")},
                         )
                         .setColor("#ff0000")
-                    return message.reply(errEmbed);
+                    message.reply(errEmbed);
+                    return message.channel.stopTyping()
                 }
                 let gData = steamStats.stats
                 let rawGameTime = gameName.playTime; let realGameTime = Math.floor(rawGameTime / 60)
@@ -131,6 +132,7 @@ module.exports = {
                     )
                 pages = [survivalPage, survivalPage2, survivalPage3]
                 page(message, pages)
+                return message.channel.stopTyping()
             } 
         } catch (error) {
             const errEmbed = new MessageEmbed()
@@ -141,6 +143,7 @@ module.exports = {
                     {name: `${lang(guild, "err2")}  ${lang(guild, "err_dev")}`, value: `\`\`\`${error}\`\`\``},
                 )
             message.reply(errEmbed)
+            return message.channel.stopTyping()
         }   
     }
 }

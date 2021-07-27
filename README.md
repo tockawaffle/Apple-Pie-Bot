@@ -34,7 +34,7 @@ PS: If you're going to download it and use it as a base for your bot (or somethi
 
 # **Informações Úteis / Useful Info:**
 
-Versão do bot / Bot Version: 12.0
+Versão do bot / Bot Version: 12.6
 
 Todos as dependências estão no arquivo "package.json", é só utilizar: ```npm install```
 
@@ -63,6 +63,9 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 - [ ] Ser famosa! / Be famous! (Sonhar alto não tem problema, tem?)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[License](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/LICENSE)
+[Riot Disclaimer](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/RIOT-NOTE)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

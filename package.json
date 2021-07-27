@@ -1,14 +1,14 @@
 {
   "name": "apple_pie",
-  "version": "12.5.1",
+  "version": "12.6",
   "description": "yummi apple pie yummi yummi",
   "main": "./src/bot.js",
   "scripts": {
     "start": "node ./src/bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nodemon": "nodemon ./src/bot.js"
   },
   "author": "Tocka!",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",
     "akaneko": "^5.0.1",
@@ -32,5 +32,8 @@
     "steamapi": "^2.1.2",
     "weather-js": "^2.0.0",
     "ytdl-core": "^4.8.3"
+  },
+  "note-league-api": {
+    "disclaimer": "Apple Pie isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc."
   }
 }

@@ -2756,6 +2756,42 @@
         "lr-al-reg": {
             "english": "❌ Failed: User Already Registered.",
             "portugues": "❌ Falha: Usuário Já Registrado."
+        },
+        "lacc-not-reg": {
+            "english": "❌ Failed: You are not registered.",
+            "portugues": "❌ Falha: Você não está registrado."
+        },
+        "lacc-not-reg-desc": {
+            "english": "Please, run the command \" <prefix>lr <Account Region> <Username> \"\nYou can get bot info of your account by following the image below:",
+            "portugues": "Por favor, utilize o comando \" <prefix>lr <Região da Conta> <Username>\"\nVocê consegue ambas informações seguindo as imagens abaixo:"
+        },
+        "lacc-not-ranked": {
+            "english": "Could not retrieve this information.",
+            "portugues": "Não consegui recuperar essa informação."
+        },
+        "lacc-maestry-points": {
+            "english": "Maestry Points:",
+            "portugues": "Pontos de Maestria:"
+        },
+        "lacc-champMaestry-points": {
+            "english": "Champion Maestry:",
+            "portugues": "Maestria de Campeão:"
+        },
+        "lacc-profile-info": {
+            "english": "**Profile Info**",
+            "portugues": "**Informação do Perfil**"
+        },
+        "lacc-profile-level": {
+            "english": "Level:",
+            "portugues": "Nível:"
+        },
+        "lfr-desc-evchamps": {
+            "english": "Free Champions List on Rotation:",
+            "portugues": "Lista de Campeões Gratuitos na Rotação:"
+        },
+        "lft-desc-lowchamps": {
+            "english": "Champions on Rotation for Players Below lvl 10:",
+            "portugues": "Campeões em Rotação para jogadores abaixo do nvl 10:"
         }
 
     }
