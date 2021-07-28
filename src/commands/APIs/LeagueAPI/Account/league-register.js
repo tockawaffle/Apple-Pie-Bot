@@ -24,7 +24,6 @@ module.exports = {
             if(regOpts.indexOf(region) !== -1) {
                 const req = await fetch(`https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}?api_key=${process.env.riotkey}`)
                 const reqjson = await req.json()
-                console.log(req)
                 const rpsStts = [400, 401, 403, 404, 405, 415, 429, 500, 502, 503, 504]
                 if(rpsStts.indexOf(req.status) !== -1) {
                     let errReq;

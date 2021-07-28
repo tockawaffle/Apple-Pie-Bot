@@ -54,7 +54,7 @@ module.exports = {
                     if(req.status === 404){
                         errReq = lang(guild, "http_error-404")
                         errEmbed.setTitle(`❌ Error: ${errReq}`)
-                        errEmbed.setDescription(`\`\`\`${lang(guild, "lr-err-404").replace("{name}", name).replace("{region}", region)}\`\`\``)
+                        errEmbed.setDescription(`\`\`\`${lang(guild, "lr-err-404").replace("{name}", checkReg.leagueName).replace("{region}", checkReg.leagueReg)}\`\`\``)
                         errEmbed.setImage(await 'https://cdn.discordapp.com/attachments/828401264961912893/865711767597482024/download.png')
                         message.reply(errEmbed)
                         return message.channel.stopTyping()
