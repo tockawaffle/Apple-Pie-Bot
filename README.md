@@ -65,7 +65,8 @@ All of the dependencies of the bot are included in the "package.json" file, inst
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 [License](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/LICENSE)
-[Riot Disclaimer](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/RIOT-NOTE)
+
+[Riot Disclaimer](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/RIOT-NOTE.md)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
