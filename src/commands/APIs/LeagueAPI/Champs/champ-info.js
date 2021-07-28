@@ -37,8 +37,8 @@ module.exports = {
                         .setTitle(`${data.name} | ${data.title}`)
                         .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                         .setColor("RANDOM")
-                        
-                    return pages(message, [champPresentationEmbed, champStats])
+                        .setDescription(`**Q - ${data.spells[0].name}:**\n\`\`\`${data.spells[0].description}\`\`\`\n**W - ${data.spells[1].name}:**\n\`\`\`${data.spells[1].description}\`\`\`\n**E - ${data.spells[2].name}:**\n\`\`\`${data.spells[2].description}\`\`\`\n**R - ${data.spells[3].name}:**\n\`\`\`${data.spells[3].description}\`\`\``)
+                    return pages(message, [champPresentationEmbed, champStats, champHab])
                 } else {
                     const data = reqJson.data[inputChamp]
                     const champPresentationEmbed = new MessageEmbed()
@@ -51,7 +51,12 @@ module.exports = {
                         .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                         .setColor("RANDOM")
                         .setDescription(`**Stats:**\n\`\`\`HP: ${data.stats.hp} | ${data.stats.hpperlevel}^¹\nHP Regen.: ${data.stats.hpregen} | ${data.stats.hpregenperlevel}^¹\nMP: ${data.stats.mp} | ${data.stats.mpperlevel}^¹\nMP Regen.: ${data.stats.mpregen} | ${data.stats.mpregenperlevel}^¹\nMovespeed: ${data.stats.movespeed}\nArmor: ${data.stats.armor} | ${data.stats.armorperlevel}^¹\nMR: ${data.stats.spellblock} | ${data.stats.spellblockperlevel}^¹\nAA Dmg: ${data.stats.attackdamage} | ${data.stats.attackdamageperlevel}^¹\`\`\``)
-                    return pages(message, [champPresentationEmbed, champStats])
+                    const champHab = new MessageEmbed()
+                        .setTitle(`${data.name} | ${data.title}`)
+                        .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                        .setColor("RANDOM")
+                        .setDescription(`**Q - ${data.spells[0].name}:**\n\`\`\`${data.spells[0].description}\`\`\`\n**W - ${data.spells[1].name}:**\n\`\`\`${data.spells[1].description}\`\`\`\n**E - ${data.spells[2].name}:**\n\`\`\`${data.spells[2].description}\`\`\`\n**R - ${data.spells[3].name}:**\n\`\`\`${data.spells[3].description}\`\`\``)
+                    return pages(message, [champPresentationEmbed, champStats, champHab])
                     } 
             } else {
                 const champListErr = new MessageEmbed()
