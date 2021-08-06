@@ -1,7 +1,7 @@
 {
   "name": "apple_pie",
-  "version": "12.6",
-  "description": "yummi apple pie yummi yummi",
+  "version": "12.6.5",
+  "description": "Apple Pie, a simple Discord bot made with NodeJS with a good amount of commands for your server and everyone in it!",
   "main": "./src/bot.js",
   "scripts": {
     "start": "node ./src/bot.js",
@@ -9,6 +9,10 @@
   },
   "author": "Tocka!",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/The-Crow-pleb/Apple-Pie-Bot"
+  },
+  "readme": "https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/README.md",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",
     "akaneko": "^5.0.1",

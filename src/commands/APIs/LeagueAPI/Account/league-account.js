@@ -17,7 +17,7 @@ module.exports = {
                     .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                     .setColor("RANDOM")
                     .setTitle(lang(guild, "lacc-not-reg"))
-                    .setDescription(lang(guild, "lacc-not-reg-desc"))
+                    .setDescription(lang(guild, "lacc-not-reg-desc").replace("<prefix>", message.prefix))
                     .setImage(await 'https://cdn.discordapp.com/attachments/828401264961912893/865711767597482024/download.png')
                 return message.reply(notReg)
             }
@@ -85,7 +85,7 @@ module.exports = {
                     .setAuthor(guild.name, guild.iconURL({dynamic: true}))
                     .setColor("RANDOM")
                     .setTitle(lang(guild, "lacc-not-reg"))
-                    .setDescription(lang(guild, "lacc-not-reg-desc"))
+                    .setDescription(lang(guild, "lacc-not-reg-desc").replace("<prefix>", message.prefix))
                     .setImage(await 'https://cdn.discordapp.com/attachments/828401264961912893/865711767597482024/download.png')
                 return message.reply(notReg)
             } 

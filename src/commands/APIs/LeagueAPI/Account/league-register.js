@@ -24,7 +24,6 @@ module.exports = {
         const regOpts = ['br1','euw1','la1','la2','na1','oce','oc1','ru1','tr1','jp1','kr']
         if(regOpts.indexOf(region) !== -1) {
             const req = await fetch(new URL(`https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}?api_key=${process.env.riotkey}`))
-            console.log(req)
             const reqjson = await req.json()
             const rpsStts = [400, 401, 403, 404, 405, 415, 429, 500, 502, 503, 504]
             if(rpsStts.indexOf(req.status) !== -1) {
@@ -62,9 +61,9 @@ module.exports = {
                     return message.channel.stopTyping()
                 } else {
                     const alreadyReg = new MessageEmbed()
-                    .setAuthor(guild.name, guild.iconURL({dynamic: true}))
-                    .setTitle(lang(guild, "lr-al-reg"))
-                    .setColor("RANDOM")
+                        .setAuthor(guild.name, guild.iconURL({dynamic: true}))
+                        .setTitle(lang(guild, "lr-al-reg"))
+                        .setColor("RANDOM")
                     message.reply(alreadyReg)
                     return message.channel.stopTyping()
                 }

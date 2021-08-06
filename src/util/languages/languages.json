@@ -2792,7 +2792,34 @@
         "lft-desc-lowchamps": {
             "english": "Champions on Rotation for Players Below lvl 10:",
             "portugues": "Campeões em Rotação para jogadores abaixo do nvl 10:"
+        },
+        "lunrg-sccs": {
+            "english": "✅ Success!: Unregistered.",
+            "portugues": "✅ Sucesso!: Registro excluído."
+        },
+        "lhelp": {
+            "english": "League of Legends Help Page",
+            "portugues": "Página de Ajuda - League of Legends"
+        },
+        "lhelp-1": {
+            "english": "Register your account:",
+            "portugues": "Registre sua conta:"
+        },
+        "lhelp-2": {
+            "english": "Info about your League account:",
+            "portugues": "Informações sobre sua conta do League:"
+        },
+        "lhelp-3": {
+            "english": "List of champions on free rotation:",
+            "portugues": "Lista de campeões em rotação gratuita:"
+        },
+        "lhelp-4": {
+            "english": "Champion Information:",
+            "portugues": "Informação sobre Campeão:"
+        },
+        "lhelp-5": {
+            "english": "Unregister:",
+            "portugues": "Remover Registro:"
         }
-
     }
 }
