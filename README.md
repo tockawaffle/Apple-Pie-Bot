@@ -1,44 +1,6 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# **Introdução / Intro**
-
-**PT-BR:**
-
-_Hey você!_
-Essa é a Apple Pie, um bot de Discord "open-source", ela foi programada com Javascript!
-Ela é um bot bem novo que eu decidi fazer pelo simples motivo de ~Estar tão entediado que acabei fazendo isso~ amar programar!
-
-Ela agora consegue ter uma DB e função multilinguagem. Yay!
-Agora você pode aproveitar o máximo dela uwu
-
-~Seja cuidadoso, você está vendo o código fonte de uma linda jovem!~
-
-PS: Se você for baixar e utilizar o código como base para seu bot (Ou algo do tipo), tenha certeza de retirar todas as dependências do dotenv na pasta de comandos, pois se não fizer, pode acabar não funcionando direito.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**EN-US:**
-
-_Hello you!_
-This is Apple Pie, an "open-source" Discord bot that uses the Javascript language!
-It's a pretty new bot  that I made because ~I was bored and had nothing else to do~ I love programming!
-
-It seems like I could do it! now this bot has a DB and Multilanguage functionality. Yay!
-You can now enjoy the best of her uwu
-
-~Be careful, you're looking at a young lady source-code!~
-
-PS: If you're going to download it and use it as a base for your bot (or something) be  sure that in every single command that uses the dotenv process you delete it or change the code for it to work properly.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# **Informações Úteis / Useful Info:**
-
-Versão do bot / Bot Version: 12.6
-
-Todos as dependências estão no arquivo "package.json", é só utilizar: ```npm install```
-
-All of the dependencies of the bot are included in the "package.json" file, install all of them using: ```npm install```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

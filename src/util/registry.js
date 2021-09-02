@@ -73,6 +73,27 @@ async function registerPlayerEvents(client, dir) {
     }
 }
 
+async function registerTrackerEvents(tracker, dir) {
+    let files = await fs.readdir(path.join(__dirname, dir));
+    for(let file of files) {
+        let stat = await fs.lstat(path.join(__dirname, dir, file));
+        if(stat.isDirectory())
+            registerEvents(tracker, path.join(dir, file));
+        else {
+            if(file.endsWith(".js")) {
+                let trackerEventName = file.substring(0, file.indexOf(".js"));
+                try {
+                    let trackerEventModule = require(path.join(__dirname, dir, file));
+                    tracker.on(trackerEventName, trackerEventModule.bind(null, tracker));
+                }
+                catch(err) {
+                    console.log(err);
+                }
+            }
+        }
+    }
+}
+
 // async function registerDblEvents(client, dir) {
 //     let files = await fs.readdir(path.join(__dirname, dir));
 //     for(let file of files) {
@@ -98,5 +119,6 @@ module.exports = {
     registerEvents, 
     registerCommands,
     registerPlayerEvents,
+    registerTrackerEvents
     // registerDblEvents
 };

@@ -1,9 +1,7 @@
+const ms = require('ms'); const db = require('../../../configs/db/db'); const {loadLangs} = require('../../../util/languages/languages'); const status = require('../../../configs/status/statusA'); 
 module.exports = async(client) => {
-    const {loadLangs} = require('../../../util/languages/languages')
-    const status = require('../../../configs/status/statusA');
+
     const random = status[Math.floor(Math.random() * status.length)];
-    const ms = require('ms');
-    const db = require('../../../configs/db/db');
 
     db.then(() => console.log(`${client.user.username} se conectou à DB!`)).catch(err => console.log(err))
     console.log(`

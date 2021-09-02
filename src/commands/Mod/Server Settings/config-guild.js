@@ -2,7 +2,6 @@ const guildSchema = require('../../../configs/db/schemas/guildSchema')
 const {MessageEmbed} = require('discord.js')
 const lang = require('../../../util/languages/languages')
 const page = require('discord.js-pagination')
-
 module.exports = {
     aliases: ['config'], description: '',
     run: async(client, message, args) => {
@@ -28,6 +27,7 @@ module.exports = {
             else if(args[0] === 'language') {def = 'languageConfig'}
             else if(args[0] === 'help') {def = 'helpConfig'}
             else if(args[0] === 'show') {def = 'configConsult'}
+            else if(args[0] === 'invite') {def = 'inviteTracker'}
             if (!args[0] || !def) {return message.react('<:Bad_Argument:853404667765850112>')}
             let configConsult = await guildSchema.findOne({_id: guild.id})
             let PREFIX = configConsult.prefix
@@ -104,6 +104,23 @@ module.exports = {
                     .setDescription(`\`\`\`json\n${JSON.stringify(configConsult, null, '\t')}\`\`\``)
                 message.channel.stopTyping()
                 return message.reply(consultEmbed)
+            } else if(def === 'inviteTracker') {
+                if(!args[1]) return message.channel.stopTyping()
+                if(args[1] === "enable") {
+                    await guildSchema.findOneAndUpdate({_id: guild.id}, {_id: guild.id, ivEnabled: true}, {upsert: true})
+                    message.react("<:Success_Enable:873389838609575967>")
+                    return message.channel.stopTyping(true)
+                }else if(args[1] === "disable") {
+                    await guildSchema.findOneAndDelete({_id: guild.id}, {_id: guild.id, ivEnabled: false}, {upsert: true})
+                    message.react("<:Success_Disable:873389853939752971>")
+                    return message.channel.stopTyping(true)
+                } else if(args[1] === "channel" && configConsult.ivEnabled === true) {
+                    const channel = message.mentions.channels.first()
+                    if(!channel) return
+                    await guildSchema.findOneAndUpdate({_id: guild.id}, {ivChannel: channel.id}, {upsert: true})
+                    message.react("<:Success_Enable:873389838609575967>")
+                    return message.channel.stopTyping(true)
+                }
             }
         } catch (error) {
             const errorEmbed = new MessageEmbed()

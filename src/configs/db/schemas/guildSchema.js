@@ -9,7 +9,9 @@ const guildSchema = mongoose.Schema({
     _id: reqString,
     name: String,
     language: reqString,
-    prefix: String
+    prefix: String,
+    ivEnabled: Boolean,
+    ivChannel: String
 })
 
 module.exports = mongoose.model('guilds', guildSchema)

@@ -5,21 +5,16 @@ module.exports = async(client, message) => {
     
     if(message.author.bot) return
     const {guild, author} = message
+    if(message.channel.type === 'dm') 
+    let dbPrefix = await guildSchema.findOne({_id: guild.id}); let PREFIX;
+    if(!dbPrefix.prefix) {PREFIX = process.env.PREFIX} 
+    else {PREFIX = dbPrefix.prefix}
 
-    let dbPrefix = await guildSchema.findOne({_id: guild.id})
-    let PREFIX;
-    if(!dbPrefix.prefix) {
-        PREFIX = process.env.PREFIX
-    } else {PREFIX = dbPrefix.prefix}
-
-    if(!dbPrefix.name) {
-        await guildSchema.findOneAndUpdate({_id: guild.id}, {_id: guild.id, name: guild.name, language: 'english', prefix: process.env.PREFIX}, {upsert: true})
-    }
+    if(!dbPrefix.name) {await guildSchema.findOneAndUpdate({_id: guild.id}, {_id: guild.id, name: guild.name, language: 'english', prefix: process.env.PREFIX}, {upsert: true})}
     message.prefix = PREFIX
 
     let limited = limiter.take(author.id)
     
-    if(message.channel.type === 'dm' && !ids) return
     if(message.content.startsWith(PREFIX)) {
         if (limited) return 
         else {
@@ -33,7 +28,6 @@ module.exports = async(client, message) => {
             } catch (error) {
                 console.log(`Algo estranho aconteceu:\n\n${error}`)
             }
-            
         }
     }
 }
