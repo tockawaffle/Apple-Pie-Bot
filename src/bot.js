@@ -1,12 +1,24 @@
-require('dotenv').config();
-const discord = require('discord.js'); const client = new discord.Client({disableMentions: "everyone", partials: ["USER", "REACTION", "GUILD_MEMBER", "CHANNEL"], intents: discord.Intents.ALL});
-const { Player } = require('discord-player'); const player = new Player(client); const CoinGecko = require('coingecko-api'); const CoinGeckoClient = new CoinGecko(); const steamapi = require('steamapi'); const steamAPI = new steamapi(process.env.STEAM_TOKEN)
-const InvitesTracker = require('@androz2091/discord-invites-tracker'); const tracker = InvitesTracker.init(client, {fetchGuilds: true,fetchVanity: true,fetchAuditLogs: true});
+require("dotenv").config(); require('module-alias/register')
+const { Client, Intents } = require("discord.js");
+const client = new Client({
+    allowedMentions: { parse: [ 'users', 'roles' ], repliedUser: true },
+    partials: [ "CHANNEL", "GUILD_MEMBER", "MESSAGE", "USER" ],
+    intents: [ Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_VOICE_STATES, Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.DIRECT_MESSAGE_REACTIONS, Intents.FLAGS.DIRECT_MESSAGE_TYPING, Intents.FLAGS.GUILD_PRESENCES ]
+})
 
-const { registerCommands, registerEvents, registerPlayerEvents, registerTrackerEvents } = require('./util/registry');
-(async () => {
-    client.login(process.env.BOT_TOKEN); client.player = player; client.steam = steamAPI; ; client.crypto = CoinGeckoClient; client.tracker = tracker
-    client.commands = new Map(); client.filters = require('./configs/music/filters.json');
-    await registerEvents(client, '../events/discordEvents'); await registerCommands(client, '../commands'); await registerPlayerEvents(player, '../events/player-event');
-    await registerTrackerEvents(tracker, "../events/trackerEvents")
+const { Player } = require("discord-player"); const PlayerClient = new Player(client);
+const Coingecko = require("coingecko-api"); const GeckoClient = new Coingecko();
+const SteamAPI = require("steamapi"); const SteamClient = new SteamAPI(process.env.STEAM_TOKEN);
+
+const {registerCommands, registerEvents, registerPlayerEvents} = require("./Utils/Registry/registry");
+
+(async() => {
+    client.login(process.env.TOKEN);
+    client.commands = new Map()
+    client.player = PlayerClient;
+    client.gecko = GeckoClient;
+    client.steam = SteamClient;
+    await registerEvents(client, "../../Events/DiscordEvents")
+    await registerCommands(client, "../../Commands")
+    await registerPlayerEvents(PlayerClient, "../../Events/PlayerEvents")
 })();

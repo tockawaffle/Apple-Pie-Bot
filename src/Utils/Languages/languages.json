@@ -1,0 +1,87 @@
+{
+    "languages": [
+        "english",
+        "portugues"
+    ],
+    "traduções": {
+        "no-args": {
+            "english": "Missing Args, please, redo the command.",
+            "portugues": "Faltando Argumentos, por favor, utilize o comando novamente."
+        },
+        "no-args-correct": {
+            "english": "The correct way of using this command is:\n{command}",
+            "portugues": "O modo correto de utilizar este comando é:\n{command}"
+        },
+        "error": {
+            "english": "❌ Error:",
+            "portugues": "❌ Erro:"
+        },
+        "accp-opts": {
+            "english": "These are the options that this command accepts:\n{opts}",
+            "portugues": "Essas são as opções que este comando aceita:\n{opts}"
+        },
+        "success": {
+            "english": "✅ Success:",
+            "portugues": "✅ Sucesso:"
+        },
+        
+
+        "separator": "uconfig",
+        "prefix": {
+            "english": "prefix",
+            "portugues": "prefixo"
+        },
+        "language": {
+            "english": "language",
+            "portugues": "idioma"
+        },
+        "privacy": {
+            "english": "privacy",
+            "portuguse": "privacidade"
+        },
+        "redo-noreg": {
+            "english": "Please, redo the command, you were not in my Database.",
+            "portugues": "Por favor, refaça o comando, você não estava em minha base de dados."
+        },
+        "prefix-changed": {
+            "english": "Prefix Updated.",
+            "portugues": "Prefixo Atualizado."
+        },
+        "prefix-new": {
+            "english": "Your new prefix is: ```{prefix}```",
+            "portugues": "Seu novo prefixo é: ```{prefix}```"
+        },
+        "config_prefix_err_noargs": {
+            "english": "You forgot what I should use as a prefix.",
+            "portugues": "Você não me disse o que eu deveria utilizar como prefixo"
+        },
+        "config_lang_err_noargs": {
+            "english": "❌Failed: Missing Args.",
+            "portugues": "❌Falha: Faltando Argumentos"
+        },
+        "config_lang_err_noargs-nolang_2": {
+            "english": "You can choose between those languages:",
+            "portugues": "Você pode escolher entre estes idiomas:"
+        },
+        "config_lang_err_nolang": {
+            "english": "The following language is not supported!",
+            "portugues": "O idioma a seguir não é suportado!"
+        },
+        "config_lang_err_nolang_2": {
+            "english": "Language not supported:",
+            "portugues": "Idioma não suportado:"
+        },
+        "config_lang_set": {
+            "english": "The language has been set!",
+            "portugues": "O idioma foi configurado!"
+        },
+        "config_lang_set_1": {
+            "english": "New language:",
+            "portugues": "Novo idioma:"
+        },
+        "noprefix": {
+            "english": "Missing the prefix to update.",
+            "portugues": "Faltando o prefixo para update."
+        }
+    }
+}

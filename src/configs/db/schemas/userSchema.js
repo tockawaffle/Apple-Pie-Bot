@@ -1,24 +1,12 @@
-const mongoose = require('mongoose')
-
+const mongoose = require("mongoose")
 const reqString = {
-    type: String,
-    required: true
+    required: true,
+    type: String
 }
-const reqNumber = {
-    type: Number,
-    required: true
-}
-
-const userSchema = mongoose.Schema({
-    _userID: reqString,
-    registered: reqString,
-    steamID: String,
-    //Economy
-    botPayout: String,
-    amountCoins: reqNumber,
-    amountAlreadyPaid: Number,
-    amountBetted: Number,
-    // daily: reqNumber,
+const UserSchema = new mongoose.Schema({
+    _id: reqString,
+    language: reqString,
+    prefix: reqString,
 })
 
-module.exports = mongoose.model('Users', userSchema)
+module.exports = mongoose.model("User", UserSchema)

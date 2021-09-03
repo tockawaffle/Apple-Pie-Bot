@@ -1,45 +1,53 @@
 {
-  "name": "apple_pie",
-  "version": "12.6.5",
-  "description": "Apple Pie, a simple Discord bot made with NodeJS with a good amount of commands for your server and everyone in it!",
-  "main": "./src/bot.js",
+  "name": "apple-pie",
+  "version": "13.0.0",
+  "description": "This is an updated version of the Apple Pie Bot made for Discord, using the latest v13 update with newer interactions with the Discord API.",
+  "main": "src/bot.js",
   "scripts": {
-    "start": "node ./src/bot.js",
-    "nodemon": "nodemon ./src/bot.js"
+    "test": "null"
   },
-  "author": "Tocka!",
-  "license": "MIT",
   "repository": {
-    "url": "https://github.com/The-Crow-pleb/Apple-Pie-Bot"
+    "type": "git",
+    "url": "git+https://github.com/The-Crow-pleb/Apple-Pie-Bot.git"
   },
-  "readme": "https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Master/README.md",
+  "keywords": [
+    "Discord",
+    "Bot",
+    "v13",
+    "Apple",
+    "Pie",
+    "Apple",
+    "Pie",
+    "Tocka"
+  ],
+  "author": "тоска",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/The-Crow-pleb/Apple-Pie-Bot/issues"
+  },
+  "homepage": "https://github.com/The-Crow-pleb/Apple-Pie-Bot#readme",
   "dependencies": {
-    "@androz2091/discord-invites-tracker": "^0.1.2",
-    "@discordjs/opus": "github:discordjs/opus",
-    "@haileybot/captcha-generator": "^1.7.0",
-    "akaneko": "^5.2.0",
+    "@discordjs/opus": "^0.5.3",
+    "@psibean/discord.js-pagination": "^3.0.5",
+    "akaneko": "^5.2.1",
     "canvacord": "^5.2.3",
-    "cheerio": "^1.0.0-rc.10",
     "coingecko-api": "^1.0.10",
-    "dblapi.js": "^2.4.1",
-    "discord-player": "^4.1.4",
-    "discord.js": "^12.5.3",
-    "discord.js-pagination": "^1.0.3",
-    "discord.js-rate-limiter": "^1.2.0",
-    "dotenv": "^8.2.0",
-    "ffmpeg-static": "^4.4.0",
+    "discord-player": "^5.1.0",
+    "discord.js": "^13.1.0",
+    "discord.js-rate-limiter": "^1.2.2",
+    "djs-buttons-pagination": "^1.6.2",
+    "dotenv": "^10.0.0",
     "mathjs": "^9.4.4",
+    "module-alias": "^2.2.2",
     "moment": "^2.29.1",
-    "mongoose": "^5.13.5",
-    "ms": "^2.1.3",
-    "nodemon": "^2.0.12",
-    "request-promise": "^4.2.6",
-    "snakecord": "^1.0.8",
-    "steamapi": "^2.1.2",
+    "mongoose": "^6.0.4",
+    "steamapi": "^2.1.3",
     "weather-js": "^2.0.0",
     "ytdl-core": "^4.9.1"
   },
-  "note-league-api": {
-    "disclaimer": "Apple Pie isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc."
+  "_moduleAliases": {
+    "@db": "src/Configs/DB",
+    "@lang": "src/utils/Languages/languages",
+    "@configs": "src/Configs/Commands"
   }
 }
