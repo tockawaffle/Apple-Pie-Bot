@@ -1,0 +1,106 @@
+[
+    {
+        "aliases": "btc",
+        "api": "bitcoin"
+    },
+    {
+        "aliases": "eth",
+        "api": "ethereum"
+    },
+    {
+        "aliases": "sol",
+        "api": "solana"
+    },
+    {
+        "aliases": "slp",
+        "api": "smooth-love-potion"
+    },
+    {
+        "aliases": "bnb",
+        "api": "binancecoin"
+    },
+    {
+        "aliases": "pvu",
+        "api": "plant-vs-undead-token"
+    },
+    {
+        "aliases": "xrp",
+        "api": "ripple"
+    },
+    {
+        "aliases": "ada",
+        "api": "cardano"
+    },
+    {
+        "aliases": "tether",
+        "api": "tether"
+    },
+    {
+        "aliases": "doge",
+        "api": "dogecoin"
+    },
+    {
+        "aliases": "dot",
+        "api": "polkadot"
+    },
+    {
+        "aliases": "usdc",
+        "api": "usd-coin"
+    },
+    {
+        "aliases": "uni",
+        "api": "uniswap"
+    },
+    {
+        "aliases": "ltc",
+        "api": "litecoin"
+    },
+    {
+        "aliases": "link",
+        "api": "chainlink"
+    },
+    {
+        "aliases": "bch",
+        "api": "bitcoin-cash"
+    },
+    {
+        "aliases": "luna",
+        "api": "terra-luna"
+    },
+    {
+        "aliases": "busd",
+        "api": "binance-usd"
+    },
+    {
+        "aliases": "matic",
+        "api": "matic-network"
+    },
+    {
+        "aliases": "etc",
+        "api": "ethereum-classic"
+    },
+    {
+        "aliases": "xlm",
+        "api": "stellar"
+    },
+    {
+        "aliases": "xmr",
+        "api": "monero"
+    },
+    {
+        "aliases": "cake",
+        "api": "pancakeswap-token"
+    },
+    {
+        "aliases": "axs",
+        "api": "axie-infinity"
+    },
+    {
+        "aliases": "algo",
+        "api": "algorand"
+    },
+    {
+        "aliases": "shib",
+        "api": "shiba-inu"
+    }
+]

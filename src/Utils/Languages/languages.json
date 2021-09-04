@@ -24,7 +24,10 @@
             "english": "✅ Success:",
             "portugues": "✅ Sucesso:"
         },
-        
+        "bad": {
+            "english": "Oops, something went wrong, please check:",
+            "portugues": "Oops, alguma coisa deu errado, dê uma olhada:"
+        },
 
         "separator": "uconfig",
         "prefix": {
@@ -82,6 +85,82 @@
         "noprefix": {
             "english": "Missing the prefix to update.",
             "portugues": "Faltando o prefixo para update."
+        },
+
+        "separator2": "pancake",
+        "pancake-contract": {
+            "english": "Contract:",
+            "portugues": "Contrato:"
+        }, 
+        "pancake-last-att": {
+            "english": "Last updated at:",
+            "portugues": "Ultima vez atualizado em:"
+        },
+        "pancake-price": {
+            "english": "Price USD: {usd}\nPrice BNB: {bnb}",
+            "portugues": "Preço USD: {usd}\nPreço BNB: {bnb}"
+        },
+        "swap-link": {
+            "english": "Swap {here}",
+            "portugues": "Troque {here}"
+        },
+        "here": {
+            "english": "here",
+            "portugues": "aqui"
+        },
+        
+        "separator3": "coingecko",
+        "noToken": {
+            "english": "You forgot to say what token I should get from coingecko.",
+            "portugues": "Você esqueceu de dizer qual token eu deveria pegar do coingecko."
+        },
+        "noAlias": {
+            "english": "Missing Alias.",
+            "portugues": "Faltando Alias."
+        },
+        "chats": {
+            "english": "Chats of this project:",
+            "portugues": "Chats deste Projeto:"
+        },
+        "names": {
+            "english": "Name:",
+            "portugues": "Nome:"
+        },
+        "platform": {
+            "english": "Platform:",
+            "portugues": "Plataforma"
+        },
+        "description": {
+            "english": "Description:",
+            "portugues": "Descrição:"
+        },
+        "category": {
+            "english": "Categories:",
+            "portugues": "Categorias:"
+        },
+        "homepage": {
+            "english": "Homepage:",
+            "portugues": "Página:"
+        },
+        "explorer": {
+            "english": "Blockchain Explorer:",
+            "portugues": "Explorador da Blockchain:"
+        },
+        "announcements": {
+            "english": "Announcements:",
+            "portugues": "Novidades:"
+        },
+        "rank-marketcap": {
+            "english": "Market Cap Rank:",
+            "portugues": "Rank do Market Cap:"
+        },
+        "rank-liquidity": {
+            "english": "Liquidity Rank:",
+            "portugues": "Rank de Liquidez:"
+        },
+        "contract": {
+            "english": "Contract Address:",
+            "portugues": "Endereço do Contrato:" 
         }
     }
 }
