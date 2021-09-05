@@ -161,6 +161,89 @@
         "contract": {
             "english": "Contract Address:",
             "portugues": "Endereço do Contrato:" 
+        },
+        "prices": {
+            "english": "Prices:",
+            "portugues": "Preços:"
+        },
+        "infos": {
+            "english": "Main Informations:",
+            "portugues": "Principais Informações:"
+        },
+        "not-provided": {
+            "english": "Not provided.",
+            "portugues": "Não providenciada."
+        },
+        "not-a-contract": {
+            "english": "Not a Smart Contract.",
+            "portugues": "Não é um Smart Contract"
+        },
+        "price-changes": {
+            "english": "Price Changes in:",
+            "portugues": "Mudança de Preços em:"
+        },
+        "rank": {
+            "english": "Ranks:",
+            "portugues": "Classificações:"
+        },
+        "24h-change": {
+            "english": "24 Hours    :  ",
+            "portugues": "24 Horas    :  "
+        },
+        "24h-change-percent": {
+            "english": "24 Hours %  :   ",
+            "portugues": "24 Horas %  :  "
+        },
+        "7d-change": {
+            "english": "% in 7 Days :  ",
+            "portugues": "% em 7 Dias :  "
+        },
+        "14d-change": {
+            "english": "% in 14 Days:  ",
+            "portugues": "% em 14 Dias:  "
+        },
+        "30d-change": {
+            "english": "% in 30 Days:  ",
+            "portugues": "% em 30 Dias:  "
+        },
+
+
+        "separator4": "Roleplay",
+        "kiss": {
+            "english": "Kissed",
+            "portugues": "Beijou"
+        },
+        "kiss-quote-1": {
+            "english": "❤ {author} Whispered: _“Make me immortal with a kiss.”_ and then kissed {mention}",
+            "portugues": "❤ {author} Sussurrou: _“Me faça imortal com um beijo.”_ e então beijou {mention}"
+        },
+        "kiss-quote-2": {
+            "english": "❤ {author} Whispered: _“A kiss may ruin a human life”_ just to kiss {mention} and whisper again: _“But not mine, and not yours.”_",
+            "portugues": "❤ {author} Sussurou: “Um beijo pode arruinar uma vida”, apenas para beijar {mention} e então sussurrar novamente: _“A minha seria arruinada caso eu não te beijasse.”_"
+        },
+        "kiss-quote-3": {
+            "english": "❤ {author} Said: _“You should be kissed and by someone who knows how.”_ and then showed {mention} how it's done!",
+            "portugues": "❤ {author} Disse: _“Você deveria beijar alguém que saiba como.”_ Só para então mostrar a {mention} como se faz!"
+        },
+        "kiss-quote-4": {
+            "english": "❤ {mention} Said: _“Well, it’s either kiss me or kill me, that’s how I see it.”_ just to receive a kiss from {author}",
+            "portugues": "❤ {mention} Disse: _“Bem, ou você me beija, ou você me mata, é assim que eu vejo.”_ apenas para receber um beijo de {author}"
+        },
+        "kiss-quote-5": {
+            "english": "❤ {author} whispered _“Now give me a soft kiss.”_, then kissed {mention} and continued: _“Aye! By that kiss, I vow an endless bliss.”_",
+            "portugues": "❤ {author} sussurrou “Agora me dê um beijo, o mais suave possível.” para então beijar {mention} e continuar: _“Agora sim!, com este beijo eu te juro uma felicidade sem fim!”_"
+        },
+        "hug": {
+            "english": "Hugged",
+            "portugues": "Abraçou"
+        },
+        "slap": {
+            "english": "Slapped",
+            "portugues": "Deu um tapa em"
+        },
+        "pat": {
+            "english": "Headpatted",
+            "portugues": "Fez carinho em"
         }
     }
 }

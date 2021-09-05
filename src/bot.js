@@ -1,5 +1,5 @@
 require("dotenv").config(); require('module-alias/register')
-const { Client, Intents } = require("discord.js");
+const { Client, Intents, DiscordAPIError } = require("discord.js");
 const client = new Client({
     allowedMentions: { parse: [ 'users', 'roles' ], repliedUser: true },
     partials: [ "CHANNEL", "GUILD_MEMBER", "MESSAGE", "USER" ],
@@ -11,10 +11,10 @@ const Coingecko = require("coingecko-api"); const GeckoClient = new Coingecko();
 const SteamAPI = require("steamapi"); const SteamClient = new SteamAPI(process.env.STEAM_TOKEN);
 
 const {registerCommands, registerEvents, registerPlayerEvents} = require("./Utils/Registry/registry");
-
 (async() => {
     client.login(process.env.TOKEN);
     client.commands = new Map()
+    client.apierror = DiscordAPIError
     client.player = PlayerClient;
     client.gecko = GeckoClient;
     client.steam = SteamClient;

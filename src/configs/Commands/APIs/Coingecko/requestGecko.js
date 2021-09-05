@@ -17,6 +17,9 @@ async function requestGecko(messageCreate, token, author) {
     try {
         const geckoFetch = await fetch(`https://api.coingecko.com/api/v3/coins/${token}`, {method: "GET"})
         const geckoJson = await geckoFetch.json()
+        if(geckoJson.error) {
+            return {error: geckoJson.error}
+        }
         const geckoRps = {
             id: geckoJson.id,
             name: geckoJson.name,
