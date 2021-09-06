@@ -28,6 +28,10 @@
             "english": "Oops, something went wrong, please check:",
             "portugues": "Oops, alguma coisa deu errado, dê uma olhada:"
         },
+        "bad-advise": {
+            "english": "Be sure that you're using the command as it needs to be used. If you are confused on how to use it, check my help page using {command}",
+            "portugues": "Tenha certeza de que você está utilizando o comando do modo que ele deve ser utilizado. Caso esteja confuso em como você deveria usar o mesmo, cheque minha página de ajuda: {command}"
+        },
 
         "separator": "uconfig",
         "prefix": {
@@ -244,6 +248,84 @@
         "pat": {
             "english": "Headpatted",
             "portugues": "Fez carinho em"
+        },
+
+        "separator5": "userinfo",
+        "vsc-name": {
+            "english": "Name:",
+            "portugues": "Nome:"
+        },
+        "vsc-type": {
+            "english": "State:",
+            "portugues": "Estado:"
+        },
+        "vsc-details": {
+            "english": "Details:",
+            "portugues": "Detalhes:"
+        },
+        "vsc-started": {
+            "english": "Started at:",
+            "portugues": "Começou faz:"
+        },
+        "spotify-name": {
+            "english": "Is listening To: {song}",
+            "portugues": "Está escutando: {song}"
+        },
+        "spotify-details": {
+            "english": "Details:",
+            "portugues": "Detalhes:"
+        },
+        "spotify-started": {
+            "english": "Started at:",
+            "portugues": "Começou faz:"
+        },
+        "spotify-ends": {
+            "english": "Ends at:",
+            "portugues": "Vai acabar em:"
+        },
+        "other-state": {
+            "english": "Activity State:",
+            "portugues": "Estado da Ativade:"
+        },
+        "other-details": {
+            "english": "Details:",
+            "portugues": "Detalhes:"
+        },
+        "other-started": {
+            "english": "Started at:",
+            "portugues": "Começou em:"
+        },
+        "idle": {
+            "english": "AFK - Idle",
+            "portugues": "Ausente - AFK"
+        },
+        "dnd": {
+            "english": "DND - Do not Disturb",
+            "portugues": "Ocupado - Não Perturbe"
+        },
+        "not-found": {
+            "english": "Coudn't find this information.",
+            "portugues": "Não consegui recuperar essa informação."
+        },
+        "name": {
+            "english": "Username:",
+            "portugues": "Nome:"
+        },
+        "created": {
+            "english": "Created at:",
+            "portugues": "Criado em:"
+        },
+        "presence": {
+            "english": "User Presence:",
+            "portugues": "Presença do Usuário:"
+        },
+        "uf": {
+            "english": "User Info:",
+            "portugues": "Informação do Usuário:"
+        },
+        "joined": {
+            "english": "Joined at:",
+            "portugues": "Entrou em:"
         }
     }
 }

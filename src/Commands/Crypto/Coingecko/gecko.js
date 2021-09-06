@@ -44,10 +44,12 @@ module.exports = {
                 .setAuthor(name, geckoReq.images.imgSmall)
                 .setColor("RANDOM")
                 .setDescription(`${lang(author, "infos")}\`\`\`${lang(author, "names")} ${name}\n\n${lang(author, "category")} ${categories}\n\n${lang(author, "contract")} ${contract ? contract: lang(author, "not-a-contract")}\n\n${lang(author, "homepage")} ${homepage}\n\n${lang(author, "explorer")} ${explorer}\`\`\`\n${lang(author, "description")}\`\`\`${description ? description: `${lang(author, "not-provided")}`}\`\`\`\n${lang(author, "prices")}\`\`\`USD: ${usd}\nGBP: ${gbp}\nBRL: ${brl}\nBTC: ${btc}\nBNB: ${bnb}\`\`\`\n${lang(author, "price-changes")}\`\`\`${lang(author, "24h-change")} ${change_24h}\n${lang(author, "24h-change-percent")} ${change_24h_percentage}\n${lang(author, "7d-change")} ${last_7d_percentage}\n${lang(author, "14d-change")} ${last_14d_percentage}\n${lang(author, "30d-change")} ${last_30d_percentage}\`\`\``)
+                
             const otherInfos = new MessageEmbed()
                 .setAuthor(name, geckoReq.images.imgSmall)
                 .setColor("RANDOM")
                 .setDescription(`\`\`\`${lang(author, "chats")} ${chats ? chats: lang(author, "not-provided")}\n\n${lang(author, "announcements")} ${announcements ? announcements: lang(author, "not-provided")}\`\`\`\n${lang(author,"rank")}\`\`\`\n${lang(author, "rank-marketcap")} ${market_cap_rank}\n${lang(author, "rank-liquidity")} ${liquidity_score}\`\`\`\n`)
+                
             return pagination(messageCreate, [mainInfos, otherInfos], [], 10000).catch(error => console.log(error))
         } catch (error) {
             await errorHandle(messageCreate, author, error)
