@@ -326,6 +326,60 @@
         "joined": {
             "english": "Joined at:",
             "portugues": "Entrou em:"
+        },
+
+        "separator6": "Weather",
+        "weather": {
+            "english": "**Weather:**",
+            "portugues": "**Clima Atual:**"
+        },
+        "temperature": {
+            "english": "Temperature:",
+            "portugues": "Temperatura:"
+        },
+        "feelslike": {
+            "english": "Thermal Sensation:",
+            "portugues": "Sensação Térmica"
+        },
+        "sky": {
+            "english": "Sky Situation:",
+            "portugues": "Situação do Céu:"
+        },
+        "humidity": {
+            "english": "Humidity:",
+            "portugues": "Humidade:"
+        },
+        "windspeed": {
+            "english": "Windspeed:",
+            "portugues": "Velocidade do Vento:"
+        },
+        "obs-time": {
+            "english": "Time in Observation:",
+            "portugues": "Tempo de Observação:"
+        },
+        "advise-not-100-accuratte": {
+            "english": "• Might not be 100% accuratte",
+            "portugues": "• Pode não ser 100% preciso"
+        },
+        "provided-by": {
+            "english": "Information provided by: [MSN Weather](https://www.msn.com/{lang}/weather)",
+            "portugues": "Informação providenciada por: [MSN Weather](https://www.msn.com/{lang}/weather)"
+        },
+        "high": {
+            "english": "Max Temp.:",
+            "portugues": "Temp. Máxima:"
+        },
+        "low": {
+            "english": "Low Temp.:",
+            "portugues": "Menor Temp."
+        },
+        "date": {
+            "english": "Date:",
+            "portugues": "Data:"
+        },
+        "precip": {
+            "english": "Precipitation:",
+            "portugues": "Precipitação:"
         }
     }
 }

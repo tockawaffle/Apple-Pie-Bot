@@ -22,7 +22,7 @@ module.exports = {
             const presence = retrieveStatus.presence
             const joined = retrieveStatus.joinedAt
             const joinedFrom = retrieveStatus.joinedFrom
-            const userMainInfoText = `${lang(author, "uf")}\`\`\`\n${lang(author, "name")} ${name}\nUser ID: ${id}\n${lang(author, "created")} ${created} - ${createdFrom}\n${lang(author, "joined")} ${joined} - ${joinedFrom}\n${lang(author, "presence")} ${presence}\`\`\``
+            const userMainInfoText = `**${lang(author, "uf")}**\`\`\`\n${lang(author, "name")} ${name}\nUser ID: ${id}\n${lang(author, "created")} ${created} - ${createdFrom}\n${lang(author, "joined")} ${joined} - ${joinedFrom}\n${lang(author, "presence")} ${presence}\`\`\``
             
             const userMainInfo = new MessageEmbed()
                 .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))

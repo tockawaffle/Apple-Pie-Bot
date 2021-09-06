@@ -22,7 +22,10 @@ module.exports = async(client, messageCreate) => {
                     .slice(prefix.length)
                     .trim()
                     .split(/\s+/);
-                if(client.commands.get(cmdName)) {client.commands.get(cmdName)(client, messageCreate, cmdArgs)}
+                if(client.commands.get(cmdName)) {
+                    messageCreate.lang = checker.language
+                    client.commands.get(cmdName)(client, messageCreate, cmdArgs)
+                }
                 else return messageCreate.react('<:Command_Not_Found:853407507682295849>') 
             } catch (error) {
                 console.log(`Algo estranho aconteceu:\n\n${error}`)
