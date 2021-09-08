@@ -107,7 +107,7 @@ module.exports = {
             }
             pagination(messageCreate, verify, [], 10000)
         } catch (error) {
-            errorHandle(messageCreate, author, error)
+            await errorHandle(messageCreate, author, error)
         }
     }
 }

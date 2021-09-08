@@ -53,8 +53,12 @@
             "portugues": "Você se esqueceu do nome que esse emote deveria ter."
         },
         "missing-permissions": {
-            "english": "Seems like you are missing some permissions, why not ask someone that has the {perm} permission to use this command for you?",
-            "portugues": "Parece que você não tem algumas permissões, por quê não pedir à alguém que tenha a permissão {perm} para usar este comando por você?"
+            "english": "Seems like you are missing some permissions, why not ask someone that has the {perm} permission(s) to use this command for you?",
+            "portugues": "Parece que você não tem algumas permissões, por quê não pedir à alguém que tenha a permissão/(permissões) {perm} para usar este comando por você?"
+        },
+        "reason": {
+            "english": "Reason:",
+            "portugues": "Motivo:"
         },
  
         "separator": "uconfig",
@@ -415,6 +419,10 @@
             "english": "Emoji Name:",
             "portugues": "Nome do Emoji:"
         },
+        "emoji-perms": {
+            "english": "Manage Emoji and Stickers",
+            "portugues": "Gerenciar Emojis e Stickers"
+        },
 
         "separator8": "banimentos",
         "ban-members": {
@@ -434,8 +442,79 @@
             "portugues": "Martelo do Banimento 🔨"
         },
         "banned-desc": {
-            "english": "The following user was banned successfully: {ban}",
-            "portugues": "O membro a seguir foi banido com sucesso: {ban}"
+            "english": "The following user was banned successfully: {ban}\nReason: ```{reason}```",
+            "portugues": "O membro a seguir foi banido com sucesso: {ban}\nMotivo: ```{reason}```"
+        },
+        "unban-desc": {
+            "english": "The following user was unbanned successfully: {ban}\nReason: ```{reason}```",
+            "portugues": "O membro a seguir foi desbanido com sucesso: {ban}\nMotivo: ```{reason}```"
+        },
+        "unbanned": {
+            "english": "Unban Hammer 🔨",
+            "portugues": "Martelo do Desbanimento 🔨"
+        },
+        "kick": {
+            "english": "Kicked.",
+            "portugues": "Expulsão."
+        },
+        "kick-desc": {
+            "english": "The following user was kicked successfully: {kick}\nReason: ```{reason}```",
+            "portugues": "O membro a seguir foi expulso com sucesso: {kick}\nMotivo: ```{reason}```"
+        },
+
+        "separator9": "mute/unmute",
+        "no-mute-perms": {
+            "english": "Manage Roles, Mute Members and Manage Channels",
+            "portugues": "Gerenciar Cargos, Mutar Membros e Gerenciar Canais"
+        },
+        "same-id-mute": {
+            "english": "Hmmm, you know that you cannot mute yourself, right?",
+            "portugues": "Hmmm, você sabe que você não pode se mudar, né?"
+        },
+        "owner-mute": {
+            "english": "You cannot mute the guild owner, what are you? crazy?",
+            "portugues": "Você não pode mutar o Dono do Servidor, o que você é? louco?"
+        },
+        "tomute-has-higher-role": {
+            "english": "Seems like {tomute} has a higher role than you, that said, I cannot mute him.",
+            "portugues": "Parece que {tomute} tem um cargo maior que o seu, com isto dito, eu não posso mutar o mesmo."
+        },
+        "tomute-has-higher-role-than-me": {
+            "english": "Seems like {tomute} has a higher role than me, that said, I cannot mute him.",
+            "portugues": "Parece que {tomute} tem um cargo maior que o meu, com isto dito, eu não posso mutar o mesmo."
+        },
+        "muted-role": {
+            "english": "Muted",
+            "portugues": "Silenciado"
+        },
+        "muted-role-reason": {
+            "english": "Muted Role.",
+            "portugues": "Cargo de Silenciado."
+        },
+        "muted-success": {
+            "english": "Muted {member} sucessfully.",
+            "portugues": "{member} Mutado com Sucesso."
+        },
+        "mute-me": {
+            "english": "Seems like you're trying to mute me. Sorry, I cannot allow that to happen, if you wish for me to stop talking or something, I suggest you to remove me from this server, since I'm a bot and cannot leave by myself.",
+            "portugues": "Parece que você está tentando me mutar. Desculpe, eu não posso deixar que isto aconteça, caso você deseje que eu pare de falar ou algo do tipo, eu te sugiro que me remova do servidor, contado que sou um bot (IA), eu não posso sair por mim mesma."
+        },
+        "already-muted": {
+            "english": "This member is already muted.",
+            "portugues": "Este membro já está mutado."
+        },
+        "muted-advise": {
+            "english": "I might not have the permission to configure some channels permissions, the \"muted role\" might not work in these channels, you can solve this by giving me access to them.",
+            "portugues": "Talvez eu não tenha permissão para configurar a permissão de alguns canais, o \"cargo de mutado\" pode não funcionar nestes canais, você pode resolver isso ao me dar acesso à estes canais."
+        },
+        "no-muted-role-to-unmute": {
+            "english": "Seems like this server doens't have a \"Muted Role\" for me to use it. Could you check it please?\nThe name of the role I use to mute members is called: \"Muted\"",
+            "portugues": "Parece que este servidor não tem um cargo de \"Silenciado\" para mim utilizar. Você poderia checar para mim?\nO nome do cargo que eu uso para silenciar membros é chamado de: \"Silenciado\""
+        },
+        "unmuted-success": {
+            "english": "Unmuted {member} successfully.",
+            "portugues": "{member} Desmutado com sucesso."
         }
+        
     }
 }

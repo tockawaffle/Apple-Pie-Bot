@@ -1,5 +1,6 @@
+const lang = require("@lang")
 const {errorHandle} = require("@configs/other/errorHandle")
-const {banUser} = require("@configs/other/banUser")
+const {kickUser} = require("@configs/other/kickUser")
 module.exports = {
     aliases: [],
     run: async(client, messageCreate, args) => {
@@ -9,15 +10,15 @@ module.exports = {
         const verify = await checkGuild(messageCreate, author)
         if(verify.verify !== true) return 
 
-        let toBan,
+        let toKick,
             mentionedMember = messageCreate.mentions.members.first(),
             userID = guild.members.cache.get(args[0])
             reason = args.slice(1).join(' ')
-        if(mentionedMember) {toBan = mentionedMember}
-        else if(userID) {toBan = userID}
+        if(mentionedMember) {toKick = mentionedMember}
+        else if(userID) {toKick = userID}
 
         try {
-            await banUser(messageCreate, author, toBan, reason)
+            await kickUser(messageCreate, author, toKick, reason)
         } catch (error) {
             await errorHandle(messageCreate, author, error)
         }

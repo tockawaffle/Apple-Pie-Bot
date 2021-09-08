@@ -9,7 +9,7 @@ module.exports = {
             if(verify.verify !== true) return 
             await emojiAdd(messageCreate, args[0], args[1], author)
         } catch (error) {
-            errorHandle(messageCreate, author, error)
+            await errorHandle(messageCreate, author, error)
         }
     }
 }

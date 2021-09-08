@@ -29,7 +29,7 @@ module.exports = {
                 }
             }
         } catch (error) {
-            errorHandle(messageCreate, author, error)
+            await errorHandle(messageCreate, author, error)
         }
     }
 }

@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");const lang = require("@lang"); const moment = require("moment")
 const {requestPancake} = require("../../../Configs/Commands/APIs/PancakeSwap/requestPancake"); const {errorHandle} = require("../../../Configs/Commands/other/errorHandle")
 module.exports = {
-    aliases: [],
+    aliases: ["cake"],
     run:async(client, messageCreate, args) => {
         const {author} = messageCreate
         try {
@@ -26,7 +26,7 @@ module.exports = {
                 return messageCreate.reply({embeds: [reqEmbed]})
             }
         } catch (error) {
-            errorHandle(messageCreate, author, err)
+            await errorHandle(messageCreate, author, err)
         }
        
     }

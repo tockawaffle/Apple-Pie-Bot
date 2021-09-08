@@ -1,5 +1,5 @@
 require("dotenv").config(); require('module-alias/register')
-const { Client, Intents, DiscordAPIError } = require("discord.js");
+const { Client, Intents } = require("discord.js");
 const client = new Client({
     allowedMentions: { parse: [ 'users', 'roles' ], repliedUser: true },
     partials: [ "CHANNEL", "GUILD_MEMBER", "MESSAGE", "USER" ],
@@ -14,7 +14,6 @@ const {registerCommands, registerEvents, registerPlayerEvents} = require("./Util
 (async() => {
     client.login(process.env.TOKEN);
     client.commands = new Map()
-    client.apierror = DiscordAPIError
     client.player = PlayerClient;
     client.gecko = GeckoClient;
     client.steam = SteamClient;

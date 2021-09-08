@@ -28,7 +28,7 @@ module.exports = {
                 return messageCreate.reply({embeds: [avatarEmbed]})
             }
         } catch (error) {
-            errorHandle(messageCreate, author, error)
+            await errorHandle(messageCreate, author, error)
         }
         
     }

@@ -68,7 +68,7 @@ module.exports = {
                 return pagination(messageCreate, [weatherEmbed, forecastOneEmbed, forecastTwoEmbed, forecastThreeEmbed], [], 10000)
             })
         } catch (error) {
-            errorHandle(messageCreate, author, error)
+            await errorHandle(messageCreate, author, error)
         }
     }
 }
