@@ -28,11 +28,35 @@
             "english": "Oops, something went wrong, please check:",
             "portugues": "Oops, alguma coisa deu errado, dê uma olhada:"
         },
+        "missing-permissions-me": {
+            "english": "Seems like I am missing the {perms} permission, I am not able to use this command, so please, give me that permission.",
+            "portugues": "Parece que eu não tenho a permissão {perms}, Portanto, não posso utilizar este comando até que me dêem esta permissão."
+        },
         "bad-advise": {
             "english": "Be sure that you're using the command as it needs to be used. If you are confused on how to use it, check my help page using {command}",
             "portugues": "Tenha certeza de que você está utilizando o comando do modo que ele deve ser utilizado. Caso esteja confuso em como você deveria usar o mesmo, cheque minha página de ajuda: {command}"
         },
-
+        "no-guild": {
+            "english": "I cannot execute this command in DM's, please, go to a server to use it!",
+            "portugues": "Eu não posso executar este comando no PV, por favor, vá até um servidor para utilizar o mesmo!"
+        },
+        "no-reason": {
+            "english": "Reason Not Provided.",
+            "portugues": "Motivo Não Providenciado."
+        },
+        "emote-or-url": {
+            "english": "I need a link or emote as the first argument of the command to add it to this server.",
+            "portugues": "Eu preciso de um link ou um emote como o primeiro argumento do comando para pode adicionar o mesmo a este servidor."
+        },
+        "missing-name": {
+            "english": "You forgot to say what name this emote should have.",
+            "portugues": "Você se esqueceu do nome que esse emote deveria ter."
+        },
+        "missing-permissions": {
+            "english": "Seems like you are missing some permissions, why not ask someone that has the {perm} permission to use this command for you?",
+            "portugues": "Parece que você não tem algumas permissões, por quê não pedir à alguém que tenha a permissão {perm} para usar este comando por você?"
+        },
+ 
         "separator": "uconfig",
         "prefix": {
             "english": "prefix",
@@ -380,6 +404,38 @@
         "precip": {
             "english": "Precipitation:",
             "portugues": "Precipitação:"
+        },
+
+        "separator7": "emoji",
+        "created-emoji": {
+            "english": "Emoji Created.",
+            "portugues": "Emoji Criado."
+        },
+        "emoji-name": {
+            "english": "Emoji Name:",
+            "portugues": "Nome do Emoji:"
+        },
+
+        "separator8": "banimentos",
+        "ban-members": {
+            "english": "Ban Guild Members",
+            "portugues": "Banir Membros do Servidor"
+        },
+        "same-id-ban": {
+            "english": "Hmmm, seems like you're trying to ban yourself. . . Whyyyy do yooou want to leaaave???",
+            "portugues": "Hmmmm, parece que você está tentando se banir. . . Por queeeee vocêêê quer seeeer banido??"
+        },
+        "not-bannable": {
+            "english": "This member cannot be banned.",
+            "portugues": "Este membro não pode ser banido."
+        },
+        "banned": {
+            "english": "Ban Hammer 🔨",
+            "portugues": "Martelo do Banimento 🔨"
+        },
+        "banned-desc": {
+            "english": "The following user was banned successfully: {ban}",
+            "portugues": "O membro a seguir foi banido com sucesso: {ban}"
         }
     }
 }

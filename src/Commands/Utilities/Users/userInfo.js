@@ -9,6 +9,10 @@ module.exports = {
     run: async(client, messageCreate, args) => {
 
         const {author, mentions, guild} = messageCreate
+        const {checkGuild} = require("@configs/other/checkGuild")
+        const verify = await checkGuild(messageCreate, author)
+        if(verify.verify !== true) return 
+        
         try {
             let verify = []
             const guildMember = mentions.members.first() || guild.members.cache.get([args[0]])
