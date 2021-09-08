@@ -25,6 +25,8 @@ From [v12](https://github.com/The-Crow-pleb/Apple-Pie-Bot/tree/v12) to [v13](htt
 
 But still, the bot isn't finished yet, so expect more changes soon! 
 
+Found any bugs/errors or better ways to help in the optimization? Feel free to open a pull request with details of the code you changed!
+
   
 ## Acknowledgements - 👨‍🎓
 
