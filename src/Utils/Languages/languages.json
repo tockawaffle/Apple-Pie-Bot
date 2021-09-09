@@ -508,13 +508,135 @@
             "portugues": "Talvez eu não tenha permissão para configurar a permissão de alguns canais, o \"cargo de mutado\" pode não funcionar nestes canais, você pode resolver isso ao me dar acesso à estes canais."
         },
         "no-muted-role-to-unmute": {
-            "english": "Seems like this server doens't have a \"Muted Role\" for me to use it. Could you check it please?\nThe name of the role I use to mute members is called: \"Muted\"",
+            "english": "Seems like this server doesn't have a \"Muted Role\" for me to use it. Could you check it please?\nThe name of the role I use to mute members is called: \"Muted\"",
             "portugues": "Parece que este servidor não tem um cargo de \"Silenciado\" para mim utilizar. Você poderia checar para mim?\nO nome do cargo que eu uso para silenciar membros é chamado de: \"Silenciado\""
         },
         "unmuted-success": {
             "english": "Unmuted {member} successfully.",
             "portugues": "{member} Desmutado com sucesso."
-        }
+        },
         
+        "separator10": "roles",
+        "no-role-name": {
+            "english": "Missing the role name, please, tell me a name for me to able to create the role!",
+            "portugues": "Está faltando o nome do cargo, por favor, diga-me um nome para que eu possa criar o mesmo!"
+        },
+        "no-role-color": {
+            "english": "You can also give me a HEX code to add a color to the role. Check [here](https://htmlcolorcodes.com/)",
+            "portugues": "Você também pode me enviar um código HEX para que eu coloque uma corzinha no cargo. Dê uma olhada [aqui](https://htmlcolorcodes.com/)"
+        },
+        "roles-perm": {
+            "english": "Manage Roles",
+            "portugues": "Gerenciar Cargos"
+        },
+        "create-role-desc": {
+            "english": "✅ - **The following role was created successfully:** ```Name: {role}\nColor: {color}```",
+            "portugues": "✅ - **O seguinte cargo foi criado com sucesso:** ```Nome: {role}\nCor: {color}```"
+        },
+        "default-color": {
+            "english": "Not provided - Defaults to Gray.",
+            "portugues": "Não providenciado. - Padronizado para Cinza."
+        },
+        "create-role": {
+            "english": "create",
+            "portugues": "criar"
+        },
+        "delete-role": {
+            "english": "delete",
+            "portugues": "excluir"
+        },
+        "no-role-name-delete": {
+            "english": "Missing the role id/mention, please, give me an id or a role mention for me to able to delete the role!",
+            "portugues": "Está faltando o id/menção do cargo, por favor, me dê um id ou uma menção de cargo para que eu possa deletar o mesmo!"
+        },
+        "delete-role-desc": {
+            "english": "✅ - **The following role was deleted successfully:** ```Name: {role}```",
+            "portugues": "✅ - **O seguinte cargo foi excluido com sucesso:** ```Nome: {role}```"
+        },
+
+        "separator11": "slowmode",
+        "slowmode-remove": {
+            "english": "remove",
+            "portugues": "remover"
+        },
+        "no-channel": {
+            "english": "Missing Channel, please give me one to add slowmode to!",
+            "portugues": "Faltando o Canal, por favor, me diga um para que eu adicione o slowmode!"
+        },
+        "no-time": {
+            "english": "Missing Time, please, give me, in seconds, the time for the slowmode.\nNot more than 6 hours, not less than 5 seconds",
+            "portugues": "Faltando o tempo, por favor, me dê em segundos o tempo para o slowmode.\nNão mais do que 6 horas, não menos do que 5 segundos."
+        },
+        "too-much-time": {
+            "english": "Sorry, seems like you're trying to add more than 21600 seconds (Six hours) as slowmode, and I'm not able to do that.",
+            "portugues": "Desculpe, parece que você está tentando adicionar mais do que 21600 segundos (Seis horas) como slowmode, eu não sou capaz de fazer isto."
+        },
+        "time-not-a-number": {
+            "english": "Hmmm, seems like you're trying to add something else that is not a number as the slowmode, you know that you can't do that, right?.... right?",
+            "portugues": "Hmmm, parece que você está tentando adicionar algo que não seja um número como slowmode, você sabe que não é possível fazer isto, né?.... né?"
+        },
+        "set-limit": {
+            "english": "Slowmode set to: ```{time} seconds```\nSlowmode Channel: ```{channel}```\nReason: ```{reason}```",
+            "portugues": "Slowmode Configurado: ```{time} seconds```\nCanal do Slowmode: ```{channel}```\nMotivo: ```{reason}```"
+        },
+
+
+        "separator12": "Help",
+        "can-be-used-on-dms": {
+            "english": "✅ - These commands can be used on DMs!",
+            "portugues": "✅ - Estes comandos podem ser utilizados no PV!"
+        },
+        "can-not-be-used-on-dms": {
+            "english": "❌ - These commands can not be used on DMs!",
+            "portugues": "❌ - Estes comandos não podem ser utilizados no PV!"
+        },
+        "some-can-be-used-on-dms": {
+            "english": "⁉ - Some of these commands can be used on DMs!",
+            "portugues": "⁉ - Alguns desses comandos podem ser utilizados no PV!"
+        },
+        "help-mainEmbed": {
+            "english": "Hello, this is the help command, here you can find all the commands that I have and if they can be used or not in DM's!",
+            "portugues": "Olá, este é o comando de ajuda, aqui você pode encontrar todos os comandos que eu possuo e se eles podem ser utilizados ou não no PV!"
+        },
+        "help-mainEmbed-intro": {
+            "english": "This is the first page, or, the introduction if I should say.",
+            "portugues": "Esta é a primeira página, ou, a introdução."
+        },
+        "help-mainEmbed-tosp": {
+            "english": "You can check my Terms of Use and Privacy [here](https://www.tockanest.com/terms-of-use-and-privacy)",
+            "portugues": "Você pode checar meus Termos de Uso e Privacidade [aqui](https://www.tockanest.com/terms-of-use-and-privacy)"
+        },
+        "help-mainEmbed-github": {
+            "english": "You can check my source-code at my [Github](https://github.com/The-Crow-pleb/Apple-Pie-Bot) page",
+            "portugues": "Você pode checar meu código-fonte em meu [Github](https://github.com/The-Crow-pleb/Apple-Pie-Bot)"
+        },
+        "help-mainEmbed-options": {
+            "english": "Don't want to scroll over all pages? You can also use {prefix}help <pageName> to go directly to that page!\nThese are all the pages avaiable, for now: [Click Here](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Apple-Pie-v13/src/configs/Commands/Texts/help-pages.md)",
+            "portugues": "Não deseja rolar por todas as páginas? você também pode utilizar {prefix}help <página> para ir diretamente para aquela página!\nEstas são todas as páginas disponívels, por agora: [Clique aqui](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Apple-Pie-v13/src/configs/Commands/Texts/help-pages.md)"
+        },
+        "help-userconfig-desc" :{
+            "english": "These are the commands that you can use to config your language and personal prefix.",
+            "portugues": "Estes são os comandos que você pode utilizar para configurar seu idioma e prefixo pessoal."
+        },
+        "help-uconfig": {
+            "english": "Change your prefix or language:",
+            "portugues": "Mude seu prefixo ou idioma:"
+        },
+        "help-mod-desc": {
+            "english": "🚓 These are the moderation commands:",
+            "portugues": "🚔 Estes são os comandos de moderação:"
+        },
+        "help-roleplay-desc": {
+            "english": "🎭 Roleplay Commands:",
+            "portugues": "🎭 Comandos de Roleplay:"
+        },
+        "help-utils-desc": {
+            "english": "🛠 Utilities:",
+            "portugues": "🛠 Utilidades:"
+        },
+        "help-crypto-desc": {
+            "english": "💰 Crypto Commands:",
+            "portugues": "💰 Comandos de Criptomoedas:"
+        }
     }
 }

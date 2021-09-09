@@ -58,11 +58,15 @@ Required on the dotenv file:
   
 ## Roadmap - 🛣
 
-- Create a Token on the BSC network to distribute around users of this bot. Interested? [Read this.]
+- Create a Token on the BSC network to distribute around users of this bot. Interested? Soon.
 
 - Finish the commands that are missing from v12.
 
 - Get more attention from other communities.
+
+- Create a per-server economy. (Yes, every server with it's own economy.)
+
+- Create a global economy using some kind of "point" to get more features and etc.
 
 - Other things such as making more pies, I guess?
 

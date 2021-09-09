@@ -10,8 +10,8 @@ module.exports = {
 
         const {author, mentions, guild} = messageCreate
         const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
-        if(verify.verify !== true) return 
+        const verified = await checkGuild(messageCreate, author)
+        if(verified.verify !== true) return 
         
         try {
             let verify = []

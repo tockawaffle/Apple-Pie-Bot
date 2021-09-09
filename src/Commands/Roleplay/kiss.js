@@ -16,7 +16,6 @@ module.exports = {
                 .setAuthor(author.username, author.displayAvatarURL())
                 .setDescription(`${await selectRandomQuotes(author, mentionedMember)}`)
                 .setImage(await selectRandomImage())
-                
             return messageCreate.reply({embeds: [kissEmbed]})
         } catch (error) {
             errorHandle(messageCreate, author, error)
