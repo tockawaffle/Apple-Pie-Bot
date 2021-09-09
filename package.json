@@ -1,6 +1,6 @@
 {
   "name": "apple-pie",
-  "version": "13.0.0",
+  "version": "13.2.0",
   "description": "This is an updated version of the Apple Pie Bot made for Discord, using the latest v13 update with newer interactions with the Discord API.",
   "main": "src/bot.js",
   "repository": {

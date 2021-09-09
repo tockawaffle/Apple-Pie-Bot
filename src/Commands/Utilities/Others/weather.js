@@ -3,7 +3,7 @@ const lang = require("@lang");const { MessageEmbed } = require("discord.js");
 const {find} = require("weather-js"); const {buttonsPagination: pagination} = require("djs-buttons-pagination")
 const moment = require("moment")
 module.exports = {
-    aliases: [],
+    aliases: ["clima"],
     run: async(client, messageCreate, args) => {
         const {author} = messageCreate
         
