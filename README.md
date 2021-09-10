@@ -46,6 +46,13 @@ Found any bugs/errors or better ways to help in the optimization? Feel free to o
 
 To deploy this project, you can simply fork it, clone it and set the Enviroment Variables inside a dotenv file.
 
+- Requirements
+- - NodeJS v16
+- - Git
+- - An editor, such as VSC or others
+- - At least 1.5GB of RAM (for smaller communities you might need get less RAM)
+-  - Basic knowledge of JavaScript (This is optional, but always good to have)
+
 Required on the dotenv file:
 
 ```
