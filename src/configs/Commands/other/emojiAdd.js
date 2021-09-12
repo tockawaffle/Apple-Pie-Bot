@@ -21,7 +21,9 @@ async function emojiAdd(messageCreate, input, name, author, attachment) {
         
         if(identifier === "Emoji JPG" || identifier === "Emoji GIF" || identifier === "URL" || identifier === "Attachment") {
             try {
-                messageCreate.guild.emojis.create(url, `${name || input}`)
+                if(name.includes("-")) name = name.replace(/[#-]/g, "_")
+                messageCreate.guild.emojis.create(url, `${name || input}`).catch(error => {return err = error})
+
                 const created = new MessageEmbed()
                     .setColor("RANDOM")
                     .setAuthor(author.username, author.displayAvatarURL())
