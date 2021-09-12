@@ -1,4 +1,5 @@
 Here you can find all the pages you can use as option on the Help command!
+
 Aqui você consegue encontrar todas as páginas que você pode utilizar no comando de Ajuda!
 
 - Pages - Páginas:
