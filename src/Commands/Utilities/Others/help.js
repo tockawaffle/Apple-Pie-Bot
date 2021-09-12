@@ -37,7 +37,7 @@ module.exports = {
             const utilitiesEmbed = new MessageEmbed()
                 .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
                 .setColor("RANDOM")
-                .setDescription(`${lang(author, "help-utils-desc")}\`\`\`${prefix}weather <City/State>\n${prefix}avatar <@mention | userID | if not both, yours will be showed.>\n${prefix}userinfo <@mention | userID>\`\`\``)
+                .setDescription(`${lang(author, "help-utils-desc")}\`\`\`${prefix}weather <City/State>\n${prefix}avatar <@mention | userID | if not both, yours will be showed.>\n${prefix}userinfo <@mention | userID>\n${prefix}translate <text> (${lang(author, "help-translate-field")})\`\`\``)
                 .setFooter(lang(author, "some-can-be-used-on-dms"), author.displayAvatarURL({dynamic: true}))
             const cryptoEmbed = new MessageEmbed()
                 .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))

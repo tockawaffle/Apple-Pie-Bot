@@ -8,6 +8,10 @@
             "english": "Missing Args, please, redo the command.",
             "portugues": "Faltando Argumentos, por favor, utilize o comando novamente."
         },
+        "no-args-match": {
+            "english": "You are trying to use an unavaiable option.",
+            "portugues": "As opções disponíveis não são iguais à que você está tentando utilizar."
+        },
         "no-args-correct": {
             "english": "The correct way of using this command is:\n{command}",
             "portugues": "O modo correto de utilizar este comando é:\n{command}"
@@ -637,6 +641,102 @@
         "help-crypto-desc": {
             "english": "💰 Crypto Commands:",
             "portugues": "💰 Comandos de Criptomoedas:"
+        },
+        "help-translate-field": {
+            "english": "This only translates to your current language on the bot, in this case, english.",
+            "portugues": "Isso traduz apenas na sua linguagem atual no bot, neste caso, português."
+        },
+
+        "separator13": "translate",
+        "result": {
+            "english": "Translation Result:",
+            "portugues": "Resultado da Tradução:"
+        },
+        "input": {
+            "english": "Input:",
+            "portugues": "Entrada:"
+        },
+        "output": {
+            "english": "Translated:",
+            "portugues": "Tradução:"
+        },
+        "raw": {
+            "english": "Raw text:",
+            "portugues": "Texto Bruto:"
+        },
+        "pron": {
+            "english": "Pronunciation:",
+            "portugues": "Pronunciação:"
+        },
+        "auto": {
+            "english": "Autocorrect:",
+            "portugues": "Corretor Automático:"
+        },
+
+        "separator14": "economy",
+        "error-already-started": {
+            "english": "You already started the economy on: {date}",
+            "portugues": "Você já começou a economia em: {date}"
+        },
+        "econ-options": {
+            "english": "Start | Rewards",
+            "portugues": "Iniciar | Recompensas"
+        },
+        "econ-start": {
+            "english": "start",
+            "portugues": "iniciar"
+        },
+        "econ-started": {
+            "english": "You've started the server economy successfully!\nEach user starts with 1000 {name}!\nYou can set rewards by using: ```{prefix}econfig {option} <Name-Of-Reward> <Reward-Cost> <?Image-of-Reward>```",
+            "portugues": "Voce iniciou a economia do servidor com sucesso!\nCada usuário começa com 1000 {name}!\nVocê pode configurar recompensas utilizando o comando: ```{prefix}econfig {option} <Nome-da-Recompensa> <Custo-da-Recompensa> <?Imagem-da-Recompensa>```"
+        },
+        "econ-reward": {
+            "english": "reward",
+            "portugues": "recompensas"
+        },
+        "econ-not-started": {
+            "english": "You cannot use this. The economy on this server has not started!",
+            "portugues": "Você não pode utilizar isto, a economia neste servidor ainda não foi iniciada!"
+        },
+        "econ-no-reward-name": {
+            "english": "You forgot to give the reward a name.",
+            "portugues": "Você se esqueceu de dar um nome à sua recompensa."
+        },
+        "econ-no-reward-cost": {
+            "english": "You forgot to set a cost for your reward.",
+            "portugues": "Você se esqueceu de colocar um custo à sua recompensa."
+        },
+        "econ-name": {
+            "english": "Name of Reward:",
+            "portugues": "Nome da Recompensa:"
+        },
+        "econ-cost": {
+            "english": "Reward Cost:",
+            "portugues": "Custo da Recompensa:"
+        },
+        "econ-reward-duplicated": {
+            "english": "Seems like you already have a reward named: {name}!\nIf you want to reconfig the reward, you can use the \"config <Cost-to-Config> <?Image>\" option. Or just delete it!.",
+            "portugues": "Parece que você já tem uma recompensa com o nome: {name}!\nCaso deseje reconfigurar a recompensa, você pode utilizar a opção de \"config <Nome da Recompensa> <Custo-para-Mudar> <imagem>\" ou apenas deletar a mesma!."
+        },
+        "econ-reward-cost-nan": {
+            "english": "The cost of your reward is not a number!\nIf you're trying to add spaced names for your reward, don't try. You can use special characters for your name, the bot will replace them later!\n\nExample:\n{prefix}econfig rewards add This-is-an-Example 1200 https://cdn.discordapp.com/attachments/874792124099473478/886388511551410176/image-example.jpg",
+            "portugues": "Parece que o custo da sua recompensa não é um número!\nSe você estiver tentando adicionar espaços no nome de sua recompensa, não tente. Você pode utilizar caracteres especiais para o nome, o bot irá remover eles para você após a configuração!\n\nExemplo:\n{prefix}econfig recompensas add Isso-é-um-exemplo 1200 https://cdn.discordapp.com/attachments/874792124099473478/886388511551410176/image-example.jpg"
+        },
+        "econ-reward-id": {
+            "english": "Reward ID: {id}\n(You'll need this later to remove or configure this reward.)",
+            "portugues": "ID da Recompensa: {id}\n(Você vai precisar dele depois para remover ou configurar essa recompensa.)"
+        },
+        "econ-reward-removed": {
+            "english": "The reward with the id {id} was removed successfully!\nHope you set a new one!",
+            "portugues": "A recompensa com o id {id} foi removida com sucesso!\nEspero que logo logo você coloque outra no lugar!"
+        },
+        "econ-no-reward-found": {
+            "english": "No reward was found with the id {id}.\nPlease, check the ID you're using.",
+            "portugues": "Nenhuma recompensa com o id {id} foi encontrada.\nPor favor, cheque o ID que você está usando."
+        },
+        "econ-max-rewards": {
+            "english": "This server has reached the limit of 9 rewards.",
+            "portugues": "Este servidor alcançou o limite de 9 recompensas."
         }
     }
 }

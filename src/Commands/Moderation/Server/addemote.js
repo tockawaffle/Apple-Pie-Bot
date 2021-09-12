@@ -8,7 +8,16 @@ module.exports = {
             const {checkGuild} = require("@configs/other/checkGuild")
             const verify = await checkGuild(messageCreate, author)
             if(verify.verify !== true) return 
-            await emojiAdd(messageCreate, args[0], args[1], author)
+
+            if(messageCreate.attachments.first()) {
+                let attachment = messageCreate.attachments.first()
+                let attachmentURL = attachment.attachment
+                await emojiAdd(messageCreate, args[0], args[1], author, attachmentURL)
+            } else {
+                await emojiAdd(messageCreate, args[0], args[1], author)
+            }
+
+            
         } catch (error) {
             await errorHandle(messageCreate, author, error)
         }
