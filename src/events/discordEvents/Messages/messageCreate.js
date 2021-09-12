@@ -1,5 +1,6 @@
 const userSchema = require("@db/schemas/userSchema")
 const {RateLimiter} = require('discord.js-rate-limiter'); let limiter = new RateLimiter(2, 2000)
+const {loadUserLangs} = require("@lang");
 module.exports = async(client, messageCreate) => {
 
     const {author, guild} = messageCreate
@@ -8,7 +9,8 @@ module.exports = async(client, messageCreate) => {
     const checker = await userSchema.findOne({_id: author.id})
     let prefix;
     if(!checker) {
-        await userSchema.findOneAndUpdate({_id: userId, }, {_id: userId, language: 'english', prefix: process.env.PREFIX}, {upsert: true,})
+        await userSchema.findOneAndUpdate({_id: author.id, }, {_id: author.id, language: 'english', prefix: process.env.PREFIX}, {upsert: true,})
+        await loadUserLangs(client)
         prefix = process.env.PREFIX
     } else { prefix = checker.prefix }
     messageCreate.prefix = prefix

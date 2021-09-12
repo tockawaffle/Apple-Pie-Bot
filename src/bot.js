@@ -19,5 +19,5 @@ const {registerCommands, registerEvents, registerPlayerEvents} = require("./Util
     client.steam = SteamClient;
     await registerEvents(client, "../../Events/DiscordEvents")
     await registerCommands(client, "../../Commands")
-    await registerPlayerEvents(PlayerClient, "../../Events/PlayerEvents")
+    // await registerPlayerEvents(PlayerClient, "../../Events/PlayerEvents")
 })();

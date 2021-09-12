@@ -12,6 +12,6 @@ module.exports = async(client) => {
         else if (av === 1) {client.user.setAvatar('src/Configs/Events/imgs/perfil/i3.jpg'); av = 2} 
         else if (av === 2 ) {client.user.setAvatar('src/Configs/Events/imgs/perfil/i4.jpg'); av = 3} 
         else if (av === 3) {client.user.setAvatar('src/Configs/Events/imgs/perfil/i5.jpg'); av = 4}
-        else if (av === 4) {client.user.setAvatar('src/Configs/Events/imgs/perfil/i1'); av = 0} 
+        else if (av === 4) {client.user.setAvatar('src/Configs/Events/imgs/perfil/i1.png'); av = 0} 
     }, ms('2h'));
 }

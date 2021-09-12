@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const {errorHandle} = require("@configs/other/errorHandle")
 module.exports = {
-    aliases: [],
+    aliases: ["av"],
     run: async(client, messageCreate, args) => {
 
         const {author, mentions, guild} = messageCreate
