@@ -105,7 +105,7 @@ module.exports = {
             } else {
                 return messageCreate.reply({embeds: [userMainInfo]})
             }
-            pagination(messageCreate, verify, [], 10000)
+            await pagination(messageCreate, verify, [], 10000)
         } catch (error) {
             await errorHandle(messageCreate, author, error)
         }

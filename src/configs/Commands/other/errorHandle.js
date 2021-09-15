@@ -1,5 +1,6 @@
-function errorHandle(messageCreate, author, err) {
+function errorHandle(messageCreate, auth, err) {
 
+    const {author} = messageCreate
     const lang = require("@lang")
     const {MessageEmbed} = require('discord.js')
     const errorEmbed = new MessageEmbed()
