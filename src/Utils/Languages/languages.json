@@ -8,6 +8,10 @@
             "english": "Missing Args, please, redo the command.",
             "portugues": "Faltando Argumentos, por favor, utilize o comando novamente."
         },
+        "mention-needed": {
+            "english": "You need to mention someone to use this command!",
+            "portugues": "Você precisa mencionar alguém para usar esse comando!"
+        },
         "no-args-match": {
             "english": "You are trying to use an unavaiable option.",
             "portugues": "As opções disponíveis não são iguais à que você está tentando utilizar."
@@ -646,6 +650,30 @@
             "english": "This only translates to your current language on the bot, in this case, english.",
             "portugues": "Isso traduz apenas na sua linguagem atual no bot, neste caso, português."
         },
+        "help-canvas-desc":{
+            "english": "Image Manipulation",
+            "portugues": "Manipulação de Imagem"
+        },
+        "help-canvas-monster": {
+            "english": "The monster under your bed:",
+            "portugues": "O monstro de baixo de sua cama:"
+        },
+        "help-canvas-ohno": {
+            "english": "Oh no, it's retarded:",
+            "portugues": "Oh não, ele é retardado:"
+        },
+        "help-canvas-shit": {
+            "english": "Ew, you stepped on shit:",
+            "portugues": "Eca, você pisou na merda:"
+        },
+        "help-canvas-opinion":{
+            "english": "I respect your opinion, trust me:",
+            "portugues": "Eu respeito sua opinião, confia:"
+        },
+        "help-canvas-ytb": {
+            "english": "Youtube Comment:",
+            "portugues": "Comentário do Youtube:"
+        },
 
         "separator13": "translate",
         "result": {
@@ -673,14 +701,25 @@
             "portugues": "Corretor Automático:"
         },
 
-        "separator14": "economy",
+        "separator14": "canvas",
+        "CV_C": {
+            "english": "You should write something!",
+            "portugues": "Você deveria escrever algo!"
+        },
+        "CV_C2": {
+            "english": "You should write something!\nYou can use this command by mentioning someone too!",
+            "portugues": "Você deveria escrever algo!\nVocê pode usar esse comando mencionando alguém também!"
+        },
+
+
+        "separator15": "economy",
         "error-already-started": {
             "english": "You already started the economy on: {date}",
             "portugues": "Você já começou a economia em: {date}"
         },
         "econ-options": {
-            "english": "Start | Rewards",
-            "portugues": "Iniciar | Recompensas"
+            "english": "Start | Rewards | RConfig",
+            "portugues": "Iniciar | Recompensas | RConfig"
         },
         "econ-start": {
             "english": "start",
@@ -737,6 +776,59 @@
         "econ-max-rewards": {
             "english": "This server has reached the limit of 9 rewards.",
             "portugues": "Este servidor alcançou o limite de 9 recompensas."
+        },
+        "economy-perms": {
+            "english": "Administrator",
+            "portugues": "Administrador"
+        },
+        "econ-reward-noId": {
+            "english": "No ID was provided, please, redo the command.",
+            "portugues": "Nenhum ID foi providenciado, por favor, refaça o comando."
+        },
+        "econ-reward-noOpts": {
+            "english": "No option was provided.",
+            "portugues": "Nenhuma opção foi providenciada."
+        },
+        "econ-reward-notFound": {
+            "english": "No reward was found, please, check the ID you used",
+            "portugues": "Nenhuma recompensa foi encontrada, por favor, cheque o ID que você utilizou."
+        },
+        "econ-reward-config-name": {
+            "english": "**Configured:**```The new name was set!\nPrevious name: {prevname}\nNew name: {newname}```",
+            "portugues": "**Configurado:**```O novo nome da recompensa foi configurado!\nNome anterior: {prevname}\nNovo nome: {newname}```"
+        },
+        "econ-reward-config-cost": {
+            "english": "**Configured:**```The new reward cost was set!```",
+            "portugues": "**Configurado:**```O novo preço da recompensa foi configurado!```"
+        },
+        "econ-reward-config-image": {
+            "english": "**Configured:**```The new Image was set!```",
+            "portugues": "**Configurado:**```A nova Imagem foi configurada!```"
+        },
+        "econ-balance": {
+            "english": "Balance:```Congrats! You have {balance} {coinName} on your bank account!\nDon't forget to save some to buy Pies!```",
+            "portugues": "Total:```Parabéns! Você tem {balance} {coinName} em sua conta do banco!\nNão esqueça de guardar um pouco para comprar Tortas!```"
+        },
+        "econ-reward-buy": {
+            "english": "**✅Success:**```You successfully bought \"{rewardName}\" and used {amountName} of your balance!\nNow you have {newAmount} in your account, use with caution!```",
+            "portugues": "**✅Sucesso:**```Você comprou com sucesso \"{rewardName}\" e usou {amountName} de usa conta bancária!\nAgora você tem {newAmount} em sua conta, use com cuidado!```"
+        },
+        "econ-not-enough-balance": {
+            "english": "Seems like you do not have enough money to buy this.",
+            "portugues":  "Parece que você não tem dinheiro suficiente para comprar isto."
+        },
+        "econ-id-isnan":  {
+            "english": "Seems like you're trying to use something else than a number on the ID, please, check again your ID.",
+            "portugues": "Parece que você está tentando utilizar algo que não é um número como ID, por favor, cheque novamente o ID."
+        },
+        "econ-notfound": {
+            "english": "I coudn't find anything with the ID you provided.",
+            "portugues": "Eu não consegui encontrar nada com o ID que você providenciou."
+        },
+        "econ-rewardl-3+": {
+            "english": "This is a list of all IDs of the server rewards, pick one!",
+            "portugues": "Esta é a lista de todos os IDs das recompensas do servidor, escolha uma!"
         }
+        
     }
 }

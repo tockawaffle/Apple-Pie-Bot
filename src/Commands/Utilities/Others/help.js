@@ -44,8 +44,12 @@ module.exports = {
                 .setColor("RANDOM")
                 .setDescription(`${lang(author, "help-crypto-desc")}\`\`\`${prefix}gecko <coin API id | alias>\n${prefix}pancake <token contract>\`\`\``)
                 .setFooter(lang(author, "can-be-used-on-dms"), author.displayAvatarURL({dynamic: true}))
+            const helpCanvas = new MessageEmbed()
+                .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
+                .setDescription(`🖼 ${lang(author, "help-canvas-desc")}:\n\`\`\`Change my mind Meme: ${prefix}changemymind <text>\n\nFacepalm: ${prefix}facepalm <?@mention>\n\n${lang(author, "help-canvas-monster")} ${prefix}monster <@mention>\n\n${lang(author, "help-canvas-ohno")} ${prefix}ohno <text>\n\n${lang(author, "help-canvas-shit")} ${prefix}ohshit <?@mention>\n\n${lang(author, "help-canvas-opinion")} ${prefix}opinion <@mention> <text>\n\n${lang(author, "help-canvas-ytb")} ${prefix}ytb <?@mention> <text>\n\nJail: ${prefix}jail <@mention>\`\`\``)
+                .setColor("RANDOM")
             if(!args[0]) {
-                pages = [mainEmbed, userConfigEmbed, modEmbed, roleplayEmbed, utilitiesEmbed, cryptoEmbed]
+                pages = [mainEmbed, userConfigEmbed, modEmbed, roleplayEmbed, utilitiesEmbed, cryptoEmbed, helpCanvas]
                 await buttonsPagination(messageCreate, pages, [], 15000)
             } 
             else if(args[0] === "main") {messageCreate.reply({embeds: [mainEmbed]})}
@@ -54,6 +58,7 @@ module.exports = {
             else if(args[0] === "utils") {messageCreate.reply({embeds: [utilitiesEmbed]})}
             else if(args[0] === "mod") {messageCreate.reply({embeds: [modEmbed]})}
             else if(args[0] === "crypto") {messageCreate.reply({embeds: [cryptoEmbed]})}
+            else if(args[0] === "canvas") {messageCreate.reply({embeds: [helpCanvas]})}
         } catch (error) {
             errorHandle(messageCreate, author, error)
         }
