@@ -26,7 +26,7 @@ module.exports = {
                 return messageCreate.reply({embeds: [reqEmbed]})
             }
         } catch (error) {
-            await errorHandle(messageCreate, author, err)
+            await errorHandle(messageCreate, author, error)
         }
        
     }
