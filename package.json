@@ -29,6 +29,7 @@
     "@discordjs/voice": "^0.6.0",
     "@vitalets/google-translate-api": "^7.0.0",
     "akaneko": "^5.2.2",
+    "bcrypt": "^5.0.1",
     "bufferutil": "^4.0.3",
     "canvacord": "^5.2.3",
     "coingecko-api": "^1.0.10",
