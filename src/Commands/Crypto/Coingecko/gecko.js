@@ -14,26 +14,29 @@ module.exports = {
             const geckoReq = await requestGecko(messageCreate, token, author)
             if(geckoReq.error) { return messageCreate.reply(`${lang(author, "bad")} ${geckoReq.error}`) }
             
-            const name = geckoReq.name
-            const description = geckoReq.description
-            const categories = geckoReq.categories
-            const contract = geckoReq.contract
-            const market_cap_rank = geckoReq.ranks.market_cap_rank
-            const liquidity_score = geckoReq.ranks.liquidity_score
-            const change_24h = geckoReq.prices.market_cap_changes.last_24h
-            const change_24h_percentage = geckoReq.prices.market_cap_changes.last_24h_percentage
-            const last_7d_percentage = geckoReq.prices.market_cap_changes.last_7d_percentage
-            const last_14d_percentage = geckoReq.prices.market_cap_changes.last_14d_percentage
-            const last_30d_percentage = geckoReq.prices.market_cap_changes.last_30d_percentage
-            let explorer = geckoReq.links.explorer
-            let homepage = geckoReq.links.homepage
-            const usd = geckoReq.prices.prices_fiat_tokens.usd
-            const gbp = geckoReq.prices.prices_fiat_tokens.gbp
-            const brl = geckoReq.prices.prices_fiat_tokens.brl
-            const btc = geckoReq.prices.prices_fiat_tokens.btc
-            const bnb = geckoReq.prices.prices_fiat_tokens.bnb
-            let chats = geckoReq.links.chats
-            let announcements = geckoReq.links.announcement
+            const 
+                name = geckoReq.name,
+                description = geckoReq.description,
+                categories = geckoReq.categories,
+                contract = geckoReq.contract,
+                market_cap_rank = geckoReq.ranks.market_cap_rank,
+                liquidity_score = geckoReq.ranks.liquidity_score,
+                change_24h = geckoReq.prices.market_cap_changes.last_24h,
+                change_24h_percentage = geckoReq.prices.market_cap_changes.last_24h_percentage,
+                last_7d_percentage = geckoReq.prices.market_cap_changes.last_7d_percentage,
+                last_14d_percentage = geckoReq.prices.market_cap_changes.last_14d_percentage,
+                last_30d_percentage = geckoReq.prices.market_cap_changes.last_30d_percentage,
+                usd = geckoReq.prices.prices_fiat_tokens.usd,
+                gbp = geckoReq.prices.prices_fiat_tokens.gbp,
+                brl = geckoReq.prices.prices_fiat_tokens.brl,
+                btc = geckoReq.prices.prices_fiat_tokens.btc,
+                bnb = geckoReq.prices.prices_fiat_tokens.bnb;
+
+            let 
+                explorer = geckoReq.links.explorer,
+                homepage = geckoReq.links.homepage,
+                chats = geckoReq.links.chats,
+                announcements = geckoReq.links.announcement;
 
             if(explorer.length > 1) { explorer=explorer.join('\t') } 
             if(homepage.length > 1) { homepage=homepage.join('\t') }

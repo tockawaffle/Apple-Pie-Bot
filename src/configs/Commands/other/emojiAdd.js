@@ -28,13 +28,12 @@ async function emojiAdd(messageCreate, input, name, author, attachment) {
                     .setColor("RANDOM")
                     .setAuthor(author.username, author.displayAvatarURL())
                     .setDescription(`${lang(author, "success")} ${lang(author, "created-emoji")}\n**${lang(author, "emoji-name")}** \`\`\`${name || nameToUse}\`\`\``)
-                return messageCreate.reply({embeds: [created]})
+                await messageCreate.reply({embeds: [created]}); return
             } catch (error) {
                 throw new Error(error)
             }
         }
     } catch (error) {
-        console.log(error)
         throw new Error(error)
     }
     

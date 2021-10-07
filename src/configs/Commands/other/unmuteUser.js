@@ -21,7 +21,7 @@ async function unmuteUser(messageCreate, toUnmute, reason) {
                     .setColor("RANDOM")
                     .setTitle(`${lang(author, "success")} ${lang(author, "unmuted-success").replace("{member}", toUnmute.user.username)}`)
                     .setDescription(`${lang(author, "reason")}\`\`\`${reason ? reason: lang(author, "no-reason")}\`\`\``)
-                messageCreate.reply({embeds: [mutedEmbed]})
+                await messageCreate.reply({embeds: [mutedEmbed]})
                 await guild.channels.cache.forEach(async(channel, id) => {await channel.permissionOverwrites.create(await mutedRole, {SEND_MESSAGES: false, SPEAK: false, ADD_REACTIONS: false}).catch(error => {})})
             } catch (error) {
                 throw new Error(error)
