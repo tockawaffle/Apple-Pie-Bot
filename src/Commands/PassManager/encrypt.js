@@ -1,11 +1,13 @@
-const { MessageEmbed } = require("discord.js"),
+const 
+    { MessageEmbed } = require("discord.js"),
     { errorHandle } = require("@configs/other/errorHandle"),
-    { encryptThis } = require("../../Configs/Commands/other/encryptThis")
+    { encryptThis } = require("@configs/other/encryptThis");
 
 module.exports = {
-    aliases: ["enc"],
+    aliases: ["enc", "guard"],
     run: async(client, messageCreate, args) => {
 
+        const {author} = messageCreate
         try {
             await encryptThis(messageCreate)
         } catch (error) {

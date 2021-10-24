@@ -2,10 +2,11 @@ async function buyReward(messageCreate, idNumber) {
 
     if(!idNumber) throw new Error(lang(author, "no-args"))
  
-    const {MessageEmbed} = require("discord.js")
-    const lang = require("@lang")
-    const guildSchema = require("@db/schemas/guildSchema")
-    const {author, guild} = messageCreate
+    const 
+        {MessageEmbed} = require("discord.js"),
+        lang = require("@lang"),
+        guildSchema = require("@db/schemas/guildSchema"),
+        {author, guild} = messageCreate;
 
     if(isNaN(idNumber)) throw new Error(lang(author, "econ-id-isnan"))
     try {

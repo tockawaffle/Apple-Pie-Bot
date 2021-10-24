@@ -1,8 +1,10 @@
 async function translateThis(messageCreate, toTranslate) { // translate this, bitch
 
-    const lang = require("@lang")
-    const {author} = messageCreate; let from;
-    const translate = require("@vitalets/google-translate-api")
+    const lang = require("@lang"),
+        {author} = messageCreate,
+        translate = require("@vitalets/google-translate-api");
+    let from;
+
     if(messageCreate.lang === "portugues") {from = "pt"}
     else from = messageCreate.lang
     const translator = await translate(toTranslate, {to: from})

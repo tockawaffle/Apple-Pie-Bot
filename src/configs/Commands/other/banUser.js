@@ -1,6 +1,6 @@
 async function banUser(messageCreate, author, toBan, reason) {
 
-    const lang = require("@lang"); const {Permissions, MessageEmbed} = require("discord.js")
+    const lang = require("@lang"), {Permissions, MessageEmbed} = require("discord.js");
     if(!messageCreate.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) { throw new Error(`${lang(author, "missing-permissions").replace("{perm}", `${lang(author, "ban-members")}`)}`)}
     if(!messageCreate.guild.me.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) { throw new Error(`${lang(author, "missing-permissions-me").replace("{perms}", `${lang(author, "ban-members")}`)}`)}
     if(!toBan) {  throw new Error(`${lang(author, "no-args")}`) }

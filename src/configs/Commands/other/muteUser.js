@@ -1,10 +1,11 @@
 async function muteUser(client, messageCreate, toMute, reason) {
 
     try {
-        const {MessageEmbed, Permissions} = require("discord.js")
-        const lang = require("@lang")
-        const {guild, author} = messageCreate
-        const mutedRole = await guild.roles.cache.find(x => x.name === `${lang(author, 'muted-role')}`)
+        const 
+            {MessageEmbed, Permissions} = require("discord.js"),
+            lang = require("@lang"),
+            {guild, author} = messageCreate,
+            mutedRole = await guild.roles.cache.find(x => x.name === `${lang(author, 'muted-role')}`);
         if(!toMute) { throw new Error(`${lang(author, "no-args")}`) }
         if(!guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES && Permissions.FLAGS.MUTE_MEMBERS && Permissions.FLAGS.MANAGE_CHANNELS)) { throw new Error(`${lang(author, "missing-permissions-me").replace("{perms}", `${lang(author, "no-mute-perms")}`)}`) }
         if(!messageCreate.member.permissions.has(Permissions.FLAGS.MANAGE_ROLES && Permissions.FLAGS.MUTE_MEMBERS && Permissions.FLAGS.MANAGE_CHANNELS)) { throw new Error(`${lang(author, "missing-permissions").replace("{perm}", `${lang(author, "no-mute-perms")}`)}`) }

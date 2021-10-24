@@ -4,10 +4,10 @@ async function econfigStart(messageCreate, name) {
     try {
         const {MessageEmbed, Permissions} = require("discord.js")
         if(!messageCreate.member.permissions.has(Permissions.FLAGS.MANAGE_EMOJIS_AND_STICKERS)) throw new Error(`${lang(author, "missing-permissions").replace("{perm}", `${lang(author, "economy-perms")}`)}`)
-        const lang = require("@lang")
-        const guildSchema = require("@db/schemas/guildSchema")
-        const checker = await guildSchema.findOne({_id: guild.id})
-        const moment = require("moment")
+        const lang = require("@lang"),
+            guildSchema = require("@db/schemas/guildSchema"),
+            checker = await guildSchema.findOne({_id: guild.id}),
+        moment = require("moment");
 
         if(!checker) {
             for (const users of guild.members.cache) {

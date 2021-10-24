@@ -13,6 +13,7 @@ module.exports = {
             if(!args[0]) return messageCreate.reply({content: `${lang(author, 'CV_C')}`})
             else {
                 const changemymind = await cvs.Canvas.changemymind(args.join(' '))
+                console.log(changemymind)
                 const attachEmbed = new MessageEmbed()
                     .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
                     .setImage("attachment://file.jpg")

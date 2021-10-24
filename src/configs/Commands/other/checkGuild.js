@@ -1,8 +1,10 @@
 async function checkGuild(messageCreate, author) {
 
-    const {guild} = messageCreate
-    const lang = require("@lang"); let verify
-    const { MessageEmbed } = require("discord.js");
+    const 
+        {guild} = messageCreate,
+        lang = require("@lang"),
+        { MessageEmbed } = require("discord.js");
+    let verify
     if(guild === null || guild === undefined || !guild) {
         const noGuild = new MessageEmbed()
             .setAuthor(author.username, author.displayAvatarURL())

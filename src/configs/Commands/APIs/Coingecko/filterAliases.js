@@ -1,6 +1,7 @@
 async function filterAliases(messageCreate, tokenToFilter, author) {
-    const aliases = require('./aliases.json')
-    const lang = require("@lang")
+    const 
+        aliases = require('./aliases.json'),
+        lang = require("@lang");
     if(!tokenToFilter) {
         const noAlias = new MessageEmbed()
             .setAuthor(author.username, author.displayAvatarURL({dynamic:true}))

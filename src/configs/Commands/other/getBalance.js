@@ -2,11 +2,11 @@ const { MessageEmbed } = require("discord.js")
 
 async function getBalance(messageCreate) {
 
-    const {author, guild} = messageCreate
-
-    const lang = require("@lang")
-    const guildSchema = require("@db/schemas/guildSchema")
-    const checker = await guildSchema.findOne({_id: guild.id})
+    const 
+        {author, guild} = messageCreate,
+        lang = require("@lang"),
+        guildSchema = require("@db/schemas/guildSchema"),
+        checker = await guildSchema.findOne({_id: guild.id});
     if(checker) {
         const find = await guildSchema.findOne({_id: guild.id}, {dataOfEconomy: {$elemMatch: {userID: author.id}}})
         const money = find.dataOfEconomy[0].balance

@@ -2,14 +2,15 @@
 
 async function econfigRewards(messageCreate, rewardOptions, name, cost, image) {
     
-    const {MessageEmbed, Permissions} = require("discord.js")
-    const {makeid} = require('./createId')
-    const id = makeid(6)
-    const {author, guild} = messageCreate
-    const lang = require("@lang")
-    const guildSchema = require("@db/schemas/guildSchema")
-    const checker = await guildSchema.findOne({_id: guild.id})
-    
+    const 
+        {MessageEmbed, Permissions} = require("discord.js"),
+        {makeid} = require('./createId'),
+        id = makeid(6),
+        {author, guild} = messageCreate,
+        lang = require("@lang"),
+        guildSchema = require("@db/schemas/guildSchema"),
+        checker = await guildSchema.findOne({_id: guild.id});
+        
 
     if(!checker) throw new Error(lang(author, "econ-not-started"))
 
