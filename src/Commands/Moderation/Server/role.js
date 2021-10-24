@@ -1,14 +1,17 @@
-const lang = require("@lang")
-const {errorHandle} = require("@configs/other/errorHandle")
-const {roleCreate} = require("@configs/other/roleCreate")
-const {roleDelete} = require("@configs/other/roleDelete")
+const 
+    {checkGuild} = require("@configs/other/checkGuild"),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {roleCreate} = require("@configs/Moderation/roleCreate"),
+    {roleDelete} = require("@configs/Moderation/roleDelete"),
+    lang = require("@lang");
+
 module.exports = {
     aliases: [],
     run: async(client, messageCreate, args) => {
 
-        const {author, guild} = messageCreate
-        const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
+        const   
+            {author, guild} = messageCreate,
+            verify = await checkGuild(messageCreate, author);
         if(verify.verify !== true) return 
 
         if(args[0] === lang(author, "create-role")) {

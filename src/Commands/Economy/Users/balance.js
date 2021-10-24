@@ -1,13 +1,15 @@
-const {getBalance} = require("@configs/other/getBalance")
-const {errorHandle} = require("@configs/other/errorHandle")
+const 
+    {getBalance} = require("@configs/Economy/getBalance"),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {checkGuild} = require("@configs/other/checkGuild");
 
 module.exports = {
     aliases: ["bal"],
     run:async(client, messageCreate, args) => {
 
-        const {author} = messageCreate
-        const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
+        const 
+            {author} = messageCreate,
+            verify = await checkGuild(messageCreate, author);
         if(verify.verify !== true) return 
 
         try {

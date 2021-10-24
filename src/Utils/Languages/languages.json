@@ -902,7 +902,46 @@
         "pass-enc-duplicate": {
             "english": "Duplicated account detected. You already have an account with this name.",
             "portugues": "Conta duplicada. Você já tem uma conta com este nome."
+        },
+        "oauth-setup": {
+            "english": "1 - Scan this QRcode in your 2FA app. [Authy](https://authy.com/download/) recommended.\n2 - After scanning, tell me the code shown to complete the setup.\nYou have 10 minutes to do this.",
+            "portugues": "1 - Escaneie este QRcode em sua aplicação 2FA. Recomendo [Authy](https://authy.com/download/).\n2 - Após terminar de escanear, diga-me o código que aparece em sua tela. Você tem 10 minutos para completar."
+        },
+        "oauth-setup-success": {
+            "english": "The Oauth setup was successfull!\nThis is your recovery code: {code}. **>>PLEASE<<**, store it somewhere safe, you WILL need this to reset my verification in case you lose your 2FA access!",
+            "portugues": "A configuração do Oauth foi bem-sucedida!\nEste é seu código de recuperação: {code}. **>>POR FAVOR<<**, guarde ele em algum lugar seguro, você IRÁ precisar dele para resetar minha verificação caso você perca acesso ao seu 2FA!"
+        },
+        "oauth-setup-incorrectCode": {
+            "english": "Your code is incorrect, you can try again by using: {prefix}2fa verify.",
+            "portugues": "Seu código está incorreto, você pode tentar novamente ao utilizar: {prefix}2fa verify."
+        },
+        "oauth-verify-start": {
+            "english": "Please, inform me the code that your 2FA app shows.",
+            "portugues": "Por favor, me diga o código que sua aplicação de 2FA mostra."
+        },
+        "oauth-verify-success": {
+            "english": "Your code is correct! You are now verified.\nThis is your recovery code: {code}. **>>PLEASE<<**, store it somewhere safe, you WILL need this to reset my verification in case you lose your 2FA access!",
+            "portugues": "Seu código está correto! Você agora está verificado.\nEste é seu código de recuperação: {code}. **>>POR FAVOR<<**, guarde ele em algum lugar seguro, você IRÁ precisar dele para resetar minha verificação caso você perca acesso ao seu 2FA!"
+        },
+        "oauth-verify-failed": {
+            "english": "Your code is incorrect, you can try again by using: {prefix}2fa verify.",
+            "portugues": "Seu código está incorreto, você pode tentar novamente ao utilizar: {prefix}2fa verify."
+        },
+        "oauth-remove-start": {
+            "english": "What is your recovery code given to you in the first time you configured the 2FA? (Hint: I told you to store it somewhere safe)",
+            "portugues": "Qual é seu código de recuperação que lhe foi dado na primeira vez em que você configurou o 2FA? (Dica: Eu disse para você guardar ele em algum lugar seguro)"
+        },
+        "oauth-remove-success": {
+            "english": "Your 2fa was removed, you can set it up again.",
+            "portugues": "Sua verificação em duas etapas foi removida, você já pode configurar a mesma novamente."
+        },
+        "oauth-remove-failed": {
+            "english": "Your recovery code is wrong, please, try again!",
+            "portugues": "Seu código de recuperação está errado, por favor, tente novamente!"
+        },
+        "oauth-setup-noargs": {
+            "english": "Seems like you already have one 2FA setted up\nIf you want to remove it, please, run this command using: {prefix}2fa remove",
+            "portugues": "Parece que você já tem um 2FA configurado.\nSe quiser removê-lo, execute este comando usando: {prefix}2fa remove "
         }
-        
     }
 }

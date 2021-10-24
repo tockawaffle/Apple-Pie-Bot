@@ -1,11 +1,14 @@
-const {errorHandle} = require("@configs/other/errorHandle"); const {emojiAdd} = require("@configs/other/emojiAdd")
+const   
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {checkGuild} = require("@configs/other/checkGuild"), 
+    {emojiAdd} = require("@configs/Moderation/emojiAdd");
+    
 module.exports = {
     aliases: ["ae", "addemoji"],
     //Não sei a diferença entre emoji e emote, é tipo bolacha e biscoito tlgd? Os dois servem!!!
     run: async(client, messageCreate, args) => {
         const{author} = messageCreate
         try {
-            const {checkGuild} = require("@configs/other/checkGuild")
             const verify = await checkGuild(messageCreate, author)
             if(verify.verify !== true) return 
 

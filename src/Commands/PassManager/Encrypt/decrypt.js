@@ -1,7 +1,6 @@
 const 
-    { MessageEmbed } = require("discord.js"),
     { errorHandle } = require("@configs/other/errorHandle"),
-    { decrypthis } = require("../../Configs/Commands/other/decryptThis");
+    { decrypthis } = require("@configs/PassManager/decryptThis");
 
 module.exports = {
     aliases: ["decrypthis"],

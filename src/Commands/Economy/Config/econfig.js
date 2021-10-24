@@ -1,19 +1,21 @@
-const {econfigStart} = require("@configs/other/econStart")
-const {econfigRewards} = require("@configs/other/econRewards")
-const {errorHandle} = require("@configs/other/errorHandle")
-const {rewardConfig} = require("@configs/other/rewardConfig")
-const lang = require("@lang")
+const 
+    {econfigStart} = require("@configs/Economy/econStart"),
+    {econfigRewards} = require("@configs/Economy/econRewards"),
+    {rewardConfig} = require("@configs/Economy/rewardConfig"),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    lang = require("@lang");
 
 module.exports = {
     aliases: ["economy-start"],
     run: async(client, messageCreate, args) => {
         const {author} = messageCreate
 
-        const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
+        const 
+            {checkGuild} = require("@configs/other/checkGuild"),
+            verify = await checkGuild(messageCreate, author),
+            options = args[0];
         if(verify.verify !== true) return   
         
-        const options = args[0]
         try {
             if(!options) throw new Error(`${lang(author, "no-args")}\n${lang(author, "accp-opts").replace("{opts}", lang(author, "econ-options"))}`)
             if(options === lang(author, "econ-start")) {
