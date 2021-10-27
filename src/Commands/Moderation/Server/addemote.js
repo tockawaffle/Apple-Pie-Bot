@@ -9,8 +9,8 @@ module.exports = {
     run: async(client, messageCreate, args) => {
         const{author} = messageCreate
         try {
-            const verify = await checkGuild(messageCreate, author)
-            if(verify.verify !== true) return 
+            const verify = await checkGuild(messageCreate, author, true)
+            if(verify !== true) return 
 
             if(messageCreate.attachments.first()) {
                 let attachment = messageCreate.attachments.first()

@@ -9,9 +9,9 @@ module.exports = {
 
         const 
             {author, guild} = messageCreate, 
-            verify = await checkGuild(messageCreate, author);
+            verify = await checkGuild(messageCreate, author, true);
 
-        if(verify.verify !== true) return 
+        if(verify !== true) return 
         let 
             channel,
             mentionedChannel = messageCreate.mentions.channels.first(),

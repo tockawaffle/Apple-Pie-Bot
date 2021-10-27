@@ -7,8 +7,8 @@ module.exports = {
     run: async(client, messageCreate, args) => {
         const 
             {author} = messageCreate,
-            verify = await checkGuild(messageCreate, author);
-        if(verify.verify !== true) return
+            verify = await checkGuild(messageCreate, author, true);
+        if(verify !== true) return
 
         try {
             await buyReward(messageCreate, args[0])

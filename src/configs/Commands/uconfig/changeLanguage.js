@@ -1,8 +1,9 @@
 async function changeLanguage(messageCreate, author, targetLanguage) {
     
-    const { MessageEmbed } = require("discord.js"); 
-    const userLangSchema = require("@db/schemas/userSchema")
-    const lang = require('@lang')
+    const 
+        { MessageEmbed } = require("discord.js"),
+        userLangSchema = require("@db/schemas/userSchema"),
+        lang = require('@lang');
     
     if(!targetLanguage) {
         const noargs = new MessageEmbed()
@@ -10,7 +11,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
             .setColor("RED")
             .setDescription(lang(author, "config_lang_err_noargs"))
             .addFields({name: lang(author, "config_lang_err_noargs-nolang_2"),value: `\`\`\`${messageCreate.prefix}config language english | portugues\`\`\``},)
-        return messageCreate.reply({embeds: [noargs]})
+        return await messageCreate.reply({embeds: [noargs]})
     }
     const { languages } = require('../../../utils/languages/languages.json')
     if (!languages.includes(targetLanguage)) {
@@ -22,7 +23,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
                 {name: `${lang(author, "config_lang_err_nolang_2")}`,value: `\`\`\`${targetLanguage}\`\`\``},
                 {name: `${lang(author, "config_lang_err_noargs-nolang_2")}`, value: `\`\`\`${messageCreate.prefix}config language english | portugues\`\`\``}
             )
-        return messageCreate.reply({embeds: [noLang]})
+        return await messageCreate.reply({embeds: [noLang]})
     } else {
         const { setUserLanguage } = require('@lang');
         setUserLanguage(author, targetLanguage)
@@ -31,7 +32,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
             .setDescription(lang(author, "config_lang_set"))
             .addFields({name: lang(author, "config_lang_set_1"),value: `\`\`\`${targetLanguage}\`\`\``})
             .setColor("RANDOM")
-        messageCreate.reply({embeds: [success]}); 
+        await messageCreate.reply({embeds: [success]}); 
         await userLangSchema.findOneAndUpdate({_id:author.id},{language: targetLanguage,},{upsert: true,})
     }
 }

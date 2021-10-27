@@ -8,11 +8,10 @@ const
 module.exports = {
     aliases: ["economy-start"],
     run: async(client, messageCreate, args) => {
-        const {author} = messageCreate
-
         const 
+            {author} = messageCreate,
             {checkGuild} = require("@configs/other/checkGuild"),
-            verify = await checkGuild(messageCreate, author),
+            verify = await checkGuild(messageCreate, author, true),
             options = args[0];
         if(verify.verify !== true) return   
         

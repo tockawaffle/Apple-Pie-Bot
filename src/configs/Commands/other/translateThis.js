@@ -1,6 +1,7 @@
 async function translateThis(messageCreate, toTranslate) { // translate this, bitch
 
-    const lang = require("@lang"),
+    const 
+        lang = require("@lang"),
         {author} = messageCreate,
         translate = require("@vitalets/google-translate-api");
     let from;

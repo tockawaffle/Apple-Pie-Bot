@@ -7,7 +7,9 @@ async function RichPresence(author, userToGet) {
             activities = userToGet.presence.activities,
             moment = require("moment"),
             lang = require("@lang");
-        let identifier, response;
+        let 
+            identifier, 
+            response;
         if(activities.length === 0) {
             return response = "Nothing."
         }

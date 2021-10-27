@@ -1,10 +1,10 @@
 async function encryptThis(messageCreate) {
     const 
         { MessageEmbed, MessageCollector } = require("discord.js"),
-        {errorHandle} = require("@configs/other/errorHandle"),
+        { errorHandle } = require("@configs/other/errorHandle"),
         { hashSync, compareSync } = require("bcrypt"),
+        { author } = messageCreate,
         lang = require("@lang"),
-        {author} = messageCreate,
         passManSchema = require("@db/schemas/passManagerSchema"),
         openpgp = require("openpgp"),
         passSchema = await passManSchema.findOne({_id: author.id}),

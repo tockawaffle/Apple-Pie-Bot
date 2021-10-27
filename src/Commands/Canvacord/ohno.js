@@ -1,7 +1,8 @@
-const cvs = require('canvacord')
-const { MessageEmbed } = require('discord.js')
-const lang = require('@lang')
-const {errorHandle} = require("@configs/other/errorHandle")
+const 
+    cvs = require('canvacord'),
+    { MessageEmbed } = require('discord.js'),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    lang = require('@lang');
 module.exports = {
     aliases: [],
     description: 'Change my mind meme',
@@ -11,8 +12,9 @@ module.exports = {
         try {
             if(!args[0]) return message.channel.send(`${lang(author, 'CV_C')}`)
             else {
-                const ohno = await cvs.Canvas.ohno(args.join(' '))
-                const attachEmbed = new MessageEmbed()
+                const 
+                    ohno = await cvs.Canvas.ohno(args.join(' ')),
+                    attachEmbed = new MessageEmbed()
                     .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
                     .setImage("attachment://file.jpg")
                     .setColor("RANDOM")

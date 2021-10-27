@@ -8,8 +8,8 @@ module.exports = {
     run: async(client, messageCreate, args) => {
         const {author, guild} = messageCreate
         try {
-            const verify = await checkGuild(messageCreate, author)
-            if(verify.verify !== true) return 
+            const verify = await checkGuild(messageCreate, author, true)
+            if(verify !== true) return 
 
             let
                 toUnmute,

@@ -1,11 +1,11 @@
 async function oauthVerify(messageCreate) {
     const 
         speakeasy = require("speakeasy"),
-        {MessageEmbed, MessageCollector} = require("discord.js"),
-        {makeid} = require("@configs/other/createId"),
+        { MessageEmbed, MessageCollector } = require("discord.js"),
+        { makeid } = require("@configs/other/createId"),
         { hashSync } = require("bcrypt"),
-        userSchema = require("@db/schemas/userSchema"),
         {author} = messageCreate,
+        userSchema = require("@db/schemas/userSchema"),
         lang = require("@lang"),
         userConfig = await userSchema.findOne({_id: author.id}),
         id = makeid(5),
@@ -22,17 +22,17 @@ async function oauthVerify(messageCreate) {
         const verified = speakeasy.totp.verify({secret: userConfig.oauth.secret, encoding: "base32", token: c.map(x => x.content)[0], window: 6})
         if(verified === true) { 
             await userSchema.findOneAndUpdate({_id: author.id}, {_id: author.id, oauth: {verified: true, recoveryCode:  hashedRecoveryCode, secret: userConfig.oauth.secret, date: Date.now()}}, {upsert: true})
-            const testEmbed = new MessageEmbed()
+            const successEmbed = new MessageEmbed()
                 .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
                 .setDescription(lang(author, "oauth-verify-success").replace("{code}", recoverId))
                 .setColor("RANDOM")
-            return await messageCreate.reply({embeds: [testEmbed]})
+            return await messageCreate.reply({embeds: [successEmbed]})
         } else {
-            const testEmbed = new MessageEmbed()
+            const failedEmbed = new MessageEmbed()
                 .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
                 .setDescription(lang(author, "oauth-verify-failed").replace("{prefix}", messageCreate.prefix))
                 .setColor("RANDOM")
-            return await messageCreate.reply({embeds: [testEmbed]})
+            return await messageCreate.reply({embeds: [failedEmbed]})
         }
     })
 }

@@ -1,16 +1,15 @@
 async function decrypthis(messageCreate) {
     const 
         { MessageEmbed, MessageCollector } = require("discord.js"),
-        {errorHandle} = require("@configs/other/errorHandle"),
+        { errorHandle } = require("@configs/other/errorHandle"),
         { compareSync } = require("bcrypt"),
-        {author} = messageCreate,
+        { author } = messageCreate,
         lang = require("@lang"),
         openpgp = require("openpgp"),
         passManSchema = require("@db/schemas/passManagerSchema"),
         passSchema = await passManSchema.findOne({_id: author.id})  
 
     if(!passSchema) {
-        console.log("OK")
         throw new Error(lang(author, "pass-decrypt-error-noreg").replace("{prefix}", messageCreate.prefix))
     } else if(!passSchema.password) {
         throw new Error(lang(author, "pass-decrypt-error-noreg").replace("{prefix}", messageCreate.prefix))

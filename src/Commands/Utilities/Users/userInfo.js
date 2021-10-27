@@ -14,11 +14,12 @@ module.exports = {
             {author, mentions, guild} = messageCreate,
             {checkGuild} = require("@configs/other/checkGuild"),
             verified = await checkGuild(messageCreate, author);
-        if(verified.verify !== true) return 
+        if(verified !== true) return 
         
         try {
             let verify = []
-            const guildMember = mentions.members.first() || guild.members.cache.get([args[0]]),
+            const 
+                guildMember = mentions.members.first() || guild.members.cache.get([args[0]]),
                 toget = await RichPresence(author, guildMember),
                 togetstatus = await memberStatus(author, guildMember),
                 retrieveStatus = togetstatus[0],
@@ -109,7 +110,7 @@ module.exports = {
                         verify.push(otherElementsEmbed)
                     } else { verify.push(otherElementsEmbed) }
                 }
-            } else {  return messageCreate.reply({embeds: [userMainInfo]}) }
+            } else { return await messageCreate.reply({embeds: [userMainInfo]}) }
             await pagination(messageCreate, verify, [], 10000)
         } catch (error) { await errorHandle(messageCreate, author, error) }
     }

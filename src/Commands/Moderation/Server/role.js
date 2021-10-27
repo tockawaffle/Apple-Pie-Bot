@@ -11,8 +11,8 @@ module.exports = {
 
         const   
             {author, guild} = messageCreate,
-            verify = await checkGuild(messageCreate, author);
-        if(verify.verify !== true) return 
+            verify = await checkGuild(messageCreate, author, true);
+        if(verify !== true) return 
 
         if(args[0] === lang(author, "create-role")) {
             try {

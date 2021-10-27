@@ -4,6 +4,7 @@ const
     {oauthRemove} = require("@configs/PassManager/OAuth/oauthRemove.js"),
     {oauthSetup} = require("@configs/PassManager/OAuth/oauthSetup.js"),
     {errorHandle} = require("@configs/other/errorHandle"),
+    {checkGuild} = require("@configs/other/checkGuild"),
     userSchema = require("@db/schemas/userSchema");
 
 module.exports = {
@@ -11,7 +12,9 @@ module.exports = {
     run: async(client, messageCreate, args) => {
         const 
             {author} = messageCreate,
-            userConfig = await userSchema.findOne({_id: author.id});
+            userConfig = await userSchema.findOne({_id: author.id}),
+            verify = await checkGuild(messageCreate, author);
+        if(verify === true) return
 
         if(userConfig.oauth) {
             if(args[0] === "remove") {

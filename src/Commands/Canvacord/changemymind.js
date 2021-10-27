@@ -1,7 +1,8 @@
-const cvs = require('canvacord')
-const { MessageEmbed } = require('discord.js')
-const lang = require('@lang')
-const {errorHandle} = require("@configs/other/errorHandle")
+const 
+    { errorHandle } = require("@configs/other/errorHandle"),
+    { MessageEmbed } = require('discord.js'),
+    lang = require('@lang'),
+    cvs = require('canvacord');
 module.exports = {
     aliases: [],
     description: 'Change my mind meme',
@@ -12,13 +13,13 @@ module.exports = {
             args.shift()
             if(!args[0]) return messageCreate.reply({content: `${lang(author, 'CV_C')}`})
             else {
-                const changemymind = await cvs.Canvas.changemymind(args.join(' '))
-                console.log(changemymind)
-                const attachEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
-                    .setImage("attachment://file.jpg")
-                    .setColor("RANDOM")
-                messageCreate.reply({embeds: [attachEmbed], files: [changemymind]})
+                const 
+                    changemymind = await cvs.Canvas.changemymind(args.join(' ')),
+                    attachEmbed = new MessageEmbed()
+                        .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                        .setImage("attachment://file.jpg")
+                        .setColor("RANDOM")
+                await messageCreate.reply({embeds: [attachEmbed], files: [changemymind]})
             } 
         } catch (error) {
             await errorHandle(messageCreate, author, error)

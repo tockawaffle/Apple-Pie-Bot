@@ -1,14 +1,17 @@
-const { MessageEmbed, Interaction } = require("discord.js")
-const lang = require("@lang")
-const {errorHandle} = require("@configs/other/errorHandle")
-const {buttonsPagination} = require("djs-buttons-pagination")
+const 
+    { MessageEmbed } = require("discord.js"),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {buttonsPagination} = require("djs-buttons-pagination"),
+    lang = require("@lang");
+
 module.exports = {
     aliases: [],
     run: async(client, messageCreate, args) => {
         
-        const {user} = client
-        const {author} = messageCreate
-        const prefix = messageCreate.prefix
+        const 
+            {user} = client,
+            {author} = messageCreate,
+            prefix = messageCreate.prefix;
         
         try {
             const mainEmbed = new MessageEmbed()
@@ -52,15 +55,15 @@ module.exports = {
                 pages = [mainEmbed, userConfigEmbed, modEmbed, roleplayEmbed, utilitiesEmbed, cryptoEmbed, helpCanvas]
                 await buttonsPagination(messageCreate, pages, [], 15000)
             } 
-            else if(args[0] === "main") {messageCreate.reply({embeds: [mainEmbed]})}
-            else if(args[0] === "config") {messageCreate.reply({embeds: [userConfigEmbed]})}
-            else if(args[0] === "roleplay") {messageCreate.reply({embeds: [roleplayEmbed]})}
-            else if(args[0] === "utils") {messageCreate.reply({embeds: [utilitiesEmbed]})}
-            else if(args[0] === "mod") {messageCreate.reply({embeds: [modEmbed]})}
-            else if(args[0] === "crypto") {messageCreate.reply({embeds: [cryptoEmbed]})}
-            else if(args[0] === "canvas") {messageCreate.reply({embeds: [helpCanvas]})}
+            else if(args[0] === "main")     { await messageCreate.reply({embeds: [mainEmbed]}) }
+            else if(args[0] === "config")   { await messageCreate.reply({embeds: [userConfigEmbed]}) }
+            else if(args[0] === "roleplay") { await messageCreate.reply({embeds: [roleplayEmbed]}) }
+            else if(args[0] === "utils")    { await messageCreate.reply({embeds: [utilitiesEmbed]}) }
+            else if(args[0] === "mod")      { await messageCreate.reply({embeds: [modEmbed]}) }
+            else if(args[0] === "crypto")   { await messageCreate.reply({embeds: [cryptoEmbed]}) }
+            else if(args[0] === "canvas")   { await messageCreate.reply({embeds: [helpCanvas]}) }
         } catch (error) {
-            errorHandle(messageCreate, author, error)
+            await errorHandle(messageCreate, author, error)
         }
 
     }

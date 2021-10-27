@@ -942,6 +942,42 @@
         "oauth-setup-noargs": {
             "english": "Seems like you already have one 2FA setted up\nIf you want to remove it, please, run this command using: {prefix}2fa remove",
             "portugues": "Parece que você já tem um 2FA configurado.\nSe quiser removê-lo, execute este comando usando: {prefix}2fa remove "
+        },
+        "sacc-noacc": {
+            "english": "You have no accounts.",
+            "portugues": "Você não tem contas registradas."
+        },
+        "sacc-list": {
+            "english": "**Account Name - Date of Storage**",
+            "portugues": "**Nome da Conta - Dia que foi guardada**"
+        },
+        "respass-open": {
+            "english": "You have a 2FA app set, I'll use it to confirm that you're trying to reset your password!\nPlease, inform me the 6 digit code that your app is showing you. No Spaces!\n\n**ATTENTION!!: THIS WILL DELETE ALL OF YOUR STORED ACCOUNTS - [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys need the password they were encrypted with to be decrypted, that means, if you change your password, the accounts you had stored will be deleted in favor of incompatibilites.**",
+            "portugues": "Você tem um aplicativo 2FA definido, vou usá-lo para confirmar que você está tentando redefinir sua senha!\nPor favor, informe-me o código de 6 dígitos que seu aplicativo está mostrando a você. Sem espaços! \n\n**ATENÇÃO!!: ISSO EXCLUIRÁ TODAS AS SUAS CONTAS ARMAZENADAS - As chaves [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) precisam da senha com a qual foram criptografadas para serem descriptografada, ou seja, se você alterar sua senha, as contas armazenadas serão excluídas em favor de incompatibilidades.**"
+        },
+        "respass-newpass": {
+            "english": "Please, inform me the new password you want to use.",
+            "portugues": "Por favor, informe-me a nova senha que você quer usar."
+        },
+        "respass-wrongcode": {
+            "english": "Your code is incorrect, you can try again by running this command.",
+            "portugues": "Seu código está incorreto, você pode tentar novamente ao utilizar este comando novamente"
+        },
+        "respass-shortpass": {
+            "english": "Your password must be at least 6 characters long.",
+            "portugues": "Sua senha deve ter pelo menos 6 caracteres."
+        },
+        "respass-samepass": {
+            "english": "Your new password must be different from your old one.",
+            "portugues": "Sua nova senha deve ser diferente da sua antiga."
+        },
+        "respass-updatedpass": {
+            "english": "Your password was updated successfully!",
+            "portugues": "Sua senha foi atualizada com sucesso!"
+        },
+        "respass-error": {
+            "english": "An error occurred while trying to update your password.",
+            "portugues": "Ocorreu um erro ao tentar atualizar sua senha."
         }
     }
 }
