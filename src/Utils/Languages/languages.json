@@ -431,6 +431,14 @@
             "english": "Manage Emoji and Stickers",
             "portugues": "Gerenciar Emojis e Stickers"
         },
+        "missing-attach": {
+            "english": "Missing Emote / URL!",
+            "portugues": "Faltando Emote / Link!"
+        },
+        "missing-url-emote": {
+            "english": "Missing attachment!",
+            "portugues": "Faltando Arquivo"
+        },
 
         "separator8": "banimentos",
         "ban-members": {
