@@ -1,9 +1,10 @@
 async function rewardConfig(messageCreate, idToFind, options, args) {
 
-    const {MessageEmbed, Permissions} = require("discord.js")
-    const lang = require("@lang")
-    const guildSchema = require("@db/schemas/guildSchema")
-    const {author, guild} = messageCreate
+    const 
+        {MessageEmbed, Permissions} = require("discord.js"),
+        lang = require("@lang"),
+        guildSchema = require("@db/schemas/guildSchema"),
+        {author, guild} = messageCreate;
 
     if(!messageCreate.member.permissions.has(Permissions.FLAGS.MANAGE_EMOJIS_AND_STICKERS)) throw new Error(`${lang(author, "missing-permissions").replace("{perm}", `${lang(author, "economy-perms")}`)}`)
     if(!idToFind) throw new Error(lang(author, "econ-reward-noId"))

@@ -828,7 +828,156 @@
         "econ-rewardl-3+": {
             "english": "This is a list of all IDs of the server rewards, pick one!",
             "portugues": "Esta é a lista de todos os IDs das recompensas do servidor, escolha uma!"
+        },
+
+        "separator16": "passman",
+        "pass-decrypt-error-noreg": {
+            "english": "You are not registered on my database or don't have a password.\nYou can register yourself using the command: {prefix}passreg <password> <password hints>.",
+            "portugues": "Você não está registrado em meu banco de dados ou não tem uma senha.\nVocê pode se registrar usando o comando: {prefix}passreg <senha> <dicas de senha>."
+        },
+        "pass-decrypt-q1": {
+            "english": "Please, tell me your password. (The one you registered)",
+            "portugues": "Por favor, me diga sua senha. (A que você registrou)"
+        },
+        "pass-decrypt-q2": {
+            "english": "Now, tell me what account you want to get the information from.",
+            "portugues": "Agora, me diga o nome de qual conta eu deveria pegar a informação desejada."
+        },
+        "pass-decrypt-account-not-found": {
+            "english": "Could not find the account named: \"{name}\", are you sure you have an account with this name?",
+            "portugues": "Não foi possível encontrar a conta chamada: \"{name}\", tem certeza de que possui uma conta com este nome?"
+        },
+        "pass-decrypt-invalid-signature": {
+            "english": "Signature could not be verified: {error}\nThis might happen in events of database corruption, if you see this error, PLEASE, contact my developer through my github ASAP!",
+            "portugues": "Assinatura da Senha não pôde ser verificada: {error}\nIsso pode acontecer devido a uma possível corrupção na base de dados, caso veja este erro, contate meu desenvolvedor imediatamente em meu github."
+        },
+        "pass-decrypt-success": {
+            "english": "The decryption was completed successfully, here's your data:\n\n||Account Name: {name}||\n||Account Password: {pass}||",
+            "portugues": "A decriptação foi completa com sucesso, aqui estão seus dados:\n\n||Nome da Conta: {name}||\n||Senha da Conta: {pass}||"
+        },
+        "pass-wrong": {
+            "english": "Password did not match with the hash on the Database. If you forgot your password, you can reset it by using: {prefix}redopass <new password>",
+            "portugues": "Senha não é igual à senha guardada como hash na base de dados. Caso tenha esquecido sua senha, você pode resetar ela utilizando: {prefix}redopass <nova senha>"
+        },
+        "pass-enc-q1": {
+            "english": "That said, let's start.\nFirst, tell me a password that you want to use.",
+            "portugues": "Dito isto, vamos começar.\nPrimeiramente, me diga a senha que você deseja utilizar."
+        },
+        "pass-enc-q2": {
+            "english": "Now, give me a name for the account.",
+            "portugues": "Agora, me diga o nome que você deseja utilizar em sua conta."
+        },
+        "pass-enc-q3": {
+            "english": "Now you can give me the password, hint or something near (Personally, I'd not use the password itself, but something that's near enough that you'd remember it.), I'll encrypt it using aes256 method with PGP keys.",
+            "portugues": "Agora você pode me dar a senha, dica ou algo próximo (Pessoalmente, eu não usaria a senha em si, mas algo que seja próximo o suficiente para que você se lembre), vou criptografá-la usando o método aes256 com chaves PGP."
+        },
+        "pass-enc-q4": {
+            "english": "Now, give me the password you registered at the first time you used this command.",
+            "portugues": "Agora, me dê a senha que você registrou na primeira vez que usou este comando."
+        },
+        "pass-enc-q5": {
+            "english": "Now, give me a name for the account you want to secure.",
+            "portugues": "Agora, me dê um nome para a conta que você deseja proteger."
+        },
+        "pass-enc-start": {
+            "english": "You've started the configuration for encrypting an account, since this is a vulnerable function, all the code is located [here](https://github.com/The-Crow-pleb/Apple-Pie-Bot), so if you're a dev and want to go check how this is made and if you can trust it, go for it!",
+            "portugues": "Você iniciou a configuração para criptografar uma conta, uma vez que esta é uma função vulnerável, todo o código está localizado [aqui](https://github.com/The-Crow-pleb/Apple-Pie-Bot), então se você é um desenvolvedor e quer verificar como isso é feito e se você pode confiar, vá em frente!"
+        },
+        "pass-enc-end1": {
+            "english": "Successfully set! You were registered in the database since it was your first time using this function.\nNext time you'll only need to give the name and password of the account you wish to add!\nIf you are curious about the data that was stored, here it is:",
+            "portugues": "Definido com sucesso! Você foi registrado no banco de dados pois esta foi a primeira vez em que você utilizou esta função.\nNa próxima vez, você só precisará fornecer o nome e a senha da conta que deseja adicionar!\nSe você está curioso sobre os dados que foram armazenados, aqui eles estão:"
+        },
+        "pass-enc-end2": {
+            "english": "Successfully set! Next time you'll still need the password you registered to add another account to the encrypted database, since you did'nt had a password in my database (for some weird reason).\nIf you are curious about the data that was stored, here it is:",
+            "portugues": "Definido com sucesso! Da próxima vez você ainda precisará da senha registrada para adicionar outra conta ao banco de dados criptografado, já que você não tinha uma senha em meu banco de dados (por algum motivo estranho).\nSe você está curioso sobre os dados que foram armazenados, aqui estão eles:"
+        },
+        "pass-enc-end3": {
+            "english": "Successfully set! Your account was stored.\nHere's the data that I stored:",
+            "portugues": "Definido com sucesso! Sua conta foi armazenada.\nAqui estão os dados que armazenei:"
+        },
+        "pass-enc-end4": {
+            "english": "You didn't answer one or more questions. Before I store your account, you need to answer ALL questions.",
+            "portugues": "Você não respondeu uma ou mais questões. Antes de eu continuar e guardar sua conta, você precisa responder TODAS as perguntas."
+        },
+        "pass-enc-duplicate": {
+            "english": "Duplicated account detected. You already have an account with this name.",
+            "portugues": "Conta duplicada. Você já tem uma conta com este nome."
+        },
+        "oauth-setup": {
+            "english": "1 - Scan this QRcode in your 2FA app. [Authy](https://authy.com/download/) recommended.\n2 - After scanning, tell me the code shown to complete the setup.\nYou have 10 minutes to do this.",
+            "portugues": "1 - Escaneie este QRcode em sua aplicação 2FA. Recomendo [Authy](https://authy.com/download/).\n2 - Após terminar de escanear, diga-me o código que aparece em sua tela. Você tem 10 minutos para completar."
+        },
+        "oauth-setup-success": {
+            "english": "The Oauth setup was successfull!\nThis is your recovery code: {code}. **>>PLEASE<<**, store it somewhere safe, you WILL need this to reset my verification in case you lose your 2FA access!",
+            "portugues": "A configuração do Oauth foi bem-sucedida!\nEste é seu código de recuperação: {code}. **>>POR FAVOR<<**, guarde ele em algum lugar seguro, você IRÁ precisar dele para resetar minha verificação caso você perca acesso ao seu 2FA!"
+        },
+        "oauth-setup-incorrectCode": {
+            "english": "Your code is incorrect, you can try again by using: {prefix}2fa verify.",
+            "portugues": "Seu código está incorreto, você pode tentar novamente ao utilizar: {prefix}2fa verify."
+        },
+        "oauth-verify-start": {
+            "english": "Please, inform me the code that your 2FA app shows.",
+            "portugues": "Por favor, me diga o código que sua aplicação de 2FA mostra."
+        },
+        "oauth-verify-success": {
+            "english": "Your code is correct! You are now verified.\nThis is your recovery code: {code}. **>>PLEASE<<**, store it somewhere safe, you WILL need this to reset my verification in case you lose your 2FA access!",
+            "portugues": "Seu código está correto! Você agora está verificado.\nEste é seu código de recuperação: {code}. **>>POR FAVOR<<**, guarde ele em algum lugar seguro, você IRÁ precisar dele para resetar minha verificação caso você perca acesso ao seu 2FA!"
+        },
+        "oauth-verify-failed": {
+            "english": "Your code is incorrect, you can try again by using: {prefix}2fa verify.",
+            "portugues": "Seu código está incorreto, você pode tentar novamente ao utilizar: {prefix}2fa verify."
+        },
+        "oauth-remove-start": {
+            "english": "What is your recovery code given to you in the first time you configured the 2FA? (Hint: I told you to store it somewhere safe)",
+            "portugues": "Qual é seu código de recuperação que lhe foi dado na primeira vez em que você configurou o 2FA? (Dica: Eu disse para você guardar ele em algum lugar seguro)"
+        },
+        "oauth-remove-success": {
+            "english": "Your 2fa was removed, you can set it up again.",
+            "portugues": "Sua verificação em duas etapas foi removida, você já pode configurar a mesma novamente."
+        },
+        "oauth-remove-failed": {
+            "english": "Your recovery code is wrong, please, try again!",
+            "portugues": "Seu código de recuperação está errado, por favor, tente novamente!"
+        },
+        "oauth-setup-noargs": {
+            "english": "Seems like you already have one 2FA setted up\nIf you want to remove it, please, run this command using: {prefix}2fa remove",
+            "portugues": "Parece que você já tem um 2FA configurado.\nSe quiser removê-lo, execute este comando usando: {prefix}2fa remove "
+        },
+        "sacc-noacc": {
+            "english": "You have no accounts.",
+            "portugues": "Você não tem contas registradas."
+        },
+        "sacc-list": {
+            "english": "**Account Name - Date of Storage**",
+            "portugues": "**Nome da Conta - Dia que foi guardada**"
+        },
+        "respass-open": {
+            "english": "You have a 2FA app set, I'll use it to confirm that you're trying to reset your password!\nPlease, inform me the 6 digit code that your app is showing you. No Spaces!\n\n**ATTENTION!!: THIS WILL DELETE ALL OF YOUR STORED ACCOUNTS - [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys need the password they were encrypted with to be decrypted, that means, if you change your password, the accounts you had stored will be deleted in favor of incompatibilites.**",
+            "portugues": "Você tem um aplicativo 2FA definido, vou usá-lo para confirmar que você está tentando redefinir sua senha!\nPor favor, informe-me o código de 6 dígitos que seu aplicativo está mostrando a você. Sem espaços! \n\n**ATENÇÃO!!: ISSO EXCLUIRÁ TODAS AS SUAS CONTAS ARMAZENADAS - As chaves [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) precisam da senha com a qual foram criptografadas para serem descriptografada, ou seja, se você alterar sua senha, as contas armazenadas serão excluídas em favor de incompatibilidades.**"
+        },
+        "respass-newpass": {
+            "english": "Please, inform me the new password you want to use.",
+            "portugues": "Por favor, informe-me a nova senha que você quer usar."
+        },
+        "respass-wrongcode": {
+            "english": "Your code is incorrect, you can try again by running this command.",
+            "portugues": "Seu código está incorreto, você pode tentar novamente ao utilizar este comando novamente"
+        },
+        "respass-shortpass": {
+            "english": "Your password must be at least 6 characters long.",
+            "portugues": "Sua senha deve ter pelo menos 6 caracteres."
+        },
+        "respass-samepass": {
+            "english": "Your new password must be different from your old one.",
+            "portugues": "Sua nova senha deve ser diferente da sua antiga."
+        },
+        "respass-updatedpass": {
+            "english": "Your password was updated successfully!",
+            "portugues": "Sua senha foi atualizada com sucesso!"
+        },
+        "respass-error": {
+            "english": "An error occurred while trying to update your password.",
+            "portugues": "Ocorreu um erro ao tentar atualizar sua senha."
         }
-        
     }
 }

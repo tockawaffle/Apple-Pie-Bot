@@ -1,15 +1,16 @@
 async function memberStatus(author, userToGet) {
     try {
-        const lang = require("@lang")
-        const moment = require("moment")
-        const username = userToGet.user.username
-        const id = userToGet.user.id
-        const created = userToGet.user.createdAt
-        const formattedCreate = moment(created).locale("pt-br").format("L")
-        const createdFromNow = moment(created).fromNow()
-        const joined = userToGet.joinedAt 
-        const joinedFormat = moment(joined).locale('pt-br').format('L')
-        const joinedFrom = moment(joined).fromNow()
+        const 
+            lang = require("@lang"),
+            moment = require("moment"),
+            username = userToGet.user.username,
+            id = userToGet.user.id,
+            created = userToGet.user.createdAt,
+            formattedCreate = moment(created).locale("pt-br").format("L"),
+            createdFromNow = moment(created).fromNow(),
+            joined = userToGet.joinedAt,
+            joinedFormat = moment(joined).locale('pt-br').format('L'),
+            joinedFrom = moment(joined).fromNow();
 
         let richStatus = userToGet.presence.status
         if(richStatus === 'dnd') richStatus = `${lang(author, 'dnd')}`

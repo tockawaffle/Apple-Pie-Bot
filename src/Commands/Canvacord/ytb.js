@@ -1,7 +1,9 @@
-const cvs = require('canvacord')
-const { MessageEmbed } = require('discord.js')
-const lang = require('@lang');
-const {errorHandle} = require("@configs/other/errorHandle")
+const 
+    { MessageEmbed } = require('discord.js'),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    cvs = require('canvacord'),
+    lang = require('@lang');
+
 module.exports = {
     aliases: [],
     description: 'Pornhub Comment',
@@ -15,19 +17,21 @@ module.exports = {
                 const target = messageCreate.mentions.users.first()
                 if(target) {
                     args.shift()
-                    const ytb = await cvs.Canvas.youtube({username: target.username, content: args.join(' '), avatar: target.avatarURL({format: 'jpg'})})
-                    const attachEmbed = new MessageEmbed()
-                        .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
-                        .setImage("attachment://file.jpg")
-                        .setColor("RANDOM")
-                    messageCreate.reply({embeds: [attachEmbed], files: [ytb]})
+                    const 
+                        ytb = await cvs.Canvas.youtube({username: target.username, content: args.join(' '), avatar: target.avatarURL({format: 'jpg'})}),
+                        attachEmbed = new MessageEmbed()
+                            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                            .setImage("attachment://file.jpg")
+                            .setColor("RANDOM")
+                    await messageCreate.reply({embeds: [attachEmbed], files: [ytb]})
                 } else{
-                    const ytb = await cvs.Canvas.youtube({username: messageCreate.author.username, content: args.join(' '), avatar: messageCreate.author.avatarURL({format: 'jpg'})})
-                    const attachEmbed = new MessageEmbed()
-                        .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
-                        .setImage("attachment://file.jpg")
-                        .setColor("RANDOM")
-                    messageCreate.reply({embeds: [attachEmbed], files: [ytb]})
+                    const 
+                        ytb = await cvs.Canvas.youtube({username: messageCreate.author.username, content: args.join(' '), avatar: messageCreate.author.avatarURL({format: 'jpg'})}),
+                        attachEmbed = new MessageEmbed()
+                            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                            .setImage("attachment://file.jpg")
+                            .setColor("RANDOM")
+                    await messageCreate.reply({embeds: [attachEmbed], files: [ytb]})
                 }
             }
         } catch (error) {

@@ -1,19 +1,22 @@
-const lang = require("@lang")
-const {errorHandle} = require("@configs/other/errorHandle")
-const {kickUser} = require("@configs/other/kickUser")
+const 
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {checkGuild} = require("@configs/other/checkGuild"),
+    {kickUser} = require("@configs/Moderation/kickUser"),
+    lang = require("@lang");
 module.exports = {
     aliases: [],
     run: async(client, messageCreate, args) => {
 
-        const {author, guild} = messageCreate
-        const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
-        if(verify.verify !== true) return 
+        const 
+            {author, guild} = messageCreate,
+            verify = await checkGuild(messageCreate, author, true);
+        if(verify !== true) return 
 
-        let toKick,
+        let 
+            toKick,
             mentionedMember = messageCreate.mentions.members.first(),
-            userID = guild.members.cache.get(args[0])
-            reason = args.slice(1).join(' ')
+            userID = guild.members.cache.get(args[0]),
+            reason = args.slice(1).join(' ');
         if(mentionedMember) {toKick = mentionedMember}
         else if(userID) {toKick = userID}
 

@@ -1,18 +1,22 @@
-const lang = require("@lang")
-const {errorHandle} = require("@configs/other/errorHandle")
-const {slowmodeAdd} = require("@configs/other/slowmodeAdd")
+const 
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {checkGuild} = require("@configs/other/checkGuild"),
+    {slowmodeAdd} = require("@configs/Moderation/slowmodeAdd"),
+    lang = require("@lang");
 module.exports = {
     aliases: [],
     run: async(client, messageCreate, args) => {
 
-        const {author, guild} = messageCreate
-        const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
-        if(verify.verify !== true) return 
-        let channel,
+        const 
+            {author, guild} = messageCreate, 
+            verify = await checkGuild(messageCreate, author, true);
+
+        if(verify !== true) return 
+        let 
+            channel,
             mentionedChannel = messageCreate.mentions.channels.first(),
             channelId = guild.channels.cache.get(args[1]),
-            reason = args.slice(3).join(' ')
+            reason = args.slice(3).join(' ');
         if(mentionedChannel) {channel = mentionedChannel}
         else if(channelId) {channel = channelId}
 

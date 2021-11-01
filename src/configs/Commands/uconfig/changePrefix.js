@@ -9,8 +9,9 @@ async function changePrefix(messageCreate, author, prefixo, lang) {
         return messageCreate.reply({embeds: [noPrefix]})
     } else {
         
-        const userSchema = require("@db/schemas/userSchema")
-        const checker = await userSchema.findOne({_id: author.id})
+        const 
+            userSchema = require("@db/schemas/userSchema"),
+            checker = await userSchema.findOne({_id: author.id});
         if(!checker) {
             await userSchema.findOneAndUpdate({_id: author.id}, {_id: author.id, prefix: prefixo}, {upsert: true})
             const redo = new MessageEmbed()

@@ -1,8 +1,9 @@
 async function requestGecko(messageCreate, token, author) {
     
-    const { MessageEmbed } = require("discord.js")
-    const fetch = require("node-fetch")
-    const lang = require("@lang")
+    const 
+        { MessageEmbed } = require("discord.js"),
+        fetch = require("node-fetch"),
+        lang = require("@lang");
     if(!messageCreate) {
         throw new Error(`Faltando o evento de mensagem.`)
     }else if(!author) {

@@ -1,12 +1,17 @@
-const { MessageEmbed } = require("discord.js"); const {buttonsPagination: pagination} = require("djs-buttons-pagination")
-const {changePrefix} = require("@configs/uconfig/changePrefix"); const {changeLanguage} = require("@configs/uconfig/changeLanguage"); const {errorHandle} = require("@configs/other/errorHandle")
-const lang = require("@lang")
+const 
+    { MessageEmbed } = require("discord.js"),
+    {buttonsPagination: pagination} = require("djs-buttons-pagination"),
+    {changePrefix} = require("@configs/uconfig/changePrefix"),
+    {changeLanguage} = require("@configs/uconfig/changeLanguage"),
+    {errorHandle} = require("@configs/other/errorHandle"),
+    lang = require("@lang");
 module.exports = {
     aliases: [],
     run:async(client, messageCreate, args) => {
 
-        const {author} = messageCreate
-        const configArg = args[0]
+        const 
+            {author} = messageCreate,
+            configArg = args[0];
         try {
             if(!configArg) {
                 const noArg = new MessageEmbed()
@@ -14,13 +19,11 @@ module.exports = {
                     .setColor("DARK_RED")
                     .setTitle(`${lang(author, "error")} ${lang(author, "no-args")}`)
                     .setDescription(`${lang(author, "no-args-correct").replace("{command}", `\`\`\`\n${messageCreate.prefix}uconfig <Options> <Arg>\`\`\``)}`)
-                    
                 const opts = new MessageEmbed()
                     .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
                     .setColor("DARK_RED")
-                    .setDescription(`${lang(author, "accp-opts").replace("{opts}", `\`\`\`\nlanguage\nprefix\nprivacy\`\`\``)}`)
-                    
-                return pagination(messageCreate, [noArg, opts], [], 15000)
+                    .setDescription(`${lang(author, "accp-opts").replace("{opts}", `\`\`\`\nlanguage\nprefix\nprivacy\`\`\``)}`)  
+                return await pagination(messageCreate, [noArg, opts], [], 15000)
             } else {
                 if(configArg === lang(author, "prefix")) {
                     return await changePrefix(messageCreate, author, args[1], lang)

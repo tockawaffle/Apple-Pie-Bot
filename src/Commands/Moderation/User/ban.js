@@ -1,13 +1,16 @@
-const {errorHandle} = require("@configs/other/errorHandle")
-const {banUser} = require("@configs/other/banUser")
+const 
+    {errorHandle} = require("@configs/other/errorHandle"),
+    {checkGuild} = require("@configs/other/checkGuild"),
+    {banUser} = require("@configs/Moderation/banUser");
+    
 module.exports = {
     aliases: [],
     run: async(client, messageCreate, args) => {
 
-        const {author, guild} = messageCreate
-        const {checkGuild} = require("@configs/other/checkGuild")
-        const verify = await checkGuild(messageCreate, author)
-        if(verify.verify !== true) return 
+        const 
+            {author, guild} = messageCreate,
+            verify = await checkGuild(messageCreate, author, true);
+        if(verify !== true) return 
 
         let toBan,
             mentionedMember = messageCreate.mentions.members.first(),
