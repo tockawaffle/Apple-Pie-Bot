@@ -13,12 +13,11 @@ async function emojiAdd(messageCreate, name, urlOrEmote) {
     if(!name) { throw new Error(`${lang(author, "missing-name")}`) }
     else if(!urlOrEmote) { throw new Error(lang(author, "missing-url-emote"))}
 
-    else if(urlOrEmote.match(/<:.+?:\d+>/g)) { emoji = urlOrEmote.match(/\d+/g); url = `https://cdn.discordapp.com/emojis/${emoji}.png`; identifier = "Emoji JPG" } 
-    else if(urlOrEmote.match(/<a:.+?:\d+>/g)) { emoji = urlOrEmote.match(/\d+/g); url = `https://cdn.discordapp.com/emojis/${emoji}.gif`; identifier = "Emoji GIF" } 
-    else if(urlOrEmote.match(/(https?:\/\/)?(cdn\.)?(discordapp\.com\/emojis)\/[a-zA-Z0-9_.]{18}(.gif|.png|.jpg|.jpeg).v=1/) || urlOrEmote.match(/(https?:\/\/)?(cdn\.|media\.)?(discordapp\.(com|net)\/attachments)\/[0-9]{18}\/[0-9]{18}\/[a-zA-Z0-9-_]+(.png|.gif|.jpeg|.jpg)/)) { identifier = "URL"; url = urlOrEmote }
+    else if(urlOrEmote.match(/<:.+?:\d+>/g)) { emoji = urlOrEmote.match(/\d+/g); url = `https://cdn.discordapp.com/emojis/${emoji}.png`; } 
+    else if(urlOrEmote.match(/<a:.+?:\d+>/g)) { emoji = urlOrEmote.match(/\d+/g); url = `https://cdn.discordapp.com/emojis/${emoji}.gif`; } 
     
     if(name.includes("-")) name = name.replace(/[#-]/g, "_")
-    guild.emojis.create(url, `${name}`).catch(error => {throw new Error(error)})
+    guild.emojis.create(url || urlOrEmote, `${name}`).catch(error => {throw new Error(error)})
 
     const created = new MessageEmbed()
         .setColor("RANDOM")
