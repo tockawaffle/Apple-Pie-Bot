@@ -3,15 +3,16 @@
 
 Hello! It's me, тоска. This is my first "take it serious" project that is open-source.
 
-Apple Pie is a Discord bot with many functions, such as Moderation, RolePlay Commands (There's only a few of them, but everything counts, right?), Cryptocurrencies, League of Legends Commands, and many other commands for you to use and manage your server or have some fun with your members!
+Apple Pie is a Discord bot with many functions, such as Moderation, RolePlay Commands (There's only a few of them, but everything counts, right?), Cryptocurrencies, League of Legends Commands (TODO) and even encryption of passwords!, and many other commands for you to use and manage your server or have some fun with your members!
 
 
 ## Features  - 🤖
 
 - Capable of retrieving Cryptocurrencies/Tokens prices.
-- Capable of giving you information about someone's League Stats.
+- Capable of giving you information about someone's League Stats. (TODO) 
 - Capable of helping you to manage your guild.
 - DM Commands!
+- Encrypt your passwords with OpenPGP Keys!
 - Custom Prefix for each user (Default is an _ )
 - Custom Language for each user (Supported now: English, Português do Brasil)
 - Private Database.
@@ -50,8 +51,8 @@ To deploy this project, you can simply fork it, clone it and set the Enviroment 
 - - NodeJS v16
 - - Git
 - - An editor, such as VSC or others
-- - At least 1.5GB of RAM (for smaller communities you might need get less RAM)
--  - Basic knowledge of JavaScript (This is optional, but always good to have)
+- - At least 1.5GB of RAM (for smaller communities you might need less RAM)
+- - Basic knowledge of JavaScript (This is optional, but always good to have)
 
 Required on the dotenv file:
 
@@ -65,17 +66,17 @@ Required on the dotenv file:
   
 ## Roadmap - 🛣
 
-- Create a Token on the BSC network to distribute around users of this bot. Interested? Soon.
+- [ ] Create a Token on the BSC network to distribute around users of this bot. Interested? Soon.
 
-- Finish the commands that are missing from v12.
+- [ ] Finish the commands that are missing from v12.
 
-- Get more attention from other communities.
+- [ ] Get more attention from other communities.
 
-- Create a per-server economy. (Yes, every server with it's own economy.)
+- [X] Create a per-server economy. (Yes, every server with it's own economy.)
 
-- Create a global economy using some kind of "point" to get more features and etc.
+- [ ] Create a global economy using some kind of "point" to get more features and etc.
 
-- Other things such as making more pies, I guess?
+- [X] Other things such as making more pies, I guess?
 
   
 ## Authors - 🍦
