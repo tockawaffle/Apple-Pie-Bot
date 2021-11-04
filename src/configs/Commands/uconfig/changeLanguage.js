@@ -13,7 +13,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
             .addFields({name: lang(author, "config_lang_err_noargs-nolang_2"),value: `\`\`\`${messageCreate.prefix}config language english | portugues\`\`\``},)
         return await messageCreate.reply({embeds: [noargs]})
     }
-    const { languages } = require('../../../utils/languages/languages.json')
+    const { languages } = require('../../../Utils/Languages/languages.json')
     if (!languages.includes(targetLanguage)) {
         const noLang = new MessageEmbed()
             .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
