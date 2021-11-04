@@ -1,5 +1,7 @@
-const db = require("@db/db"); const {loadUserLangs} = require("@lang");
-const {setStatus, setAvatar} = require("../../.../../../Configs/Events/Statuses/setConfig")
+const 
+	db = require("@db/db.js"),
+	{loadUserLangs} = require("@lang"),
+	{setStatus, setAvatar} = require("../../.../../../configs/Events/Statuses/setConfig.js")
 module.exports = async(client) => {
 
     await db.then(console.log(`${client.user.username} - DataBase Connected.`))

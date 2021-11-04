@@ -1,5 +1,9 @@
-const { MessageEmbed } = require("discord.js");const lang = require("@lang"); const moment = require("moment")
-const {requestPancake} = require("../../../Configs/Commands/APIs/PancakeSwap/requestPancake"); const {errorHandle} = require("../../../Configs/Commands/other/errorHandle")
+const 
+	{ MessageEmbed } = require("discord.js");const lang = require("@lang"),
+	{requestPancake} = require("@configs/APIs/PancakeSwap/requestPancake"), 
+	{errorHandle} = require("@configs/other/errorHandle"),
+    moment = require("moment");
+
 module.exports = {
     aliases: ["cake"],
     run:async(client, messageCreate, args) => {

@@ -9,7 +9,7 @@ const
     { Player } = require("discord-player"); const PlayerClient = new Player(client),
     Coingecko = require("coingecko-api"); const GeckoClient = new Coingecko(),
     SteamAPI = require("steamapi"); const SteamClient = new SteamAPI(process.env.STEAM_TOKEN),
-    {registerCommands, registerEvents, registerPlayerEvents} = require("./Utils/Registry/registry");
+    {registerCommands, registerEvents, registerPlayerEvents} = require("./Utils/Registry/registry.js");
 
 (async() => {
     client.login(process.env.TOKEN);
@@ -17,7 +17,7 @@ const
     client.player = PlayerClient;
     client.gecko = GeckoClient;
     client.steam = SteamClient;
-    await registerEvents(client, "../../Events/DiscordEvents")
+    await registerEvents(client, "../../events/discordEvents")
     await registerCommands(client, "../../Commands")
     // await registerPlayerEvents(PlayerClient, "../../Events/PlayerEvents")
 })();

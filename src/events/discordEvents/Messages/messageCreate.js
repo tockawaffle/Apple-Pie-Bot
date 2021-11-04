@@ -1,4 +1,4 @@
-const userSchema = require("@db/schemas/userSchema")
+const userSchema = require("@db/schemas/userSchema.js")
 const {RateLimiter} = require('discord.js-rate-limiter'); let limiter = new RateLimiter(2, 2000)
 const {loadUserLangs} = require("@lang");
 module.exports = async(client, messageCreate) => {

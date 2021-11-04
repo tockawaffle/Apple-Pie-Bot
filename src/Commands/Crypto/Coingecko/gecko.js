@@ -1,5 +1,11 @@
-const { MessageEmbed } = require("discord.js"); const lang = require("@lang"); const {buttonsPagination: pagination} = require("djs-buttons-pagination")
-const {requestGecko} = require("../../../Configs/Commands/APIs//Coingecko/requestGecko"); const {filterAliases} = require("../../../Configs/Commands/APIs//Coingecko/filterAliases"); const {errorHandle} = require("../../../Configs/Commands/other/errorHandle")
+const 
+	{ MessageEmbed } = require("discord.js"),
+	{buttonsPagination: pagination} = require("djs-buttons-pagination"),
+	{requestGecko} = require("@configs/APIs/Coingecko/requestGecko"),
+	{filterAliases} = require("@configs/APIs/Coingecko/filterAliases"),
+	{errorHandle} = require("@configs/other/errorHandle"),
+	lang = require("@lang");
+
 module.exports = {
     aliases: [],
     run:async(client, messageCreate, args) => {

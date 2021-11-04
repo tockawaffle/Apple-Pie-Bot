@@ -1,6 +1,6 @@
 const fs = require('fs').promises
 const path = require('path')
-const {checkCommandModule, checkProperties} = require('../validator/validator')
+const {checkCommandModule, checkProperties} = require('../Validator/validator.js')
 
 async function registerCommands(client, dir) {
     let files = await fs.readdir(path.join(__dirname, dir));
