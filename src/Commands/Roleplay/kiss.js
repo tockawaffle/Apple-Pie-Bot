@@ -10,7 +10,7 @@ module.exports = {
         const 
             {author} = messageCreate,
             verify = await checkGuild(messageCreate, author, true)
-        if(verify.verify !== true) return 
+        if(verify !== true) return 
         
         try {
             const 
