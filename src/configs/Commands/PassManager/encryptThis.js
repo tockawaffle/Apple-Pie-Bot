@@ -42,7 +42,7 @@ async function encryptThis(messageCreate) {
         }
         
         const filter = m => m.author.id === messageCreate.author.id,
-        collector = new MessageCollector(messageCreate.channel, {filter, max: questions.length, time: 1000*15});
+        collector = new MessageCollector(messageCreate.channel, {filter, max: questions.length, time: 1000*40});
         collector.on("collect", async(m) => {
             if(counter < questions.length) {
                 const nextQuestEmbed = new MessageEmbed()
