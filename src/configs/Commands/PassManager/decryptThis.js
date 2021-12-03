@@ -19,7 +19,7 @@ async function decrypthis(messageCreate) {
             passphrase = await passSchema.password,
             filter = m => m.author.id === messageCreate.author.id,
             questions = [await lang(author, "pass-decrypt-q1"), await lang(author, "pass-decrypt-q2")],
-            collector = new MessageCollector(messageCreate.channel, {filter, max: questions.length, time: 1000*15}),
+            collector = new MessageCollector(messageCreate.channel, {filter, max: questions.length, time: 1000*30}),
             startEmbed = new MessageEmbed()
                 .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
                 .setColor("RANDOM")

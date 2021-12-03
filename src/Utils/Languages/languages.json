@@ -32,6 +32,10 @@
             "english": "✅ Success:",
             "portugues": "✅ Sucesso:"
         },
+        "unknown": {
+            "english": "Unknown.",
+            "portugues": "Desconhecido."
+        },
         "bad": {
             "english": "Oops, something went wrong, please check:",
             "portugues": "Oops, alguma coisa deu errado, dê uma olhada:"
@@ -610,6 +614,10 @@
             "english": "⁉ - Some of these commands can be used on DMs!",
             "portugues": "⁉ - Alguns desses comandos podem ser utilizados no PV!"
         },
+        "can-be-used-only-on-dms": {
+            "english": "❗ - These commands can only be used on DMs!",
+            "portugues": "❗ - Esses comandos podem ser utilizados apenas no PV!"
+        },
         "help-mainEmbed": {
             "english": "Hello, this is the help command, here you can find all the commands that I have and if they can be used or not in DM's!",
             "portugues": "Olá, este é o comando de ajuda, aqui você pode encontrar todos os comandos que eu possuo e se eles podem ser utilizados ou não no PV!"
@@ -682,6 +690,27 @@
             "english": "Youtube Comment:",
             "portugues": "Comentário do Youtube:"
         },
+        "help-encrypt-desc": {
+            "english": "Encryption!",
+            "portugues": "Encriptação!"
+        },
+        "help-encrypt-desc1": {
+            "english": "Need to wait the bot to answer you.",
+            "portugues": "É necessário esperar o bot te responder."
+        },
+        "help-encrypt-desc2": {
+            "english": "This will delete ALL of your previous stored accounts if you're not a premium user.",
+            "portugues": "Isto irá deletar TODAS as suas contas salvas caso você não seja um usuário premium."
+        },
+        "read-privacy-passman": {
+            "english": "Please, also read the [Terms of Use](https://www.tockanest.com/terms-of-use-passwordmanager/en-us)",
+            "portugues": "Por favor, leia também os [Termos de Uso](https://www.tockanest.com/terms-of-use-passwordmanager/pt-br)"
+        },
+        "help-rewads-desc":{
+            "english": "Rewards.",
+            "portugues": "Recompensas."
+        },
+
 
         "separator13": "translate",
         "result": {
@@ -986,6 +1015,88 @@
         "respass-error": {
             "english": "An error occurred while trying to update your password.",
             "portugues": "Ocorreu um erro ao tentar atualizar sua senha."
+        },
+
+        "separator17": "steam",
+        "db_use_this_link": {
+            "english": "Use [this](https://steamlogin.tockanest.com:2096/) link to add your Steam account to the database.",
+            "portugues": "Use [este](https://steamlogin.tockanest.com:2096/) link para adicionar sua conta Steam ao banco de dados."
+        },
+        "db_use_this_link_obs": {
+            "english": "You NEED a LINKED steam account to your discord profile. This link is just going to verify it and store the SteamID64 in it's database, don't trust me? You can always check the [Source Code](https://github.com/The-Crow-pleb/Tocka).",
+            "portugues": "Você PRECISA ter uma conta da Steam linkada em seu perfil do Discord. Este link irá apenas verificar sua conta e guardar o SteamID64 na base de dados. Não confia ainda assim em mim? Você pode sempre checar o [Código Fonte](https://github.com/The-Crow-pleb/Tocka)"
+        },
+        "steam_online": {
+            "english": "Online.",
+            "portugues": "Online."
+        },
+        "steam_busy": {
+            "english": "Busy.",
+            "portugues": "Ocupado."
+        },
+        "steam_offline": {
+            "english": "Offline.",
+            "portugues": "Offline."
+        },
+        "steam_away": {
+            "english": "Away.",
+            "portugues": "Ausente."
+        },
+        "steam_snooze": {
+            "english": "Snooze.",
+            "portugues": "Tirando uma Soneca."
+        },
+        "steam_notbanned": {
+            "english": "Not banned.",
+            "portugues": "Não banido."
+        },
+        "steam_banned": {
+            "english": "Banned",
+            "portugues": "Banido"
+        },
+        "steam_days_since_last_ban": {
+            "english": "Days since last ban",
+            "portugues": "Dias desde o último ban"
+        },
+        "steam_days_ago": {
+            "english": "days ago",
+            "portugues": "dias atrás"
+        },
+        "steam_realname": {
+            "english": "Real name/Description",
+            "portugues": "Nome real/Descrição"
+        },
+        "steam_none_or_private":{
+            "english": "None or Private info.",
+            "portugues": "Nenhum ou Informação privada."
+        },
+        "steam_zero_or_private": {
+            "english": "Zero or Private info.",
+            "portugues": "Zero ou Informação privada."
+        },
+        "steam_recent_game":{
+            "english": "Recent games",
+            "portugues": "Jogos recentes"
+        },
+        "steam_friends_amount": {
+            "english": "Friends amount",
+            "portugues": "Quantidade de amigos"
+        },
+        "steam_createdat": {
+            "english": "Created at",
+            "portugues": "Criado em"
+        },
+        "steam_amount_games_owned": {
+            "english": "Amount of games owned",
+            "portugues": "Quantidade de jogos que possui"
+        },
+        "steam_game_bans": {
+            "english": "Game bans",
+            "portugues": "Banimentos de Jogos"
+        },
+        "steam_community_bans": {
+            "english": "Community bans",
+            "portugues": "Banimentos de Comunidade"
         }
     }
 }

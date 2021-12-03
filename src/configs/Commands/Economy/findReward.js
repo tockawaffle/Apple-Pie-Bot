@@ -11,12 +11,9 @@ async function findReward(messageCreate, options, id) {
         const tryToFind = await guildSchema.findOne({_id: guild.id})
         const rewards = tryToFind.economyRewards
         let arrOfIds = []
-        // arrayOfElements;
-        // arr = [],
         
         var items = rewards;
         for (var i = 0; i < items.length; i++) {
-            // arr.push([{name: items[i].rewardName}, {id: items[i].id}, {cost: items[i].cost}])
             arrOfIds.push(items[i].id)
         }
         const rewardsEmbed = new MessageEmbed()

@@ -23,9 +23,7 @@ module.exports = {
                 .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
                 .setColor("RANDOM")
                 .setDescription(`${lang(author, "help-userconfig-desc")}`)
-                .addFields(
-                    {name: lang(author, "help-uconfig"), value: `${prefix}uconfig [<options>](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Apple-Pie-v13/src/configs/Commands/Texts/uconfig-opts.md) <args>`}
-                )
+                .addFields({name: lang(author, "help-uconfig"), value: `${prefix}uconfig [<options>](https://github.com/The-Crow-pleb/Apple-Pie-Bot/blob/Apple-Pie-v13/src/configs/Commands/Texts/uconfig-opts.md) <args>`})
                 .setFooter(lang(author, "can-be-used-on-dms"), author.displayAvatarURL({dynamic: true}))
             const modEmbed = new MessageEmbed()
                 .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
@@ -51,8 +49,19 @@ module.exports = {
                 .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
                 .setDescription(`🖼 ${lang(author, "help-canvas-desc")}:\n\`\`\`Change my mind Meme: ${prefix}changemymind <text>\n\nFacepalm: ${prefix}facepalm <?@mention>\n\n${lang(author, "help-canvas-monster")} ${prefix}monster <@mention>\n\n${lang(author, "help-canvas-ohno")} ${prefix}ohno <text>\n\n${lang(author, "help-canvas-shit")} ${prefix}ohshit <?@mention>\n\n${lang(author, "help-canvas-opinion")} ${prefix}opinion <@mention> <text>\n\n${lang(author, "help-canvas-ytb")} ${prefix}ytb <?@mention> <text>\n\nJail: ${prefix}jail <@mention>\`\`\``)
                 .setColor("RANDOM")
+                .setFooter(lang(author, "some-can-be-used-on-dms"), author.displayAvatarURL({dynamic: true}))
+            const helpEncrypt = new MessageEmbed()
+                .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
+                .setDescription(`🔐 ${lang(author, "help-encrypt-desc")}:\n\`\`\`${prefix}encrypt (${lang(author, "help-encrypt-desc1")})\n\n${prefix}decrypt (${lang(author, "help-encrypt-desc1")})\n\n${prefix}show-accounts\n\n${prefix}recover-password (${lang(author, "help-encrypt-desc2")})\`\`\`\n${lang(author, "read-privacy-passman")}`)
+                .setColor("RANDOM")
+                .setFooter(lang(author, "can-be-used-only-on-dms"), author.displayAvatarURL({dynamic: true}))
+            const helpRewards = new MessageEmbed()
+                .setAuthor(user.username, user.displayAvatarURL({dynamic: true}))
+                .setDescription(`💰 ${lang(author, "help-rewards-desc")}:\n\`\`\`${prefix}balance\n\n\n${prefix}buy <Reward ID>\n\n${prefix}rinfo <id || all>\n\n${prefix}econfig <option>\`\`\``)
+                .setFooter(lang(author, "can-not-be-used-on-dms"), author.displayAvatarURL({dynamic: true}))
+                .setColor("RANDOM")
             if(!args[0]) {
-                pages = [mainEmbed, userConfigEmbed, modEmbed, roleplayEmbed, utilitiesEmbed, cryptoEmbed, helpCanvas]
+                pages = [mainEmbed, userConfigEmbed, modEmbed, helpRewards, roleplayEmbed, utilitiesEmbed, cryptoEmbed, helpCanvas, helpEncrypt]
                 await buttonsPagination(messageCreate, pages, [], 15000)
             } 
             else if(args[0] === "main")     { await messageCreate.reply({embeds: [mainEmbed]}) }
@@ -62,6 +71,10 @@ module.exports = {
             else if(args[0] === "mod")      { await messageCreate.reply({embeds: [modEmbed]}) }
             else if(args[0] === "crypto")   { await messageCreate.reply({embeds: [cryptoEmbed]}) }
             else if(args[0] === "canvas")   { await messageCreate.reply({embeds: [helpCanvas]}) }
+            else if(args[0] === "encrypt")   { await messageCreate.reply({embeds: [helpEncrypt]}) }
+            else if(args[0] === "rewards")   { await messageCreate.reply({embeds: [helpRewards]}) }
+            
+        
         } catch (error) {
             await errorHandle(messageCreate, author, error)
         }

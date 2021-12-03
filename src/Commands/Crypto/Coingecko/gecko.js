@@ -58,7 +58,6 @@ module.exports = {
                 .setAuthor(name, geckoReq.images.imgSmall)
                 .setColor("RANDOM")
                 .setDescription(`\`\`\`${lang(author, "chats")} ${chats ? chats: lang(author, "not-provided")}\n\n${lang(author, "announcements")} ${announcements ? announcements: lang(author, "not-provided")}\`\`\`\n${lang(author,"rank")}\`\`\`\n${lang(author, "rank-marketcap")} ${market_cap_rank}\n${lang(author, "rank-liquidity")} ${liquidity_score}\`\`\`\n`)
-                
             return pagination(messageCreate, [mainInfos, otherInfos], [], 10000).catch(error => console.log(error))
         } catch (error) {
             await errorHandle(messageCreate, author, error)
