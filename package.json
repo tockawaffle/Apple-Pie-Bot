@@ -55,8 +55,8 @@
     "zlib-sync": "^0.1.7"
   },
   "_moduleAliases": {
-    "@db": "src/configs/DB",
-    "@lang": "src/utils/Languages/languages.js",
+    "@db": "src/configs/db",
+    "@lang": "src/Utils/Languages/languages.js",
     "@configs": "src/configs/Commands"
   },
   "devDependencies": {
