@@ -19,9 +19,13 @@ module.exports = {
                 if(err) { return errorHandle(messageCreate, author, error) } 
                 else if(result.length === 0) { const error = `No location found`; return await errorHandle(messageCreate, author, error) }  
                 const 
-                    temperature = result[0].current.temperature + ' °C'; ;const feelsLike = result[0].current.feelslike + ' °C',
-                    skytext = result[0].current.skytext; const humidity = result[0].current.humidity,
-                    windspeed = result[0].current.windspeed; const observation = result[0].current.observationtime; const currentImage = result[0].current.imageUrl,
+                    temperature = result[0].current.temperature + ' °C',
+                    feelsLike = result[0].current.feelslike + ' °C',
+                    skytext = result[0].current.skytext,
+                    humidity = result[0].current.humidity,
+                    windspeed = result[0].current.windspeed,
+                    observation = result[0].current.observationtime,
+                    currentImage = result[0].current.imageUrl,
                  
                     forecastOne_temperatureHigh = result[0].forecast[0].high,
                     forecastOne_temperatureLow = result[0].forecast[0].low,

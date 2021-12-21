@@ -71,8 +71,8 @@ module.exports = {
             else if(args[0] === "mod")      { await messageCreate.reply({embeds: [modEmbed]}) }
             else if(args[0] === "crypto")   { await messageCreate.reply({embeds: [cryptoEmbed]}) }
             else if(args[0] === "canvas")   { await messageCreate.reply({embeds: [helpCanvas]}) }
-            else if(args[0] === "encrypt")   { await messageCreate.reply({embeds: [helpEncrypt]}) }
-            else if(args[0] === "rewards")   { await messageCreate.reply({embeds: [helpRewards]}) }
+            else if(args[0] === "encrypt")  { await messageCreate.reply({embeds: [helpEncrypt]}) }
+            else if(args[0] === "rewards")  { await messageCreate.reply({embeds: [helpRewards]}) }
             
         
         } catch (error) {

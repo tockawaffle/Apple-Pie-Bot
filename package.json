@@ -47,6 +47,7 @@
     "nodemon": "^2.0.15",
     "openpgp": "^5.0.1",
     "qrcode": "^1.4.4",
+    "snakecord": "^1.0.9",
     "speakeasy": "^2.0.0",
     "steamapi": "^2.2.0",
     "utf-8-validate": "^5.0.7",
