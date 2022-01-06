@@ -1,7 +1,7 @@
 async function resetPass(messageCreate) {
 
     const
-        {compareSync, hashSync} = require("bcrypt"),
+        {compare, hash} = require("bcrypt"),
         {MessageEmbed, MessageCollector} = require("discord.js"),
         {author} = messageCreate,
         speakeasy = require("speakeasy"),
@@ -42,13 +42,13 @@ async function resetPass(messageCreate) {
                     if(pass.length < 6) {
                         await messageCreate.reply(lang(author, "respass-shortpass"));
                     } else {
-                        const compareHash = compareSync(pass, passManObj.password);
+                        const compareHash = compare(pass, passManObj.password);
                         if(compareHash === true) {
                             await messageCreate.reply(lang(author, "respass-samepass"));
                         } else {
                             const
-                                hash = await hashSync(pass, 14),
-                                newPassManObj = await passManSchema.findOneAndUpdate({_id: author.id}, {$set: {password: hash}, $unset: {"accounts": 15}}, {new: true});
+                                hashing = await hash(pass, 18),
+                                newPassManObj = await passManSchema.findOneAndUpdate({_id: author.id}, {$set: {password: hashing}, $unset: {"accounts": 15}}, {new: true});
                             if(newPassManObj) {
                                 await messageCreate.reply(lang(author, "respass-updatedpass"));
                             } else {

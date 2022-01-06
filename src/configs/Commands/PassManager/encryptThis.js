@@ -2,7 +2,7 @@ async function encryptThis(messageCreate) {
     const 
         { MessageEmbed, MessageCollector } = require("discord.js"),
         { errorHandle } = require("@configs/other/errorHandle"),
-        { hashSync, compareSync } = require("bcrypt"),
+        { hash, compare } = require("bcrypt"),
         { author } = messageCreate,
         lang = require("@lang"),
         passManSchema = require("@db/schemas/passManagerSchema"),
@@ -61,7 +61,7 @@ async function encryptThis(messageCreate) {
             } else {
                 const 
                     passphrase = `${collected.map(x => x.content)[0]}`,
-                    hashPass = hashSync(passphrase, 10), //This is where the fun begins. This hashes the password at "collected.map(x => x.content)[0]"
+                    hashPass = hash(passphrase, 18), //This is where the fun begins. This hashes the password at "collected.map(x => x.content)[0]"
                     accName = collected.map(x => x.content)[1],
                     accPass = collected.map(x => x.content)[2],
                     { privateKey, publicKey } = await openpgp.generateKey({
@@ -95,7 +95,7 @@ async function encryptThis(messageCreate) {
                     doneEmbed.setDescription(`${lang(author, "pass-enc-end2")}\`\`\`json\n${JSON.stringify(data)}\`\`\``)
                     await messageCreate.reply({embeds: [doneEmbed]})
                 } else if(functionToUse === "alreadyreg") {
-                    const compareHash = compareSync(passphrase, passSchema.password)
+                    const compareHash = compare(passphrase, passSchema.password)
                     if(compareHash === false) {
                         //If the password is not the same as the compared hash, it'll return this and end the code before anything.
                         return await errorHandle(messageCreate, author, lang(author, "pass-wrong"))

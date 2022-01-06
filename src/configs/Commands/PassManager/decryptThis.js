@@ -2,7 +2,7 @@ async function decrypthis(messageCreate) {
     const 
         { MessageEmbed, MessageCollector } = require("discord.js"),
         { errorHandle } = require("@configs/other/errorHandle"),
-        { compareSync } = require("bcrypt"),
+        { compare } = require("bcrypt"),
         { author } = messageCreate,
         lang = require("@lang"),
         openpgp = require("openpgp"),
@@ -38,7 +38,7 @@ async function decrypthis(messageCreate) {
         collector.on("end", async(c) => {
             const
                 passphraseInput = c.map(x => x.content)[0]
-                compareHash = compareSync(passphraseInput, passphrase)
+                compareHash = compare(passphraseInput, passphrase)
             if(compareHash !== true) {return await errorHandle(messageCreate, author, lang(author, "pass-wrong").replace("{prefix}", messageCreate.prefix))}
             const 
                 accName = c.map(x => x.content)[1],
