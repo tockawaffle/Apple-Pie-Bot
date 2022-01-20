@@ -7,7 +7,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
     
     if(!targetLanguage) {
         const noargs = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setColor("RED")
             .setDescription(lang(author, "config_lang_err_noargs"))
             .addFields({name: lang(author, "config_lang_err_noargs-nolang_2"),value: `\`\`\`${messageCreate.prefix}config language english | portugues\`\`\``},)
@@ -16,7 +16,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
     const { languages } = require('../../../Utils/Languages/languages.json')
     if (!languages.includes(targetLanguage)) {
         const noLang = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setColor("RED")
             .setDescription(lang(author, "config_lang_err_nolang"))
             .addFields(
@@ -28,7 +28,7 @@ async function changeLanguage(messageCreate, author, targetLanguage) {
         const { setUserLanguage } = require('@lang');
         setUserLanguage(author, targetLanguage)
         const success = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setDescription(lang(author, "config_lang_set"))
             .addFields({name: lang(author, "config_lang_set_1"),value: `\`\`\`${targetLanguage}\`\`\``})
             .setColor("RANDOM")

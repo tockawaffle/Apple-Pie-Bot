@@ -16,7 +16,7 @@ module.exports = {
                 const 
                     changemymind = await cvs.Canvas.changemymind(args.join(' ')),
                     attachEmbed = new MessageEmbed()
-                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                        .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                         .setImage("attachment://file.jpg")
                         .setColor("RANDOM")
                 await messageCreate.reply({embeds: [attachEmbed], files: [changemymind]})

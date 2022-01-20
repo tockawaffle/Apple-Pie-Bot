@@ -9,7 +9,7 @@ async function roleCreate(messageCreate, author, name, color) {
     try {
         const created = await messageCreate.guild.roles.create({name: name, color: color ? color: "GREY"})
         const createEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setDescription(`${lang(author, "create-role-desc").replace("{role}", created.name).replace("{color}", color ? color: lang(author, "default-color"))}\n${lang(author, "no-role-color")}`)
             .setColor("RANDOM")
 

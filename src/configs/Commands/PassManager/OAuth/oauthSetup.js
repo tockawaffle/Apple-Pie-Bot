@@ -18,7 +18,7 @@ async function oauthSetup(messageCreate) {
         filter = m => m.author.id === messageCreate.author.id,
         collector = new MessageCollector(messageCreate.channel, {filter, max: 1, time: 120000}),
         startEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setDescription(lang(author, "oauth-setup"))
             .setImage("attachment://file.jpg")
             .setColor("RANDOM")
@@ -37,7 +37,7 @@ async function oauthSetup(messageCreate) {
         } else {
             await userSchema.findOneAndUpdate({_id: author.id}, {_id: author.id, oauth: {verified: false, secret: newSecret.base32, date: Date.now()}}, {upsert: true})
             const wrongCode = new MessageEmbed()
-                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                 .setDescription(lang(author, "oauth-setup-incorrectCode"))
                 .setColor("RANDOM")
             return await messageCreate.reply({embeds: [wrongCode]})

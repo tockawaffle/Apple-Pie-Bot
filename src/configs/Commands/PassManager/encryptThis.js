@@ -9,7 +9,7 @@ async function encryptThis(messageCreate) {
         openpgp = require("openpgp"),
         passSchema = await passManSchema.findOne({_id: author.id}),
         startEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setColor("RANDOM")
     let counter = 0, questions, functionToUse, data;
     
@@ -28,7 +28,7 @@ async function encryptThis(messageCreate) {
             } else {
                 if(passSchema.accounts.length > 15 || passSchema.accounts.length == 15) {
                     const amountLimit = new MessageEmbed()
-                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                        .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                         .setColor("DARK_RED")
                         .setDescription()
                     return await messageCreate.reply({embeds: [amountLimit]})
@@ -48,7 +48,7 @@ async function encryptThis(messageCreate) {
         collector.on("collect", async(m) => {
             if(counter < questions.length) {
                 const nextQuestEmbed = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`\`\`\`${questions[counter++]}\`\`\``)
                 await m.reply({embeds: [nextQuestEmbed]})
@@ -83,7 +83,7 @@ async function encryptThis(messageCreate) {
                         signingKeys: privateKeyGet
                     }), //This is where the password gets finally encrypted, with the signing key using the private key generated before and the encryption using the public key. It outputs a PGP Message using as decryption the password given.
                     doneEmbed = new MessageEmbed()
-                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                        .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                         .setColor("RANDOM");
                 //Bellow you can find the code storing everything it needs to decrypt later.
                 if(functionToUse === "notreg") {

@@ -17,12 +17,12 @@ module.exports = {
         try {
             if(!configArg) {
                 const noArg = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setColor("DARK_RED")
                     .setTitle(`${lang(author, "error")} ${lang(author, "no-args")}`)
                     .setDescription(`${lang(author, "no-args-correct").replace("{command}", `\`\`\`\n${messageCreate.prefix}uconfig <Options> <Arg>\`\`\``)}`)
                 const opts = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setColor("DARK_RED")
                     .setDescription(`${lang(author, "accp-opts").replace("{opts}", `\`\`\`\nlanguage\nprefix\nprivacy\`\`\``)}`)  
                 return await pagination(messageCreate, [noArg, opts], [], 15000)

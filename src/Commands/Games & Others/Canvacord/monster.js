@@ -15,14 +15,14 @@ module.exports = {
             if(!target) {
                 const errorEmbed = new MessageEmbed()
                     .setColor("DARK_RED")
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setDescription(`${lang(author, "error")} ${lang(author, "no-args")}\n\n${lang(author, "mention-needed")}`)
                 return messageCreate.reply({embeds: [errorEmbed]})
             }
             const 
                 bed = await cvs.Canvas.bed(messageCreate.author.avatarURL({format: 'jpg'}), target.avatarURL({format: 'jpg'})),
                 attachEmbed = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setImage("attachment://file.jpg")
                     .setColor("RANDOM")
             messageCreate.reply({embeds: [attachEmbed], files: [bed]})

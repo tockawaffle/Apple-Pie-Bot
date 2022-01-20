@@ -15,7 +15,7 @@ async function econfigStart(messageCreate, name) {
                 await guildSchema.findOneAndUpdate({_id: guild.id}, {_id: guild.id, coinName: name ? name: "Pies", premium: false, startedEconomy: true, date: Date.now(), $push: {dataOfEconomy: dataToInsert}},{upsert: true})
             }
             const startedEmbed = new MessageEmbed()
-                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                 .setColor("RANDOM")
                 .setDescription(`${lang(author, "econ-started").replace("{prefix}", messageCreate.prefix).replace("{option}", lang(author, "econ-reward")).replace("{name}", name ? name: "Pies")}`)
             return messageCreate.reply({embeds: [startedEmbed]})

@@ -11,7 +11,7 @@ async function banUser(messageCreate, author, toBan, reason) {
     try {
         await toBan.ban({reason: reason})
         const banEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})    
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})    
             .setColor("RANDOM")
             .setTitle(`${lang(author, "success")} ${lang(author, "banned")}`)
             .setDescription(`${lang(author, "banned-desc").replace("{ban}", `**${toBan.user.username}**`).replace("{reason}", reason)}`)

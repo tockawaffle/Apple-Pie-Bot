@@ -21,7 +21,7 @@ async function muteUser(client, messageCreate, toMute, reason) {
                 const createdRole = await guild.roles.create({name: lang(author, "muted-role"), color: "BLACK", reason: lang(author, "muted-role-reason")})
                 await toMute.roles.add(await createdRole)
                 const mutedEmbed = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setTitle(`${lang(author, "success").replace("{member}", toMute.user.username)}`)
                 messageCreate.reply({embeds: [mutedEmbed]})
@@ -33,7 +33,7 @@ async function muteUser(client, messageCreate, toMute, reason) {
             try {
                 await toMute.roles.add(await mutedRole)
                 const mutedEmbed = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setTitle(`${lang(author, "success")} ${lang(author, "muted-success").replace("{member}", toMute.user.username)}`)
                     .setDescription(`${lang(author, "reason")}\`\`\`${reason ? reason: lang(author, "no-reason")}\`\`\``)

@@ -14,7 +14,7 @@ async function oauthVerify(messageCreate) {
         filter = m => m.author.id === messageCreate.author.id,
         collector = new MessageCollector(messageCreate.channel, {filter, max: 1, time: 120000});
         startEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setColor("RANDOM")
             .setDescription(lang(author, "oauth-verify-start"))
     await messageCreate.reply({embeds: [startEmbed]});
@@ -23,13 +23,13 @@ async function oauthVerify(messageCreate) {
         if(verified === true) { 
             await userSchema.findOneAndUpdate({_id: author.id}, {_id: author.id, oauth: {verified: true, recoveryCode:  hashedRecoveryCode, secret: userConfig.oauth.secret, date: Date.now()}}, {upsert: true})
             const successEmbed = new MessageEmbed()
-                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                 .setDescription(lang(author, "oauth-verify-success").replace("{code}", recoverId))
                 .setColor("RANDOM")
             return await messageCreate.reply({embeds: [successEmbed]})
         } else {
             const failedEmbed = new MessageEmbed()
-                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                 .setDescription(lang(author, "oauth-verify-failed").replace("{prefix}", messageCreate.prefix))
                 .setColor("RANDOM")
             return await messageCreate.reply({embeds: [failedEmbed]})

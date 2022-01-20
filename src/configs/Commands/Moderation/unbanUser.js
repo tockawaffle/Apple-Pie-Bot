@@ -10,7 +10,7 @@ async function unbanUser(messageCreate, author, toUnban, reason) {
     try {
         await messageCreate.guild.members.unban(toUnban, {reason: reason})
         const unbanEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})    
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})    
             .setColor("RANDOM")
             .setTitle(`${lang(author, "success")} ${lang(author, "unbanned")}`)
             .setDescription(`${lang(author, "unbanned-desc").replace("{ban}", `**${toUnban}**`).replace("{reason}", reason)}`)

@@ -13,7 +13,7 @@ async function slowmodeAdd(messageCreate, channel, author, time, reason) {
     try {
         await channel.setRateLimitPerUser(time, reason?reason:lang(author, "not-provided"))
         const setLimitEmbed = new MessageEmbed()
-            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+            .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
             .setColor("RANDOM")
             .setDescription(`${lang(author, "set-limit").replace("{time}", time).replace("{channel}", channel.name).replace("{reason}", reason?reason:lang(author,"not-provided"))}`) 
         messageCreate.reply({embeds: [setLimitEmbed]})

@@ -15,7 +15,7 @@ module.exports = {
                 const 
                     ohno = await cvs.Canvas.ohno(args.join(' ')),
                     attachEmbed = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setImage("attachment://file.jpg")
                     .setColor("RANDOM")
                 messageCreate.reply({embeds: [attachEmbed], files: [ohno]})

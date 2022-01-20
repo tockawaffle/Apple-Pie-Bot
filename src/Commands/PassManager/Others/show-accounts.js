@@ -20,20 +20,20 @@ module.exports = {
             if(verified === true) return messageCreate.react("❌")
             if(!passSchema) {
                 const noAccEmbed = new MessageEmbed()
-                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                    .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setDescription(lang(author, "sacc-noacc"))
                     .setColor("DARK_RED")
                 return messageCreate.reply({embeds: [noAccEmbed]})
             } else {
                 if(!passSchema.accounts) {
                     const noAccEmbed = new MessageEmbed()
-                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                        .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                         .setDescription(lang(author, "sacc-noacc"))
                         .setColor("DARK_RED")
                     return messageCreate.reply({embeds: [noAccEmbed]})
                 } else {
                     const accEmbed = new MessageEmbed()
-                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
+                        .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                         .setDescription(`${lang(author, "sacc-list")}\n${passSchema.accounts.map(acc => `\`\`\`${acc.accName} - ${moment(acc.date).utc().format("L")}\`\`\``).join("\n")}`)
                         .setColor("RANDOM")
                     return messageCreate.reply({embeds: [accEmbed]})
