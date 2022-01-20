@@ -22,7 +22,7 @@ module.exports = {
             const
                 facepalm = await cvs.Canvas.jail(avatar, greyscale),
                 attachEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setImage("attachment://file.jpg")
                     .setColor("RANDOM")
             await messageCreate.reply({embeds: [attachEmbed], files: [facepalm]})

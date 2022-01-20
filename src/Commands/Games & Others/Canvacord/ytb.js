@@ -20,7 +20,7 @@ module.exports = {
                     const 
                         ytb = await cvs.Canvas.youtube({username: target.username, content: args.join(' '), avatar: target.avatarURL({format: 'jpg'})}),
                         attachEmbed = new MessageEmbed()
-                            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                             .setImage("attachment://file.jpg")
                             .setColor("RANDOM")
                     await messageCreate.reply({embeds: [attachEmbed], files: [ytb]})
@@ -28,7 +28,7 @@ module.exports = {
                     const 
                         ytb = await cvs.Canvas.youtube({username: messageCreate.author.username, content: args.join(' '), avatar: messageCreate.author.avatarURL({format: 'jpg'})}),
                         attachEmbed = new MessageEmbed()
-                            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                             .setImage("attachment://file.jpg")
                             .setColor("RANDOM")
                     await messageCreate.reply({embeds: [attachEmbed], files: [ytb]})

@@ -4,13 +4,15 @@ const
     {errorHandle} = require("@configs/other/errorHandle");
 module.exports = {
     aliases: ["av"],
+    description: "Shows the avatar of the mentioned user, or yours",
+    category: "Utilities",
     run: async(client, messageCreate, args) => {
 
         const {author, mentions, guild} = messageCreate
         try {
             if(!args[0]) {
                 const authorAvatarEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`🔎 ${author.username}`)
                     .setImage(`${ await author.displayAvatarURL(({dynamic: true, size: 2048, format: 'png'}))}`)
@@ -21,7 +23,7 @@ module.exports = {
                     const 
                         globalId = client.users.cache.get(args[0]),
                         avatarEmbed = new MessageEmbed()
-                            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                             .setColor("RANDOM")
                             .setDescription(`🔎🌎 ${globalId.username}`)
                             .setImage(`${ await globalId.displayAvatarURL(({dynamic: true, size: 2048, format: 'png'}))}`)
@@ -40,7 +42,7 @@ module.exports = {
                 }
                 
                 const avatarEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`${text}`)
                     .setImage(`${ await mentionedMember.displayAvatarURL(({dynamic: true, size: 2048, format: 'png'}))}`)

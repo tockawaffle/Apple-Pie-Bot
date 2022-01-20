@@ -18,7 +18,7 @@ async function resetPass(messageCreate) {
                 filter = m => m.author.id === author.id,
                 collector = new MessageCollector(messageCreate.channel, {filter, max: 2, time: 30000});
                 const startEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setDescription(lang(author, "respass-open"))
                     .setColor("RANDOM");
                 await messageCreate.reply({embeds: [startEmbed]});
@@ -26,7 +26,7 @@ async function resetPass(messageCreate) {
                 const verifyOauth = speakeasy.totp.verify({secret: userSchemaObj.oauth.secret, encoding: "base32", token: collector.collected.map(m => m.content)[0], window: 6})
                 if(verifyOauth === true) {        
                     const passwordEmbed = new MessageEmbed()
-                        .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                         .setDescription(lang(author, "respass-newpass"))
                         .setColor("RANDOM");
                     await m.reply({embeds: [passwordEmbed]})

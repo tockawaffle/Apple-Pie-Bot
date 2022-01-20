@@ -5,6 +5,8 @@ const
 
 module.exports = {
     aliases: ["resetpass"],
+    description: "Resets your password",
+    category: "Security",
     run: async(client, messageCreate, args) => {
 
         const

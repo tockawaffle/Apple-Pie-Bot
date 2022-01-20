@@ -30,6 +30,31 @@ async function registerCommands(client, dir) {
     }
 }
 
+async function registerCommandNamesAndAliases(client, dir) {
+    let files = await fs.readdir(path.join(__dirname, dir));
+    for(let file of files) {
+        let stat = await fs.lstat(path.join(__dirname, dir, file));
+        if(stat.isDirectory())
+        registerCommandNamesAndAliases(client, path.join(dir, file));
+        else {
+            if(file.endsWith(".js")) {
+                let cmdName = file.substring(0, file.indexOf(".js"));
+                try {
+                    let cmdModule = require(path.join(__dirname, dir, file));
+                    if(checkCommandModule(cmdName, cmdModule)) {
+                        if(checkProperties(cmdName, cmdModule)) {
+                            let { aliases, description, category } = cmdModule;
+                            client.commandsNamesDescAndAliases.set(cmdName, {aliases, description, category});
+                        }
+                    }
+                }catch(err) {
+                    console.log(err);
+                }
+            }
+        }
+    }
+}
+
 async function registerEvents(client, dir) {
     let files = await fs.readdir(path.join(__dirname, dir));
     for(let file of files) {
@@ -71,5 +96,5 @@ async function registerPlayerEvents(client, dir) {
 }
 
 module.exports = {
-    registerCommands, registerEvents, registerPlayerEvents
+    registerCommands, registerEvents, registerPlayerEvents, registerCommandNamesAndAliases
 }

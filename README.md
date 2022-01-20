@@ -78,6 +78,8 @@ Required on the dotenv file:
 
 - [X] Other things such as making more pies, I guess?
 
+- [ ] Create a dashboard.
+
   
 ## Authors - 🍦
 

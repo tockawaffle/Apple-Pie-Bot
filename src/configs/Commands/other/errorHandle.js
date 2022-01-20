@@ -1,4 +1,4 @@
-async function errorHandle(messageCreate, auth, err) {
+async function errorHandle(messageCreate, undefined, err) {
 
     const 
         {author} = messageCreate,

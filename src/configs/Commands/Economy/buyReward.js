@@ -32,7 +32,7 @@ async function buyReward(messageCreate, idNumber) {
                     const foundEmbed = new MessageEmbed()
                         .setColor("RANDOM")
                         .setDescription(lang(author, "econ-reward-buy").replace("{rewardName}", rewards.rewardName).replace("{amountName}", `${rewards.cost + " " + coinName.coinName}`).replace("{newAmount}", amountToUpdate + " " + coinName.coinName))
-                        .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     return messageCreate.reply({embeds: [foundEmbed]})
                 }
             }

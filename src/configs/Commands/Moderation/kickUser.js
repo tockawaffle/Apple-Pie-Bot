@@ -11,7 +11,7 @@ async function kickUser(messageCreate, author, toKick, reason) {
     try {
         await toKick.kick({reason: reason})
         const toKickEmbed = new MessageEmbed()
-            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))    
+            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})    
             .setColor("RANDOM")
             .setTitle(`${lang(author, "success")} ${lang(author, "kick")}`)
             .setDescription(`${lang(author, "kick-desc").replace("{kick}", `**${toKick.user.username}**`).replace("{reason}", reason)}`)

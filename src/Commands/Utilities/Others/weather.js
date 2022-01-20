@@ -7,6 +7,8 @@ const
     lang = require("@lang");
 module.exports = {
     aliases: ["clima"],
+    description: "Command to get the weather of a city",
+    category: "Utilities",
     run: async(client, messageCreate, args) => {
         const {author} = messageCreate
         
@@ -53,23 +55,23 @@ module.exports = {
 
                     weatherText = `${lang(author, "weather")}\`\`\`${lang(author, "temperature")} ${temperature}\n${lang(author, "feelslike")} ${feelsLike}\n\n${lang(author, "sky")} ${skytext}\n${lang(author, "windspeed")} ${windspeed}\n${lang(author, "humidity")} ${humidity}\`\`\`\n${lang(author, "provided-by").replace("{lang}", langToUse)}`;
                 const weatherEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`${weatherText}`)
                     .setThumbnail(`${await currentImage}`)
                     .setFooter(`${lang(author, "obs-time")} ${observation} ${lang(author, "advise-not-100-accuratte")}`)
                 const forecastOneEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`${forecastOneText}`)
                     .setFooter(`${lang(author, "advise-not-100-accuratte")}`)
                 const forecastTwoEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`${forecastTwoText}`)
                     .setFooter(`${lang(author, "advise-not-100-accuratte")}`)
                 const forecastThreeEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`${forecastThreeText}`)
                     .setFooter(`${lang(author, "advise-not-100-accuratte")}`)

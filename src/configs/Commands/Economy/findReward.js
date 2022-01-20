@@ -17,7 +17,7 @@ async function findReward(messageCreate, options, id) {
             arrOfIds.push(items[i].id)
         }
         const rewardsEmbed = new MessageEmbed()
-            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
             .setColor("RANDOM")
             .setDescription(`${lang(author, "econ-rewardl-3+")}\`\`\`${JSON.stringify(arrOfIds, null, " ").replace(/[\#\"\#,\[\].]/g, "")}\`\`\``)
         return messageCreate.reply({embeds: [rewardsEmbed]})

@@ -21,7 +21,7 @@ async function decrypthis(messageCreate) {
             questions = [await lang(author, "pass-decrypt-q1"), await lang(author, "pass-decrypt-q2")],
             collector = new MessageCollector(messageCreate.channel, {filter, max: questions.length, time: 1000*30}),
             startEmbed = new MessageEmbed()
-                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                 .setColor("RANDOM")
                 .setDescription(`\`\`\`${questions[counter++]}\`\`\``)
             await messageCreate.reply({embeds: [startEmbed]})
@@ -29,7 +29,7 @@ async function decrypthis(messageCreate) {
         collector.on("collect", async(m) => {
             if(counter < questions.length) {
                 const nextQuestEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setDescription(`\`\`\`${questions[counter++]}\`\`\``)
                 await m.reply({embeds: [nextQuestEmbed]})
@@ -53,7 +53,7 @@ async function decrypthis(messageCreate) {
                 catch (error) { await errorHandle(messageCreate, author, lang(author, "pass-decrypt-invalid-signature"))}
                 try {
                     const decryptedEmbed = new MessageEmbed()
-                        .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                        .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                         .setColor("RANDOM")
                         .setDescription(lang(author, "pass-decrypt-success").replace("{name}", accName).replace("{pass}", decrypted))
                     await messageCreate.reply({embeds: [decryptedEmbed]})

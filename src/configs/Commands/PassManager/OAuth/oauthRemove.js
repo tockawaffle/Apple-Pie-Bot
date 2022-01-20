@@ -9,7 +9,7 @@ async function oauthRemove(messageCreate) {
         filter = m => m.author.id === messageCreate.author.id,
         collector = new MessageCollector(messageCreate.channel, {filter, max: 1, time: 120000});
         startEmbed = new MessageEmbed()
-            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
             .setDescription(lang(author, "oauth-remove-start"))
             .setColor("RANDOM")
     await messageCreate.reply({embeds: [startEmbed]})
@@ -19,14 +19,14 @@ async function oauthRemove(messageCreate) {
         if(compareRecoveryHash === true) {
             await userSchema.findOneAndUpdate({_id: author.id}, { _id: author.id, $unset: {"oauth": 1}}, {upsert: true})
             const deletedEmbed =  new MessageEmbed()
-                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                 .setDescription(lang(author, "oauth-remove-success"))
                 .setColor("RANDOM")
             return await messageCreate.reply({embeds: [deletedEmbed]})
         } else {
             const 
                 failedEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setDescription(lang(author, "oauth-remove-failed"))
                     .setColor("DARK_RED")
             return await messageCreate.reply({embeds: [failedEmbed]})

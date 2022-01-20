@@ -13,7 +13,7 @@ async function getBalance(messageCreate) {
 
         const moneyEmbed = new MessageEmbed()
             .setColor("RANDOM")
-            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
             .setDescription(lang(author, "econ-balance").replace("{balance}", money).replace("{coinName}", checker.coinName))
         return messageCreate.reply({embeds: [moneyEmbed]})
         

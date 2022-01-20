@@ -18,7 +18,7 @@ async function unmuteUser(messageCreate, toUnmute, reason) {
             try {
                 await toUnmute.roles.remove(await mutedRole)
                 const mutedEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setColor("RANDOM")
                     .setTitle(`${lang(author, "success")} ${lang(author, "unmuted-success").replace("{member}", toUnmute.user.username)}`)
                     .setDescription(`${lang(author, "reason")}\`\`\`${reason ? reason: lang(author, "no-reason")}\`\`\``)

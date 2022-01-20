@@ -8,6 +8,8 @@ const
     
 module.exports = {
     aliases: ["uf", "userinfo"],
+    description: "Command to get information about a user",
+    category: "Utilities",
     run: async(client, messageCreate, args) => {
 
         const 
@@ -32,7 +34,7 @@ module.exports = {
                 joinedFrom = retrieveStatus.joinedFrom,
                 userMainInfoText = `**${lang(author, "uf")}**\`\`\`\n${lang(author, "name")} ${name}\nUser ID: ${id}\n${lang(author, "created")} ${created} - ${createdFrom}\n${lang(author, "joined")} ${joined} - ${joinedFrom}\n${lang(author, "presence")} ${presence}\`\`\``
                 userMainInfo = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setDescription(`${userMainInfoText}`)
                     .setColor("RANDOM")
                     .setFooter(name, guildMember.user.displayAvatarURL({dynamic: true}));
@@ -49,7 +51,7 @@ module.exports = {
                             smallImageVSC = retrieveVSC.assets.smallImage,
                             retrieveVSCText = `**Visual Studio Code:**\`\`\`${lang(author, "vsc-name")} ${retrieveVSC.name}\n${lang(author, "vsc-type")} ${retrieveVSC.state}\n${lang(author, "vsc-details")} ${retrieveVSC.assets.largeText} - ${retrieveVSC.details}\n${lang(author, "vsc-started")} ${retrieveVSC.starts}\`\`\``,
                             vscEmbed = new MessageEmbed()
-                                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                                 .setColor("RANDOM")
                                 .setDescription(`${retrieveVSCText}`)
                                 .setThumbnail(await largeImageVSC)
@@ -63,7 +65,7 @@ module.exports = {
                             smallImageSpotify = retrieveSpotify.assets.smallImage,
                             retrieveSpotifyText = `**Spotify**:\`\`\`${lang(author, "spotify-name").replace("{song}", retrieveSpotify.assets.largeText)}\n${lang(author, "spotify-started")} ${retrieveSpotify.starts}\n${lang(author, "spotify-ends")} ${retrieveSpotify.ends}\n${lang(author, "spotify-details")} ${retrieveSpotify.details}\`\`\``,
                             SpotifyEmbed = new MessageEmbed()
-                                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                                 .setColor("RANDOM")
                                 .setDescription(`${retrieveSpotifyText}`)
                                 .setThumbnail(await largeImageSpotify)
@@ -75,7 +77,7 @@ module.exports = {
                             otherElements = retrieve.otherElements,
                             otherElementsText = `**${otherElements.name}:**\`\`\`\n${lang(author, "other-state")} ${otherElements.type}\n${lang(author, "other-details")} ${otherElements.details}\n${lang(author, "other-started")} ${otherElements.starts}\`\`\``,
                             otherElementsEmbed = new MessageEmbed()
-                                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                                 .setColor("RANDOM")
                                 .setDescription(`${otherElementsText}`);
                         let otherElementsAssets = otherElements.assets
@@ -95,7 +97,7 @@ module.exports = {
                         otherElements = retrieve.Single,
                         otherElementsText = `**${otherElements.name}:**\`\`\`\n${lang(author, "other-state")} ${otherElements.type}\n${lang(author, "other-details")} ${otherElements.details}\n${lang(author, "other-started")} ${otherElements.starts}\`\`\``,
                         otherElementsEmbed = new MessageEmbed()
-                            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                             .setColor("RANDOM")
                             .setDescription(`${otherElementsText}`);
                     let otherElementsAssets = otherElements.assets

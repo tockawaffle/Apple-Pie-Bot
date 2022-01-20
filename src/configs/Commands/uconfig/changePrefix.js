@@ -3,7 +3,7 @@ async function changePrefix(messageCreate, author, prefixo, lang) {
     if(!author) throw new Error(`Falta um autor para a mudança.`)
     else if(!prefixo) {
         const noPrefix = new MessageEmbed()
-            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
             .setColor("RED")
             .setTitle(`${lang(author, "error")} ${lang(author, "noprefix")}`)
         return messageCreate.reply({embeds: [noPrefix]})
@@ -15,14 +15,14 @@ async function changePrefix(messageCreate, author, prefixo, lang) {
         if(!checker) {
             await userSchema.findOneAndUpdate({_id: author.id}, {_id: author.id, prefix: prefixo}, {upsert: true})
             const redo = new MessageEmbed()
-                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                 .setColor("GREEN")
                 .setTitle(`${lang(author, "error")} ${lang(author, "redo-noreg")}`)
             return messageCreate.reply({embeds: [redo]})
         } else {
             await userSchema.findOneAndUpdate({_id: author.id}, {_id: author.id, prefix: prefixo}, {upsert: true})
             const changed = new MessageEmbed()
-                .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                 .setColor("GREEN")
                 .setTitle(`${lang(author, "success")} ${lang(author, "prefix-changed")}`)
                 .setDescription(`${lang(author, "prefix-new").replace("{prefix}", prefixo)}`)

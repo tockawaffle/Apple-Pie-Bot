@@ -5,6 +5,8 @@ const
 
 module.exports = {
     aliases: ["decrypthis"],
+    description: "Decrypts your stored password",
+    category: "Security",
     run: async(client, messageCreate, args) => {
         const 
             {author} = messageCreate,

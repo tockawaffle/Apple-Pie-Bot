@@ -5,6 +5,8 @@ const
 
 module.exports = {
     aliases: ["enc", "guard"],
+    description: "Encrypts your password",
+    category: "Security",
     run: async(client, messageCreate, args) => {
 
         const 

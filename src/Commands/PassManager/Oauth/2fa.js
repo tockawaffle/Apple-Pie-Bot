@@ -9,6 +9,8 @@ const
 
 module.exports = {
     aliases: ["oauth"],
+    description: "Manage your 2FA",
+    category: "Security",
     run: async(client, messageCreate, args) => {
         const 
             {author} = messageCreate,
@@ -22,7 +24,7 @@ module.exports = {
                 catch (error) { await errorHandle(messageCreate, author, error) }
             } else if(!args[0]) {
                 const testEmbed = new MessageEmbed()
-                    .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+                    .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
                     .setDescription(lang(author, "oauth-setup-noargs"))
                     .setColor("RANDOM")
                 return await messageCreate.reply({embeds: [testEmbed]})

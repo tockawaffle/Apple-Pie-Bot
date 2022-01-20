@@ -1,4 +1,4 @@
-async function checkGuild(messageCreate, author, sendError = Boolean()) {
+async function checkGuild(messageCreate, author, sendError) {
 
     const 
         {guild} = messageCreate,

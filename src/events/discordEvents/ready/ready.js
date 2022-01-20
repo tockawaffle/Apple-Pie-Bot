@@ -5,7 +5,8 @@ const
 module.exports = async(client) => {
 
     db.then(console.log(`${client.user.username} - DataBase Connected.`))
-    loadUserLangs(client).then(console.log(`${client.user.username} - Languages Loaded\n${client.user.username} - Ready.`))
+    await loadUserLangs(client)
+    console.log(`${client.user.username} - Languages Loaded\n${client.user.username} - Ready.`)
 
     await setStatus(client); await setAvatar(client)
 }

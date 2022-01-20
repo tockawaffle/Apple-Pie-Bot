@@ -26,6 +26,9 @@ module.exports = async(client, messageCreate) => {
                     .split(/\s+/);
                 if(client.commands.get(cmdName)) {
                     messageCreate.lang = checker.language
+                    //if the language is english, set the nominal language to en_US, if the language is portuguese, set the nominal language to pt_BR
+                    if(messageCreate.lang === "english") messageCreate.nominalLang = "en_US"
+                    else if(messageCreate.lang === "portuguese") messageCreate.nominalLang = "pt_BR"
                     client.commands.get(cmdName)(client, messageCreate, cmdArgs)
                 }
                 else return messageCreate.react('<:Command_Not_Found:853407507682295849>') 

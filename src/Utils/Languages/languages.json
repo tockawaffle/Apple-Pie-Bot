@@ -72,6 +72,50 @@
             "english": "Reason:",
             "portugues": "Motivo:"
         },
+        "http_error-504": {
+            "english": "Gateway timeout",
+            "portugues": "Tempo Limite Excedido"
+        },
+        "http_error-400": {
+            "english": "Bad request",
+            "portugues": "Requisição Mal-Feita"
+        },
+        "http_error-401": {
+            "english": "Unauthorized Request (Try again tomorrow)",
+            "portugues": "Requisição Não Autorizada (Tente Novamente Amanhã)"
+        },
+        "http_error-403": {
+            "english": "Forbidden Request (Try again tomorrow)",
+            "portugues": "Requisição Proibida (Tente Novamente Amanhã)"
+        },
+        "http_error-404": {
+            "english": "Data not found",
+            "portugues": "Informações Não Encontradas"
+        },
+        "http_error-405": {
+            "english": "Method not allowed",
+            "portugues": "Método não autorizado"
+        },
+        "http_error-415": {
+            "english": "Unsupported media type",
+            "portugues": "Tipo de mídia não suportada"
+        },
+        "http_error-429": {
+            "english": "Rate limit exceeded (Try again in a couple of minutes)",
+            "portugues": "Limite de Requisições Excedido (Tente Novamente em alguns minutos)"
+        },
+        "http_error-500": {
+            "english": "Internal server error",
+            "portugues": "Erro interno de Servidor"
+        },
+        "http_error-502": {
+            "english": "Bad gateway",
+            "portugues": "Gateway Ruim"
+        },
+        "http_error-503": {
+            "english": "Service unavailable",
+            "portugues": "Serviço não disponivel"
+        },
  
         "separator": "uconfig",
         "prefix": {
@@ -1097,6 +1141,44 @@
         "steam_community_bans": {
             "english": "Community bans",
             "portugues": "Banimentos de Comunidade"
+        },
+
+        "separator19": "riot api",
+        "champ-err-notfound": {
+            "english": "Unavailable information.",
+            "portugues": "Informação Indisponível."
+        },
+        "champ-err-char-notfound": {
+            "english": "Sorry, could not find any champion by the name **{name}**!",
+            "portugues": "Desculpe, não consegui encontrar nenhum campeão com o nome **{name}**!"
+        },
+        "account-register-q1-sum": {
+            "english": "What is the **summoner name** of your account?",
+            "portugues": "Qual é o **nome do invocador** de sua conta?"
+        },
+        "account-register-q2-reg": {
+            "english": "What is the **region** of your account?",
+            "portugues": "Qual é a **região** de sua conta?"
+        },
+        "verification_code_sent": {
+            "english": "Please, use this verification code to confirm that the account \"{summonerName}\" is yours.\nVerification Code: {verificationCode}\nIf you don't know how to use this code, please refer to [this tutorial]().",
+            "portugues": "Por favor, use este código de verificação para confirmar que a conta \"{summonerName}\" é sua.\nCódigo de Verificação: {verificationCode}\nSe você não sabe como usar este código, por favor, consulte [este tutorial]()."
+        },
+        "verification_code_doesnt_match": {
+            "english": "The verification code doesn't match. Please, try again.",
+            "portugues": "O código de verificação não corresponde. Por favor, tente novamente."
+        },
+        "account_registered": {
+            "english": "Your account was registered successfully!",
+            "portugues": "Sua conta foi registrada com sucesso!"
+        },
+        "invalid_region": {
+            "english": "Invalid region.",
+            "portugues": "Região inválida."
+        },
+        "timeout": {
+            "english": "You took too long, please, redo this command.",
+            "portugues": "Você demorou muito, por favor, refaça este comando."
         }
     }
 }

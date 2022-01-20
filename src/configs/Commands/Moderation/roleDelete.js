@@ -9,7 +9,7 @@ async function roleDelete(messageCreate, author, role) {
 
     try {
         const deleteEmbed = new MessageEmbed()
-            .setAuthor(author.username, author.displayAvatarURL({dynamic: true}))
+            .setAuthor({name: author.username, url: author.displayAvatarURL({dynamic: true})})
             .setDescription(`${lang(author, "delete-role-desc").replace("{role}", role.name)}`)
             .setColor("RANDOM")
         messageCreate.reply({embeds: [deleteEmbed]})

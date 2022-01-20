@@ -7,7 +7,8 @@ const UserSchema = new mongoose.Schema({
     _id: reqString,
     language: reqString,
     prefix: reqString,
-    oauth: Object
+    oauth: Object,
+    league: Object
 })
 
 module.exports = mongoose.model("User", UserSchema)
