@@ -40,7 +40,7 @@ async function econfigRewards(messageCreate, rewardOptions, name, cost, image) {
                 .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                 .setDescription(`${lang(author, "econ-name")} **${name.replace(/[\#\-\#_\|#.]/g, " ")}**\n${lang(author, "econ-cost")} **${cost}** ${checker.coinName}`)
                 .setImage(image ? image: "https://cdn.discordapp.com/attachments/874792124099473478/886377525452881960/noimage2.png")
-                .setFooter(`${lang(author, "econ-reward-id").replace("{id}", id)}`)
+                .setFooter({text: `${lang(author, "econ-reward-id").replace("{id}", id)}`})
             return messageCreate.reply({embeds: [rewardAdded]})
         } else if(rewardOptions === "delete" || rewardOptions === "remove") {
             const toRemove = name

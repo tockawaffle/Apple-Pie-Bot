@@ -37,7 +37,7 @@ module.exports = {
                     .setAuthor({name: author.username, iconURL: author.displayAvatarURL({dynamic: true})})
                     .setDescription(`${userMainInfoText}`)
                     .setColor("RANDOM")
-                    .setFooter(name, guildMember.user.displayAvatarURL({dynamic: true}));
+                    .setFooter({text: name, iconURL: guildMember.user.displayAvatarURL({dynamic: true})});
                 
                 verify.push(userMainInfo)
             if(toget !== "Nothing.") {
@@ -55,7 +55,7 @@ module.exports = {
                                 .setColor("RANDOM")
                                 .setDescription(`${retrieveVSCText}`)
                                 .setThumbnail(await largeImageVSC)
-                                .setFooter(`${retrieveVSC.assets.smallText}`, `${await smallImageVSC}`)
+                                .setFooter({text: `${retrieveVSC.assets.smallText}`, iconURL: `${await smallImageVSC}`})
                         verify.push(vscEmbed)
                     } else {}
                     if(retrieve.Spotify){
@@ -69,7 +69,7 @@ module.exports = {
                                 .setColor("RANDOM")
                                 .setDescription(`${retrieveSpotifyText}`)
                                 .setThumbnail(await largeImageSpotify)
-                                .setFooter(`${retrieveSpotify.assets.smallText}`, `${await smallImageSpotify}`)
+                                .setFooter({text: `${retrieveSpotify.assets.smallText}`, iconURL: `${await smallImageSpotify}`})
                             verify.push(SpotifyEmbed)
                     } else {}
                     if(retrieve.otherElements) {
@@ -86,7 +86,7 @@ module.exports = {
                                 largeImageSpotify = otherElementsAssets.largeImage,
                                 smallImageSpotify = otherElementsAssets.smallImage;
                             otherElementsEmbed.setThumbnail(await largeImageSpotify)
-                            otherElementsEmbed.setFooter(`${otherElements.assets.smallText}`, `${await smallImageSpotify}`)
+                            otherElementsEmbed.setFooter({text: `${otherElements.assets.smallText}`, iconURL: `${await smallImageSpotify}`})
                             verify.push(otherElementsEmbed)
                         } else { verify.push(otherElementsEmbed) }
                     }
@@ -108,7 +108,7 @@ module.exports = {
                             smallImageSpotify = otherElementsAssets.smallImage;
 
                         otherElementsEmbed.setThumbnail(await largeImageSpotify)
-                        otherElementsEmbed.setFooter(`${otherElements.assets.smallText}`, `${await smallImageSpotify}`)
+                        otherElementsEmbed.setFooter({text: `${otherElements.assets.smallText}`, iconURL: `${await smallImageSpotify}`})
                         verify.push(otherElementsEmbed)
                     } else { verify.push(otherElementsEmbed) }
                 }

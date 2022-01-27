@@ -43,7 +43,7 @@
     "moment": "^2.29.1",
     "mongoose": "^6.1.7",
     "ms": "^2.1.3",
-    "node-fetch": "2.6.6",
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15",
     "openpgp": "^5.0.1",
     "qrcode": "1.4.4",
