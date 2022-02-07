@@ -12,7 +12,7 @@ async function resetPass(messageCreate) {
 
     if(userSchemaObj.oauth.verified === true) {
         const
-            passManObj = await passManSchema.findOne({userID: author.id});
+            passManObj = await passManSchema.findOne({_id: author.id});
         if(passManObj) { 
             const
                 filter = m => m.author.id === author.id,
