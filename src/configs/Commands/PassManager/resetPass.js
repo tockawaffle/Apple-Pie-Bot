@@ -9,8 +9,9 @@ async function resetPass(messageCreate) {
         passManSchema = require("@db/schemas/passManagerSchema"),
         userSchema = require("@db/schemas/userSchema"),
         userSchemaObj = await userSchema.findOne({_id: author.id});
-
-    if(userSchemaObj.oauth.verified === true) {
+    if(!userSchemaObj.oauth) {
+        throw new Error(lang(author, "respass-no-oauth").replace("{prefix}", messageCreate.prefix))
+    }else if(userSchemaObj.oauth.verified === true) {
         const
             passManObj = await passManSchema.findOne({_id: author.id});
         if(passManObj) { 

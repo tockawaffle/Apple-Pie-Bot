@@ -63,7 +63,7 @@ async function encryptThis(messageCreate) {
             } else {
                 const 
                     passphrase = `${collected.map(x => x.content)[0]}`,
-                    hashPass = hash(passphrase, 18), //This is where the fun begins. This hashes the password at "collected.map(x => x.content)[0]"
+                    hashPass = await hash(passphrase, 18), //This is where the fun begins. This hashes the password at "collected.map(x => x.content)[0]"
                     accName = collected.map(x => x.content)[1],
                     accPass = collected.map(x => x.content)[2],
                     { privateKey, publicKey } = await openpgp.generateKey({

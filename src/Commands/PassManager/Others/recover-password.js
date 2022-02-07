@@ -17,6 +17,7 @@ module.exports = {
         try {
             await resetPass(messageCreate)
         } catch (error) {
+            console.log(error)
             await errorHandle(messageCreate,author,error)
         }
     }

@@ -1060,6 +1060,10 @@
             "english": "An error occurred while trying to update your password.",
             "portugues": "Ocorreu um erro ao tentar atualizar sua senha."
         },
+        "respass-no-oauth": {
+            "english": "Sorry, you can only reset your password after setting up a 2fa!\nRun the command: {prefix}2fa to start!",
+            "portugues": "Desculpe, você pode apenas resetar sua senha após configurar um 2fa!\nUtilize o comando: {prefix}2fa para começar!"
+        },
 
         "separator17": "steam",
         "db_use_this_link": {
