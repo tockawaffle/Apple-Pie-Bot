@@ -1,7 +1,7 @@
 const 
     { errorHandle } = require("@configs/other/errorHandle"),
     { getInfoWithURL } = require("@configs/APIs/Steam/GetInfo/getInfoWithURL"),
-    { getInfoWithId } = require("@configs/APIs/Steam/GetInfo/getInfoWithID"),
+    { getInfoWithId } = require("@configs/APIs/Steam/GetInfo/getInfoWithId"),
     { getInfoWithDB } = require("@configs/APIs/Steam/GetInfo/getInfoWithDB");
 
 module.exports = {
