@@ -7,7 +7,7 @@ const
             const 
                 userId = users[0],
                 result = await userSchema.findOne({_id: userId});
-            userLanguage[userId] = result ? result.language : await userSchema.findOneAndUpdate({_id: userId, }, {_id: userId, language: 'english', prefix: process.env.PREFIX}, {upsert: true,})
+            userLanguage[userId] = await result ? await result.language : await userSchema.findOneAndUpdate({_id: userId, }, {_id: userId, language: 'english', prefix: process.env.PREFIX}, {upsert: true,})
         }
     },
     setUserLanguage = (user, languages) => {
