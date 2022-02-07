@@ -97,7 +97,7 @@ async function encryptThis(messageCreate) {
                     doneEmbed.setDescription(`${lang(author, "pass-enc-end2")}\`\`\`json\n${JSON.stringify(data)}\`\`\``)
                     await messageCreate.reply({embeds: [doneEmbed]})
                 } else if(functionToUse === "alreadyreg") {
-                    const compareHash = compare(passphrase, passSchema.password)
+                    const compareHash = await compare(passphrase, passSchema.password)
                     if(compareHash === false) {
                         //If the password is not the same as the compared hash, it'll return this and end the code before anything.
                         return await errorHandle(messageCreate, author, lang(author, "pass-wrong"))

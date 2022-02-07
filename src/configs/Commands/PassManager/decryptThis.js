@@ -38,7 +38,7 @@ async function decrypthis(messageCreate) {
         collector.on("end", async(c) => {
             const
                 passphraseInput = c.map(x => x.content)[0]
-                compareHash = compare(passphraseInput, passphrase)
+                compareHash = await compare(passphraseInput, passphrase)
             if(compareHash !== true) {return await errorHandle(messageCreate, author, lang(author, "pass-wrong").replace("{prefix}", messageCreate.prefix))}
             const 
                 accName = c.map(x => x.content)[1],
