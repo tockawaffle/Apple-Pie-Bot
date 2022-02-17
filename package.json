@@ -25,15 +25,12 @@
   },
   "homepage": "https://github.com/The-Crow-pleb/Apple-Pie-Bot#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.7.0",
-    "@discordjs/voice": "^0.8.0",
     "@vitalets/google-translate-api": "^7.0.0",
     "akaneko": "^5.2.2",
     "bcrypt": "^5.0.1",
     "bufferutil": "^4.0.6",
     "canvacord": "^5.2.3",
-    "coingecko-api": "^1.0.10",
-    "discord-player": "^5.2.2",
+    "crypto-js": "^4.1.1",
     "discord.js": "^13.6.0",
     "discord.js-rate-limiter": "^1.3.2",
     "djs-buttons-pagination": "^1.6.2",
@@ -44,6 +41,7 @@
     "mongoose": "^6.2.1",
     "ms": "^2.1.3",
     "node-fetch": "^2.6.7",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
     "openpgp": "^5.1.0",
     "qrcode": "^1.5.0",
@@ -51,7 +49,6 @@
     "steamapi": "^2.2.0",
     "utf-8-validate": "^5.0.8",
     "weather-js": "^2.0.0",
-    "ytdl-core": "^4.10.1",
     "zlib-sync": "^0.1.7"
   },
   "_moduleAliases": {
