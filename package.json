@@ -1,62 +1,29 @@
 {
-  "name": "apple-pie",
-  "version": "13.4.0",
-  "description": "This is an updated version of the Apple Pie Bot made for Discord, using the latest v13 update with newer interactions with the Discord API.",
-  "main": "src/bot.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/The-Crow-pleb/Apple-Pie-Bot.git"
-  },
-  "keywords": [
-    "Discord",
-    "Bot",
-    "v13",
-    "Apple",
-    "Pie",
-    "Apple",
-    "Pie",
-    "Tocka"
-  ],
-  "type": "commonjs",
-  "author": "тоска",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/The-Crow-pleb/Apple-Pie-Bot/issues"
-  },
-  "homepage": "https://github.com/The-Crow-pleb/Apple-Pie-Bot#readme",
-  "dependencies": {
-    "@vitalets/google-translate-api": "^7.0.0",
-    "akaneko": "^5.2.2",
-    "bcrypt": "^5.0.1",
-    "bufferutil": "^4.0.6",
-    "canvacord": "^5.2.3",
-    "crypto-js": "^4.1.1",
-    "discord.js": "^13.6.0",
-    "discord.js-rate-limiter": "^1.3.2",
-    "djs-buttons-pagination": "^1.6.2",
-    "dotenv": "^16.0.0",
-    "mathjs": "^10.1.1",
-    "module-alias": "^2.2.2",
-    "moment": "^2.29.2",
-    "mongoose": "^6.2.1",
-    "ms": "^2.1.3",
-    "node-fetch": "^2.6.7",
-    "nodemailer": "^6.7.2",
-    "nodemon": "^2.0.15",
-    "openpgp": "^5.1.0",
-    "qrcode": "^1.5.0",
-    "speakeasy": "^2.0.0",
-    "steamapi": "^2.2.0",
-    "utf-8-validate": "^5.0.8",
-    "weather-js": "^2.0.0",
-    "zlib-sync": "^0.1.7"
-  },
-  "_moduleAliases": {
-    "@db": "src/configs/db",
-    "@lang": "src/Utils/Languages/languages.js",
-    "@configs": "src/configs/Commands"
-  },
-  "devDependencies": {
-    "solc": "^0.8.11"
-  }
+    "name": "teste",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/bot.ts",
+    "scripts": {
+        "test": "nodemon ./tests/tests.ts",
+        "main": "nodemon main.ts",
+        "bot": "nodemon ./src/bot.ts",
+        "clip": "nodemon ./modules/cliprxyz/tests/test.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@discordjs/rest": "^0.5.0",
+        "@types/moment": "^2.13.0",
+        "cliprxyz": "^1.0.5",
+        "discord.js": "^13.8.1",
+        "dotenv": "^16.0.1",
+        "moment": "^2.29.4",
+        "node-fetch": "^2.6.7",
+        "wokcommands": "^1.5.3"
+    },
+    "devDependencies": {
+        "@types/nodemon": "^1.19.1",
+        "nodemon": "^2.0.19"
+    }
 }

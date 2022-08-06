@@ -1,0 +1,77 @@
+{
+    "languages": ["english", "portugues"],
+    "traduzido": {
+        "defaults": {
+            "success": {
+                "english": "✅ Success",
+                "portugues": "✅ Sucesso"
+            },
+            "error": {
+                "english": "❌ Error",
+                "portugues": "❌Erro"
+            },
+            "warning": {
+                "english": "❗ Warning",
+                "portugues": "❗ Aviso"
+            },
+            "info": {
+                "english": "ℹ Info",
+                "portugues": "ℹ Informação"
+            },
+            "debug": {
+                "english": "👩‍💻 Debug",
+                "portugues": "👩‍💻 Debug"
+            },
+            "unknown": {
+                "english": "⁉ Unknown",
+                "portugues": "⁉ Desconhecido"
+            }
+        },
+        "help": {
+            "help-title": {
+                "english": "Help Menu - {{bot_name}}",
+                "portugues": "Menu de Ajuda - {{bot_name}}"
+            },
+            "help-description": {
+                "english": "Hello! My name is {{bot_name}}, but that I think you already know!\n\nI'm a bot that might be able to entertain, help you manage your server, and do waaay more things!\n\nBut remember, I'm still at active development, so I might not be able to do everything I'm supposed to.\n\nIf you have any questions, feel free to open an Issue on my [GitHub repository](https://github.com/Tockawa/Apple-Pie-Bot)! I am also open to any feedback you might have! Just do the same as opening an Issue!\n\nI hope you enjoy using me!",
+                "portugues": "Olá! Meu nome é {{bot_name}}, mas provavelmente você já sabe disso!\n\nEu sou um bot que pode ser capaz de te divertir, ajudar você a gerenciar o seu servidor, e fazer muito, mas muito mais coisas!\n\nMas lembre-se, eu ainda estou em desenvolvimento, então eu não tenho certeza se eu irei ser capaz de fazer tudo o que eu posso, pois podem acontecer alguns bugs inesperados!\n\nSe você tiver alguma dúvida, ou quiser reportar algum bug ou dar algum feedback, ou sugestão para o bot, não hesite em abrir um Issue no meu [repositório do GitHub](https://github.com/Tockawa/Apple-Pie-Bot)!\n\nEspero que você tenha uma ótima experiência me utilizando!"
+            },
+            "help-footer": {
+                "english": "Made by тоска with 🖤",
+                "portugues": "Feito por тоска com 🖤"
+            },
+            "help-util-users-title": {
+                "english": "Utility - Users",
+                "portugues": "Utilidades - Usuários"
+            },
+            "help-util-servers-title": {
+                "english": "Utility - Servers",
+                "portugues": "Utilidades - Servidores"
+            },
+            "help-misc-title": {
+                "english": "Misc",
+                "portugues": "Diversos"
+            }
+        },
+        "languageCh": {
+            "error-invalid-language": {
+                "english": "Invalid language.\nPlease select a language from the list below:\n\n**English**\n**Portugues**",
+                "portugues": "Idioma inválido.\nPor favor, utilize um dos idiomas abaixo:\n\n**English**\n**Português**"
+            },
+            "success-language-changed": {
+                "english": "Language changed to **{0}** successfully!",
+                "portugues": "Idioma alterado para **{0}** com sucesso!"
+            }
+        },
+        "emoji": {
+            "success": {
+                "english": "Emoji Successfully Created!",
+                "portugues": "Emoji criado com sucesso!"
+            },
+            "error": {
+                "english":"Something bad happened. Please try again later.",
+                "portugues":"Algo deu errado. Por favor, tente novamente mais tarde."
+            }
+        }
+    }
+}
