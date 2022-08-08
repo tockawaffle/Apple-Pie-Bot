@@ -103,6 +103,8 @@ Required on the dotenv file:
 
 - [тоска](https://github.com/The-Crow-pleb)
 
+- [Tockawa](https://github.com/Tockawa)
+
 - [Dixon](https://twitter.com/riickdixon)
 
   
