@@ -47,7 +47,9 @@ Found any bugs/errors or better ways to help in the optimization? Feel free to o
 [Terms of Use and Privacy](https://www.tockanest.com/terms-of-use-and-privacy) //Offline
 
 ## Open Source Code - Licenses and Notifications
+
 [cliprxyz](https://github.com/Tockawa/Apple-Pie-Bot/blob/Apple-TS/modules/cliprxyz/LICENSE)
+
 [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands) • Coudn't find it's License, the link if for it's github page.
 
 ## Deployment - 👨‍💻
@@ -100,6 +102,7 @@ Required on the dotenv file:
 ## Authors - 🍦
 
 - [тоска](https://github.com/The-Crow-pleb)
+
 - [Dixon](https://twitter.com/riickdixon)
 
   
