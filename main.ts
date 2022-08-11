@@ -1,5 +1,5 @@
 import nodemon from "nodemon";
-import { MessageEmbed, WebhookClient, ColorResolvable } from "discord.js";
+import { EmbedBuilder, WebhookClient, ColorResolvable } from "discord.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -16,7 +16,7 @@ function sendWebhook(
         username: process.env.DISCORD_WEBHOOK_USERNAME,
         avatarURL: process.env.DISCORD_WEBHOOK_AVATAR_URL,
         embeds: [
-            new MessageEmbed({
+            new EmbedBuilder({
                 title: `${process.env.DISCORD_WEBHOOK_USERNAME} - Handler`,
                 description: message,
                 color: color ?? "RANDOM",

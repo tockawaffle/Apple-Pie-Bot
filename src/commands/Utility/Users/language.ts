@@ -1,7 +1,10 @@
-import { ICommand } from "wokcommands";
+import { ICommand, ICallbackObject } from "../../../../modules/wokcommands";
 import { User } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
-import lang, { setUserLanguage, loadUserSettings } from "../../../configs/languages/languages";
+import lang, {
+    setUserLanguage,
+    loadUserSettings,
+} from "../../../configs/languages/languages";
 import languages from "../../../configs/languages/translations.json";
 import userl from "../../../configs/db/models/user";
 
@@ -15,7 +18,7 @@ export default {
             name: "language",
             description: "Language to use (Portugues | English",
             required: true,
-            type: "STRING",
+            type: 3,
         },
     ],
 
@@ -30,7 +33,6 @@ export default {
                         "languageCh",
                         "error-invalid-language"
                     )}`,
-                    color: "RED",
                 },
                 interactionObj: interaction,
             });
@@ -54,7 +56,7 @@ export default {
                     "languageCh",
                     "success-language-changed"
                 ).replace("{0}", language)}`,
-                color: "GREEN",
+                color: 32768,
             },
             interactionObj: interaction,
         });

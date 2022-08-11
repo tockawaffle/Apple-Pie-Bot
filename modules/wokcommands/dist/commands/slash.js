@@ -53,7 +53,7 @@ module.exports = {
         else {
             allSlashCommands.push('None');
         }
-        const embed = new discord_js_1.MessageEmbed().addField('How to delete a slash command:', `${instance.getPrefix(guild)}slash <command-id>`);
+        const embed = new discord_js_1.EmbedBuilder().addField('How to delete a slash command:', `${instance.getPrefix(guild)}slash <command-id>`);
         for (let a = 0; a < allSlashCommands.length; ++a) {
             embed.addField(`Global slash commands:${a === 0 ? '' : ' (Continued)'}`, allSlashCommands[a]);
         }

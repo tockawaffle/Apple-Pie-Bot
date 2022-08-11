@@ -1,4 +1,6 @@
 import { Client, CommandInteraction, User } from "discord.js";
+import { ICallbackObject } from "../../../modules/wokcommands"
+
 import user from "../db/models/user";
 import translations from "./translations.json";
 
@@ -26,7 +28,7 @@ function setUserLanguage(user: User, languages: string) {
 }
 
 export default (
-    interaction: CommandInteraction | User,
+    interaction: ICallbackObject["interaction"] | User,
     commandName: any,
     textId: any
 ): string => {

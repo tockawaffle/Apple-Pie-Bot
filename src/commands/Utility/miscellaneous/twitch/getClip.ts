@@ -1,6 +1,6 @@
 import { dClip } from "../../../../../modules/cliprxyz";
 import { embedCreator } from "../../../../configs/functions/embedCreator";
-import { ICommand } from "wokcommands";
+import { ICommand } from "../../../../../modules/wokcommands";
 // import { modifyArgs } from "../../configs/functions/separateArgs"
 
 export default {
@@ -13,7 +13,7 @@ export default {
             name: "clip-url",
             description: "The url of the clip you want to download",
             required: true,
-            type: "STRING",
+            type: 3,
         },
     ],
 

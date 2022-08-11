@@ -1,4 +1,4 @@
-import { ICommand } from "wokcommands";
+import { ICommand } from "../../../../modules/wokcommands"
 import { User, CommandInteractionOptionResolver, ClientUser } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 
@@ -13,7 +13,7 @@ export default {
             name: "user",
             description: "The user you want to get the avatar of",
             required: false,
-            type: "USER",
+            type: 6,
         },
     ],
 
@@ -31,15 +31,14 @@ export default {
         }
         const { member } = interaction,
             { user } = member!,
-            u = user as User;
-        const options = interaction.options as CommandInteractionOptionResolver;
+            u = user as unknown as User;
+        const options = interaction.options as unknown as CommandInteractionOptionResolver;
         if (options!.data[0]) {
             const value = options!.data[0]!.user as User | ClientUser;
             return await sendAvatar(
                 value.username,
                 value.displayAvatarURL({
-                    format: "png",
-                    dynamic: true,
+                    forceStatic: true,
                     size: 2048,
                 }) as string
             );
@@ -49,8 +48,7 @@ export default {
                     description: `🔎${user.username}`,
                     image: {
                         url: u.displayAvatarURL({
-                            format: "png",
-                            dynamic: true,
+                            forceStatic: true,
                             size: 2048,
                         }),
                     },

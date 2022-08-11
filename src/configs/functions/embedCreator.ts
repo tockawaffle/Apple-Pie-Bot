@@ -1,9 +1,5 @@
-import {
-    MessageEmbed,
-    MessageEmbedOptions,
-    CommandInteraction,
-    User,
-} from "discord.js";
+import { EmbedBuilder, Embed, EmbedAuthorData, ColorResolvable, HexColorString } from "discord.js";
+import { ICallbackObject } from "../../../modules/wokcommands/typings";
 
 export async function embedCreator({
     embedData,
@@ -13,13 +9,13 @@ export async function embedCreator({
     embedData: {
         title?: string;
         description: string;
-        color?: string;
+        color?: Embed["color"];
         image?: { url: string; height?: number; width?: number };
         thumbnail?: { url: string };
         fields?: { name: string; value: string }[];
         footer?: { text: string; icon_url?: string };
     };
-    interactionObj?: CommandInteraction;
+    interactionObj?: ICallbackObject["interaction"];
     followup?: boolean;
 }): Promise<void> {
     // If there is not any of the required parameters, return error
@@ -31,17 +27,17 @@ export async function embedCreator({
         throw new Error("interactionObj is required for interaction");
     const { member } = interactionObj;
     const { user } = member!;
-    const u = user as User;
+    const u = user as ICallbackObject["user"];
 
     if (followup) {
         await interactionObj!.followUp({
             // Mention the user who sent the message
             content: `<@${u.id}>`,
             embeds: [
-                new MessageEmbed({
+                new EmbedBuilder({
                     author: {
                         name: u.username,
-                        iconURL: u.avatarURL({ format: "png", dynamic: true }),
+                        iconURL: u.avatarURL({ forceStatic: true }) as string,
                     },
                     title: title ?? "",
                     description,
@@ -50,17 +46,17 @@ export async function embedCreator({
                     image: image ?? undefined,
                     thumbnail: thumbnail ?? undefined,
                     footer: footer ? footer : undefined,
-                } as MessageEmbedOptions),
+                }),
             ],
         });
     } else {
         await interactionObj!.reply({
             embeds: [
-                new MessageEmbed({
+                new EmbedBuilder({
                     author: {
                         name: u.username,
-                        iconURL: u.avatarURL({ format: "png", dynamic: true }),
-                    },
+                        icon_url: u.avatarURL({ forceStatic: true }),
+                    } as EmbedAuthorData,
                     title: title ?? "",
                     description,
                     color: color ? color : 7419530,
@@ -68,7 +64,7 @@ export async function embedCreator({
                     image: image ?? undefined,
                     thumbnail: thumbnail ?? undefined,
                     footer: footer ? footer : undefined,
-                } as MessageEmbedOptions),
+                }),
             ],
         });
     }

@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/luisgbr1el/cliprxyz#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
-    "request": "^2.88.2"
+    "cheerio": "file:../../node_modules/cheerio",
+    "request": "file:../../node_modules/request"
   },
   "devDependencies": {
-    "@types/request": "^2.48.8",
-    "nodemon": "^2.0.18"
+    "@types/request": "file:../../node_modules/@types/request",
+    "nodemon": "file:../../node_modules/nodemon"
   }
 }

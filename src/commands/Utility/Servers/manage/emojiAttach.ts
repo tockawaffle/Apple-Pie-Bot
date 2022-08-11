@@ -1,5 +1,4 @@
-import { ICommand } from "wokcommands";
-import { MessageAttachment } from "discord.js";
+import { ICommand } from "../../../../../modules/wokcommands"
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
@@ -14,31 +13,28 @@ export default {
             name: "name",
             description: "The name of the emoji.",
             required: true,
-            type: "STRING",
+            type: 3,
         },
         {
             name: "attachment",
             description: "If you're using an attachment, use this.",
             required: true,
-            type: "ATTACHMENT",
+            type: 11,
         },
     ],
 
-    callback: async ({ interaction, client, args }) => {
+    callback: async ({ interaction, client, args,user }) => {
         const name = args[0] as string,
-            attachment = interaction.options.getAttachment(
-                "attachment"
-            ) as MessageAttachment,
-            { url } = attachment;
+            attachment = interaction.options.resolved?.attachments?.first()!.attachment
 
         try {
             const formatName = name.replace(/\s/g, "_"),
-                emoji = await interaction.guild?.emojis.create(url, formatName);
+                emoji = await interaction.guild?.emojis.create({attachment: attachment as Buffer, name: formatName});
 
             await embedCreator({
                 embedData: {
                     title: `${lang(
-                        interaction,
+                        user,
                         "defaults",
                         "success"
                     )} - ${lang(interaction, "emoji", "success")}`,

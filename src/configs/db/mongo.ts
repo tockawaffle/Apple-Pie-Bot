@@ -7,9 +7,9 @@ export async function connectMongoDB(client: Client): Promise<void> {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     } as ConnectOptions).then(() => {
-        console.log("Conectado à Base de Dados");
+        console.log("BOT > DATABASE CONNECTED");
     });
     await loadUserSettings(client).then(() => {
-        console.log("Traduções carregadas com sucesso")
+        console.log("BOT > TRANSLATIONS LOADED")
     })
 }

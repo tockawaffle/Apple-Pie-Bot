@@ -1,4 +1,4 @@
-import { ICommand } from "wokcommands";
+import { ICommand } from "../../../../../modules/wokcommands";  
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
@@ -14,13 +14,13 @@ export default {
             name: "name",
             description: "Name your emoji!",
             required: true,
-            type: "STRING",
+            type: 3,
         },
         {
             name: "value",
             description: "Either use a url, or a custom emoji.",
             required: true,
-            type: "STRING",
+            type: 3,
         },
     ],
     testOnly: true,
@@ -30,7 +30,7 @@ export default {
             guild = interaction.guild;
 
         try {
-            const emojiC = await guild?.emojis.create(emoji, name);
+            const emojiC = await guild?.emojis.create({attachment: emoji, name});
 
             await embedCreator({
                 embedData: {

@@ -71,7 +71,7 @@ module.exports = {
             });
         }
         const description = _ReactionListener_1.default.getHelp(command, instance, guild);
-        const embed = new discord_js_1.MessageEmbed()
+        const embed = new discord_js_1.EmbedBuilder()
             .setTitle(`${instance.displayName} ${instance.messageHandler.getEmbed(guild, 'HELP_MENU', 'TITLE')} - ${arg}`)
             .setDescription(description);
         if (instance.color) {

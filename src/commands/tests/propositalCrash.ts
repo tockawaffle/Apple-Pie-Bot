@@ -1,4 +1,4 @@
-import { ICommand } from "wokcommands";
+import { ICommand } from "../../../modules/wokcommands";
 
 export default {
     category: "Utility - Servers - Bot Owner.",

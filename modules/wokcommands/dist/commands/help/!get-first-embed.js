@@ -4,7 +4,7 @@ const discord_js_1 = require("discord.js");
 const getFirstEmbed = (message, instance) => {
     const { guild, member } = message;
     const { commandHandler: { commands }, messageHandler, } = instance;
-    const embed = new discord_js_1.MessageEmbed()
+    const embed = new discord_js_1.EmbedBuilder()
         .setTitle(`${instance.displayName} ${messageHandler.getEmbed(guild, 'HELP_MENU', 'TITLE')}`)
         .setDescription(messageHandler.getEmbed(guild, 'HELP_MENU', 'SELECT_A_CATEGORY'))
         .setFooter(`ID #${message.author?.id}`);

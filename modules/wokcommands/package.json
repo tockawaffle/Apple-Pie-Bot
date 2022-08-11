@@ -12,15 +12,15 @@
   "author": "Alexzander Flores, WornOffKeys.com",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.1.0",
-    "dotenv": "^8.2.0",
-    "mongoose": "^6.0.10"
+    "discord.js": "file:../../node_modules/discord.js",
+    "dotenv": "file:../../node_modules/dotenv",
+    "mongoose": "file:../../node_modules/mongoose"
   },
   "devDependencies": {
-    "@types/mongoose": "^5.10.1",
-    "@types/node": "^14.14.9",
-    "ts-node-dev": "^1.0.0",
-    "typescript": "^4.3.5"
+    "@types/mongoose": "file:../../node_modules/@types/mongoose",
+    "@types/node": "file:../../node_modules/@types/node",
+    "ts-node-dev": "file:../../node_modules/ts-node-dev",
+    "typescript": "file:../../node_modules/typescript"
   },
   "description": "An easy to use command handler for Discord.JS",
   "repository": {

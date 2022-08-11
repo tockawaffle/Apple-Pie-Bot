@@ -1,10 +1,5 @@
-import {
-    Client,
-    MessageActionRow,
-    MessageSelectMenu,
-    MessageSelectOptionData,
-} from "discord.js";
-import WOKCommands, { ICommand } from "wokcommands";
+import { Client } from "discord.js";
+import WOKCommands, { ICommand } from "../../../modules/wokcommands";
 import lang from "../../configs/languages/languages";
 
 export default {
@@ -60,7 +55,7 @@ export default {
             const { customId, values } = interaction;
             if (customId === "help_menu") {
                 const uAvatar = interaction.user.displayAvatarURL({
-                    dynamic: true,
+                    forceStatic: true,
                 });
                 switch (values[0]) {
                     case "util_users": {
@@ -78,21 +73,21 @@ export default {
                                         "help-util-users-title"
                                     ),
                                     description: utilUsersPage,
-                                    color: "RANDOM",
+                                    color: 7419530,
                                     footer: {
                                         text: lang(
                                             interaction.user,
                                             "help",
                                             "help-footer"
                                         ),
-                                        iconURL: client.users.cache
+                                        icon_url: client.users.cache
                                             .find(
                                                 (user) =>
                                                     user.id ===
                                                     "876578406144290866"
                                             )
                                             ?.displayAvatarURL({
-                                                dynamic: true,
+                                                forceStatic: true,
                                             }),
                                     },
                                 },
@@ -115,21 +110,21 @@ export default {
                                         "help-util-servers-title"
                                     ),
                                     description: utilServersPage,
-                                    color: "RANDOM",
+                                    color: 7419530,
                                     footer: {
                                         text: lang(
                                             interaction.user,
                                             "help",
                                             "help-footer"
                                         ),
-                                        iconURL: client.users.cache
+                                        icon_url: client.users.cache
                                             .find(
                                                 (user) =>
                                                     user.id ===
                                                     "876578406144290866"
                                             )
                                             ?.displayAvatarURL({
-                                                dynamic: true,
+                                                forceStatic: true,
                                             }),
                                     },
                                 },
@@ -146,7 +141,7 @@ export default {
                                         name: interaction.user.username,
                                         icon_url:
                                             interaction.user.displayAvatarURL({
-                                                dynamic: true,
+                                                forceStatic: true,
                                             }),
                                     },
                                     title: lang(
@@ -155,21 +150,21 @@ export default {
                                         "help-misc-title"
                                     ),
                                     description: miscPage,
-                                    color: "RANDOM",
+                                    color: 7419530,
                                     footer: {
                                         text: lang(
                                             interaction.user,
                                             "help",
                                             "help-footer"
                                         ),
-                                        iconURL: client.users.cache
+                                        icon_url: client.users.cache
                                             .find(
                                                 (user) =>
                                                     user.id ===
                                                     "876578406144290866"
                                             )
                                             ?.displayAvatarURL({
-                                                dynamic: true,
+                                                forceStatic: true,
                                             }),
                                     },
                                 },
@@ -181,64 +176,73 @@ export default {
             }
         });
     },
-    callback: async ({ client, interaction }) => {
-        let row = new MessageActionRow();
-        const options: MessageSelectOptionData[] = [
-            {
-                label: lang(interaction, "help", "help-util-users-title"),
-                value: "util_users",
-                emoji: "🔎",
-            },
-            {
-                label: lang(interaction, "help", "help-util-servers-title"),
-                value: "util_servers",
-                emoji: "🔎",
-            },
-            {
-                label: lang(interaction, "help", "help-misc-title"),
-                value: "misc",
-                emoji: "🔎",
-            },
-        ];
-
-        row.addComponents(
-            new MessageSelectMenu()
-                .setCustomId("help_menu")
-                .setMinValues(1)
-                .setMaxValues(1)
-                .setPlaceholder("Select a Page")
-                .addOptions(options)
-        );
-        const i = interaction;
-
-        await i.reply({
+    callback: async ({ client, interaction, user }) => {
+        await interaction.reply({
             embeds: [
                 {
                     author: {
                         name: interaction.user.username,
                         icon_url: interaction.user.displayAvatarURL({
-                            dynamic: true,
+                            forceStatic: true,
                         }),
                     },
-                    title: lang(interaction, "help", "help-title").replace(
+                    title: lang(user, "help", "help-title").replace(
                         "{{bot_name}}",
                         client!.user!.username
                     ),
-                    description: lang(
-                        interaction,
-                        "help",
-                        "help-description"
-                    ).replace("{{bot_name}}", client!.user!.username),
+                    description: lang(user, "help", "help-description").replace(
+                        "{{bot_name}}",
+                        client!.user!.username
+                    ),
                     footer: {
-                        text: lang(interaction, "help", "help-footer"),
-                        iconURL: client.users.cache
+                        text: lang(user, "help", "help-footer"),
+                        icon_url: client.users.cache
                             .find((user) => user.id === "876578406144290866")
-                            ?.displayAvatarURL({ dynamic: true }),
+                            ?.displayAvatarURL({ forceStatic: true }),
                     },
-                    color: "DARK_PURPLE",
+                    color: 7419530
                 },
             ],
-            components: [row],
+            components: [
+                {
+                    type: 1,
+                    components: [
+                        {
+                            type: 3,
+                            customId: "help_menu",
+                            options: [
+                                {
+                                    label: lang(
+                                        user,
+                                        "help",
+                                        "help-util-users-title"
+                                    ),
+                                    value: "util_users",
+                                    emoji: "🔎",
+                                },
+                                {
+                                    label: lang(
+                                        user,
+                                        "help",
+                                        "help-misc-title"
+                                    ),
+                                    value: "misc",
+                                    emoji: "🔎",
+                                },
+                                {
+                                    label: lang(
+                                        interaction,
+                                        "help",
+                                        "help-util-servers-title"
+                                    ),
+                                    value: "util_servers",
+                                    emoji: "🔎",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         });
     },
 } as ICommand;

@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import WOKCommands from "wokcommands";
+import WOKCommands from "../../../modules/wokcommands";
 import { loadUserSettings } from "../../configs/languages/languages";
 
 export default (client: Client, instance: WOKCommands) => {
