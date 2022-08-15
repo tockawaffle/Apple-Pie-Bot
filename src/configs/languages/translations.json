@@ -69,8 +69,50 @@
                 "portugues": "Emoji criado com sucesso!"
             },
             "error": {
-                "english":"Something bad happened. Please try again later.",
-                "portugues":"Algo deu errado. Por favor, tente novamente mais tarde."
+                "english": "Something bad happened. Please try again later.",
+                "portugues": "Algo deu errado. Por favor, tente novamente mais tarde."
+            }
+        },
+        "passwd": {
+            "restricted": {
+                "english": "This command has restricteda access. Only users within the bot's developer team can use this command.",
+                "portugues": "Este comando tem acesso restrito. Somente usuários dentro do time de desenvolvedores do bot podem usar este comando."
+            },
+            "invalid-dfa-code": {
+                "english": "Your Second Authentication Code is not valid. Please, try again.",
+                "portugues": "Seu código de segunda autenticação não é válido. Por favor, tente novamente."
+            },
+            "error": {
+                "english": "Something bad happened. Please try again later.",
+                "portugues": "Algo deu errado. Por favor, tente novamente mais tarde."
+            },
+            "success-desc": {
+                "english": "Keep your password safe! Set up a 2FA code to keep your password safe!\nYou can set it up using the command /2fa.",
+                "portugues": "Mantenha sua senha segura! Defina um código de 2FA para manter sua senha segura!\nVocê pode definir usando o comando /2fa."
+            },
+            "success": {
+                "english": "Your account was successfully stored!",
+                "portugues": "Sua conta foi armazenada com sucesso!"
+            },
+            "account-name": {
+                "english": "Account Name:",
+                "portugues": "Nome da Conta:"
+            },
+            "account-passwd": {
+                "english": "Account Password (Encrypted):",
+                "portugues": "Senha da Conta (Criptografada):"
+            },
+            "master-key": {
+                "english": "Master Key (Encrypted):",
+                "portugues": "Chave Mestre (Criptografada):"
+            },
+            "created-at": {
+                "english": "Account Created at:",
+                "portugues": "Conta Criada em:"
+            },
+            "waiting": {
+                "english": "Waiting for the encryption process to finish...",
+                "portugues": "Esperando o processo de criptografia terminar..."
             }
         }
     }

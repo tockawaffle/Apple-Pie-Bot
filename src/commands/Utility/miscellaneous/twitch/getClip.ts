@@ -1,6 +1,6 @@
 import { dClip } from "../../../../../modules/cliprxyz";
 import { embedCreator } from "../../../../configs/functions/embedCreator";
-import { ICommand } from "../../../../../modules/wokcommands";
+import { ICommand } from "../../../../../modules/wokcommands/typings";
 // import { modifyArgs } from "../../configs/functions/separateArgs"
 
 export default {

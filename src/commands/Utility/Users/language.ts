@@ -1,4 +1,4 @@
-import { ICommand, ICallbackObject } from "../../../../modules/wokcommands";
+import { ICommand, ICallbackObject } from "../../../../modules/wokcommands/typings";
 import { User } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 import lang, {
@@ -22,14 +22,14 @@ export default {
         },
     ],
 
-    callback: async ({ interaction, client, args }) => {
+    callback: async ({ interaction, client, args, user }) => {
         const language = args[0].toLowerCase();
         if (!languages.languages.includes(language)) {
             return await embedCreator({
                 embedData: {
                     title: "**❌ Error**",
                     description: `\n${lang(
-                        interaction,
+                        user,
                         "languageCh",
                         "error-invalid-language"
                     )}`,
@@ -37,22 +37,19 @@ export default {
                 interactionObj: interaction,
             });
         }
-        const { member } = interaction,
-            { user } = member!,
-            u = user as User;
         await userl.findOneAndUpdate(
-            { _id: u.id },
-            { _id: u.id, account_settings: { language: language } },
+            { _id: user.id },
+            { _id: user.id, account_settings: { language: language } },
             { upsert: true }
         );
-        setUserLanguage(u, language);
+        setUserLanguage(user, language);
         await loadUserSettings(client);
 
         return await embedCreator({
             embedData: {
                 title: "**✅ Success**",
                 description: `\n${lang(
-                    interaction,
+                    user,
                     "languageCh",
                     "success-language-changed"
                 ).replace("{0}", language)}`,

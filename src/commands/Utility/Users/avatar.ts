@@ -1,4 +1,4 @@
-import { ICommand } from "../../../../modules/wokcommands"
+import { ICommand } from "../../../../modules/wokcommands/typings"
 import { User, CommandInteractionOptionResolver, ClientUser } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 
@@ -38,7 +38,7 @@ export default {
             return await sendAvatar(
                 value.username,
                 value.displayAvatarURL({
-                    forceStatic: true,
+                    forceStatic: false,
                     size: 2048,
                 }) as string
             );
@@ -48,7 +48,7 @@ export default {
                     description: `🔎${user.username}`,
                     image: {
                         url: u.displayAvatarURL({
-                            forceStatic: true,
+                            forceStatic: false,
                             size: 2048,
                         }),
                     },

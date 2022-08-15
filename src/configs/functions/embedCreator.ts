@@ -5,6 +5,7 @@ export async function embedCreator({
     embedData,
     interactionObj,
     followup,
+    ephemeral
 }: {
     embedData: {
         title?: string;
@@ -17,12 +18,13 @@ export async function embedCreator({
     };
     interactionObj?: ICallbackObject["interaction"];
     followup?: boolean;
+    ephemeral?: boolean;
 }): Promise<void> {
     // If there is not any of the required parameters, return error
     if (!embedData) throw new Error("No embed data provided");
     const { title, description, color, fields, image, thumbnail, footer } =
         embedData;
-
+        console.log(interactionObj)
     if (!interactionObj)
         throw new Error("interactionObj is required for interaction");
     const { member } = interactionObj;
@@ -37,7 +39,7 @@ export async function embedCreator({
                 new EmbedBuilder({
                     author: {
                         name: u.username,
-                        iconURL: u.avatarURL({ forceStatic: true }) as string,
+                        iconURL: u.avatarURL({ forceStatic: false }) as string,
                     },
                     title: title ?? "",
                     description,
@@ -48,14 +50,16 @@ export async function embedCreator({
                     footer: footer ? footer : undefined,
                 }),
             ],
+            ephemeral: ephemeral ?? false,
         });
     } else {
+        
         await interactionObj!.reply({
             embeds: [
                 new EmbedBuilder({
                     author: {
                         name: u.username,
-                        icon_url: u.avatarURL({ forceStatic: true }),
+                        icon_url: u.avatarURL({ forceStatic: false }),
                     } as EmbedAuthorData,
                     title: title ?? "",
                     description,
@@ -66,6 +70,7 @@ export async function embedCreator({
                     footer: footer ? footer : undefined,
                 }),
             ],
+            ephemeral: ephemeral ?? false,
         });
     }
 }

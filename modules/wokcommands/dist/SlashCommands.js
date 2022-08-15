@@ -165,6 +165,8 @@ class SlashCommands {
             user: interaction.user,
         });
         if (reply) {
+            if(interaction.replied) return;
+            
             if (typeof reply === 'string') {
                 interaction.reply({
                     content: reply,

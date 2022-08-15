@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import WOKCommands, { ICommand } from "../../../modules/wokcommands";
+import WOKCommands, { ICommand } from "../../../modules/wokcommands/typings";
 import lang from "../../configs/languages/languages";
 
 export default {
@@ -55,7 +55,7 @@ export default {
             const { customId, values } = interaction;
             if (customId === "help_menu") {
                 const uAvatar = interaction.user.displayAvatarURL({
-                    forceStatic: true,
+                    forceStatic: false,
                 });
                 switch (values[0]) {
                     case "util_users": {
@@ -87,7 +87,7 @@ export default {
                                                     "876578406144290866"
                                             )
                                             ?.displayAvatarURL({
-                                                forceStatic: true,
+                                                forceStatic: false,
                                             }),
                                     },
                                 },
@@ -124,7 +124,7 @@ export default {
                                                     "876578406144290866"
                                             )
                                             ?.displayAvatarURL({
-                                                forceStatic: true,
+                                                forceStatic: false,
                                             }),
                                     },
                                 },
@@ -141,7 +141,7 @@ export default {
                                         name: interaction.user.username,
                                         icon_url:
                                             interaction.user.displayAvatarURL({
-                                                forceStatic: true,
+                                                forceStatic: false,
                                             }),
                                     },
                                     title: lang(
@@ -164,7 +164,7 @@ export default {
                                                     "876578406144290866"
                                             )
                                             ?.displayAvatarURL({
-                                                forceStatic: true,
+                                                forceStatic: false,
                                             }),
                                     },
                                 },
@@ -183,7 +183,7 @@ export default {
                     author: {
                         name: interaction.user.username,
                         icon_url: interaction.user.displayAvatarURL({
-                            forceStatic: true,
+                            forceStatic: false,
                         }),
                     },
                     title: lang(user, "help", "help-title").replace(
@@ -198,7 +198,7 @@ export default {
                         text: lang(user, "help", "help-footer"),
                         icon_url: client.users.cache
                             .find((user) => user.id === "876578406144290866")
-                            ?.displayAvatarURL({ forceStatic: true }),
+                            ?.displayAvatarURL({ forceStatic: false }),
                     },
                     color: 7419530
                 },
@@ -231,7 +231,7 @@ export default {
                                 },
                                 {
                                     label: lang(
-                                        interaction,
+                                        user,
                                         "help",
                                         "help-util-servers-title"
                                     ),

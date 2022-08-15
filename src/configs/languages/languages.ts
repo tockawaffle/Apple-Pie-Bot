@@ -1,5 +1,5 @@
 import { Client, CommandInteraction, User } from "discord.js";
-import { ICallbackObject } from "../../../modules/wokcommands"
+import { ICallbackObject } from "../../../modules/wokcommands";
 
 import user from "../db/models/user";
 import translations from "./translations.json";
@@ -27,20 +27,17 @@ function setUserLanguage(user: User, languages: string) {
     userLanguage[user.id] = languages;
 }
 
-export default (
-    interaction: ICallbackObject["interaction"] | User,
-    commandName: any,
-    textId: any
-): string => {
+export default (user: User, commandName: any, textId: any): string => {
     const t = translations.traduzido as any;
     let u: User;
-    if (interaction instanceof CommandInteraction) {
-        const { member } = interaction,
-            { user } = member!;
-        u = user as User;
-    } else if (interaction instanceof User) {
-        u = interaction;
-    }
+    if (!user) throw new Error(`argument "user" missing`);
+    if (user instanceof User) {
+        u = user;
+    } else
+        throw new Error(
+            `Invalid argument: user, not an instance of the class "User"`
+        );
+
     if (!t[commandName][textId]) {
         throw new Error(`Text ID: ${textId} is undefined`);
     }

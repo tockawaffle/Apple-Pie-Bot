@@ -1,4 +1,4 @@
-import { ICommand } from "../../../../../modules/wokcommands";  
+import { ICommand } from "../../../../../modules/wokcommands/typings";  
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
@@ -24,7 +24,7 @@ export default {
         },
     ],
     testOnly: true,
-    callback: async ({ interaction, client, args }) => {
+    callback: async ({ interaction, client, args, user }) => {
         const name = args[0] as string,
             emoji = args[1] as string,
             guild = interaction.guild;
@@ -35,10 +35,10 @@ export default {
             await embedCreator({
                 embedData: {
                     title: `${lang(
-                        interaction,
+                        user,
                         "defaults",
                         "success"
-                    )} - ${lang(interaction, "emoji", "success")}`,
+                    )} - ${lang(user, "emoji", "success")}`,
                     description: `${emojiC}`,
                 },
                 interactionObj: interaction,
