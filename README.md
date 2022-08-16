@@ -77,6 +77,8 @@ Required on the dotenv file:
     DISCORD_WEBHOOK_USERNAME={The username you wish to use}
     DISCORD_WEBHOOK_AVATAR_URL={The avatar URL you want the webhook to use}
     
+    AES_PREFIX={If you wish to use this bot encryption functionality, you'll need to write something here. Can be anything, such as: enc::}
+
     STEAM_TOKEN={YOUR STEAM API TOKEN} (Not in Use)
     RIOT_TOKEN={YOUR RIOT API TOKEN} (Not in Use)
 ```
