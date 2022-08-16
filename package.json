@@ -1,7 +1,7 @@
 {
-    "name": "teste",
-    "version": "1.0.0",
-    "description": "",
+    "name": "apple-pie",
+    "version": "1.1.0",
+    "description": "Just an usual Discord Bot, she might be a pie, but she's also a bot.",
     "main": "src/bot.ts",
     "scripts": {
         "test": "nodemon ./tests/tests.ts",
@@ -11,8 +11,9 @@
         "wokbuild": "tsc ./modules/wokcommands/typings.d.ts -w --outDir .modules/wokcommands/dist --rootDir .modules/wokcommands/src --skipLibCheck"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "тоска",
+    "contributors": ["Tockawa", "Dixon"],
+    "license": "MIT",
     "dependencies": {
         "@discordjs/rest": "^1.0.1",
         "@types/bcrypt": "^5.0.0",

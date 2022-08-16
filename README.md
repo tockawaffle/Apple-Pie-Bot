@@ -12,10 +12,9 @@ Apple Pie is a Discord bot with many functions, such as Moderation, RolePlay Com
 - Capable of giving you information about someone's League Stats.
 - Capable of helping you to manage your guild.
 - DM Commands!
-- Encrypt your passwords with OpenPGP Keys!
-- Custom Prefix for each user (Default is an _ )
+- Slash Commands Only!
 - Custom Language for each user (Supported now: English, Português do Brasil)
-- Private Database.
+- Private Database (MongoDB)
 - Server with plenty of RAM so that she can eat as many she wants. Heh.
 - Many Others!
 (For now, most of them are unavaiable, didn't had enough time to rewrite most of them in Typescript.)
@@ -23,7 +22,7 @@ Apple Pie is a Discord bot with many functions, such as Moderation, RolePlay Com
   
 ## Changes - 🚀
 
-From [v13](https://github.com/The-Crow-pleb/Apple-Pie-Bot/tree/Apple-Pie-v13) This bot saw some optimazations, changed the handler (Was using my own, now this bot is using [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands) as a handler, I changed some things myself on the package, nothing big though). There isn't much added to it yet, this is an work in progress.
+From [v13](https://github.com/The-Crow-pleb/Apple-Pie-Bot/tree/Apple-Pie-v13) This bot saw some optimazations, such as the change of it's handler (Was using my own, now this bot is using [WOKCommands](https://github.com/AlexzanderFlores/WOKCommands) as a handler, I changed some things myself on the package, nothing big though). There isn't much added to it yet, this is an work in progress.
 
 But still, the bot might not be finished yet, but expect more changes soon! 
 
@@ -62,14 +61,12 @@ To deploy this project, you can simply fork it, clone it and set the Enviroment 
 - - NodeJS v16
 - - Git
 - - An editor, such as VSC or others
-- - At least 1.5GB of RAM (for smaller communities you might need less RAM)
 - - Basic knowledge of JavaScript and Typescript (This is optional, but always good to have)
 
 Required on the dotenv file:
 (None of the fields bellow have a default setting, you *WILL* need them for this bot to work.)
 
 ```
-    
     DISCORD_TOKEN={YOUR BOT TOKEN}
     TEST_SERVERS={The test server ID}
     OWNER_ID={The ids of the developers}
@@ -116,3 +113,6 @@ Required on the dotenv file:
   
 >_And once you are awake, you shall remain awake **eternally.**_
 >― _Thus Spoke Zarathustra, Friedrich Wilhelm Nietzsche_
+
+>_Don’t walk in front of me… I may not follow. Don’t walk behind me… I may not lead. Walk beside me… just be my friend_
+>―_Albert Camus_

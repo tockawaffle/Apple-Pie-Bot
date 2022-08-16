@@ -200,7 +200,7 @@ export default {
                             .find((user) => user.id === "876578406144290866")
                             ?.displayAvatarURL({ forceStatic: false }),
                     },
-                    color: 7419530
+                    color: 7419530,
                 },
             ],
             components: [

@@ -1,5 +1,4 @@
-import { Client, CommandInteraction, User } from "discord.js";
-import { ICallbackObject } from "../../../modules/wokcommands";
+import { Client, User } from "discord.js";
 
 import user from "../db/models/user";
 import translations from "./translations.json";
