@@ -16,7 +16,7 @@ export default {
     options: [
         {
             name: "language",
-            description: "Language to use (Portugues | English",
+            description: "Language to use (Portugues | English)",
             required: true,
             type: 3,
         },

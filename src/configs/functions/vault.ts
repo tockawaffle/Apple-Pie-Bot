@@ -43,7 +43,7 @@ function deriveKeyFromPassword(
 export function encryptAesGcm(
     plainText: string | object,
     password: string
-): string | undefined {
+): string {
     try {
         if (typeof plainText === "object") {
             plainText = JSON.stringify(plainText);
@@ -97,10 +97,8 @@ export function encryptAesGcm(
         ]).toString("hex");
 
         return getEncryptedPrefix() + output;
-    } catch (error) {
-        console.error("Encryption failed!");
-        console.error(error);
-        return void 0;
+    } catch (error: any) {
+        return error.message as string;
     }
 }
 
@@ -109,10 +107,7 @@ export function encryptAesGcm(
  * @param cipherText
  * @param password
  */
-export function decryptAesGcm(
-    cipherText: string,
-    password: string
-): string | undefined {
+export function decryptAesGcm(cipherText: string, password: string): string {
     try {
         const algorithm: CipherGCMTypes = getAlgorithm();
 
@@ -120,10 +115,7 @@ export function decryptAesGcm(
 
         // If it's not encrypted by this, reject with undefined
         if (cipherTextParts.length !== 2) {
-            console.error(
-                "Could not determine the beginning of the cipherText. Maybe not encrypted by this method."
-            );
-            return void 0;
+            return "Could not determine the beginning of the cipherText. Maybe not encrypted by this method.";
         } else {
             cipherText = cipherTextParts[1];
         }
@@ -166,9 +158,7 @@ export function decryptAesGcm(
         } catch (error) {
             return decrypted;
         }
-    } catch (error) {
-        console.error("Decryption failed!");
-        console.error(error);
-        return void 0;
+    } catch (error: any) {
+        return error.message as string;
     }
 }
