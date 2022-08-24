@@ -47,9 +47,9 @@ Found any bugs/errors or better ways to help in the optimization? Feel free to o
 
 ## Open Source Code - Licenses and Notifications
 
-[cliprxyz](https://github.com/Tockawa/Apple-Pie-Bot/tree/Apple-TS/modules/cliprxyz) - [Github page - License](https://github.com/luisgbr1el/cliprxyz/blob/main/LICENSE)
+[cliprxyz](https://github.com/Tockawa/Apple-Pie-Bot/tree/Apple-TS/modules/cliprxyz) - [Github page / License](https://github.com/luisgbr1el/cliprxyz/blob/main/LICENSE)
 
-[WOKCommands](https://github.com/Tockawa/Apple-Pie-Bot/tree/Apple-TS/modules/wokcommands) - [Author](https://github.com/AlexzanderFlores/WOKCommands) • Coudn't find it's License, the link if for it's github page.
+[WOKCommands](https://github.com/Tockawa/Apple-Pie-Bot/tree/Apple-TS/modules/wokcommands) - [Author](https://github.com/AlexzanderFlores/WOKCommands) • Coudn't find it's License.
 
 [AesUtil](https://github.com/Tockawa/Apple-Pie-Bot/blob/Apple-TS/src/configs/functions/vault.ts) - [Author](https://gist.github.com/AndiDittrich/4629e7db04819244e843) • [Typescript Modification](https://gist.github.com/btxtiger/e8eaee70d6e46729d127f1e384e755d6)
 
