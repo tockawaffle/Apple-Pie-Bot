@@ -1,7 +1,7 @@
-import { ICommand } from "../../../../../modules/wokcommands/typings";
+import { CommandObject, CommandType } from "wokcommands";
 import { encryptAesGcm } from "../../../../configs/functions/vault";
 import { totp } from "speakeasy";
-import { User } from "discord.js";
+import { CommandInteraction, User } from "discord.js";
 import { hash } from "bcrypt";
 import moment from "moment";
 import passwdSchema from "../../../../configs/db/models/passwd";
@@ -53,7 +53,7 @@ export default {
     description:
         "Stores your password in a secure database (Restricted Command)",
     name: "passwd",
-    slash: true,
+    type: CommandType.SLASH,
     options: [
         {
             name: "master_key",
@@ -80,7 +80,7 @@ export default {
             required: false,
         },
     ],
-    callback: async ({ interaction, user, args }) => {
+    callback: async ({ interaction, user, args }: {interaction: CommandInteraction, user: User, args: string[]}) => {
         const allowed = ["876578406144290866"];
         if (!allowed.includes(user.id)) {
             interaction.reply(lang(user, "passwd", "restricted"));
@@ -206,4 +206,4 @@ export default {
             });
         }
     },
-} as ICommand;
+} as CommandObject;

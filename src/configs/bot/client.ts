@@ -1,4 +1,6 @@
 import { Partials, GatewayIntentBits } from "discord.js";
+import { Options, DefaultCommands } from "wokcommands";
+import { client } from "../../bot";
 import path from "path";
 
 const partials = [
@@ -28,25 +30,22 @@ export const clientOptions = {
 };
 
 export const wokOptions = {
+    client,
     commandsDir: path.join(__dirname, "../../commands"),
-    featuresDir: path.join(__dirname, "../../features"),
-    messagesPath: path.join(__dirname, "../languages/messages.json"),
     defaultLanguage: "english",
-    testServers: process.env.TEST_SERVERS,
+    testServers: process.env.SERVER_ID,
     ignoreBots: true,
     debug: true,
     typeScript: true,
     showWarns: true,
     ephemeral: true,
     botOwners: [process.env.OWNER_ID as string],
-    mongoUri: process.env.MONGO_URI,
     disabledDefaultCommands: [
-        "help",
-        "command",
-        "language",
-        "prefix",
-        "requiredrole",
-        "channelonly",
-        "slash",
+        DefaultCommands.ChannelCommand,
+        DefaultCommands.CustomCommand,
+        DefaultCommands.Prefix,
+        DefaultCommands.RequiredPermissions,
+        DefaultCommands.RequiredRoles,
+        DefaultCommands.ToggleCommand,
     ],
-};
+} as Options;

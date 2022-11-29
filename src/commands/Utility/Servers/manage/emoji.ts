@@ -1,4 +1,5 @@
-import { ICommand } from "../../../../../modules/wokcommands/typings";  
+import { Client, CommandInteraction, User } from "discord.js";
+import { CommandObject, CommandType } from "wokcommands";  
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
@@ -6,7 +7,7 @@ export default {
     category: "Utility - Servers",
     description:
         "Add emojis to your guild! You can use this command with a url or a custom emoji.",
-    slash: true,
+    type: CommandType.SLASH,
     name: "emoji",
     guildOnly: true,
     options: [
@@ -24,7 +25,7 @@ export default {
         },
     ],
     testOnly: true,
-    callback: async ({ interaction, client, args, user }) => {
+    callback: async ({ interaction, args, user }: {interaction: CommandInteraction, args: string[], user: User}) => {
         const name = args[0] as string,
             emoji = args[1] as string,
             guild = interaction.guild;
@@ -45,4 +46,4 @@ export default {
             });
         } catch (error) {}
     },
-} as ICommand;
+} as CommandObject;

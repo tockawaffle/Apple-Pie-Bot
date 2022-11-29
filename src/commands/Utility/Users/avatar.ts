@@ -1,12 +1,12 @@
-import { ICommand } from "../../../../modules/wokcommands/typings"
-import { User, CommandInteractionOptionResolver, ClientUser } from "discord.js";
+import { CommandObject, CommandType } from "wokcommands"
+import { User, CommandInteractionOptionResolver, ClientUser, CommandInteraction, Client } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 
 export default {
     category: "Utility - Users",
     description:
         "Works with mentions, if none, it'll return your profile picture.",
-    slash: true,
+    type: CommandType.SLASH,
     name: "avatar",
     options: [
         {
@@ -17,7 +17,7 @@ export default {
         },
     ],
 
-    callback: async ({ interaction, client }) => {
+    callback: async ({ interaction }: {interaction: CommandInteraction}) => {
         async function sendAvatar(username: string, avatar: string) {
             return await embedCreator({
                 embedData: {
@@ -57,4 +57,4 @@ export default {
             });
         }
     },
-} as ICommand;
+} as CommandObject;

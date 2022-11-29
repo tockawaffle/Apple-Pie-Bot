@@ -1,5 +1,5 @@
 import { EmbedBuilder, Embed, EmbedAuthorData, ColorResolvable, HexColorString } from "discord.js";
-import { ICallbackObject } from "../../../modules/wokcommands/typings";
+import { CommandUsage } from "wokcommands";
 
 export async function embedCreator({
     embedData,
@@ -16,7 +16,7 @@ export async function embedCreator({
         fields?: { name: string; value: string }[];
         footer?: { text: string; icon_url?: string };
     };
-    interactionObj?: ICallbackObject["interaction"];
+    interactionObj?: CommandUsage["interaction"];
     followup?: boolean;
     ephemeral?: boolean;
 }): Promise<void> {
@@ -29,7 +29,7 @@ export async function embedCreator({
         throw new Error("interactionObj is required for interaction");
     const { member } = interactionObj;
     const { user } = member!;
-    const u = user as ICallbackObject["user"];
+    const u = user as CommandUsage["user"];
 
     if (followup) {
         await interactionObj!.followUp({

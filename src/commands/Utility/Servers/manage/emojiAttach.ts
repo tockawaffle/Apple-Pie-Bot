@@ -1,11 +1,12 @@
-import { ICommand } from "../../../../../modules/wokcommands/typings";
+import { Client, CommandInteraction, User } from "discord.js";
+import { CommandObject, CommandType } from "wokcommands";
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
 export default {
     category: "Utility - Servers",
     description: "Works only with image attachments.",
-    slash: true,
+    type: CommandType.SLASH,
     name: "emojiattach",
     guildOnly: true,
     options: [
@@ -23,7 +24,7 @@ export default {
         },
     ],
 
-    callback: async ({ interaction, client, args, user }) => {
+    callback: async ({ interaction, args, user }: {interaction: CommandInteraction, args: string[], user: User}) => {
         const name = args[0] as string,
             attachment =
                 interaction.options.resolved?.attachments?.first()!.attachment;
@@ -50,4 +51,4 @@ export default {
             console.log(error);
         }
     },
-} as ICommand;
+} as CommandObject;

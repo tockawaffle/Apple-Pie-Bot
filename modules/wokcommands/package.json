@@ -1,30 +1,26 @@
 {
   "name": "wokcommands",
-  "version": "1.5.3",
-  "main": "dist/index.js",
+  "version": "2.0.3",
+  "main": "./dist/index.js",
   "typings": "./typings.d.ts",
   "scripts": {
-    "tsc": "tsc -w --outDir dist --rootDir src --skipLibCheck",
-    "compile": "tsc && node index.js",
-    "dev": "nodemon -e ts --exec \"npm run compile\""
+    "tsc": "tsc -w --outDir dist --rootDir src --skipLibCheck"
   },
   "keywords": [],
   "author": "Alexzander Flores, WornOffKeys.com",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "file:../../node_modules/discord.js",
-    "dotenv": "file:../../node_modules/dotenv",
-    "mongoose": "file:../../node_modules/mongoose"
+    "discord.js": "file:../node_modules/discord.js",
+    "dotenv": "file:../node_modules/dotenv",
+    "mongoose": "file:../node_modules/mongoose"
   },
   "devDependencies": {
-    "@types/mongoose": "file:../../node_modules/@types/mongoose",
-    "@types/node": "file:../../node_modules/@types/node",
-    "ts-node-dev": "file:../../node_modules/ts-node-dev",
-    "typescript": "file:../../node_modules/typescript"
+    "@types/mongoose": "file:../node_modules/@types/mongoose",
+    "@types/node": "file:../node_modules/@types/node",
+    "typescript": "file:../node_modules/typescript"
   },
-  "description": "An easy to use command handler for Discord.JS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexzanderFlores/WOKCommands"
+    "url": "https://github.com/AlexzanderFlores/WOKCommands-v2"
   }
 }

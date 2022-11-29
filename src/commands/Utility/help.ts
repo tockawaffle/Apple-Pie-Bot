@@ -1,15 +1,15 @@
-import { Client } from "discord.js";
-import WOKCommands, { ICommand } from "../../../modules/wokcommands/typings";
+import { Client, CommandInteraction, User } from "discord.js";
+import WOKCommands, { CommandObject, CommandType } from "wokcommands";
 import lang from "../../configs/languages/languages";
 
 export default {
-    slash: true,
+    type: CommandType.SLASH,
     name: "help",
     category: "Utility - Help",
     description: "Shows the help menu",
     init: (client: Client, instance: WOKCommands) => {
         client.on("interactionCreate", async (interaction) => {
-            if (!interaction.isSelectMenu()) return;
+            if (!interaction.isStringSelectMenu()) return;
 
             let utilUsers: string[] = [],
                 utilServers: string[] = [],
@@ -176,7 +176,7 @@ export default {
             }
         });
     },
-    callback: async ({ client, interaction, user }) => {
+    callback: async ({ client, interaction, user }: {client: Client, interaction: CommandInteraction, user: User}) => {
         await interaction.reply({
             embeds: [
                 {
@@ -245,4 +245,4 @@ export default {
             ],
         });
     },
-} as ICommand;
+} as CommandObject;

@@ -1,12 +1,13 @@
+import { Client, CommandInteraction } from "discord.js";
 import { dClip } from "../../../../../modules/cliprxyz";
 import { embedCreator } from "../../../../configs/functions/embedCreator";
-import { ICommand } from "../../../../../modules/wokcommands/typings";
+import { CommandObject, CommandType } from "wokcommands";
 // import { modifyArgs } from "../../configs/functions/separateArgs"
 
 export default {
     category: "Utility - Misc",
     description: "Gives you a link to download a clip from Twitch",
-    slash: true,
+    type: CommandType.SLASH,
     name: "twitch-clip",
     options: [
         {
@@ -17,7 +18,7 @@ export default {
         },
     ],
 
-    callback: async ({ interaction, client, args }) => {
+    callback: async ({ interaction, client, args }: {interaction: CommandInteraction, client: Client, args: string[]}) => {
         const down = await dClip({ clipId: args[0] });
 
         if (down.code !== 200)
@@ -51,4 +52,4 @@ export default {
             followup: true,
         });
     },
-} as ICommand;
+} as CommandObject;

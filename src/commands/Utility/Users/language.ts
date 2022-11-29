@@ -1,5 +1,5 @@
-import { ICommand, ICallbackObject } from "../../../../modules/wokcommands/typings";
-import { User } from "discord.js";
+import { CommandObject, CommandType } from "wokcommands";
+import { Client, CommandInteraction, User } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 import lang, {
     setUserLanguage,
@@ -12,17 +12,27 @@ export default {
     category: "Utility - Users",
     description: "Changes your language between portuguese and english",
     name: "language",
-    slash: true,
+    type: CommandType.SLASH,
     options: [
         {
             name: "language",
-            description: "Language to use (Portugues | English)",
+            description: "Language to use",
             required: true,
             type: 3,
+            choices: [
+                {
+                    name: "Português",
+                    value: "portugues",
+                },
+                {
+                    name: "English",
+                    value: "english",
+                }
+            ]
         },
     ],
 
-    callback: async ({ interaction, client, args, user }) => {
+    callback: async ({ interaction, client, args, user }: {interaction: CommandInteraction, client: Client, args: string[], user: User} ) => {
         const language = args[0].toLowerCase();
         if (!languages.languages.includes(language)) {
             return await embedCreator({
@@ -58,4 +68,4 @@ export default {
             interactionObj: interaction,
         });
     },
-} as ICommand;
+} as CommandObject;

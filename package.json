@@ -1,40 +1,43 @@
 {
     "name": "apple-pie",
-    "version": "1.1.0",
-    "description": "Just an usual Discord Bot, she might be a pie, but she's also a bot.",
+    "version": "1.1.5",
+    "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
     "main": "src/bot.ts",
     "scripts": {
-        "test": "nodemon ./tests/tests.ts",
-        "main": "nodemon main.ts",
-        "bot": "nodemon ./src/bot.ts",
-        "clip": "nodemon ./modules/cliprxyz/tests/test.ts",
-        "wokbuild": "tsc ./modules/wokcommands/typings.d.ts -w --outDir .modules/wokcommands/dist --rootDir .modules/wokcommands/src --skipLibCheck"
+        "build": "tsc",
+        "prestart": "npm run build",
+        "start": "node dist/bot.js",
+        "dev": "nodemon src/bot.ts"
     },
-    "keywords": [],
+    "keywords": ["discord", "bot", "typescript", "apple pie", "discord.js", "discordjs", "djs"],
     "author": "тоска",
-    "contributors": ["Tockawa", "Dixon"],
+    "contributors": [
+        "Tockawa",
+        "Dixon"
+    ],
     "license": "MIT",
     "dependencies": {
-        "@discordjs/rest": "^1.0.1",
+        "@discordjs/rest": "^1.4.0",
         "@types/bcrypt": "^5.0.0",
         "@types/moment": "^2.13.0",
-        "@types/node": "^18.7.1",
-        "bcrypt": "^5.0.1",
+        "@types/node": "^18.11.9",
+        "bcrypt": "^5.1.0",
         "cheerio": "^1.0.0-rc.12",
-        "discord.js": "^14.2.0",
-        "dotenv": "^16.0.1",
+        "discord.js": "^14.7.0",
+        "dotenv": "^16.0.3",
         "moment": "^2.29.4",
-        "node-fetch": "2.6.7",
+        "node-fetch": "^2.6.7",
         "request": "^2.88.2",
-        "speakeasy": "^2.0.0"
+        "speakeasy": "^2.0.0",
+        "wokcommands": "file:modules/wokcommands"
     },
     "devDependencies": {
         "@types/mongoose": "^5.11.96",
-        "@types/node": "^18.7.1",
+        "@types/node": "^18.11.9",
         "@types/nodemon": "^1.19.2",
         "@types/request": "^2.48.8",
         "@types/speakeasy": "^2.0.7",
-        "nodemon": "^2.0.19",
+        "nodemon": "^2.0.20",
         "ts-node-dev": "^2.0.0"
     }
 }

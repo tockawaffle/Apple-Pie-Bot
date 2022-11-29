@@ -4,4 +4,4 @@ I modified little bit of them for my own personal use, the respectives Licenses 
 Anyways, here's a list of the modified packages:
 
 [Cliprxyz](https://github.com/luisgbr1el/cliprxyz)
-[WOKCommands](https://github.com/AlexzanderFlores/WOKCommands)
+[WOKCommands](https://github.com/AlexzanderFlores/WOKCommands-v2)
