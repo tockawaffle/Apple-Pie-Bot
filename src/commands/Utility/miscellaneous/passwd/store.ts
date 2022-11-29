@@ -49,10 +49,8 @@ async function store(
 }
 
 export default {
-    category: "Utility - Password Manager",
     description:
         "Stores your password in a secure database (Restricted Command)",
-    name: "passwd",
     type: CommandType.SLASH,
     options: [
         {

@@ -4,10 +4,8 @@ import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
 export default {
-    category: "Utility - Servers",
     description: "Works only with image attachments.",
     type: CommandType.SLASH,
-    name: "emojiattach",
     guildOnly: true,
     options: [
         {

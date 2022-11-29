@@ -3,11 +3,9 @@ import { User, CommandInteractionOptionResolver, ClientUser, CommandInteraction,
 import { embedCreator } from "../../../configs/functions/embedCreator";
 
 export default {
-    category: "Utility - Users",
     description:
         "Works with mentions, if none, it'll return your profile picture.",
     type: CommandType.SLASH,
-    name: "avatar",
     options: [
         {
             name: "user",

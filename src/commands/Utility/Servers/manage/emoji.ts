@@ -4,11 +4,9 @@ import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
 export default {
-    category: "Utility - Servers",
     description:
         "Add emojis to your guild! You can use this command with a url or a custom emoji.",
     type: CommandType.SLASH,
-    name: "emoji",
     guildOnly: true,
     options: [
         {
@@ -24,7 +22,6 @@ export default {
             type: 3,
         },
     ],
-    testOnly: true,
     callback: async ({ interaction, args, user }: {interaction: CommandInteraction, args: string[], user: User}) => {
         const name = args[0] as string,
             emoji = args[1] as string,

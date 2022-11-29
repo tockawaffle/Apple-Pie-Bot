@@ -5,10 +5,8 @@ import { CommandObject, CommandType } from "wokcommands";
 // import { modifyArgs } from "../../configs/functions/separateArgs"
 
 export default {
-    category: "Utility - Misc",
     description: "Gives you a link to download a clip from Twitch",
     type: CommandType.SLASH,
-    name: "twitch-clip",
     options: [
         {
             name: "clip-url",

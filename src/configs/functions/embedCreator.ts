@@ -1,4 +1,4 @@
-import { EmbedBuilder, Embed, EmbedAuthorData, ColorResolvable, HexColorString } from "discord.js";
+import { EmbedBuilder, Embed, EmbedAuthorData } from "discord.js";
 import { CommandUsage } from "wokcommands";
 
 export async function embedCreator({

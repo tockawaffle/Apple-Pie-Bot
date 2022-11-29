@@ -9,9 +9,7 @@ import languages from "../../../configs/languages/translations.json";
 import userl from "../../../configs/db/models/user";
 
 export default {
-    category: "Utility - Users",
     description: "Changes your language between portuguese and english",
-    name: "language",
     type: CommandType.SLASH,
     options: [
         {

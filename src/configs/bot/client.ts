@@ -33,12 +33,7 @@ export const wokOptions = {
     client,
     commandsDir: path.join(__dirname, "../../commands"),
     defaultLanguage: "english",
-    testServers: process.env.SERVER_ID,
-    ignoreBots: true,
-    debug: true,
-    typeScript: true,
-    showWarns: true,
-    ephemeral: true,
+    testServers: process.env.TEST_SERVERS,
     botOwners: [process.env.OWNER_ID as string],
     disabledDefaultCommands: [
         DefaultCommands.ChannelCommand,

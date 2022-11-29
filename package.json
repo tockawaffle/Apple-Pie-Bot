@@ -6,10 +6,19 @@
     "scripts": {
         "build": "tsc",
         "prestart": "npm run build",
-        "start": "node dist/bot.js",
+        "build-wok": "tsc -p modules/wokcommands/tsconfig.json",
+        "start": "node dist/src/bot.js",
         "dev": "nodemon src/bot.ts"
     },
-    "keywords": ["discord", "bot", "typescript", "apple pie", "discord.js", "discordjs", "djs"],
+    "keywords": [
+        "discord",
+        "bot",
+        "typescript",
+        "apple pie",
+        "discord.js",
+        "discordjs",
+        "djs"
+    ],
     "author": "тоска",
     "contributors": [
         "Tockawa",
@@ -17,27 +26,22 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "@discordjs/rest": "^1.4.0",
+        "@discordjs/rest": "^1.3.0",
         "@types/bcrypt": "^5.0.0",
         "@types/moment": "^2.13.0",
         "@types/node": "^18.11.9",
+        "@types/speakeasy": "^2.0.7",
         "bcrypt": "^5.1.0",
         "cheerio": "^1.0.0-rc.12",
-        "discord.js": "^14.7.0",
+        "cliprxyz": "file:modules/cliprxyz",
+        "discord.js": "^14.6.0",
         "dotenv": "^16.0.3",
         "moment": "^2.29.4",
+        "mongoose": "^6.7.4",
         "node-fetch": "^2.6.7",
         "request": "^2.88.2",
         "speakeasy": "^2.0.0",
+        "typescript": "^4.7.4",
         "wokcommands": "file:modules/wokcommands"
-    },
-    "devDependencies": {
-        "@types/mongoose": "^5.11.96",
-        "@types/node": "^18.11.9",
-        "@types/nodemon": "^1.19.2",
-        "@types/request": "^2.48.8",
-        "@types/speakeasy": "^2.0.7",
-        "nodemon": "^2.0.20",
-        "ts-node-dev": "^2.0.0"
     }
 }

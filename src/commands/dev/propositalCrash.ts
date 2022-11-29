@@ -2,7 +2,6 @@ import { Client, CommandInteraction } from "discord.js";
 import { CommandObject, CommandType } from "../../../modules/wokcommands";
 
 export default {
-    category: "Utility - Servers - Bot Owner.",
     description: "Crashes the bot for testing purposes. (Bot Owner Only)",
     type: CommandType.SLASH,
     name: "crash",

@@ -1,12 +1,7 @@
 import { CommandObject, CommandType } from "wokcommands";
 import { REST, Routes } from "discord.js";
+import { CommandInteraction } from "discord.js";
 
-import {
-    User,
-    CommandInteraction,
-    GuildMember,
-    PermissionsBitField,
-} from "discord.js";
 export default {
     description: "Deletes a command or all commands registered to the bot.",
     type: CommandType.SLASH,
