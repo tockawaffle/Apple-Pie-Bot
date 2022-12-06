@@ -106,6 +106,7 @@ export interface CommandObject {
   callback: function
   type: CommandType
   init?: function
+  category?: string    
   description?: string
   descriptionLocalizations?: ApplicationCommand["descriptionLocalizations"],
   nameLocalizations?: ApplicationCommand["nameLocalizations"]

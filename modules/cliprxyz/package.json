@@ -2,7 +2,7 @@
   "name": "cliprxyz",
   "version": "1.0.5",
   "description": "Fetch infos from a Twitch clip with Clipr.xyz website.",
-  "main": "index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "nodemon tests/test.ts"
   },

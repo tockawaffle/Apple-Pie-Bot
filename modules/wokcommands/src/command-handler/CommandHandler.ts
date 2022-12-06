@@ -170,7 +170,6 @@ class CommandHandler {
                         );
                     }
                 } else {
-                    console.log(options)
                     this._slashCommands.create(
                         command.commandName,
                         description!,
