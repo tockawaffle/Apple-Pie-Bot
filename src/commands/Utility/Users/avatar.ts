@@ -6,10 +6,15 @@ export default {
     description:
         "Works with mentions, if none, it'll return your profile picture.",
     type: CommandType.SLASH,
+    category: "Utility - Users",
     options: [
         {
             name: "user",
             description: "The user you want to get the avatar of",
+            descriptionLocalizations: {
+                "en-US": "The user you want to get the avatar of",
+                "pt-BR": "O usuário que você deseja obter o avatar",
+            },
             required: false,
             type: 6,
         },

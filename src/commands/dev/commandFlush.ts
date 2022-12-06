@@ -4,8 +4,10 @@ import { CommandInteraction } from "discord.js";
 
 export default {
     description: "Deletes a command or all commands registered to the bot.",
+    category: "Dev",
     type: CommandType.SLASH,
     guildOnly: true,
+    testOnly: true,
     options: [
         {
             name: "command_id",
@@ -23,7 +25,7 @@ export default {
         interaction: CommandInteraction;
     }) => {
         const rest = new REST({ version: "10" }).setToken(
-            process.env.BOT_TOKEN as string
+            process.env.DISCORD_TOKEN as string
         );
 
         const commandId = args[0] as string;

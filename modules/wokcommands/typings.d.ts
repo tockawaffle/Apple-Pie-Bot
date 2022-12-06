@@ -1,11 +1,13 @@
 import {
   ApplicationCommandOption,
+  ApplicationCommand,
   Client,
   CommandInteraction,
   Guild,
   GuildMember,
   TextChannel,
   User,
+  LocalizationMap
 } from 'discord.js'
 
 import CommandType from './src/util/CommandType'
@@ -27,8 +29,8 @@ export default class WOK {
   constructor(options: Options)
 
   public get client(): Client
-  public get testServers(): string[]
-  public get botOwners(): string[]
+  public get testServers(): string[] | string
+  public get botOwners(): string[] | string
   public get cooldowns(): Cooldowns
   public get disabledDefaultCommands(): DefaultCommands[]
   public get validations(): Validations
@@ -105,6 +107,8 @@ export interface CommandObject {
   type: CommandType
   init?: function
   description?: string
+  descriptionLocalizations?: ApplicationCommand["descriptionLocalizations"],
+  nameLocalizations?: ApplicationCommand["nameLocalizations"]
   aliases?: string[]
   testOnly?: boolean
   guildOnly?: boolean

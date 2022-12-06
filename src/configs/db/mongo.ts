@@ -6,10 +6,10 @@ export async function connectMongoDB(client: Client): Promise<void> {
         keepAlive: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,
-    } as ConnectOptions).then(() => {
-        console.log("[ BOT ] > DATABASE CONNECTED");
+    } as ConnectOptions).then((c) => {
+        console.log(`[ Bot ] > Connected to the database "${c.connection.name}"!`);
     });
     await loadUserSettings(client).then(() => {
-        console.log("[ BOT ] > TRANSLATIONS LOADED")
+        console.log("[ Bot ] > Translations loaded!");
     })
 }

@@ -49,31 +49,47 @@ async function store(
 }
 
 export default {
-    description:
-        "Stores your password in a secure database (Restricted Command)",
+    description: "Stores your password in a secure database (Restricted Command)",
     type: CommandType.SLASH,
+    category: "Utility - Misc",
     options: [
         {
             name: "master_key",
             description: "The Key You'll use to encrypt the password you want",
+            descriptionLocalizations: {
+                "en-US": "The Key You'll use to encrypt the password you want",
+                "pt-BR": "A Chave que você usará para criptografar a senha que você deseja",
+            },
             type: 3,
             required: true,
         },
         {
             name: "account_name",
             description: "The name of the account you want to store.",
+            descriptionLocalizations: {
+                "en-US": "The name of the account you want to store.",
+                "pt-BR": "O nome da conta que você deseja armazenar.",
+            },
             type: 3,
             required: true,
         },
         {
             name: "password",
             description: "The password you want to store.",
+            descriptionLocalizations: {
+                "en-US": "The password you want to store.",
+                "pt-BR": "A senha que você deseja armazenar.",
+            },
             type: 3,
             required: true,
         },
         {
             name: "second_authentication_code",
             description: "If you have any, the code it'll show you.",
+            descriptionLocalizations: {
+                "en-US": "If you have any 2FA registered, use the code it'll show you",
+                "pt-BR": "Se você tiver algum 2FA cadastrado, coloque o código que ele lhe mostrará.",
+            },
             type: 10,
             required: false,
         },

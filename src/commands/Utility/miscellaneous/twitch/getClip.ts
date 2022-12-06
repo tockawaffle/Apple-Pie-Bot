@@ -7,10 +7,15 @@ import { CommandObject, CommandType } from "wokcommands";
 export default {
     description: "Gives you a link to download a clip from Twitch",
     type: CommandType.SLASH,
+    category: "Utility - Misc",
     options: [
         {
             name: "clip-url",
             description: "The url of the clip you want to download",
+            descriptionLocalizations: {
+                "en-US": "The url of the clip you want to download",
+                "pt-BR": "A url do clip que você quer baixar",
+            },
             required: true,
             type: 3,
         },

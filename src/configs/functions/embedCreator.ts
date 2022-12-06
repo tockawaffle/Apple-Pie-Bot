@@ -24,7 +24,6 @@ export async function embedCreator({
     if (!embedData) throw new Error("No embed data provided");
     const { title, description, color, fields, image, thumbnail, footer } =
         embedData;
-        console.log(interactionObj)
     if (!interactionObj)
         throw new Error("interactionObj is required for interaction");
     const { member } = interactionObj;

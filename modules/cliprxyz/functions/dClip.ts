@@ -1,4 +1,4 @@
-import cheerio, { HTMLParser2Options } from "cheerio";
+import { HTMLParser2Options, load } from "cheerio";
 import moment from "moment";
 
 export async function dClip({ clipId }: { clipId: string }): Promise<
@@ -45,7 +45,7 @@ export async function dClip({ clipId }: { clipId: string }): Promise<
     const req = fetch("https://clipr.xyz/" + clip_id);
     const res = await req;
     const body = await res.text();
-    const $ = cheerio.load(body, {
+    const $ = load(body, {
         xml: {
             normalizeWhitespace: true,
             decodeEntities: true,

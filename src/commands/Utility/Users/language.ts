@@ -10,11 +10,16 @@ import userl from "../../../configs/db/models/user";
 
 export default {
     description: "Changes your language between portuguese and english",
+    category: "Utility - User Config",
     type: CommandType.SLASH,
     options: [
         {
             name: "language",
-            description: "Language to use",
+            description: "Select your language",
+            descriptionLocalizations: {
+                "en-US": "Select your language",
+                "pt-BR": "Selecione seu idioma.",
+            },
             required: true,
             type: 3,
             choices: [

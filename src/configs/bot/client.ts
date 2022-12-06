@@ -1,6 +1,7 @@
-import { Partials, GatewayIntentBits } from "discord.js";
+import { Partials, GatewayIntentBits, REST } from "discord.js";
 import { Options, DefaultCommands } from "wokcommands";
 import { client } from "../../bot";
+import { CronJob } from "cron";
 import path from "path";
 
 const partials = [
@@ -29,12 +30,19 @@ export const clientOptions = {
     intents,
 };
 
+export const RESTdjs = new REST({ version: "10" }).setToken(
+    process.env.DISCORD_TOKEN as string
+);
+
 export const wokOptions = {
     client,
     commandsDir: path.join(__dirname, "../../commands"),
+    validations: {
+        syntax: path.join(__dirname, "../../validations/syntax"),
+    },
     defaultLanguage: "english",
-    testServers: process.env.TEST_SERVERS,
-    botOwners: [process.env.OWNER_ID as string],
+    testServers: [process.env.TEST_SERVERS],
+    botOwners: [process.env.OWNER_ID],
     disabledDefaultCommands: [
         DefaultCommands.ChannelCommand,
         DefaultCommands.CustomCommand,
@@ -44,3 +52,4 @@ export const wokOptions = {
         DefaultCommands.ToggleCommand,
     ],
 } as Options;
+

@@ -3,7 +3,7 @@
     "resolveJsonModule": true,
     "target": "esnext",
     "module": "commonjs",
-    "outDir": "../../dist/modules/wokcommands",
+    "outDir": "../dist/wokcommands",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
