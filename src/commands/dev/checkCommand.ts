@@ -8,6 +8,10 @@ export default {
         "en-US": "Enable the bot to check it's own commands and sync them.",
         "pt-BR": "Habilite o bot para verificar seus próprios comandos e sincronizá-los.",
     },
+    nameLocalizations: {
+        "en-US": "check-commands",
+        "pt-BR": "verificar-comandos",
+    },
     category: "Dev",
     type: CommandType.SLASH,
     guildOnly: true,

@@ -6,49 +6,46 @@ export default {
     type: CommandType.SLASH,
     name: "help",
     category: "Utility - Help",
+    descriptionLocalizations: {
+        "en-US": "Shows the help menu",
+        "pt-BR": "Mostra o menu de ajuda",
+    },
+    nameLocalizations: {
+        "en-US": "help",
+        "pt-BR": "ajuda",
+    },
     description: "Shows the help menu",
-    // options: [
-    //     {
-    //         name: "category",
-    //         description: "The category you want to see",
-    //         required: false,
-    //         type: 3,
-    //         choices: [
-    //             {
-    //                 name: "Utility for Users",
-    //                 value: "Utility - Users",
-    //             },
-    //             {
-    //                 name: "Utility for Servers",
-    //                 value: "Utility - Servers",
-    //             },
-    //             {
-    //                 name: "Miscellaneous",
-    //                 value: "Utility - Misc",
-    //             }
-    //         ]
-    //     }
-    // ],
     init: (client: Client, instance: WOKCommands) => {
         client.on("interactionCreate", async (interaction) => {
             if (!interaction.isStringSelectMenu()) return;
 
             let utilUsers: object[] = [],
                 utilServers: object[] = [],
-                misc: object[] = [];
+                misc: object[] = [],
+                games: object[] = [];
             async function getCommands(): Promise<{
                 utilUsersPage: string;
                 utilServersPage: string;
                 miscPage: string;
+                gamesPage: string;
             }> {
                 await instance.commandHandler.commands.forEach(
                     (command: Command) => {
-                        if (command.commandObject.category === "Utility - Users") {
+                        if (
+                            command.commandObject.category === "Utility - Users"
+                        ) {
                             utilUsers.push(command);
-                        } else if (command.commandObject.category === "Utility - Servers") {
+                        } else if (
+                            command.commandObject.category ===
+                            "Utility - Servers"
+                        ) {
                             utilServers.push(command);
-                        } else if (command.commandObject.category === "Utility - Misc") {
+                        } else if (
+                            command.commandObject.category === "Utility - Misc"
+                        ) {
                             misc.push(command);
+                        } else if (command.commandObject.category === "Games") {
+                            games.push(command);
                         }
                     }
                 );
@@ -68,10 +65,16 @@ export default {
                         return `/${command.commandName} - **${command.commandObject.description}**`;
                     })
                     .join("\n");
+                const gamesPage = games
+                    .map((command: any) => {
+                        return `/${command.commandName} - **${command.commandObject.description}**`;
+                    })
+                    .join("\n");
                 return {
                     utilUsersPage,
                     utilServersPage,
                     miscPage,
+                    gamesPage,
                 };
             }
             const { customId, values } = interaction;
@@ -161,10 +164,7 @@ export default {
                                 {
                                     author: {
                                         name: interaction.user.username,
-                                        icon_url:
-                                            interaction.user.displayAvatarURL({
-                                                forceStatic: false,
-                                            }),
+                                        icon_url: uAvatar,
                                     },
                                     title: lang(
                                         interaction.user,
@@ -194,11 +194,56 @@ export default {
                         });
                         break;
                     }
+                    case "games": {
+                        const { gamesPage } = await getCommands();
+                        await interaction.update({
+                            embeds: [
+                                {
+                                    author: {
+                                        name: interaction.user.username,
+                                        icon_url: uAvatar,
+                                    },
+                                    title: lang(
+                                        interaction.user,
+                                        "help",
+                                        "help-games-title"
+                                    ),
+                                    description: gamesPage,
+                                    color: 7419530,
+                                    footer: {
+                                        text: lang(
+                                            interaction.user,
+                                            "help",
+                                            "help-footer"
+                                        ),
+                                        icon_url: client.users.cache
+                                            .find(
+                                                (user) =>
+                                                    user.id ===
+                                                    "876578406144290866"
+                                            )
+                                            ?.displayAvatarURL({
+                                                forceStatic: false,
+                                            }),
+                                    },
+                                },
+                            ],
+                        });
+                        break;
+                    }
                 }
             }
         });
     },
-    callback: async ({ client, interaction, user }: {client: Client, interaction: CommandInteraction, user: User}) => {
+    callback: async ({
+        client,
+        interaction,
+        user,
+    }: {
+        client: Client;
+        interaction: CommandInteraction;
+        user: User;
+    }) => {
         await interaction.reply({
             embeds: [
                 {
@@ -260,6 +305,15 @@ export default {
                                     value: "util_servers",
                                     emoji: "🔎",
                                 },
+                                {
+                                    label: lang(
+                                        user,
+                                        "help",
+                                        "help-games-title"
+                                    ),
+                                    value: "games",
+                                    emoji: "🔎",
+                                }
                             ],
                         },
                     ],

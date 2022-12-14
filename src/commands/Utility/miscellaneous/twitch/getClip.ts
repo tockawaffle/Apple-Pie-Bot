@@ -8,6 +8,14 @@ export default {
     description: "Gives you a link to download a clip from Twitch",
     type: CommandType.SLASH,
     category: "Utility - Misc",
+    descriptionLocalizations: {
+        "en-US": "Gives you a link to download a clip from Twitch",
+        "pt-BR": "Te dá um link para baixar um clip do Twitch",
+    },
+    nameLocalizations: {
+        "en-US": "getclip",
+        "pt-BR": "baixarclip",
+    },
     options: [
         {
             name: "clip-url",
@@ -15,6 +23,10 @@ export default {
             descriptionLocalizations: {
                 "en-US": "The url of the clip you want to download",
                 "pt-BR": "A url do clip que você quer baixar",
+            },
+            nameLocalizations: {
+                "en-US": "clip-url",
+                "pt-BR": "url-do-clip",
             },
             required: true,
             type: 3,

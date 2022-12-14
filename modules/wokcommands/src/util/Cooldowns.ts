@@ -241,7 +241,7 @@ class Cooldowns {
     if (m > 0) time += `${m}m `;
     time += `${s}s`;
 
-    return errorMessage.replace("{TIME}", time);
+    return errorMessage.replaceAll("{TIME}", time);
   }
 }
 

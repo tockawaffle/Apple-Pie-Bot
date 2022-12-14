@@ -2,6 +2,8 @@ import {
     ApplicationCommandOption,
     ApplicationCommandOptionType,
     Client,
+    LocalizationMap,
+    ApplicationCommand
 } from "discord.js";
 
 class SlashCommands {
@@ -38,8 +40,7 @@ class SlashCommands {
             if (
                 option.name !== existing.name ||
                 option.type !== existing.type ||
-                option.description !== existing.description ||
-                option.descriptionLocalizations !== existing.descriptionLocalizations
+                option.description !== existing.description
             ) {
                 return true;
             }
@@ -51,7 +52,9 @@ class SlashCommands {
         name: string,
         description: string,
         options: ApplicationCommandOption[],
-        guildId?: string
+        descriptionLocalizations: ApplicationCommand["descriptionLocalizations"],
+        nameLocalizations: ApplicationCommand["nameLocalizations"],
+        guildId?: string,
     ) {
         const commands = await this.getCommands(guildId);
         if (!commands) {
@@ -63,22 +66,25 @@ class SlashCommands {
             const {
                 description: existingDescription,
                 options: existingOptions,
+                nameLocalizations: existingNameLocalizations,
+                descriptionLocalizations: existingDescriptionLocalizations,
             } = existingCommand;
+
             if (
                 description !== existingDescription ||
                 options.length !== existingOptions.length ||
-                this.areOptionsDifferent(options, existingOptions)
+                this.areOptionsDifferent(options, existingOptions) ||
+                nameLocalizations !== existingCommand.nameLocalizations ||
+                descriptionLocalizations !== existingDescriptionLocalizations ||
+                nameLocalizations !== existingNameLocalizations
             ) {
-                console.log(`[ Handler ] > Updating the command "${name}"`);
                 const upd = await commands.edit(existingCommand.id, {
                     description,
                     options,
+                    descriptionLocalizations: descriptionLocalizations!,
+                    nameLocalizations: nameLocalizations!,
                 });
-                if (upd) {
-                    return console.log(
-                        `[ Handler ] > Updated the command "${name}"`
-                    );
-                } else {
+                if (!upd) {
                     return console.log(
                         `[ Handler ] > Failed to update the command "${name}"`
                     );
@@ -93,6 +99,8 @@ class SlashCommands {
                 name,
                 description,
                 options,
+                descriptionLocalizations: descriptionLocalizations!,
+                nameLocalizations: nameLocalizations!,
             })
             .then(() => {
                 console.log(`[ Handler ] > Created the command "${name}"`);

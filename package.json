@@ -1,14 +1,15 @@
 {
     "name": "apple-pie",
-    "version": "1.1.7",
+    "version": "1.2.0",
     "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
     "main": "src/bot.ts",
     "scripts": {
-        "postinstall": "npm run build-wok && npm run build-cliprxy && npm run build",
-        "start": "node dist/src/bot.js",
+        "start": "ts-node src/bot.ts",
         "build": "tsc",
         "build-wok": "tsc -p modules/wokcommands/tsconfig.json",
         "build-cliprxy": "tsc -p modules/cliprxyz/tsconfig.json",
+        "build-all": "npm run build-wok && npm run build-cliprxy && npm run build", 
+        "start-built": "node dist/bot.js",
         "dev": "nodemon src/bot.ts"
     },
     "keywords": [
@@ -47,5 +48,29 @@
         "ts-node": "^10.9.1",
         "typescript": "^4.9.3",
         "wokcommands": "file:modules/wokcommands"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "node_modules",
+            "dist"
+        ],
+        "watch": [
+            "src",
+            "types",
+            "modules",
+            "package.json"
+        ],
+        "ext": "ts,json",
+        "exec": "npm run start",
+        "execMap": {
+            "ts": "ts-node"
+        },
+        "verbose": true,
+        "execOptions": {
+            "env": {
+                "NODE_ENV": "development"
+            }
+        }
+
     }
 }

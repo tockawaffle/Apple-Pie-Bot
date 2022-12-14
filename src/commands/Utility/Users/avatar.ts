@@ -7,6 +7,14 @@ export default {
         "Works with mentions, if none, it'll return your profile picture.",
     type: CommandType.SLASH,
     category: "Utility - Users",
+    nameLocalizations: {
+        "en-US": "avatar",
+        "pt-BR": "avatar",
+    },
+    descriptionLocalizations: {
+        "en-US": "Works with mentions, if none, it'll return your profile picture.",
+        "pt-BR": "Funciona com menções, se não tiver nenhuma, mostrará sua foto de perfil.",
+    },
     options: [
         {
             name: "user",
@@ -14,6 +22,10 @@ export default {
             descriptionLocalizations: {
                 "en-US": "The user you want to get the avatar of",
                 "pt-BR": "O usuário que você deseja obter o avatar",
+            },
+            nameLocalizations: {
+                "en-US": "user",
+                "pt-BR": "usuário",
             },
             required: false,
             type: 6,

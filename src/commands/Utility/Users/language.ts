@@ -11,10 +11,22 @@ import userl from "../../../configs/db/models/user";
 export default {
     description: "Changes your language between portuguese and english",
     category: "Utility - User Config",
+    nameLocalizations: {
+        "en-US": "language",
+        "pt-BR": "idioma",
+    },
+    descriptionLocalizations: {
+        "en-US": "Changes your language between portuguese and english",
+        "pt-BR": "Altera seu idioma entre português e inglês",
+    },
     type: CommandType.SLASH,
     options: [
         {
             name: "language",
+            nameLocalizations: {
+                "en-US": "language",
+                "pt-BR": "idioma",
+            },
             description: "Select your language",
             descriptionLocalizations: {
                 "en-US": "Select your language",

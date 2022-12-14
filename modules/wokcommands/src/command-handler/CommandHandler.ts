@@ -1,4 +1,6 @@
 import {
+    ApplicationCommand,
+    ApplicationCommandOptionData,
     Client,
     CommandInteraction,
     GuildMember,
@@ -11,7 +13,6 @@ import getAllFiles from "../util/get-all-files";
 import Command from "./Command";
 import SlashCommands from "./SlashCommands";
 import ChannelCommands from "./ChannelCommands";
-import CustomCommands from "./CustomCommands";
 import DisabledCommands from "./DisabledCommands";
 import PrefixHandler from "./PrefixHandler";
 import CommandType from "../util/CommandType";
@@ -33,7 +34,6 @@ class CommandHandler {
     private _commandsDir: string;
     private _slashCommands: SlashCommands;
     private _channelCommands: ChannelCommands;
-    private _customCommands: CustomCommands;
     private _disabledCommands: DisabledCommands;
     private _prefixes: PrefixHandler;
 
@@ -43,7 +43,6 @@ class CommandHandler {
         this._slashCommands = new SlashCommands(client);
         this._client = client;
         this._channelCommands = new ChannelCommands(instance);
-        this._customCommands = new CustomCommands(instance, this);
         this._disabledCommands = new DisabledCommands(instance);
         this._prefixes = new PrefixHandler(instance);
 
@@ -67,10 +66,6 @@ class CommandHandler {
         return this._slashCommands;
     }
 
-    public get customCommands() {
-        return this._customCommands;
-    }
-
     public get disabledCommands() {
         return this._disabledCommands;
     }
@@ -80,7 +75,6 @@ class CommandHandler {
     }
 
     private async readFiles() {
-        const defaultCommands = getAllFiles(path.join(__dirname, "./commands"));
         const files = getAllFiles(this._commandsDir);
         const validations = [
             ...this.getValidations(
@@ -89,7 +83,7 @@ class CommandHandler {
             ...this.getValidations(this._instance.validations?.syntax),
         ];
 
-        for (let fileData of [...defaultCommands, ...files]) {
+        for (let fileData of [...files]) {
             const { filePath } = fileData;
             const commandObject: CommandObject = fileData.fileContents;
 
@@ -159,6 +153,7 @@ class CommandHandler {
                 const options =
                     commandObject.options ||
                     this._slashCommands.createOptions(commandObject);
+                
 
                 if (testOnly) {
                     for (const guildId of this._instance.testServers) {
@@ -166,6 +161,8 @@ class CommandHandler {
                             command.commandName,
                             description!,
                             options,
+                            command.commandObject.descriptionLocalizations,
+                            command.commandObject.nameLocalizations,
                             guildId
                         );
                     }
@@ -173,7 +170,9 @@ class CommandHandler {
                     this._slashCommands.create(
                         command.commandName,
                         description!,
-                        options
+                        options,
+                        command.commandObject.descriptionLocalizations,
+                        command.commandObject.nameLocalizations
                     );
                 }
             }

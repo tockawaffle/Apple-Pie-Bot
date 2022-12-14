@@ -5,6 +5,14 @@ import { CommandInteraction } from "discord.js";
 export default {
     description: "Deletes a command or all commands registered to the bot.",
     category: "Dev",
+    nameLocalizations: {
+        "en-US": "command-flush",
+        "pt-BR": "limpar-comandos",
+    },
+    descriptionLocalizations: {
+        "en-US": "Deletes a command or all commands registered to the bot.",
+        "pt-BR": "Exclui um comando ou todos os comandos registrados no bot.",
+    },
     type: CommandType.SLASH,
     guildOnly: true,
     testOnly: true,

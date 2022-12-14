@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { Client, Routes } from "discord.js";
 import WOK, { Command } from "wokcommands";
 
 
@@ -22,7 +22,6 @@ export async function checkCommands({ client, instance }: { client: Client; inst
     const commandsToDelete = clientCommandsArray.filter(
         (command) => !instanceCommandsArray.includes(command)
     );
-    console.log(commandsToDelete);
     if (commandsToDelete.length > 0) {
         for (const command of commandsToDelete) {
             const c = clientCommands.map((commands) => {
@@ -31,6 +30,11 @@ export async function checkCommands({ client, instance }: { client: Client; inst
             });
             const commandToDelete = c.filter((command) => command !== undefined);
             await client.application!.commands.delete(commandToDelete[0]!.id);
+            await client.rest.delete(Routes.applicationCommand(client.user!.id, commandToDelete[0]!.id)).catch(async(err) => {
+                if(err.code === 404) {
+                    const r = await client.rest.delete(Routes.applicationGuildCommand(client.user!.id, commandToDelete[0]?.guildId as string, commandToDelete[0]!.id))
+                }
+            });
             return {
                 status: "success",
                 commands: commandsToDelete,

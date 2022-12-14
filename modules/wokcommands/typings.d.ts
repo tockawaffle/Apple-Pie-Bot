@@ -105,11 +105,11 @@ export interface CommandUsage {
 export interface CommandObject {
   callback: function
   type: CommandType
+  descriptionLocalizations: ApplicationCommand["descriptionLocalizations"],
+  nameLocalizations: ApplicationCommand["nameLocalizations"]
   init?: function
   category?: string    
   description?: string
-  descriptionLocalizations?: ApplicationCommand["descriptionLocalizations"],
-  nameLocalizations?: ApplicationCommand["nameLocalizations"]
   aliases?: string[]
   testOnly?: boolean
   guildOnly?: boolean

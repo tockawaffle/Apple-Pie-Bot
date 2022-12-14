@@ -52,6 +52,14 @@ export default {
     description: "Stores your password in a secure database (Restricted Command)",
     type: CommandType.SLASH,
     category: "Utility - Misc",
+    nameLocalizations: {
+        "pt-BR": "passwd",
+        "en-US": "passwd",
+    },
+    descriptionLocalizations: {
+        "pt-BR": "Armazena sua senha em um banco de dados seguro (Comando Restrito)",
+        "en-US": "Stores your password in a secure database (Restricted Command)",
+    },
     options: [
         {
             name: "master_key",
@@ -59,6 +67,10 @@ export default {
             descriptionLocalizations: {
                 "en-US": "The Key You'll use to encrypt the password you want",
                 "pt-BR": "A Chave que você usará para criptografar a senha que você deseja",
+            },
+            nameLocalizations: {
+                "en-US": "master_key",
+                "pt-BR": "chave_mestra"
             },
             type: 3,
             required: true,
@@ -70,6 +82,10 @@ export default {
                 "en-US": "The name of the account you want to store.",
                 "pt-BR": "O nome da conta que você deseja armazenar.",
             },
+            nameLocalizations: {
+                "en-US": "account_name",
+                "pt-BR": "nome_da_conta"
+            },
             type: 3,
             required: true,
         },
@@ -80,6 +96,10 @@ export default {
                 "en-US": "The password you want to store.",
                 "pt-BR": "A senha que você deseja armazenar.",
             },
+            nameLocalizations: {
+                "en-US": "password",
+                "pt-BR": "senha"
+            },
             type: 3,
             required: true,
         },
@@ -89,6 +109,10 @@ export default {
             descriptionLocalizations: {
                 "en-US": "If you have any 2FA registered, use the code it'll show you",
                 "pt-BR": "Se você tiver algum 2FA cadastrado, coloque o código que ele lhe mostrará.",
+            },
+            nameLocalizations: {
+                "en-US": "second_authentication_code",
+                "pt-BR": "codigo_de_segunda_autenticacao"
             },
             type: 10,
             required: false,
