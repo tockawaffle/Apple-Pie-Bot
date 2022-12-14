@@ -85,7 +85,6 @@ export default {
             });
         }
 
-        //Ask the mentioned member if he/she wants to marry the user
         const embed = new EmbedBuilder()
             .setTitle(lang(user!.user as User, "marry", "askMarryTitle"))
             .setDescription(
@@ -114,7 +113,7 @@ export default {
             );
         };
 
-        const collector = msg.createReactionCollector({ filter, time: 15000 });
+        const collector = msg.createReactionCollector({ filter, time: 120000 });
 
         collector.on(
             "collect",
@@ -192,7 +191,31 @@ export default {
 
                     return collector.stop();
                 }
+
+                //get timmeout
+                
             }
         );
+
+        collector.on("end", async(collected, reason) => {
+            if(reason === "time") {
+                const embed = new EmbedBuilder()
+                .setTitle(lang(interaction.user, "marry", "marryTimeoutTitle"))
+                .setDescription(
+                    `${lang(
+                        interaction.user,
+                        "marry",
+                        "marryTimeout"
+                    ).replace("{0}", mentionedMember.user.username)}`
+                )
+                .setColor("Random")
+                .setImage(selectRandomImage());
+
+                await interaction.editReply({
+                    content: `${interaction.user} 💔 ${mentionedMember.user}`,
+                    embeds: [embed],
+                });
+            }
+        })
     },
 } as CommandObject;

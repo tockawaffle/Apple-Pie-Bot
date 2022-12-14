@@ -207,6 +207,14 @@
             "marryDeniedTitle": {
                 "english": "Marry Proposal Denied!",
                 "portugues": "Proposta de Casamento Recusada!"
+            },
+            "marryTimeoutTitle": {
+                "english": "Marry Proposal Timeout!",
+                "portugues": "Proposta de Casamento Expirou!"
+            },
+            "marryTimeout": {
+                "english": "Unfortunately, {0} didn't answer your marriage proposal in time. . .\nI'm sorry.",
+                "portugues": "Infelizmente, {0} não respondeu sua proposta de casamento a tempo. . .\nDesculpe."
             }
         },
         "divorce": {
