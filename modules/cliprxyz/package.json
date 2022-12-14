@@ -24,7 +24,8 @@
   "homepage": "https://github.com/luisgbr1el/cliprxyz#readme",
   "dependencies": {
     "cheerio": "file:../node_modules/cheerio",
-    "request": "file:../node_modules/request"
+    "request": "file:../node_modules/request",
+    "moment": "file:../node_modules/moment"
   },
   "devDependencies": {
     "@types/request": "file:../node_modules/@types/request",
