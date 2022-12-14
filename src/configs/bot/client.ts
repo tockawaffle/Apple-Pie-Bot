@@ -1,7 +1,6 @@
 import { Partials, GatewayIntentBits, REST } from "discord.js";
 import { Options, DefaultCommands } from "wokcommands";
 import { client } from "../../bot";
-import { CronJob } from "cron";
 import path from "path";
 
 const partials = [

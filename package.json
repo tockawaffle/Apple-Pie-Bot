@@ -11,7 +11,7 @@
         "build-cliprxy": "tsc -p modules/cliprxyz/tsconfig.json",
         "build-all": "npm run build-wok && npm run build-cliprxy && npm run build",
         "start-built": "node dist/bot.js",
-        "dev": "nodemon src/bot.ts",
+        "dev": "ts-node src/bot.ts",
         "build-all-watch": "npm run build-wok --watch & npm run build-cliprxy --watch & npm run build --watch"
     },
     "keywords": [
@@ -31,6 +31,7 @@
     "license": "MIT",
     "dependencies": {
         "@discordjs/rest": "^1.3.0",
+        "@napi-rs/canvas": "^0.1.30",
         "@types/bcrypt": "^5.0.0",
         "@types/cron": "^2.0.0",
         "@types/node": "^18.11.15",
@@ -48,6 +49,7 @@
         "speakeasy": "^2.0.0",
         "ts-node": "^10.9.1",
         "typescript": "^4.9.4",
+        "undici": "^5.14.0",
         "wokcommands": "file:modules/wokcommands"
     },
     "nodemonConfig": {
@@ -62,7 +64,7 @@
             "package.json"
         ],
         "ext": "ts,json",
-        "exec": "npm run build-all-watch & npm run start",
+        "exec": "npm run dev",
         "execMap": {
             "ts": "ts-node"
         },

@@ -5,11 +5,13 @@ interface account extends Document {
     createdAt: Date;
     account_settings: {
         language: string;
+        customBackgroundName?: string;
+        customMarriageBackgroundName?: string;
     };
     marriedTo?: {
         user_id: string;
         user_name: string;
-        marryDate: Date | string;
+        marryDate: string;
         divorceTries?: number;
         nextDivorceTry?: Date;
         marriedAt: {
@@ -44,11 +46,13 @@ const account_schema = new Schema<account>({
     createdAt: { type: Date, required: true, default: Date.now },
     account_settings: {
         language: { type: String, required: true },
+        customBackgroundName: { type: String, required: false },
+        customMarriageBackgroundName: { type: String, required: false },
     },
     marriedTo: {
         user_id: { type: String, required: true },
         user_name: { type: String, required: true },
-        marryDate: { type: Date, required: true },
+        marryDate: { type: String, required: true },
         divorceTries: { type: Number, required: true },
         nextDivorceTry: { type: Date, required: true },
         marriedAt: {
