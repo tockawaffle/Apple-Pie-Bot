@@ -1,10 +1,10 @@
 {
     "name": "apple-pie",
-    "version": "1.2.0",
+    "version": "1.7.0",
     "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
     "main": "src/bot.ts",
     "scripts": {
-        "preinstall": "npm run build-all",
+        "preinstall": "npm install -g rimraf && npm run build-all && rimraf node_modules && npm i --ignore-scripts",
         "start": "node dist/src/bot.js",
         "build": "tsc",
         "build-wok": "tsc -p modules/wokcommands/tsconfig.json",
@@ -38,10 +38,10 @@
         "@types/speakeasy": "^2.0.7",
         "bcrypt": "^5.1.0",
         "cheerio": "^1.0.0-rc.12",
-        "cliprxyz": "file:modules/cliprxyz",
         "cron": "^2.1.0",
         "discord.js": "^14.6.0",
         "dotenv": "^16.0.3",
+        "module-alias": "^2.2.2",
         "moment": "^2.29.4",
         "mongoose": "^6.7.4",
         "node-fetch": "^2.6.7",
@@ -49,8 +49,7 @@
         "speakeasy": "^2.0.0",
         "ts-node": "^10.9.1",
         "typescript": "^4.9.4",
-        "undici": "^5.14.0",
-        "wokcommands": "file:modules/wokcommands"
+        "undici": "^5.14.0"
     },
     "nodemonConfig": {
         "ignore": [
@@ -74,5 +73,9 @@
                 "NODE_ENV": "development"
             }
         }
+    },
+    "_moduleAliases": {
+        "@wokcommands": "modules/wokcommands/",
+        "@cliprxyz": "modules/cliprxyz/"
     }
 }

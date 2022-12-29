@@ -1,7 +1,7 @@
 import { Client, CommandInteraction } from "discord.js";
-import { dClip } from "../../../../../modules/cliprxyz";
+import { dClip } from "@cliprxyz/";
 import { embedCreator } from "../../../../configs/functions/embedCreator";
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 // import { modifyArgs } from "../../configs/functions/separateArgs"
 
 export default {
@@ -13,7 +13,6 @@ export default {
         "pt-BR": "Te dá um link para baixar um clip do Twitch",
     },
     nameLocalizations: {
-        "en-US": "getclip",
         "pt-BR": "baixarclip",
     },
     options: [

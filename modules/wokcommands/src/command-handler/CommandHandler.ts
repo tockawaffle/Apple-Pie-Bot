@@ -153,8 +153,6 @@ class CommandHandler {
                 const options =
                     commandObject.options ||
                     this._slashCommands.createOptions(commandObject);
-                
-
                 if (testOnly) {
                     for (const guildId of this._instance.testServers) {
                         this._slashCommands.create(

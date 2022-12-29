@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import { CommandInteraction, EmbedBuilder, GuildMember } from "discord.js";
 import { selectRandomImage } from "../../../configs/commands/misc/hug";
 import lang from "../../../configs/languages/languages";

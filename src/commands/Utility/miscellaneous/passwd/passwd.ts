@@ -1,6 +1,5 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import { encryptAesGcm } from "../../../../configs/functions/vault";
-import { totp } from "speakeasy";
 import { CommandInteraction, User } from "discord.js";
 import { hash } from "bcrypt";
 import moment from "moment";
@@ -15,8 +14,8 @@ async function store(
 ) {
     if (!user || !passwd) throw new Error("Missing user or passwd");
     try {
-        const passwdEnc = encryptAesGcm(masterKey, passwd);
-        const passwdHash = await hash(passwd, 16);
+        const passwdEnc = encryptAesGcm(passwd, masterKey);
+        const passwdHash = await hash(masterKey, 16);
         const createdMoment = moment(new Date()).format("L");
         await passwdSchema.findOneAndUpdate(
             { _id: user },
@@ -54,7 +53,6 @@ export default {
     category: "Utility - Misc",
     nameLocalizations: {
         "pt-BR": "passwd",
-        "en-US": "passwd",
     },
     descriptionLocalizations: {
         "pt-BR": "Armazena sua senha em um banco de dados seguro (Comando Restrito)",
@@ -125,87 +123,13 @@ export default {
         }
 
         const masterKey = args[0];
-        const passwd = args[1];
-        const secondAuth = args[2];
+        const accName = args[1];
+        const passwd = args[2];
+        const secondAuth = args[3];
         const dbUser = await passwdSchema.findOne({ _id: user.id });
-        if (dbUser?.dfa.enabled) {
-            const verify = totp.verify({
-                secret: dbUser.dfa.b32Secret,
-                encoding: "base32",
-                token: secondAuth,
-            });
-            if (!verify)
-                return interaction.reply(
-                    lang(user, "passwd", "invalid-dfa-code")
-                );
-            else {
-                await interaction.reply(lang(user, "passwd", "waiting"));
-                const s = await store(user.id, masterKey, passwd, passwd);
-                if (s.code !== 200)
-                    return interaction.editReply(
-                        `${lang(user, "defaults", "error")} ${lang(
-                            user,
-                            "passwd",
-                            "error"
-                        )}\n${s.message}`
-                    );
-                else {
-                    return await interaction.editReply({
-                        embeds: [
-                            {
-                                title: lang(
-                                    user,
-                                    "passwd",
-                                    "success"
-                                ) as string,
-                                description: lang(
-                                    user,
-                                    "passwd",
-                                    "success-desc"
-                                ),
-                                fields: [
-                                    {
-                                        name: lang(
-                                            user,
-                                            "passwd",
-                                            "account-name"
-                                        ),
-                                        value: s.account_name as string,
-                                    },
-                                    {
-                                        name: lang(
-                                            user,
-                                            "passwd",
-                                            "account-passwd"
-                                        ),
-                                        value: s.account_passwd as string,
-                                    },
-                                    {
-                                        name: lang(
-                                            user,
-                                            "passwd",
-                                            "master-key"
-                                        ),
-                                        value: s.masterKey as string,
-                                    },
-                                    {
-                                        name: lang(
-                                            user,
-                                            "passwd",
-                                            "created-at"
-                                        ),
-                                        value: s.createdAt as string,
-                                    },
-                                ],
-                                color: 7419530,
-                            },
-                        ],
-                    });
-                }
-            }
-        }
+        
         interaction.reply(lang(user, "passwd", "waiting"));
-        const s = await store(user.id, masterKey, passwd, passwd);
+        const s = await store(user.id, masterKey, accName, passwd);
         if (s.code !== 200) {
             return await interaction.editReply(
                 lang(user, "passwd", "error") + `\n${s.message}`

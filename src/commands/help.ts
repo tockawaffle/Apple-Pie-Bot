@@ -1,5 +1,5 @@
 import { Client, CommandInteraction, User } from "discord.js";
-import WOKCommands, { Command, CommandObject, CommandType } from "wokcommands";
+import WOKCommands, { Command, CommandObject, CommandType } from "@wokcommands/";
 import lang from "../configs/languages/languages";
 
 export default {
@@ -11,7 +11,6 @@ export default {
         "pt-BR": "Mostra o menu de ajuda",
     },
     nameLocalizations: {
-        "en-US": "help",
         "pt-BR": "ajuda",
     },
     description: "Shows the help menu",

@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import { CommandInteraction, EmbedBuilder, GuildMember } from "discord.js";
 import { selectRandomImage } from "../../../configs/commands/misc/kiss";
 import lang from "../../../configs/languages/languages";
@@ -8,7 +8,6 @@ export default {
     category: "Games",
     type: CommandType.SLASH,
     nameLocalizations: {
-        "en-US": "kiss",
         "pt-BR": "beijar",
     },
     descriptionLocalizations: {

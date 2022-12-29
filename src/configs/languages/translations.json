@@ -87,7 +87,7 @@
         },
         "passwd": {
             "restricted": {
-                "english": "This command has restricteda access. Only users within the bot's developer team can use this command.",
+                "english": "This command has restricted access. Only users within the bot's developer team can use this command.",
                 "portugues": "Este comando tem acesso restrito. Somente usuários dentro do time de desenvolvedores do bot podem usar este comando."
             },
             "invalid-dfa-code": {
@@ -125,6 +125,60 @@
             "waiting": {
                 "english": "Waiting for the encryption process to finish...",
                 "portugues": "Esperando o processo de criptografia terminar..."
+            }
+        },
+        "decr": {
+            "decr_restricted": {
+                "english": "This command is restricted because of it's insecure nature. Only selected users can use this command.",
+                "portugues": "Este comando é restrito por sua natureza insegura. Somente usuários selecionados podem usar este comando."
+            },
+            "decr_doesnt_exist": {
+                "english": "You don't have any account stored within this bot.",
+                "portugues": "Você não tem nenhuma conta armazenada neste bot."
+            },
+            "decr_modal_title": {
+                "english": "Account Decryption.",
+                "portugues": "Descriptografia de Conta."
+            },
+            "decr_modal_masterkey_label": {
+                "english": "Master Key",
+                "portugues": "Chave Mestre"
+            },
+            "decr_modal_masterkey_placeholder": {
+                "english": "Master key used to encrypt the password",
+                "portugues": "Chave Mestra utilizada para criptografar a senha"
+            },
+            "decr_modal_accountname_label": {
+                "english": "Account Name",
+                "portugues": "Nome da Conta"
+            },
+            "decr_modal_accountname_placeholder": {
+                "english": "The account you want the password of",
+                "portugues": "O nome da conta que você deseja a senha"
+            },
+            "decr_modal_2fa_label": {
+                "english": "2FA Code",
+                "portugues": "Código de 2FA"
+            },
+            "decr_modal_2fa_placeholder": {
+                "english": "2FA Code",
+                "portugues": "Código de 2FA"
+            },
+            "decr_account_doesnt_exist": {
+                "english": "The account you are trying to decrypt doesn't exist.",
+                "portugues": "A conta que você está tentando descriptografar não existe."
+            },
+            "decr_invalid_masterkey": {
+                "english": "Invalid/Wrong master key, please try again.\nRemaining attempts: {0}",
+                "portugues": "Chave Mestra inválida/errada, por favor tente novamente.\nTentativas restantes: {0}"
+            },
+            "decr_success": {
+                "english": "Account Decrypted successfully!",
+                "portugues": "Senha da Conta descriptografada com sucesso!"
+            },
+            "decr_success_desc": {
+                "english": "**Account Name:** {0}\n**Account Password:** ||{1}||",
+                "portugues": "**Nome da Conta:** {0}\n**Senha da Conta:** ||{1}||"
             }
         },
         "dice": {
@@ -269,6 +323,12 @@
             "forceDivorce": {
                 "english": "It's the third time you try to divorce {0} in a row without that person accepting your proposal.\nI'm not going to chain you to your marriage, so I'm going to use my powers to force your divorce.\nI'm sorry.",
                 "portugues": "É a terceira vez seguida que você tenta se divorciar de {0} sem que a pessoa aceite sua proposta.\nEu não vou te prender ao seu casamento, então vou usar meus poderes para forçar seu divórcio.\nDesculpe."
+            }
+        },
+        "myMarriage": {
+            "notMarried": {
+                "english": "You are not married to anyone!",
+                "portugues": "Você não está casado com ninguém!"
             }
         }
     }

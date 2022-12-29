@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import {
     Client,
     CommandInteraction,
@@ -12,7 +12,6 @@ export default {
     description: "Hugs someone.",
     type: CommandType.SLASH,
     nameLocalizations: {
-        "en-US": "hug",
         "pt-BR": "abraçar",
     },
     descriptionLocalizations: {

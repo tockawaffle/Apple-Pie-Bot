@@ -1,4 +1,4 @@
-import {Command} from "wokcommands"
+import {Command} from "@wokcommands/"
 
 export default (command: Command) => {
     const {commandObject, commandName} = command
@@ -8,4 +8,3 @@ export default (command: Command) => {
         )
     }
 }
-

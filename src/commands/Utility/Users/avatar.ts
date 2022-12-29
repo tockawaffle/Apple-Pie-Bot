@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands"
+import { CommandObject, CommandType } from "@wokcommands/"
 import { User, CommandInteractionOptionResolver, ClientUser, CommandInteraction, Client } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 
@@ -8,7 +8,6 @@ export default {
     type: CommandType.SLASH,
     category: "Utility - Users",
     nameLocalizations: {
-        "en-US": "avatar",
         "pt-BR": "avatar",
     },
     descriptionLocalizations: {

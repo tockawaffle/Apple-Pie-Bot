@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import { CommandInteraction, Client } from "discord.js";
 import lang from "../../../configs/languages/languages";
 
@@ -6,7 +6,6 @@ export default {
     category: "Games",
     description: "Rolls a dice.",
     nameLocalizations: {
-        "en-US": "dice",
         "pt-BR": "dado",
     },
     descriptionLocalizations: {

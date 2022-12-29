@@ -1,7 +1,8 @@
 import { Partials, GatewayIntentBits, REST } from "discord.js";
-import { Options, DefaultCommands } from "wokcommands";
+import WOK, { Options, DefaultCommands } from "@wokcommands/";
 import { client } from "../../bot";
 import path from "path";
+import { Client } from "undici";
 
 const partials = [
     Partials.GuildMember,
@@ -37,7 +38,7 @@ export const wokOptions = {
     client,
     commandsDir: path.join(__dirname, "../../commands"),
     validations: {
-        syntax: path.join(__dirname, "../../validations/syntax"),
+        syntax: path.join(__dirname, "./validations/syntax"),
     },
     defaultLanguage: "english",
     testServers: [process.env.TEST_SERVERS],
@@ -51,4 +52,3 @@ export const wokOptions = {
         DefaultCommands.ToggleCommand,
     ],
 } as Options;
-

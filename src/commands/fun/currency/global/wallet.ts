@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import { CommandInteraction, Client, User, EmbedBuilder } from "discord.js";
 import user from "../../../../configs/db/models/user";
 import lang from "../../../../configs/languages/languages";
@@ -7,7 +7,6 @@ export default {
     category: "Currency",
     description: "Shows the amount of money you have in your wallet!",
     nameLocalizations: {
-        "en-US": "wallet",
         "pt-BR": "carteira",
     },
     descriptionLocalizations: {

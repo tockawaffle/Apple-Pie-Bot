@@ -1,5 +1,5 @@
 import { EmbedBuilder, Embed, EmbedAuthorData } from "discord.js";
-import { CommandUsage } from "wokcommands";
+import { CommandUsage } from "@wokcommands/";
 
 export async function embedCreator({
     embedData,

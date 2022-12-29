@@ -1,4 +1,4 @@
-import { CommandObject, CommandType } from "wokcommands";
+import { CommandObject, CommandType } from "@wokcommands/";
 import { Client, CommandInteraction, User } from "discord.js";
 import { embedCreator } from "../../../configs/functions/embedCreator";
 import lang, {
@@ -12,7 +12,6 @@ export default {
     description: "Changes your language between portuguese and english",
     category: "Utility - User Config",
     nameLocalizations: {
-        "en-US": "language",
         "pt-BR": "idioma",
     },
     descriptionLocalizations: {

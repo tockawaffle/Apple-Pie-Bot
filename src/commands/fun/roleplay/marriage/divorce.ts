@@ -1,4 +1,4 @@
-import { CommandObject, CommandType, CooldownTypes } from "wokcommands";
+import { CommandObject, CommandType, CooldownTypes } from "@wokcommands/";
 import {
     CommandInteraction,
     EmbedBuilder,

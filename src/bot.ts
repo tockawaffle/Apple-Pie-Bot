@@ -1,18 +1,12 @@
 import "dotenv/config";
+import 'module-alias/register';
+
 import { Client } from "discord.js";
-import { connectMongoDB } from "./configs/db/mongo";
-import { clientOptions, wokOptions, RESTdjs } from "./configs/bot/client";
-import WOK from "wokcommands";
+import { clientOptions } from "./configs/bot/client";
+import { registerDiscordEvents } from "./configs/bot/functions/registerEvents";
 export const client = new Client(clientOptions);
-wokOptions.client = client;
 
 (async () => {
-    client.on("ready", async () => {
-        await connectMongoDB(client);
-        new WOK(wokOptions);
-        console.log(`[ Bot ] > Bot started as "${client.user!.tag}"`);
-        client.rest = RESTdjs
-    });
-    
+    await registerDiscordEvents(client, "../events/discord");
     client.login(process.env.DISCORD_TOKEN);
 })();

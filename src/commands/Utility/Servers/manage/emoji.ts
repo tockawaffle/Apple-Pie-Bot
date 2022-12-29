@@ -1,5 +1,5 @@
 import { Client, CommandInteraction, User } from "discord.js";
-import { CommandObject, CommandType } from "wokcommands";  
+import { CommandObject, CommandType } from "@wokcommands/";  
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
 
@@ -7,7 +7,12 @@ export default {
     description:
         "Add emojis to your guild! You can use this command with a url or a custom emoji.",
     type: CommandType.SLASH,
-    guildOnly: true,
+    nameLocalizations: {
+        "pt-BR": "emoji"
+    },
+    descriptionLocalizations: {
+        "pt-BR": "Adicione emojis ao seu servidor! Você pode usar este comando com uma url ou um emoji customizado."
+    },
     category: "Utility - Servers",
     options: [
         {
@@ -50,6 +55,7 @@ export default {
         }
     ],
     callback: async ({ interaction, args, user }: {interaction: CommandInteraction, args: string[], user: User}) => {
+        
         const name = args[0] as string,
             guild = interaction.guild;
         try {
