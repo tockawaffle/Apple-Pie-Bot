@@ -4,7 +4,8 @@
     "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
     "main": "src/bot.ts",
     "scripts": {
-        "preinstall": "npm install -g rimraf && npm run build-all && rimraf node_modules && npm i --ignore-scripts",
+        "preinstall": "npm install -g rimraf && npm run build-all && npm run rimraf && npm i --ignore-scripts",
+        "rimraf": "rimraf node_modules",
         "start": "node dist/src/bot.js",
         "build": "tsc",
         "build-wok": "tsc -p modules/wokcommands/tsconfig.json",
