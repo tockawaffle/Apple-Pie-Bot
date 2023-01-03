@@ -1,5 +1,5 @@
 import { Client, Routes } from "discord.js";
-import WOK, { Command } from "wokcommands";
+import WOK, { Command } from "@wokcommands/";
 
 export async function checkCommands(client: Client, instance: any) {
     const i = instance as WOK;
