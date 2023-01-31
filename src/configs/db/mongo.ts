@@ -1,8 +1,9 @@
-import { connect, ConnectOptions } from "mongoose";
+import { connect, ConnectOptions, set } from "mongoose";
 import { loadUserSettings } from "../languages/languages";
 import { Client } from "discord.js";
 
 export async function connectMongoDB(client: Client): Promise<void> {
+    set("strictQuery", false)
     await connect(process.env.MONGO_URI!, {
         keepAlive: true,
         useNewUrlParser: true,

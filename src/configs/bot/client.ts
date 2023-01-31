@@ -2,7 +2,6 @@ import { Partials, GatewayIntentBits, REST } from "discord.js";
 import WOK, { Options, DefaultCommands } from "@wokcommands/";
 import { client } from "../../bot";
 import path from "path";
-import { Client } from "undici";
 
 const partials = [
     Partials.GuildMember,

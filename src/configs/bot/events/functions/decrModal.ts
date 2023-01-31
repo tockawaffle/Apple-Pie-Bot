@@ -1,8 +1,4 @@
-import {
-    ModalSubmitInteraction,
-    Interaction,
-    EmbedBuilder,
-} from "discord.js";
+import { ModalSubmitInteraction, Interaction, EmbedBuilder } from "discord.js";
 import { decryptAesGcm } from "../../../functions/vault";
 import { compare } from "bcrypt";
 import passwd from "../../../db/models/passwd";
@@ -13,7 +9,7 @@ export async function decr_modal(
     modalInteraction: ModalSubmitInteraction
 ) {
     const mInteraction = modalInteraction;
-    await mInteraction.deferReply();
+    await mInteraction.deferReply({ephemeral: true});
 
     const masterKeyInput = mInteraction.fields.fields.map(
         (fields) => fields.value
@@ -34,7 +30,6 @@ export async function decr_modal(
             },
         }
     );
-    console.log(accountNameInput)
     if (!accountsDb) {
         return await mInteraction.editReply({
             content: lang(
@@ -77,7 +72,9 @@ export async function decr_modal(
             new EmbedBuilder()
                 .setAuthor({
                     name: username,
-                    iconURL: interaction.user.displayAvatarURL({ forceStatic: false }),
+                    iconURL: interaction.user.displayAvatarURL({
+                        forceStatic: false,
+                    }),
                 })
                 .setTitle(
                     lang(interaction.user, "decr", "decr_success") as string

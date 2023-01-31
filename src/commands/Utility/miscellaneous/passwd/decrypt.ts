@@ -5,6 +5,9 @@ import {
     ActionRowBuilder,
     TextInputBuilder,
     TextInputStyle,
+    StringSelectMenuBuilder,
+    InteractionCollector,
+    Client,
 } from "discord.js";
 import { CommandObject, CommandType } from "@wokcommands/";
 import decr from "../../../../configs/db/models/passwd";
@@ -25,10 +28,12 @@ export default {
             "Decrypts your password from a secure database (Restricted Command)",
     },
     callback: async ({
+        client,
         interaction,
         user,
         args,
     }: {
+        client: Client
         interaction: CommandInteraction;
         user: User;
         args: string[];
@@ -43,56 +48,60 @@ export default {
             return interaction.reply(lang(user, "decr", "decr_doesnt_exist"));
         }
 
-        const modal = new ModalBuilder({
-            title: lang(user, "decr", "decr_modal_title"),
-            custom_id: "decr_modal",
+        const accountsDbs = checkSA.accounts as [
+            {
+                account_name: string;
+                account_passwd: string;
+                masterKey: string;
+                createdAt: string;
+            }
+        ];
+
+        const accounts = accountsDbs.map((account) => {
+            return account.account_name;
         });
 
-        const masterKey = new ActionRowBuilder({
-            components: [
-                new TextInputBuilder({
-                    custom_id: "decr_modal_masterkey",
-                    label: lang(user, "decr", "decr_modal_masterkey_label"),
-                    placeholder: lang(
-                        user,
-                        "decr",
-                        "decr_modal_masterkey_placeholder"
-                    ),
-                    required: true,
-                    style: TextInputStyle.Short,
-                    type: 4,
-                }),
-            ],
-        }) as ActionRowBuilder<TextInputBuilder>;
+        const row = new ActionRowBuilder().addComponents(
+            new StringSelectMenuBuilder()
+                .setCustomId("decr_slm_accountname")
+                .setPlaceholder(
+                    lang(user, "decr", "decr_modal_accountname_placeholder")
+                )
+                .addOptions(
+                    accounts.map((account) => {
+                        return {
+                            label: account,
+                            value: account,
+                        };
+                    })
+                )
+        ) as ActionRowBuilder<StringSelectMenuBuilder>;
 
-        const accountName = new ActionRowBuilder({
-            components: [
-                new TextInputBuilder({
-                    custom_id: "decr_modal_accountname",
-                    label: lang(user, "decr", "decr_modal_accountname_label"),
-                    placeholder: lang(
-                        user,
-                        "decr",
-                        "decr_modal_accountname_placeholder"
-                    ),
-                    required: true,
-                    style: TextInputStyle.Short,
-                    type: 4,
-                }),
-            ],
-        }) as ActionRowBuilder<TextInputBuilder>;
+        await interaction.reply({
+            components: [row],
+        })
 
-        const userSA = checkSA.dfa.enabled;
-        if (userSA) {
-            const code2fa = new ActionRowBuilder({
+        const collector = new InteractionCollector(client, {
+            filter: (i) => i.user.id === user.id,
+            time: 180000
+        })
+
+        collector.on("collect", async(i: any) => {
+            const selectedAccountName = i.values[0];
+            const modal = new ModalBuilder({
+                title: lang(user, "decr", "decr_modal_title"),
+                custom_id: "decr_modal",
+            });
+    
+            const masterKey = new ActionRowBuilder({
                 components: [
                     new TextInputBuilder({
-                        custom_id: "decr_modal_2fa",
-                        label: lang(user, "decr", "decr_modal_2fa_label"),
+                        custom_id: "decr_modal_masterkey",
+                        label: lang(user, "decr", "decr_modal_masterkey_label"),
                         placeholder: lang(
                             user,
                             "decr",
-                            "decr_modal_2fa_placeholder"
+                            "decr_modal_masterkey_placeholder"
                         ),
                         required: true,
                         style: TextInputStyle.Short,
@@ -100,10 +109,46 @@ export default {
                     }),
                 ],
             }) as ActionRowBuilder<TextInputBuilder>;
-            modal.addComponents(code2fa);
-        }
-        modal.addComponents(accountName);
-        modal.addComponents(masterKey);
-        await interaction.showModal(modal);
+    
+            const accountName = new ActionRowBuilder({
+                components: [
+                    new TextInputBuilder({
+                        custom_id: "decr_modal_accountname",
+                        label: lang(user, "decr", "decr_modal_accountname_label"),
+                        placeholder: selectedAccountName,
+                        value: selectedAccountName,
+                        required: true,
+                        style: TextInputStyle.Short,
+                        type: 4,
+                    }),
+                ],
+            }) as ActionRowBuilder<TextInputBuilder>;
+    
+            const userSA = checkSA.dfa.enabled;
+            if (userSA) {
+                const code2fa = new ActionRowBuilder({
+                    components: [
+                        new TextInputBuilder({
+                            custom_id: "decr_modal_2fa",
+                            label: lang(user, "decr", "decr_modal_2fa_label"),
+                            placeholder: lang(
+                                user,
+                                "decr",
+                                "decr_modal_2fa_placeholder"
+                            ),
+                            required: true,
+                            style: TextInputStyle.Short,
+                            type: 4,
+                        }),
+                    ],
+                }) as ActionRowBuilder<TextInputBuilder>;
+                modal.addComponents(code2fa);
+            }
+            modal.addComponents(accountName);
+            modal.addComponents(masterKey);
+            await i.showModal(modal);
+            collector.stop()
+        })
+
     },
 } as CommandObject;

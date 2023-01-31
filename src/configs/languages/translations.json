@@ -94,27 +94,39 @@
                 "english": "Your Second Authentication Code is not valid. Please, try again.",
                 "portugues": "Seu código de segunda autenticação não é válido. Por favor, tente novamente."
             },
-            "error": {
+            "passwd_error": {
                 "english": "Something bad happened. Please try again later.",
                 "portugues": "Algo deu errado. Por favor, tente novamente mais tarde."
             },
-            "success-desc": {
-                "english": "Keep your password safe! Set up a 2FA code to keep your password safe!\nYou can set it up using the command /2fa.",
-                "portugues": "Mantenha sua senha segura! Defina um código de 2FA para manter sua senha segura!\nVocê pode definir usando o comando /2fa."
+            "passwd_success_title_embed": {
+                "english": "Password Successfully Stored!",
+                "portugues": "Senha Armazenada com Sucesso!"
+            },
+            "passwd_success_desc_embed": {
+                "english": "**Account Name:** {0}\n\nKeep your password safe! Set up a 2FA code to keep your password safe!\nYou can set it up using the command /2fa.",
+                "portugues": "**Nome da Conta:** {0}\n\nMantenha sua senha segura! Defina um código de 2FA para manter sua senha segura!\nVocê pode definir usando o comando /2fa."
             },
             "success": {
                 "english": "Your account was successfully stored!",
                 "portugues": "Sua conta foi armazenada com sucesso!"
             },
             "account-name": {
-                "english": "Account Name:",
-                "portugues": "Nome da Conta:"
+                "english": "Account Name",
+                "portugues": "Nome da Conta"
             },
             "account-passwd": {
+                "english": "Account Password",
+                "portugues": "Senha da Conta"
+            },
+            "account-passwd-crypt": {
                 "english": "Account Password (Encrypted):",
                 "portugues": "Senha da Conta (Criptografada):"
             },
             "master-key": {
+                "english": "Master Key",
+                "portugues": "Chave Mestre"
+            },
+            "master-key-crypt": {
                 "english": "Master Key (Encrypted):",
                 "portugues": "Chave Mestre (Criptografada):"
             },
@@ -122,9 +134,21 @@
                 "english": "Account Created at:",
                 "portugues": "Conta Criada em:"
             },
-            "waiting": {
-                "english": "Waiting for the encryption process to finish...",
-                "portugues": "Esperando o processo de criptografia terminar..."
+            "second-auth": {
+                "english": "Second Authentication Code",
+                "portugues": "Código de Segunda Autenticação"
+            },
+            "modal-title": {
+                "english": "Account Encryption",
+                "portugues": "Criptografia de Conta"
+            },
+            "passwd_account_exists": {
+                "english": "There is already an account stored with this name. Please, choose another name.",
+                "portugues": "Já existe uma conta armazenada com este nome. Por favor, escolha outro nome."
+            },
+            "passwd_error_db": {
+                "english": "Something happened while trying to store your account. Please, try again later.",
+                "portugues": "Algo aconteceu enquanto tentávamos armazenar sua conta. Por favor, tente novamente mais tarde."
             }
         },
         "decr": {
