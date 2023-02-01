@@ -4,11 +4,11 @@
     "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
     "main": "src/bot.ts",
     "scripts": {
-        "start": "ts-node src/bot.ts --transpile-only",
-        "postinstall": "npm rebuild",
+        "start": "node dist/src/bot.js",
+        "postinstall": "npm rebuild ./node_modules",
         "dev": "nodemon",
         "dev-start": "ts-node src/bot.ts",
-        "build": "tsc"
+        "build": "tsc -p tsconfig.json"
     },
     "keywords": [
         "discord",
@@ -73,7 +73,7 @@
         }
     },
     "_moduleAliases": {
-        "@wokcommands": "modules/wokcommands/",
-        "@cliprxyz": "modules/cliprxyz/"
+        "@wokcommands": "dist/modules/wokcommands/src/index.js",
+        "@cliprxyz": "dist/modules/cliprxyz/index.js"
     }
 }

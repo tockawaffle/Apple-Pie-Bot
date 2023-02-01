@@ -17,6 +17,6 @@
         }
     },
     
-    "exclude": ["modules", "dist"],
+    "exclude": ["dist"],
     
 }
