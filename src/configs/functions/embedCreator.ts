@@ -1,4 +1,4 @@
-import { EmbedBuilder, Embed, EmbedAuthorData } from "discord.js";
+import { EmbedBuilder, Embed, EmbedAuthorData, User } from "discord.js";
 import { CommandUsage } from "@wokcommands/";
 
 export async function embedCreator({
@@ -26,8 +26,7 @@ export async function embedCreator({
         embedData;
     if (!interactionObj)
         throw new Error("interactionObj is required for interaction");
-    const { member } = interactionObj;
-    const { user } = member!;
+    const { user } = interactionObj;
     const u = user as CommandUsage["user"];
 
     if (followup) {

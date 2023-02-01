@@ -2,7 +2,7 @@
     "name": "apple-pie",
     "version": "1.7.0",
     "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
-    "main": "src/bot.ts",
+    "main": "dist/src/bot.js",
     "scripts": {
         "start": "node dist/src/bot.js",
         "postinstall": "npm rebuild ./node_modules",
