@@ -2,7 +2,6 @@ import { Client, CommandInteraction } from "discord.js";
 import { dClip } from "@cliprxyz/";
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import { CommandObject, CommandType } from "@wokcommands/";
-// import { modifyArgs } from "../../configs/functions/separateArgs"
 
 export default {
     description: "Gives you a link to download a clip from Twitch",
@@ -32,7 +31,7 @@ export default {
         },
     ],
 
-    callback: async ({ interaction, client, args }: {interaction: CommandInteraction, client: Client, args: string[]}) => {
+    callback: async ({ interaction, args }: {interaction: CommandInteraction, client: Client, args: string[]}) => {
         const down = await dClip({ clipId: args[0] });
 
         if (down.code !== 200)

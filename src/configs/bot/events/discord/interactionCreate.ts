@@ -1,6 +1,7 @@
 import { Events, Interaction } from "discord.js";
 import { decr_modal } from "../functions/decrModal";
 import { passwd_modal } from "../functions/passwdModal";
+import { rem_modal } from "../functions/remAccModal";
 
 module.exports = {
     name: Events.InteractionCreate,
@@ -17,6 +18,9 @@ module.exports = {
                 }
                 case "passwd_modal": {
                     return await passwd_modal(interaction, thisModalInteraction)
+                }
+                case "acc_rem_modal": {
+                    return await rem_modal(interaction, thisModalInteraction)
                 }
             }
         }

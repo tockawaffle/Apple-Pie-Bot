@@ -14,28 +14,24 @@ import decr from "../../../../configs/db/models/passwd";
 import lang from "../../../../configs/languages/languages";
 
 export default {
-    description:
-        "Decrypts your password from a secure database (Restricted Command)",
+    description: "Removes an account from the database (Restricted Command).",
     type: CommandType.SLASH,
     category: "Utility - Misc",
     nameLocalizations: {
-        "pt-BR": "decrypt",
+        "pt-BR": "remover-conta",
     },
     descriptionLocalizations: {
-        "pt-BR":
-            "Descriptografa sua senha de um banco de dados seguro (Comando Restrito)",
-        "en-US":
-            "Decrypts your password from a secure database (Restricted Command)",
+        "pt-BR": "Remove uma conta da Base de Dados (Comando Restrito)",
+        "en-US": "Removes an account from the database (Restricted Command)",
     },
     callback: async ({
         client,
         interaction,
         user,
     }: {
-        client: Client
+        client: Client;
         interaction: CommandInteraction;
         user: User;
-        args: string[];
     }) => {
         const allowed = ["876578406144290866"];
         if (!allowed.includes(user.id)) {
@@ -64,7 +60,11 @@ export default {
             new StringSelectMenuBuilder()
                 .setCustomId("decr_slm_accountname")
                 .setPlaceholder(
-                    lang(user, "decr", "decr_modal_accountname_placeholder")
+                    lang(
+                        user,
+                        "passwd_rem",
+                        "rem_modal_accountname_placeholder"
+                    )
                 )
                 .addOptions(
                     accounts.map((account) => {
@@ -78,20 +78,20 @@ export default {
 
         await interaction.reply({
             components: [row],
-        })
+        });
 
         const collector = new InteractionCollector(client, {
             filter: (i) => i.user.id === user.id,
-            time: 180000
-        })
+            time: 180000,
+        });
 
-        collector.on("collect", async(i: any) => {
+        collector.on("collect", async (i: any) => {
             const selectedAccountName = i.values[0];
             const modal = new ModalBuilder({
-                title: lang(user, "decr", "decr_modal_title"),
-                custom_id: "decr_modal",
+                title: lang(user, "passwd_rem", "rem_modal_title"),
+                custom_id: "acc_rem_modal",
             });
-    
+
             const masterKey = new ActionRowBuilder({
                 components: [
                     new TextInputBuilder({
@@ -108,12 +108,16 @@ export default {
                     }),
                 ],
             }) as ActionRowBuilder<TextInputBuilder>;
-    
+
             const accountName = new ActionRowBuilder({
                 components: [
                     new TextInputBuilder({
                         custom_id: "decr_modal_accountname",
-                        label: lang(user, "decr", "decr_modal_accountname_label"),
+                        label: lang(
+                            user,
+                            "decr",
+                            "decr_modal_accountname_label"
+                        ),
                         placeholder: selectedAccountName,
                         value: selectedAccountName,
                         required: true,
@@ -122,7 +126,7 @@ export default {
                     }),
                 ],
             }) as ActionRowBuilder<TextInputBuilder>;
-    
+
             const userSA = checkSA.dfa.enabled;
             if (userSA) {
                 const code2fa = new ActionRowBuilder({
@@ -146,8 +150,7 @@ export default {
             modal.addComponents(accountName);
             modal.addComponents(masterKey);
             await i.showModal(modal);
-            collector.stop()
-        })
-
+            collector.stop();
+        });
     },
 } as CommandObject;

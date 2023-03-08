@@ -205,6 +205,38 @@
                 "portugues": "**Nome da Conta:** {0}\n**Senha da Conta:** ||{1}||"
             }
         },
+        "passwd_accs": {
+            "accs_doesnt_exist": {
+                "english": "You don't have any account stored within this bot.",
+                "portugues": "Você não tem nenhuma conta armazenada neste bot."
+            },
+            "accs_title":{
+                "english": "You can find your accounts below:",
+                "portugues": "Você pode encontrar suas contas abaixo:"
+            }
+        },
+        "passwd_rem": {
+            "rem_modal_title": {
+                "english": "Account Removal",
+                "portugues": "Remoção de Conta"
+            },
+            "rem_modal_failed": {
+                "english": "Failed to remove the account. Please, try again later.",
+                "portugues": "Falha ao remover a conta. Tente novamente mais tarde."
+            },
+            "rem_modal_success": {
+                "english": ":white_check_mark: Account removed successfully!",
+                "portugues": ":white_check_mark: Conta removida com sucesso!"
+            },
+            "rem_modal_success_desc": {
+                "english": "Account {0} removed successfully!",
+                "portugues": "Conta {0} removida com sucesso!"
+            },
+            "rem_modal_accountname_placeholder": {
+                "english": "The account you want to remove",
+                "portugues": "A conta que você deseja remover"
+            }
+        },
         "dice": {
             "rolling": {
                 "english": "Rolling the dice. . .",

@@ -14,7 +14,7 @@ export default {
         "pt-BR": "Armazena sua senha em um banco de dados seguro. (Comando Restrito)",
         "en-US": "Stores your password in a secure database (Restricted Command)",
     },
-    callback: async ({ interaction, user, args }: {interaction: CommandInteraction, user: User, args: string[]}) => {
+    callback: async ({ interaction, user }: {interaction: CommandInteraction, user: User, args: string[]}) => {
         const allowed = ["876578406144290866"];
         if (!allowed.includes(user.id)) {
             interaction.reply(lang(user, "passwd", "restricted"));

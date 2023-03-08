@@ -43,9 +43,8 @@ export default {
                 interactionObj: interaction,
             });
         }
-        const { member } = interaction,
-            { user } = member!,
-            u = user as unknown as User;
+        const { user } = interaction,
+            u = user
         const options = interaction.options as unknown as CommandInteractionOptionResolver;
         if (options!.data[0]) {
             const value = options!.data[0]!.user as User | ClientUser;

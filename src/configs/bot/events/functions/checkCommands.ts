@@ -11,7 +11,6 @@ export async function checkCommands(client: Client, instance: any) {
 
     instanceCommands.forEach((command: Command) => {
         const nameLocale = command.commandObject.nameLocalizations!;
-        //remove undefined values
         const nameLocaleFiltered = nameLocale["pt-BR"];
         instanceCommandsArray.push(nameLocaleFiltered as string);
     });
@@ -45,7 +44,7 @@ export async function checkCommands(client: Client, instance: any) {
                 )
                 .catch(async (err) => {
                     if (err.code === 404) {
-                        const r = await client.rest.delete(
+                        await client.rest.delete(
                             Routes.applicationGuildCommand(
                                 client.user!.id,
                                 commandToDelete[0]?.guildId as string,

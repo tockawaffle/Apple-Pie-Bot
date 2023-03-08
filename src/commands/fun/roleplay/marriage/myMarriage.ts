@@ -17,7 +17,6 @@ export default {
     },
     callback: async ({
         client,
-        args,
         interaction,
     }: {
         client: Client
