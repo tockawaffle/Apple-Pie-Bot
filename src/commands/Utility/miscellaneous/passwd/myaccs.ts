@@ -78,6 +78,7 @@ export default {
                             }),
                     }),
             ],
+            ephemeral: true
         });
     },
 } as CommandObject;
