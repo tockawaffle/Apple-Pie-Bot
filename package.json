@@ -73,7 +73,7 @@
         }
     },
     "_moduleAliases": {
-        "@wokcommands": "dist/modules/wokcommands/src/index.js",
-        "@cliprxyz": "dist/modules/cliprxyz/index.js"
+        "@wokcommands": "dist/modules/wokcommands/src/",
+        "@cliprxyz": "dist/modules/cliprxyz/"
     }
 }

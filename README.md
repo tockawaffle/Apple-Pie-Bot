@@ -78,25 +78,7 @@ Required on the dotenv file:
 
 ### Known Bugs - 🖥️
 
-One bug that I've experienced while trying to deploy the built bot is:
-
-It might not recognize the moduleAlias file in the package.json file, I've experienced this using Pterodactyl Panel. To fix this, just remove these parts:
-
-Before:
-```
-    "_moduleAliases": {
-        "@wokcommands": "dist/modules/wokcommands/src/index.js",
-        "@cliprxyz": "dist/modules/cliprxyz/index.js"
-    }
-```
-
-After:
-```
-    "_moduleAliases": {
-        "@wokcommands": "dist/modules/wokcommands/src/",
-        "@cliprxyz": "dist/modules/cliprxyz/"
-    }
-```
+--
   
 ## Roadmap - 🛣
 
