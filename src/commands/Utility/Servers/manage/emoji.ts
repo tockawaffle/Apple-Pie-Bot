@@ -1,4 +1,4 @@
-import { Client, CommandInteraction, User } from "discord.js";
+import { Attachment, CommandInteraction, User } from "discord.js";
 import { CommandObject, CommandType } from "@wokcommands/";  
 import { embedCreator } from "../../../../configs/functions/embedCreator";
 import lang from "../../../../configs/languages/languages";
@@ -75,8 +75,8 @@ export default {
                     interactionObj: interaction,
                 });
             } else if(args[1] === "attachment") {
-                const attachment = interaction.options.resolved?.attachments!.first()!.attachment;
-                const formatName = name.replace(/\s/g, "_"),
+                const attachment = interaction.options!.resolved!.attachments!.first()!.url as Attachment["url"];
+                const formatName = name.replaceAll(/\s/g, "_"),
                     emoji = await interaction.guild?.emojis.create({
                         attachment: attachment as string,
                         name: formatName,
