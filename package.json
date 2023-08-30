@@ -34,7 +34,7 @@
         "dotenv": "^16.0.3",
         "module-alias": "^2.2.2",
         "moment": "^2.29.4",
-        "mongoose": "^7.0.2",
+        "mongoose": "^7.5.0",
         "node-fetch": "^2.6.9",
         "request": "^2.88.2",
         "speakeasy": "^2.0.0",
