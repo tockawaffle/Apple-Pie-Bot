@@ -1,53 +1,53 @@
 {
     "name": "apple-pie",
-    "version": "1.7.0",
-    "description": "Just an usual Discord Bot, she might be a pie made of apples, but she's also a bot.",
-    "main": "dist/src/bot.js",
+    "version": "1.0.0",
+    "versionName": "Crimson Reboot",
+    "description": "Apple Pie bot, rebooted.",
+    "main": "dist/src/index.js",
     "scripts": {
-        "start": "node dist/src/bot.js",
-        "postinstall": "npm rebuild ./node_modules",
-        "dev": "nodemon",
-        "dev-start": "ts-node src/bot.ts",
-        "build": "tsc -p tsconfig.json"
+        "build-wok": "tsc -p ./modules/wokcommands/tsconfig.json",
+        "dev": "ts-node-esm --project ./tsconfig.json --files src/index.ts"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tockawaffle/Apple-Pie-Bot.git"
+    },
+    "types": "./types/index.ts",
     "keywords": [
-        "discord",
-        "bot",
-        "typescript",
-        "apple pie",
-        "discord.js",
-        "discordjs",
-        "djs"
+        "Apple",
+        "Pie",
+        "Discord",
+        "Bot",
+        "Bot",
+        "ChatGpt",
+        "Apple",
+        "Pie"
     ],
-    "author": "тоска",
-    "contributors": [
-        "Tockawa",
-        "Dixon"
-    ],
-    "license": "MIT",
+    "author": "Nixy",
+    "license": "AGPL-3.0",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/tockawaffle/Apple-Pie-Bot/issues"
+    },
+    "homepage": "https://github.com/tockawaffle/Apple-Pie-Bot#readme",
     "dependencies": {
-        "@discordjs/rest": "^1.6.0",
-        "bcrypt": "^5.1.0",
-        "cheerio": "^1.0.0-rc.12",
-        "cron": "^2.2.0",
-        "discord.js": "^14.8.0",
-        "dotenv": "^16.0.3",
-        "module-alias": "^2.2.2",
-        "moment": "^2.29.4",
-        "mongoose": "^7.0.2",
-        "node-fetch": "^2.6.9",
-        "request": "^2.88.2",
-        "speakeasy": "^2.0.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^4.9.5",
-        "undici": "^5.21.0"
+        "@discord-player/extractor": "^4.4.4",
+        "@discordjs/rest": "^2.0.1",
+        "discord-api-types": "^0.37.58",
+        "discord-player": "^6.6.4",
+        "discord.js": "^14.13.0",
+        "dotenv": "^16.3.1",
+        "i": "^0.3.7",
+        "install": "^0.13.0",
+        "mediaplex": "^0.0.8",
+        "mongoose": "^7.5.3",
+        "npm": "^10.1.0",
+        "openai": "^4.10.0",
+        "uuid": "^9.0.1",
+        "youtube-ext": "^1.1.14"
     },
     "devDependencies": {
-        "@napi-rs/canvas": "^0.1.39",
-        "@types/bcrypt": "^5.0.0",
-        "@types/cron": "^2.0.0",
-        "@types/node": "^18.15.3",
-        "@types/speakeasy": "^2.0.7"
+        "@types/node": "^20.6.3"
     },
     "nodemonConfig": {
         "ignore": [
@@ -61,7 +61,7 @@
             "package.json"
         ],
         "ext": "ts,json",
-        "exec": "npm run dev-start",
+        "exec": "npm run dev",
         "execMap": {
             "ts": "ts-node"
         },
@@ -71,9 +71,6 @@
                 "NODE_ENV": "development"
             }
         }
-    },
-    "_moduleAliases": {
-        "@wokcommands": "dist/modules/wokcommands/src/",
-        "@cliprxyz": "dist/modules/cliprxyz/"
     }
 }
+
