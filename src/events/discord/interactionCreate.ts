@@ -1,9 +1,4 @@
-import {
-    Events,
-    Client,
-    Interaction,
-    User,
-} from "discord.js";
+import { Events, Client, Interaction, User } from "discord.js";
 
 export default {
     name: Events.InteractionCreate,

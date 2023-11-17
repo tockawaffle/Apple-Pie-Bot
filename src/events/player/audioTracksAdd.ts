@@ -15,25 +15,9 @@ export default {
 
         if (trackLength <= 1) return;
 
-        const isPlaylist = track.playlist ? true : false;
-        console.log(isPlaylist);
-        let message: string = "";
-        if (isPlaylist) {
-            message = client.translation(
-                metadata.user,
-                "events::music",
-                "playlistAdded"
-            );
-        } else {
-            message = client.translation(
-                metadata.user,
-                "events::music",
-                "tracksAdded"
-            );
-        }
-
         await metadata.followUp({
-            content: message
+            content: client
+                .translation(metadata.user, "events::music", "tracksAdded")
                 .replace("{track}", track.title)
                 .replace("{length}", trackLength.toString()),
         });

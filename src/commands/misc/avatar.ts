@@ -27,6 +27,9 @@ function createEmbed(
 export default {
     name: "avatar",
     description: "Shows yours or someone's avatar.",
+    descriptionLocalizations: {
+        "pt-BR": "Mostra o seu ou o avatar de alguém."
+    },
     options: [
         {
             name: "user",

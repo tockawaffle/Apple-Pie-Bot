@@ -9,6 +9,7 @@ export default {
         "pt-BR": "Comandos e opções de música",
     },
     options: musicOptions,
+    guildOnly: true,
     execute: async ({
         client,
         interaction,

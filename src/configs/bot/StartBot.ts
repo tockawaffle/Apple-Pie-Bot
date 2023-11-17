@@ -1,24 +1,16 @@
-import { Client, GatewayIntentBits, Partials } from "discord.js";
-import fs from "fs";
-import path from "path";
-import CommandHandler from "../../configs/handlers/commands/CommandHandler";
-import EventHandler from "../handlers/events/EventHandler";
 import { Player } from "discord-player";
+import { ActivityType, Client, GatewayIntentBits, Partials } from "discord.js";
 
-import { connectMongoDB } from "../database";
-
-const __dirname = path.resolve();
+import EventHandler from "../handlers/events/EventHandler";
+import CommandHandler from "../../configs/handlers/commands/CommandHandler";
+import dbConnect from "../database";
+import Polyglot from "../handlers/language/LanguageHandler";
 
 export default class Bot {
     private client: Client;
     private debug: boolean = false;
 
-    constructor(
-        private token: string,
-        private commandsDir: string,
-        private eventsDir: string,
-        debug: boolean = false
-    ) {
+    constructor(private token: string, debug: boolean = false) {
         this.client = new Client({
             intents: [
                 GatewayIntentBits.Guilds,
@@ -48,116 +40,47 @@ export default class Bot {
     }
 
     public async start(): Promise<void> {
-        await connectMongoDB();
+        await dbConnect();
         await this.client.login(this.token);
         const player = new Player(this.client);
         await player.extractors.loadDefault();
         const events = new EventHandler(this.client, player);
         events.loadEvents();
         events.loadPlayerEvents();
-
-        if (!fs.existsSync(this.commandsDir)) {
-            this.logDebug(
-                "red",
-                "CommandHandler",
-                "Commands directory not found",
-                "error"
-            );
-            return;
-        }
-
-        const getCommandFiles = (dir: string): string[] => {
-            const files = fs.readdirSync(dir);
-            const commandFiles: string[] = [];
-            for (const file of files) {
-                if (file === "helpers") {
-                    this.logDebug(
-                        "yellow",
-                        "Command Handler",
-                        `Helper directory found, skipping...`,
-                        "warn"
-                    );
-                    continue;
-                }
-                const filePath = path.join(dir, file);
-                if (fs.statSync(filePath).isDirectory()) {
-                    commandFiles.push(...getCommandFiles(filePath));
-                } else if (file.endsWith(".ts")) {
-                    commandFiles.push(filePath);
-                }
-            }
-            return commandFiles;
-        };
-
-        const commandFiles = getCommandFiles(this.commandsDir);
-
-        if (commandFiles.length === 0) {
-            return;
-        }
-
         const commandHandler = new CommandHandler(this.client, this.debug);
-
-        for (const filePath of commandFiles) {
-            const filePathUrl = new URL(filePath, `file://${__dirname}/`).href;
-            const command = (await import(filePathUrl)).default as Command;
-
-            if (
-                !command ||
-                !command.name ||
-                !command.description ||
-                typeof command.execute !== "function"
-            ) {
-                this.logDebug(
-                    "yellow",
-                    "Command Handler",
-                    `Command ${filePath} is invalid`,
-                    "warn"
-                );
-                continue;
-            }
-
-            commandHandler.registerCommand(command);
-            this.logDebug(
-                "green",
-                "Command Handler",
-                `Command ${filePath} registered`,
-                "info"
-            );
-        }
+        await commandHandler.loadCommands();
     }
 
-    private logDebug(
-        color: string,
-        firstString: string,
-        message: string,
-        logType: string
-    ) {
-        if (this.debug) {
-            const colorCodes: Record<string, string> = {
-                red: "\x1b[31m",
-                green: "\x1b[32m",
-                yellow: "\x1b[33m",
-                blue: "\x1b[34m",
-                magenta: "\x1b[35m",
-                cyan: "\x1b[36m",
-                reset: "\x1b[0m",
-            };
+    private async setBot() {}
 
-            const consoleMethods: Record<string, (...data: any[]) => void> = {
-                log: console.log,
-                error: console.error,
-                warn: console.warn,
-                info: console.info,
-                debug: console.debug,
-            };
+    private setBotActivity() {
+        const { setActivity } = this.client.user!;
 
-            const chosenColor = colorCodes[color] || colorCodes.reset;
-            const chosenMethod = consoleMethods[logType] || consoleMethods.log;
+        const activities = [
+            {
+                name: "To the beats of your heart!",
+                type: ActivityType.Listening,
+            },
+            {
+                name: "With your heart!",
+                type: ActivityType.Playing,
+            },
+            {
+                name: "Your heart!",
+                type: ActivityType.Watching,
+            },
+            {
+                name: "Doing nothing~~",
+                type: ActivityType.Custom,
+            },
+        ];
 
-            chosenMethod(
-                `${chosenColor}[ ${firstString} ]${colorCodes.reset}`,
-                `${message}`
-            );
-        }
+        setInterval(() => {
+            setActivity({
+                ...activities[Math.floor(Math.random() * activities.length)],
+            });
+        }, 3600000);
     }
+
+    private setBotImage() {}
 }

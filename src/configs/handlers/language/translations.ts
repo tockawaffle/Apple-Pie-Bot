@@ -65,6 +65,34 @@ const translationsData: TranslationsExport = {
                     "Playlist {name} foi adicionada à fila, com {length} músicas!",
                 epo: "{name} listo estis aldonita al la vico, kun {length} kantoj!",
             },
+            startedPlaying: {
+                "en-US": "Now playing: {track}\nDuration: {duration}",
+                "pt-BR": "Tocando agora: {track}\nDuração: {duration}",
+                epo: "Nun ludante: {track}\nDaŭro: {duration}",
+            }
+        },
+        "events::chatbot": {
+            eventError: {
+                "en-US":
+                    "Something went wrong while trying to talk to the chatbot: {error}",
+                "pt-BR":
+                    "Algo deu errado ao tentar conversar com o chatbot: {error}",
+                epo: "Io malsukcesis dum provado paroli kun la babilejo: {error}",
+            },
+            flaggedMessage: {
+                "en-US":
+                    "Your message was flagged against the rules. These are the categories: {flags}",
+                "pt-BR":
+                    "Sua mensagem foi marcada contra as regras. Essas são as categorias: {flags}",
+                epo: "Via mesaĝo estis flagita kontraŭ la reguloj. Jen la kategorioj: {flags}",
+            },
+            notEnoughCredits: {
+                "en-US":
+                    "You don't have enough credits to talk to the chatbot. You can get more by voting on top.gg, donating or upgrading your tier.",
+                "pt-BR":
+                    "Você não tem créditos suficientes para conversar com o chatbot. Você pode conseguir mais votando no top.gg, doando ou atualizando seu tier.",
+                epo: "Vi ne havas sufiĉe da kreditoj por paroli kun la babilejo. Vi povas akiri pli voĉdonante en top.gg, donante aŭ ĝisdatigante vian nivelo.",
+            },
         },
     },
 };

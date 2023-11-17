@@ -1,5 +1,5 @@
 import { Player, GuildQueue, Track } from "discord-player";
-import { EmbedBuilder } from "discord.js";
+import { Client, EmbedBuilder } from "discord.js";
 
 export default {
     name: "playerStart",
@@ -7,7 +7,8 @@ export default {
     async execute(
         queue: GuildQueue<any>,
         track: Track<unknown>,
-        player: Player
+        player: Player,
+        client: Client
     ) {
         await queue.metadata.followUp({
             embeds: [
@@ -19,8 +20,18 @@ export default {
                     .setColor("Random")
                     .setDescription(
                         `
-                            Tocando agora: [${track.title}](${track.url}) - ${track.author}
-                            Duração: ${track.duration}
+                            ${client
+                                .translation(
+                                    queue.metadata.user,
+                                    "events::music",
+                                    "startedPlaying"
+                                )
+                                .replace(
+                                    "{track}",
+                                    `[${track.title}](${track.url})`
+                                )
+                                .replace("{length}", `${track.duration}`)
+                                .replace("{duration}", `${track.duration}`)}
                         `
                     )
                     .setImage(track.thumbnail),

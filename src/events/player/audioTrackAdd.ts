@@ -1,14 +1,14 @@
 import { Player, GuildQueue, Track } from "discord-player";
-
+import { Client } from "discord.js";
 export default {
     name: "audioTrackAdd",
     once: false,
     async execute(
         queue: GuildQueue<any>,
         track: Track<unknown>,
-        player: Player
+        player: Player,
+        client: Client
     ) {
-        const { client } = player;
         const { tracks, metadata } = queue;
         const trackLength = tracks.toArray().length;
 
@@ -18,7 +18,7 @@ export default {
             content: client
                 .translation(
                     metadata.user,
-                    "music::audioTrackAdd",
+                    "events::music",
                     "trackAdded"
                 )
                 .replace("{track}", track.title)

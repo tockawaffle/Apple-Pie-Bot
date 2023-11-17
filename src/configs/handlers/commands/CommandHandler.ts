@@ -5,6 +5,7 @@ import {
     Collection,
     Interaction,
 } from "discord.js";
+import commandsImports from "./commandsImports";
 
 export default class CommandHandler {
     private commands: Map<string, Command> = new Map();
@@ -13,6 +14,13 @@ export default class CommandHandler {
     constructor(client: Client, private debug: boolean = false) {
         this.client = client;
         this.client.on("interactionCreate", this.handleInteraction.bind(this));
+    }
+
+    public async loadCommands(): Promise<void> {
+        for (const command of commandsImports) {
+            this.registerCommand(command);
+        }
+        await this.syncCommands();
     }
 
     private handleInteraction(interaction: Interaction) {
@@ -29,41 +37,43 @@ export default class CommandHandler {
         command.execute(args);
     }
 
-    async registerCommand(command: Command): Promise<void> {
+    private registerCommand(command: Command): void {
         this.commands.set(command.name, command);
-        await this.syncCommands();
     }
 
     private async syncCommands(): Promise<void> {
         const existingCommands =
             await this.client.application!.commands.fetch();
-        await Promise.all(
-            [...this.commands.values()].map(async (command) => {
-                if (!command.name || !command.description || !command.execute) {
-                    throw new Error(
-                        `Command ${command.name} is missing a required property.`
-                    );
-                }
-                const commandData = this.createCommandData(command);
-                const existingCommand = existingCommands.find(
-                    (cmd) => cmd.name === command.name
-                );
 
-                if (
-                    existingCommand &&
-                    this.isCommandDifferent(existingCommand, commandData)
-                ) {
+        for (const command of this.commands.values()) {
+            const commandData = this.createCommandData(command);
+            const existingCommand = existingCommands.find(
+                (cmd) => cmd.name === command.name
+            );
+
+            if (existingCommand) {
+                if (this.isCommandDifferent(existingCommand, commandData)) {
                     await this.client.application!.commands.edit(
                         existingCommand.id,
                         commandData
                     );
-                    this.logDebug(`Updated command ${command.name}`);
-                } else {
-                    await this.client.application!.commands.create(commandData);
-                    this.logDebug(`Created command ${command.name}`);
+                    this.logDebug(
+                        "magenta",
+                        `Command Handler`,
+                        `Edited/Updated ${command.name}`,
+                        "info"
+                    );
                 }
-            })
-        );
+            } else {
+                await this.client.application!.commands.create(commandData);
+                this.logDebug(
+                    "magenta",
+                    `Command Handler`,
+                    `Created ${command.name}`,
+                    "info"
+                );
+            }
+        }
 
         await this.deleteUnregisteredCommands(existingCommands);
     }
@@ -104,17 +114,49 @@ export default class CommandHandler {
             (cmd) => !registeredCommands.has(cmd.name)
         );
 
-        await Promise.all(
-            toDelete.map(async (cmd) => {
-                await this.client.application!.commands.delete(cmd.id);
-                this.logDebug(`Deleted command ${cmd.name}`);
-            })
-        );
+        for (const cmd of toDelete.values()) {
+            await this.client.application!.commands.delete(cmd.id);
+            this.logDebug(
+                "magenta",
+                `Command Handler`,
+                `Deleted ${cmd.name}`,
+                "info"
+            );
+        }
     }
 
-    private logDebug(message: string): void {
+    private logDebug(
+        color: string,
+        firstString: string,
+        message: string,
+        logType: string
+    ) {
         if (this.debug) {
-            console.log(`[CommandHandler] ${message}`);
+            const colorCodes: Record<string, string> = {
+                red: "\x1b[31m",
+                green: "\x1b[32m",
+                yellow: "\x1b[33m",
+                blue: "\x1b[34m",
+                magenta: "\x1b[35m",
+                cyan: "\x1b[36m",
+                reset: "\x1b[0m",
+            };
+
+            const consoleMethods: Record<string, (...data: any[]) => void> = {
+                log: console.log,
+                error: console.error,
+                warn: console.warn,
+                info: console.info,
+                debug: console.debug,
+            };
+
+            const chosenColor = colorCodes[color] || colorCodes.reset;
+            const chosenMethod = consoleMethods[logType] || consoleMethods.log;
+
+            chosenMethod(
+                `${chosenColor}[ ${firstString} ]${colorCodes.reset}`,
+                `${message}`
+            );
         }
     }
 }

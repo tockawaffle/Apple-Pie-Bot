@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import { Player, PlayerEvents } from "discord-player";
+import { Player } from "discord-player";
 import loadEvents from "./loadEvents";
 import loadPlayerEvents from "./loadPlayerEvents";
 

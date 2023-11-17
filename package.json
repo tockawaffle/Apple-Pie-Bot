@@ -1,11 +1,12 @@
 {
     "name": "apple-pie",
-    "version": "1.0.0",
+    "version": "1.0.5",
     "versionName": "Crimson Reboot",
     "description": "Apple Pie bot, rebooted.",
     "main": "dist/src/index.js",
     "scripts": {
-        "build-wok": "tsc -p ./modules/wokcommands/tsconfig.json",
+        "start": "node dist/index.js",
+        "build": "rollup -c",
         "dev": "ts-node-esm --project ./tsconfig.json --files src/index.ts"
     },
     "repository": {
@@ -31,20 +32,24 @@
     },
     "homepage": "https://github.com/tockawaffle/Apple-Pie-Bot#readme",
     "dependencies": {
-        "@discord-player/extractor": "^4.4.4",
-        "discord-player": "^6.6.4",
-        "discord.js": "^14.13.0",
+        "@discord-player/extractor": "^4.4.5",
+        "discord-player": "^6.6.6",
+        "discord.js": "^14.14.1",
         "dotenv": "^16.3.1",
         "gpt-3-encoder": "^1.1.4",
         "mediaplex": "^0.0.8",
-        "mongoose": "^7.5.3",
-        "npm": "^10.1.0",
-        "openai": "^4.10.0",
+        "mongoose": "^8.0.1",
+        "openai": "^4.19.0",
         "uuid": "^9.0.1",
-        "youtube-ext": "^1.1.14"
+        "youtube-ext": "^1.1.16"
     },
     "devDependencies": {
-        "@types/node": "^20.6.3"
+        "@rollup/plugin-commonjs": "^25.0.7",
+        "@rollup/plugin-json": "^6.0.1",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@types/node": "^20.9.1",
+        "rollup": "^4.4.1",
+        "rollup-plugin-typescript2": "^0.36.0"
     },
     "nodemonConfig": {
         "ignore": [
